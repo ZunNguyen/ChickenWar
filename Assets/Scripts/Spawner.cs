@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Spawner : ErshenMonoBehaviour
 {
+    [SerializeField] protected static Spawner instance;
+    public static Spawner Instance { get => instance; }
+
     [SerializeField] protected Transform holder;
     [SerializeField] protected List<Transform> prefabs;
     [SerializeField] protected List<Transform> poolObjs;
@@ -14,6 +17,13 @@ public class Spawner : ErshenMonoBehaviour
         base.LoadComponent();
         LoadHolder();
         LoadPrefabs();
+        LoadInstance();
+    }
+
+    protected virtual void LoadInstance()
+    {
+        if (instance != null) return;
+        Spawner.instance = this;
     }
 
     protected virtual void LoadHolder()
@@ -85,6 +95,12 @@ public class Spawner : ErshenMonoBehaviour
         Transform newPrefab = Instantiate(prefab);
         newPrefab.name = prefab.name;
         return newPrefab;
+    }
+
+    public virtual void Despawn(Transform obj)
+    {
+        poolObjs.Add(obj);
+        obj.gameObject.SetActive(false);
     }
 }
 
