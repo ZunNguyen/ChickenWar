@@ -2,31 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletSpawn : ErshenMonoBehaviour
+public class PointSpawnBullet : ErshenMonoBehaviour
 {
-    //[SerializeField] protected ChickenController chickenController;
+    [SerializeField] protected PointSpawnBulletController pointSpawnBulletController;
     [SerializeField] protected float distance;
     [SerializeField] protected float timeCurrent;
     [SerializeField] protected float timeDelay;
-    [SerializeField] Spawner spawner;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
-        this.LoadSpawner();
-        //this.LoadChickenController();
+        this.LoadPointSpawnBulletController();
     }
 
-    //protected virtual void LoadChickenController()
-    //{
-    //    if (chickenController != null) return;
-    //    chickenController = transform.GetComponentInParent<ChickenController>();
-    //}
-
-    protected virtual void LoadSpawner()
+    protected virtual void LoadPointSpawnBulletController()
     {
-        if (spawner != null) return;
-        spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
+        if (pointSpawnBulletController != null) return;
+        pointSpawnBulletController = transform.GetComponentInParent<PointSpawnBulletController>();
     }
 
     private void Update()
@@ -48,7 +40,7 @@ public class BulletSpawn : ErshenMonoBehaviour
         if (timeCurrent < timeDelay) return;
         if (timeCurrent >= timeDelay)
         {
-            Transform newBullet = spawner.Spawn("Bullets2", this.transform.position, this.transform.rotation);
+            Transform newBullet = pointSpawnBulletController.BulletSpawner.Spawn("Bullet2", this.transform.position, this.transform.rotation);
             newBullet.gameObject.SetActive(true);
             timeCurrent = 0;
         }
@@ -62,7 +54,8 @@ public class BulletSpawn : ErshenMonoBehaviour
 
     protected virtual float CheckDistance()
     {
-        //distance = Vector3.Distance(chickenController.transform.position, chickenController.DogController.transform.position);
+        //Vector3 distanceDog = pointSpawnBulletController.DogController.transform.position;
+        //distance = Vector3.Distance(this.transform.position, distanceDog);
         return distance;
     }
 }

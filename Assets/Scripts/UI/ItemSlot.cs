@@ -9,6 +9,25 @@ public class ItemSlot : ErshenMonoBehaviour, IDropHandler
     {
         GameObject dropObj = eventData.pointerDrag;
         DragItem dragItem = dropObj.GetComponent<DragItem>();
-        dragItem.SetRealParent(this.transform);
+        if (CheckChildrenHaveSlot() == true)
+        {
+            dragItem.SetRealParent(this.transform);
+        }
+        else
+        {
+            // Save transForm before change
+            Transform storeTransform = dragItem.realParent;
+            // Change children object
+            this.transform.GetComponentInChildren<DragItem>().transform.SetParent(storeTransform);
+            dragItem.SetRealParent(this.transform);
+        }
+    }
+    
+    // Check Object children have emty?
+    protected virtual bool CheckChildrenHaveSlot()
+    {
+        DragItem dragItem = transform.GetComponentInChildren<DragItem>();
+        if (dragItem == null) return true;
+        return false;
     }
 }

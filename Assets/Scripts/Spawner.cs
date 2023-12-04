@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Spawner : ErshenMonoBehaviour
+public abstract class Spawner : ErshenMonoBehaviour
 {
     [SerializeField] protected static Spawner instance;
     public static Spawner Instance { get => instance; }
@@ -29,7 +29,7 @@ public class Spawner : ErshenMonoBehaviour
     protected virtual void LoadHolder()
     {
         if (holder != null) return;
-        holder = transform.Find("Holders");
+        holder = transform.Find("Holder");
     }
 
     protected virtual void LoadPrefabs()

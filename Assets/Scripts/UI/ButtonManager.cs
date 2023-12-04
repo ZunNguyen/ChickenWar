@@ -5,21 +5,22 @@ using UnityEngine.UI;
 
 public class ButtonManager : ErshenMonoBehaviour
 {
-    [SerializeField] protected DogController dogController;
+    [SerializeField] protected PointSpawnDogController pointSpawnDogController;
     [SerializeField] protected static ButtonManager instance;
+
     public static ButtonManager Instance { get => instance; }
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
-        LoadDogController();
+        LoadPointSpawnDogController();
         LoadInstance();
     }
 
-    protected virtual void LoadDogController()
+    protected virtual void LoadPointSpawnDogController()
     {
-        if (dogController != null) return;
-        dogController = GameObject.Find("Dog01").GetComponent<DogController>();
+        if (pointSpawnDogController != null) return;
+        pointSpawnDogController = GameObject.Find("Point Spawn Dog").GetComponent<PointSpawnDogController>();
     }
 
     protected virtual void LoadInstance()
@@ -30,6 +31,6 @@ public class ButtonManager : ErshenMonoBehaviour
 
     public virtual void StartMovementDog()
     {
-        dogController.DogMovement.enabled = true;
+        pointSpawnDogController.PointSpawnDog.enabled = true;
     }
 }
