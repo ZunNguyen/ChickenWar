@@ -10,7 +10,7 @@ public abstract class Spawner : ErshenMonoBehaviour
 
     [SerializeField] protected Transform holder;
     [SerializeField] protected List<Transform> prefabs;
-    [SerializeField] protected List<Transform> poolObjs;
+    [SerializeField] public List<Transform> poolObjs;
 
     protected override void LoadComponent()
     {
@@ -65,7 +65,7 @@ public abstract class Spawner : ErshenMonoBehaviour
     {
         Transform prefabFromPool = GetPrefabFromPool(prefab);
         prefabFromPool.SetPositionAndRotation(pos, rot);
-        prefabFromPool.parent = holder;
+        prefabFromPool.SetParent(holder);
         return prefabFromPool;
     }
 
@@ -100,7 +100,7 @@ public abstract class Spawner : ErshenMonoBehaviour
     public virtual void Despawn(Transform obj)
     {
         poolObjs.Add(obj);
+        obj.SetParent(holder);
         obj.gameObject.SetActive(false);
     }
 }
-

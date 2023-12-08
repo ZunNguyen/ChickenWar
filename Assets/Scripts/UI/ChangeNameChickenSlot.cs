@@ -27,7 +27,7 @@ public class ChangeNameChickenSlot : ErshenMonoBehaviour
         foreach (Transform chikenSlot in chickenSlots)
         {
             int i = chickenSlots.IndexOf(chikenSlot) + 1;
-            chikenSlot.transform.name = "Chicken Slot - " + i;
+            chikenSlot.transform.name = "Chicken Upadte - " + i;
         }
     }
 }

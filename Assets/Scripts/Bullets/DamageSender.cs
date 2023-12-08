@@ -12,5 +12,4 @@ public class DamageSender : ErshenMonoBehaviour
             Spawner.Instance.Despawn(this.transform.parent);
         }
     }
-
 }

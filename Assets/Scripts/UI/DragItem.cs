@@ -9,7 +9,7 @@ public class DragItem : ErshenMonoBehaviour, IDragHandler, IBeginDragHandler, IE
 {
     
     // The score game have 2 object image
-    [SerializeField] protected Image[] images;
+    [SerializeField] public Image[] images;
     [SerializeField] public Transform realParent;
 
     // Set new parent after drag and drop object
@@ -35,12 +35,7 @@ public class DragItem : ErshenMonoBehaviour, IDragHandler, IBeginDragHandler, IE
         //Debug.Log("Begin Drag");
         realParent = this.transform.parent;
         this.transform.SetParent(ButtonManager.Instance.transform);
-        
-        // Turn off raycast for images
-        foreach (Image image in images)
-        {
-            image.raycastTarget = false;
-        } 
+        SetRaycastTarget(false);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -53,11 +48,15 @@ public class DragItem : ErshenMonoBehaviour, IDragHandler, IBeginDragHandler, IE
     {
         //Debug.Log("End Drag");
         transform.SetParent(realParent);
+        SetRaycastTarget(true);
+    }
 
-        // Turn off raycast for images -> if not, can't remove
+    // Set value boolen raycast for images
+    public virtual void SetRaycastTarget(bool getValueImage)
+    {
         foreach (Image image in images)
         {
-            image.raycastTarget = true;
+            image.raycastTarget = getValueImage;
         }
     }
 }

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PointSpawnDogController : ErshenMonoBehaviour
 {
-    [Header("Connect Script outside")]
+    [Header("Connect Script Outside")]
     [SerializeField] protected DogSpawner dogSpawner;
     public DogSpawner DogSpawner { get => dogSpawner; }
 
-    [Header("Connect Script childrent")]
+    [Header("Connect Script Childrent")]
     [SerializeField] protected PointSpawnDog pointSpawnDog;
     public PointSpawnDog PointSpawnDog { get => pointSpawnDog; }
 

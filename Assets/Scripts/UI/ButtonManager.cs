@@ -5,9 +5,14 @@ using UnityEngine.UI;
 
 public class ButtonManager : ErshenMonoBehaviour
 {
+    [Header("Connect Script Outside")]
     [SerializeField] protected PointSpawnDogController pointSpawnDogController;
-    [SerializeField] protected static ButtonManager instance;
 
+    [Header("Connect Script Inside")]
+    [SerializeField] protected SpawnUpdateChicken spawnPrefab;
+
+    [Header("Instance")]
+    [SerializeField] protected static ButtonManager instance;
     public static ButtonManager Instance { get => instance; }
 
     protected override void LoadComponent()
@@ -15,12 +20,19 @@ public class ButtonManager : ErshenMonoBehaviour
         base.LoadComponent();
         LoadPointSpawnDogController();
         LoadInstance();
+        LoadSpawnPrefab();
     }
 
     protected virtual void LoadPointSpawnDogController()
     {
         if (pointSpawnDogController != null) return;
         pointSpawnDogController = GameObject.Find("Point Spawn Dog").GetComponent<PointSpawnDogController>();
+    }
+
+    protected virtual void LoadSpawnPrefab()
+    {
+        if (spawnPrefab != null) return;
+        spawnPrefab = GetComponentInChildren<SpawnUpdateChicken>();
     }
 
     protected virtual void LoadInstance()
@@ -32,5 +44,10 @@ public class ButtonManager : ErshenMonoBehaviour
     public virtual void StartMovementDog()
     {
         pointSpawnDogController.PointSpawnDog.enabled = true;
+    }
+
+    public void SpawnPrefab()
+    {
+        spawnPrefab.SpawnPrefabInSlot();
     }
 }
