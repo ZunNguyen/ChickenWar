@@ -42,7 +42,9 @@ public class PointSpawnBullet : ErshenMonoBehaviour
         {
             Transform newBullet = pointSpawnBulletController.BulletSpawner.Spawn("Bullet2", this.transform.position, this.transform.rotation);
             newBullet.gameObject.SetActive(true);
+            
             timeCurrent = 0;
+            GetIndexObject();
         }
     }
 
@@ -57,5 +59,13 @@ public class PointSpawnBullet : ErshenMonoBehaviour
         //Vector3 distanceDog = pointSpawnBulletController.DogController.transform.position;
         //distance = Vector3.Distance(this.transform.position, distanceDog);
         return distance;
+    }
+
+    protected virtual void GetIndexObject()
+    {
+        string name = this.gameObject.name;
+        int index = name[name.Length - 1];
+        index -= 48;
+        pointSpawnBulletController.CanvasController.CheckPositionChicken.SetAnimationIndex(index);
     }
 }

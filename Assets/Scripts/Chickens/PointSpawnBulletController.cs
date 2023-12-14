@@ -12,12 +12,16 @@ public class PointSpawnBulletController : ErshenMonoBehaviour
     [SerializeField] protected BulletSpawner bulletSpawner;
     public BulletSpawner BulletSpawner { get => bulletSpawner; }
 
+    [SerializeField] protected CanvasController canvasController;
+    public CanvasController CanvasController { get => canvasController; }
+
     protected override void LoadComponent()
     {
         base.LoadComponent();
         LoadPointSpawnBullet();
         //LoadDogController();
         LoadBulletSpawner();
+        LoadCanvasController();
     }
 
     protected virtual void LoadPointSpawnBullet()
@@ -36,5 +40,11 @@ public class PointSpawnBulletController : ErshenMonoBehaviour
     {
         if (bulletSpawner != null) return;
         bulletSpawner = GameObject.Find("Bullet Spawner").GetComponent<BulletSpawner>();
+    }
+
+    protected virtual void LoadCanvasController()
+    {
+        if (canvasController != null) return;
+        canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
     }
 }

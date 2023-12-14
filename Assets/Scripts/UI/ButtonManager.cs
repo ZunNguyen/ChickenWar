@@ -10,6 +10,7 @@ public class ButtonManager : ErshenMonoBehaviour
 
     [Header("Connect Script Inside")]
     [SerializeField] protected SpawnUpdateChicken spawnPrefab;
+    [SerializeField] protected CanvasController canvasController;
 
     [Header("Instance")]
     [SerializeField] protected static ButtonManager instance;
@@ -43,7 +44,8 @@ public class ButtonManager : ErshenMonoBehaviour
 
     public virtual void StartMovementDog()
     {
-        pointSpawnDogController.PointSpawnDog.enabled = true;
+        //pointSpawnDogController.PointSpawnDog.enabled = true;
+        canvasController.CheckPositionChicken.testCheckPosition = true;
     }
 
     public void SpawnPrefab()

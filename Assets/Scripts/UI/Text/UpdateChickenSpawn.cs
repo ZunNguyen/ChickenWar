@@ -27,13 +27,15 @@ public class UpdateChickenSpawn : ErshenMonoBehaviour
     {
         if (levelChicken >= 4)
         {
-            levelSpawnChicken = levelChicken - 3;
-            UpdateNameChickenSpawn(levelSpawnChicken);
+            int level = levelChicken - 3;
+            UpdateNameChickenSpawn(level);
         }
     }
 
     protected virtual void UpdateNameChickenSpawn(int levelChicken)
     {
+        if (levelSpawnChicken > levelChicken) return;
+        levelSpawnChicken = levelChicken;
         nameChicken = "Chicken0" + levelChicken.ToString();
         text.text = nameChicken;
         Debug.Log(nameChicken);

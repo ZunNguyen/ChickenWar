@@ -8,7 +8,6 @@ public class ItemSlot : ErshenMonoBehaviour, IDropHandler
     [SerializeField] protected CanvasController canvasController;
     [SerializeField] protected string chickenLevelHighest = "Chicken10";
 
-
     protected override void LoadComponent()
     {
         base.LoadComponent();

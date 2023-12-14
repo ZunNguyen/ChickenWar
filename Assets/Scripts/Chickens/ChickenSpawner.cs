@@ -16,10 +16,13 @@ public class ChickenSpawner : Spawner
 
     protected Transform GetChickenInList(Transform obj)
     {
+        Debug.Log(obj.gameObject.name);
         foreach (Transform prefab in prefabs)
         {
             if (prefab.gameObject.name == obj.gameObject.name)
             {
+                Debug.Log(prefab.gameObject.name);
+                
                 return prefab;
             }
         }
