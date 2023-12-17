@@ -8,6 +8,8 @@ public class PointSpawnBullet : ErshenMonoBehaviour
     [SerializeField] protected float distance;
     [SerializeField] protected float timeCurrent;
     [SerializeField] protected float timeDelay;
+    [SerializeField] protected int index;
+    public string bulletName;
 
     protected override void LoadComponent()
     {
@@ -34,15 +36,14 @@ public class PointSpawnBullet : ErshenMonoBehaviour
         }
     }
 
-    protected virtual void SpawnBulletByTime()
+    public virtual void SpawnBulletByTime()
     {
         timeCurrent += Time.deltaTime;
         if (timeCurrent < timeDelay) return;
         if (timeCurrent >= timeDelay)
         {
-            Transform newBullet = pointSpawnBulletController.BulletSpawner.Spawn("Bullet2", this.transform.position, this.transform.rotation);
+            Transform newBullet = pointSpawnBulletController.BulletSpawner.Spawn(bulletName, this.transform.position, this.transform.rotation);
             newBullet.gameObject.SetActive(true);
-            
             timeCurrent = 0;
             GetIndexObject();
         }
@@ -64,7 +65,7 @@ public class PointSpawnBullet : ErshenMonoBehaviour
     protected virtual void GetIndexObject()
     {
         string name = this.gameObject.name;
-        int index = name[name.Length - 1];
+        index = name[name.Length - 1];
         index -= 48;
         pointSpawnBulletController.CanvasController.CheckPositionChicken.SetAnimationIndex(index);
     }

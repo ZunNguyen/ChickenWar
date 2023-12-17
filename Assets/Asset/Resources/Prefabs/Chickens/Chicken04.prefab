@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 945817833200286898}
   - component: {fileID: 945817833200286897}
   - component: {fileID: 945817833200286896}
+  - component: {fileID: 8339226837412367685}
   m_Layer: 5
   m_Name: Chicken - Gun
   m_TagString: Untagged
@@ -212,6 +213,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8339226837412367685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945817833200286862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a89f724e92564b428b6afe71d40a17d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anima: {fileID: 945817833200286896}
 --- !u!1 &7241863994582847073
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +238,7 @@ GameObject:
   - component: {fileID: 6464344563520252776}
   - component: {fileID: 6781176649914416790}
   m_Layer: 0
-  m_Name: 'Chicken - Body (Missing Prefab with guid: 9173f9f4f9481924eb52bb53942b7705)'
+  m_Name: Chicken - Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

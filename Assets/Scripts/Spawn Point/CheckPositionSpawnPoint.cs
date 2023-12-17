@@ -21,10 +21,11 @@ public class CheckPositionSpawnPoint : ErshenMonoBehaviour
         }
     }
 
-    public virtual void BulletOn(int index)
+    public virtual void BulletOn(int index, string updateBulletName)
     {
         PointSpawnBullet pointSpawnBullet = listPointSpawns[index].GetComponent<PointSpawnBullet>();
         pointSpawnBullet.enabled = true;
+        pointSpawnBullet.bulletName = updateBulletName;
     }
 
     public virtual void BulletOff(int index)

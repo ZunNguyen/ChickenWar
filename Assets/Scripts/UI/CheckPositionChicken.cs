@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class CheckPositionChicken : ErshenMonoBehaviour
 
     [SerializeField] protected AnimationGun animationGun;
 
-    [SerializeField] protected Transform nameObj;
+    public Transform nameObj;
 
     public bool testCheckPosition = false;
 
@@ -54,7 +55,8 @@ public class CheckPositionChicken : ErshenMonoBehaviour
             else if (chickenSlot.transform.childCount > 0)
             {
                 int index = chickenSlots.IndexOf(chickenSlot);
-                canvasController.CheckPositionSpawnPoint.BulletOn(index);
+                string bulletName = GetNameBullet(index);
+                canvasController.CheckPositionSpawnPoint.BulletOn(index, bulletName);
             }
         }
     }
@@ -62,8 +64,15 @@ public class CheckPositionChicken : ErshenMonoBehaviour
     public virtual void SetAnimationIndex(int index)
     {
         nameObj = chickenSlots[index - 1];
-        Debug.Log(nameObj.name);
         animationGun = nameObj.GetComponentInChildren<AnimationGun>();
         animationGun.SetAnimationOn();
+    }
+
+    protected virtual string GetNameBullet(int index)
+    {
+        nameObj = chickenSlots[index];
+        ChickenGun chickenGun = nameObj.GetComponentInChildren<ChickenGun>();
+        string bullet = chickenGun.nameBullet;
+        return bullet;
     }
 }

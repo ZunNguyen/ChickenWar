@@ -5,6 +5,7 @@ using UnityEngine;
 public class PointSpawnBulletController : ErshenMonoBehaviour
 {
     [SerializeField] protected PointSpawnBullet pointSpawnBullet;
+    public PointSpawnBullet PointSpawnBullet { get => pointSpawnBullet; }
 
     //[SerializeField] protected DogController dogController;
     //public DogController DogController { get => dogController; }

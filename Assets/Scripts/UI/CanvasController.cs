@@ -23,6 +23,9 @@ public class CanvasController : ErshenMonoBehaviour
     [SerializeField] protected UpdateChickenSpawn updateChickenSpawn;
     public UpdateChickenSpawn UpdateChickenSpawn { get => updateChickenSpawn; }
 
+    [SerializeField] protected PointSpawnBulletController pointSpawnBulletController;
+    public PointSpawnBulletController PointSpawnBulletController { get => pointSpawnBulletController; }
+
     protected override void LoadComponent()
     {
         base.LoadComponent();
@@ -32,6 +35,7 @@ public class CanvasController : ErshenMonoBehaviour
         LoadUpdateChickenSpawn();
         LoadCheckPositionSpawnPoint();
         LoadCheckPositionChicken();
+        LoadPointSpawnBulletController();
     }
 
     protected virtual void LoadChickenSpawner()
@@ -70,5 +74,12 @@ public class CanvasController : ErshenMonoBehaviour
         if (checkPositionChicken != null) return;
 
         checkPositionChicken = transform.GetComponentInChildren<CheckPositionChicken>();
+    }
+
+    protected virtual void LoadPointSpawnBulletController()
+    {
+        if (pointSpawnBulletController != null) return;
+
+        pointSpawnBulletController = GameObject.Find("Point Spawn Bullet").GetComponentInChildren<PointSpawnBulletController>();
     }
 }

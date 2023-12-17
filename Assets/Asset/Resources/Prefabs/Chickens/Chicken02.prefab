@@ -69,6 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 945817832484430501}
   - component: {fileID: 945817832484430502}
+  - component: {fileID: 1698649759247258623}
   m_Layer: 5
   m_Name: Chicken02
   m_TagString: Untagged
@@ -114,6 +115,19 @@ MonoBehaviour:
   - {fileID: 6781176649914416790}
   - {fileID: 945817833200286897}
   realParent: {fileID: 0}
+--- !u!114 &1698649759247258623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945817832484430500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e81bd2a5ac59b4b9e42f695ca00898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chickenSO: {fileID: 11400000, guid: fcfba855734dcdd4780c4ab919abe8fc, type: 2}
 --- !u!1 &945817833200286862
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,6 +141,7 @@ GameObject:
   - component: {fileID: 945817833200286897}
   - component: {fileID: 945817833200286896}
   - component: {fileID: 8339226837412367685}
+  - component: {fileID: 5312697553947245288}
   m_Layer: 5
   m_Name: Chicken - Gun
   m_TagString: Untagged
@@ -182,7 +197,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7b66956778951d04a9d188766e261bdc, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -226,6 +241,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anima: {fileID: 945817833200286896}
+  canvasController: {fileID: 0}
+--- !u!114 &5312697553947245288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945817833200286862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8768d0e098b99408bf1254efc1f580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 945817833200286897}
+  chickenController: {fileID: 1698649759247258623}
+  nameBullet: Bullet02
 --- !u!1 &7241863994582847073
 GameObject:
   m_ObjectHideFlags: 0

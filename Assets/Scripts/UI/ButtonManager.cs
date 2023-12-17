@@ -14,7 +14,7 @@ public class ButtonManager : ErshenMonoBehaviour
 
     [Header("Instance")]
     [SerializeField] protected static ButtonManager instance;
-    public static ButtonManager Instance { get => instance; }
+    public static ButtonManager Instance => instance;
 
     protected override void LoadComponent()
     {
@@ -42,13 +42,13 @@ public class ButtonManager : ErshenMonoBehaviour
         ButtonManager.instance = this;
     }
 
-    public virtual void StartMovementDog()
+    public virtual void StartGame()
     {
-        //pointSpawnDogController.PointSpawnDog.enabled = true;
+        pointSpawnDogController.PointSpawnDog.enabled = true;
         canvasController.CheckPositionChicken.testCheckPosition = true;
     }
 
-    public void SpawnPrefab()
+    public void SpawnChicken()
     {
         spawnPrefab.SpawnPrefabInSlot();
     }

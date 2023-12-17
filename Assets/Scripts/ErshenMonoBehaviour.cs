@@ -6,6 +6,11 @@ public class ErshenMonoBehaviour : MonoBehaviour
 {
     protected void Start()
     {
+        //For Override
+    }
+
+    protected void Awake()
+    {
         this.LoadComponent();
     }
 
@@ -15,6 +20,21 @@ public class ErshenMonoBehaviour : MonoBehaviour
     }
 
     protected virtual void LoadComponent()
+    {
+        // For override
+    }
+
+    protected virtual void ResetValue()
+    {
+        // For override
+    }
+
+    protected virtual void OnEnable()
+    {
+        // For override
+    }
+
+    protected virtual void OnDisable()
     {
         // For override
     }

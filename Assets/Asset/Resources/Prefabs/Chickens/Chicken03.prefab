@@ -69,6 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 945817832484430501}
   - component: {fileID: 945817832484430502}
+  - component: {fileID: 3420049695329408646}
   m_Layer: 5
   m_Name: Chicken03
   m_TagString: Untagged
@@ -114,6 +115,19 @@ MonoBehaviour:
   - {fileID: 6781176649914416790}
   - {fileID: 945817833200286897}
   realParent: {fileID: 0}
+--- !u!114 &3420049695329408646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945817832484430500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e81bd2a5ac59b4b9e42f695ca00898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chickenSO: {fileID: 11400000, guid: 12e7252260c77c04ca36366ef349dd56, type: 2}
 --- !u!1 &945817833200286862
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +140,8 @@ GameObject:
   - component: {fileID: 945817833200286898}
   - component: {fileID: 945817833200286897}
   - component: {fileID: 945817833200286896}
+  - component: {fileID: 8339226837412367685}
+  - component: {fileID: 7460546653659376077}
   m_Layer: 5
   m_Name: Chicken - Gun
   m_TagString: Untagged
@@ -150,7 +166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.5, y: -10.5}
+  m_AnchoredPosition: {x: 63.5, y: -64.1}
   m_SizeDelta: {x: 88, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &945817833200286898
@@ -181,7 +197,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 83561ee9aa53eda4fa8add95d0fb3815, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -212,6 +228,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8339226837412367685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945817833200286862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a89f724e92564b428b6afe71d40a17d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anima: {fileID: 945817833200286896}
+  canvasController: {fileID: 0}
+--- !u!114 &7460546653659376077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945817833200286862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8768d0e098b99408bf1254efc1f580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 945817833200286897}
+  chickenController: {fileID: 3420049695329408646}
+  nameBullet: Bullet03
 --- !u!1 &7241863994582847073
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +269,7 @@ GameObject:
   - component: {fileID: 6464344563520252776}
   - component: {fileID: 6781176649914416790}
   m_Layer: 0
-  m_Name: 'Chicken - Body (Missing Prefab with guid: 9173f9f4f9481924eb52bb53942b7705)'
+  m_Name: Chicken - Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

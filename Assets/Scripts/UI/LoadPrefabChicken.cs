@@ -26,5 +26,4 @@ public class LoadPrefabChicken : ErshenMonoBehaviour
             newPrefab.SetParent(this.transform);
         }
     }
-
 }
