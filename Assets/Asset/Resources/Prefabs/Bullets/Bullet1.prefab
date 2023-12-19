@@ -174,7 +174,6 @@ GameObject:
   - component: {fileID: 8881203420209566562}
   - component: {fileID: 8881203420209566563}
   - component: {fileID: 8881203420209566561}
-  - component: {fileID: 8881203420209566560}
   m_Layer: 0
   m_Name: DamgeSender
   m_TagString: Untagged
@@ -244,15 +243,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8881203420209566560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8881203420209566565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1229a13b257a044a976738517c62e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
