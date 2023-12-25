@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Chicken03
   m_EditorClassIdentifier: 
   spriteGun: {fileID: 21300000, guid: 83561ee9aa53eda4fa8add95d0fb3815, type: 3}
-  nameBullet: Bullet03
+  nameBullet: Bullet01

@@ -54,7 +54,7 @@ public class SpawnUpdateChicken : ErshenMonoBehaviour
         // If indexSlot = 99 -> don't allow add prefab on slot
         if (indexSlot == 99) return;
         // Instantiate prefab
-        InstantiatePrefab(canvasController.UpdateChickenSpawn.nameChicken, indexSlot);
+        InstantiatePrefab(canvasController.UpdateChickenSpawn.nameNewChicken, indexSlot);
     }
 
     public void SpawnChickenHighLevel(Transform prefab, Transform parentPrefab)
@@ -67,7 +67,7 @@ public class SpawnUpdateChicken : ErshenMonoBehaviour
         // Instantiate prefab
         Transform instance = InstantiatePrefab(namePrefabHighLevel, indexSlot);
         UpdateChickenForSpawn(instance.gameObject.name);
-        SetRaycastTargetOn(instance);
+        
     }
 
     protected virtual Transform InstantiatePrefab(string namePrefab, int indexSlot)
@@ -75,6 +75,7 @@ public class SpawnUpdateChicken : ErshenMonoBehaviour
         Transform newPrefab = canvasController.ChickenSpawner.Spawn(namePrefab, this.transform.position, this.transform.rotation);
         newPrefab.gameObject.SetActive(true);
         newPrefab.SetParent(slots[indexSlot]);
+        SetRaycastTargetOn(newPrefab);
         return newPrefab;
     }
 

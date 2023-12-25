@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class DamageReciver : ErshenMonoBehaviour
 {
     [SerializeField] protected int hpMax = 10;
-    [SerializeField] protected int hp = 1;
+    public int hp = 1;
     [SerializeField] protected bool isDead = false;
 
     protected override void ResetValue()

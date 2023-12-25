@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -98.3}
+  m_AnchoredPosition: {x: 0, y: -50}
   m_SizeDelta: {x: 115, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &945817832175422252
@@ -69,6 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 945817832484430501}
   - component: {fileID: 945817832484430502}
+  - component: {fileID: 6993610041442064053}
   m_Layer: 5
   m_Name: Chicken05
   m_TagString: Untagged
@@ -93,8 +94,8 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -114,6 +115,19 @@ MonoBehaviour:
   - {fileID: 6781176649914416790}
   - {fileID: 945817833200286897}
   realParent: {fileID: 0}
+--- !u!114 &6993610041442064053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945817832484430500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e81bd2a5ac59b4b9e42f695ca00898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chickenSO: {fileID: 11400000, guid: 12e7252260c77c04ca36366ef349dd56, type: 2}
 --- !u!1 &945817833200286862
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,6 +141,7 @@ GameObject:
   - component: {fileID: 945817833200286897}
   - component: {fileID: 945817833200286896}
   - component: {fileID: 8339226837412367685}
+  - component: {fileID: 5857661085183015586}
   m_Layer: 5
   m_Name: Chicken - Gun
   m_TagString: Untagged
@@ -151,7 +166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.5, y: -10.5}
+  m_AnchoredPosition: {x: 7.3, y: -12.9}
   m_SizeDelta: {x: 88, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &945817833200286898
@@ -226,6 +241,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anima: {fileID: 945817833200286896}
+  canvasController: {fileID: 0}
+--- !u!114 &5857661085183015586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945817833200286862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8768d0e098b99408bf1254efc1f580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 945817833200286897}
+  chickenController: {fileID: 6993610041442064053}
+  nameBullet: Bullet01
 --- !u!1 &7241863994582847073
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +269,7 @@ GameObject:
   - component: {fileID: 6464344563520252776}
   - component: {fileID: 6781176649914416790}
   m_Layer: 0
-  m_Name: 'Chicken - Body (Missing Prefab with guid: 9173f9f4f9481924eb52bb53942b7705)'
+  m_Name: Chicken - Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,7 +292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.7, y: 65.2}
+  m_AnchoredPosition: {x: 0, y: 65.2}
   m_SizeDelta: {x: 119, y: 134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6464344563520252776

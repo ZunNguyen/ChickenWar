@@ -20,8 +20,8 @@ public class CanvasController : ErshenMonoBehaviour
     [SerializeField] protected SpawnUpdateChicken spawnPrefab;
     public SpawnUpdateChicken SpawnPrefab { get => spawnPrefab; }
 
-    [SerializeField] protected UpdateChickenSpawn updateChickenSpawn;
-    public UpdateChickenSpawn UpdateChickenSpawn { get => updateChickenSpawn; }
+    [SerializeField] protected ButtonSpawn updateChickenSpawn;
+    public ButtonSpawn UpdateChickenSpawn { get => updateChickenSpawn; }
 
     [SerializeField] protected PointSpawnBulletController pointSpawnBulletController;
     public PointSpawnBulletController PointSpawnBulletController { get => pointSpawnBulletController; }
@@ -59,7 +59,7 @@ public class CanvasController : ErshenMonoBehaviour
     protected virtual void LoadUpdateChickenSpawn()
     {
         if (updateChickenSpawn != null) return;
-        updateChickenSpawn = transform.GetComponentInChildren<UpdateChickenSpawn>();
+        updateChickenSpawn = transform.GetComponentInChildren<ButtonSpawn>();
     }
 
     protected virtual void LoadCheckPositionSpawnPoint()
