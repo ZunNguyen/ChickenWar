@@ -18,4 +18,3 @@ public class DamageSender : ErshenMonoBehaviour
         damageReciver.Deduct(damge);
     }
 }
-

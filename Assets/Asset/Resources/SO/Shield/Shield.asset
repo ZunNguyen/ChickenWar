@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5381ab0a7b74c994d85f11f102b3df76, type: 3}
+  m_Name: Shield
+  m_EditorClassIdentifier: 
+  levels:
+  - gold: 100
+    hp: 100
+  - gold: 200
+    hp: 200
+  - gold: 500
+    hp: 500
+  - gold: 1000
+    hp: 1000
+  - gold: 2000
+    hp: 2000
+  - gold: 5000
+    hp: 5000
+  - gold: 10000
+    hp: 10000

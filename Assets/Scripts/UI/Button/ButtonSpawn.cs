@@ -8,9 +8,6 @@ using UnityEngine.UI;
 public class ButtonSpawn : ErshenMonoBehaviour
 {
     [SerializeField] protected int levelSpawnChicken = 1;
-    [SerializeField] protected RectTransform rectTransform;
-    public float x = -75;
-    public float y = 12;
     public string nameNewChicken = "Chicken01";
 
     public virtual void GetLevelChickenToSpawn(int levelChicken)
@@ -47,16 +44,9 @@ public class ButtonSpawn : ErshenMonoBehaviour
 
     protected virtual void SetPostion(Transform obj)
     {
-        rectTransform = obj.GetComponent<RectTransform>();
-        rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
-        rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
-        rectTransform.pivot = new Vector2(0.5f, 0.5f);
-        Test(rectTransform);
-        //rectTransform.anchoredPosition = new Vector2(x, y);
-    }
-
-    protected virtual void Test(RectTransform rectTransform)
-    {
-        rectTransform.anchoredPosition = new Vector2(x, y);
+        ChangePositionUI changePosition = obj.GetComponent<ChangePositionUI>();
+        DragItem dragItem = obj.GetComponent<DragItem>();
+        changePosition.enabled = true;
+        dragItem.enabled = false;
     }
 }

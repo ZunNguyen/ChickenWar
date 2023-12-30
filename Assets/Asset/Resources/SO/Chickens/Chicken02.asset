@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2474fdb55d746a41860b8d569497e11, type: 3}
   m_Name: Chicken02
   m_EditorClassIdentifier: 
-  spriteGun: {fileID: 21300000, guid: 7b66956778951d04a9d188766e261bdc, type: 3}
+  spriteChicken: {fileID: 21300000, guid: 392da5d525962b64cb1066093781c794, type: 3}
+  spriteGun: {fileID: 21300000, guid: 6b6a39f85b6b5fe409e552092e73d9a6, type: 3}
+  spriteLevel: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
   nameBullet: Bullet01

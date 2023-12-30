@@ -27,6 +27,6 @@ public class UIHPBar : ErshenMonoBehaviour
 
     protected virtual void UpdateHPBar()
     {
-        this.slider.value = dogDamageReceiver.hp;
+        this.slider.value = dogDamageReceiver.hpCurrent;
     }
 }

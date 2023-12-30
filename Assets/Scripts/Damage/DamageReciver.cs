@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class DamageReciver : ErshenMonoBehaviour
 {
-    [SerializeField] protected int hpMax = 10;
-    public int hp = 1;
+    public float hpMax = 99999;
+    public float hpCurrent = 1;
     [SerializeField] protected bool isDead = false;
 
     protected override void ResetValue()
@@ -22,21 +22,21 @@ public abstract class DamageReciver : ErshenMonoBehaviour
 
     public virtual void Reborn()
     {
-        hp = hpMax;
+        hpCurrent = hpMax;
         isDead = false;
     }
 
     public virtual void Deduct(int deduct)
     {
         if (isDead) return;
-        hp -= deduct;
-        if (hp < 0) hp = 0;
+        hpCurrent -= deduct;
+        if (hpCurrent < 0) hpCurrent = 0;
         CheckIsDead();
     }
 
     protected virtual void CheckIsDead()
     {
-        if (hp > 0) return;
+        if (hpCurrent > 0) return;
         isDead = true;
         OnDead();
     }

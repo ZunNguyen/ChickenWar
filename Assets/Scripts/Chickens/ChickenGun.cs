@@ -6,23 +6,23 @@ using UnityEngine.UI;
 
 public class ChickenGun : ErshenMonoBehaviour
 {
-    [SerializeField] protected Image image;
+    //[SerializeField] protected Image image;
     [SerializeField] protected ChickenController chickenController;
     public string nameBullet;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
-        LoadImage();
+        //LoadImage();
         LoadChickenController();
         Reborn();
     }
 
-    protected virtual void LoadImage()
-    {
-        if (image != null) return;
-        image = transform.GetComponent<Image>();
-    }
+    //protected virtual void LoadImage()
+    //{
+    //    if (image != null) return;
+    //    image = transform.GetComponent<Image>();
+    //}
 
     protected virtual void LoadChickenController()
     {
@@ -32,7 +32,7 @@ public class ChickenGun : ErshenMonoBehaviour
 
     protected virtual void Reborn()
     {
-        image.sprite = chickenController.ChickenSO.spriteGun;
+        //image.sprite = chickenController.ChickenSO.spriteGun;
         nameBullet = chickenController.ChickenSO.nameBullet;
     }
 }

@@ -21,6 +21,16 @@ public class DogDamageReceiver : DamageReciver
 
     protected override void OnDead()
     {
+        dogCtrl.DogAniamtion.Dead();
+        dogCtrl.DogMovement.enabled = false;
+        dogCtrl.DogDamageReceiver.gameObject.SetActive(false);
+        dogCtrl.DogDamageSender.gameObject.SetActive(false);
+        this.transform.parent.parent.position = new Vector3(this.transform.position.x, this.transform.position.y, 10);
+        Invoke("Despawn", 3);
+    }
+
+    protected virtual void Despawn()
+    {
         dogCtrl.DogDespawn.DespawnObj();
     }
 }

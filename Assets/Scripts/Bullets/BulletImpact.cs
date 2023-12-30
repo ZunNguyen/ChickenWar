@@ -7,6 +7,7 @@ public class BulletImpact : BulletAbstract
     protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Bullet Damage Sender") return;
+        if (collision.gameObject.name == "Shield Damage Reciver") return;
         bulletCtrl.DamageSender.Send(collision.transform);
     }
 }

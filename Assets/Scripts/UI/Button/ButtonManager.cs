@@ -9,7 +9,7 @@ public class ButtonManager : ErshenMonoBehaviour
     [SerializeField] protected PointSpawnDogController pointSpawnDogController;
 
     [Header("Connect Script Inside")]
-    [SerializeField] protected SpawnUpdateChicken spawnPrefab;
+    [SerializeField] protected SpawnChicken spawnPrefab;
     [SerializeField] protected CanvasController canvasController;
 
     [Header("Instance")]
@@ -33,7 +33,7 @@ public class ButtonManager : ErshenMonoBehaviour
     protected virtual void LoadSpawnPrefab()
     {
         if (spawnPrefab != null) return;
-        spawnPrefab = GetComponentInChildren<SpawnUpdateChicken>();
+        spawnPrefab = GetComponentInChildren<SpawnChicken>();
     }
 
     protected virtual void LoadInstance()
