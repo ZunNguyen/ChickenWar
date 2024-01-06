@@ -33,6 +33,6 @@ public class ChickenGun : ErshenMonoBehaviour
     protected virtual void Reborn()
     {
         //image.sprite = chickenController.ChickenSO.spriteGun;
-        nameBullet = chickenController.ChickenSO.nameBullet;
+        nameBullet = chickenController.ChickenSO.levels[2].nameBullet;
     }
 }

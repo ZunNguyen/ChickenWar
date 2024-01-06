@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamageSender : ErshenMonoBehaviour
 {
-    [SerializeField] protected int damge = 1;
+    [SerializeField] protected int damgeSend;
 
     public virtual void Send(Transform obj)
     {
@@ -15,6 +15,6 @@ public class DamageSender : ErshenMonoBehaviour
 
     public virtual void Send(DamageReciver damageReciver)
     {
-        damageReciver.Deduct(damge);
+        damageReciver.Deduct(damgeSend);
     }
 }

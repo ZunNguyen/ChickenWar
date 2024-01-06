@@ -39,27 +39,27 @@ public class CheckPositionChicken : ErshenMonoBehaviour
 
     protected void Update()
     {
-        if (testCheckPosition)
-            CheckSlotChicken();
+        //if (testCheckPosition)
+        //CheckSlotChicken();
     }
 
-    protected virtual void CheckSlotChicken()
-    {
-        foreach (Transform chickenSlot in chickenSlots)
-        {
-            if (chickenSlot.transform.childCount == 0)
-            {
-                int index = chickenSlots.IndexOf(chickenSlot);
-                canvasController.CheckPositionSpawnPoint.BulletOff(index);
-            }
-            else if (chickenSlot.transform.childCount > 0)
-            {
-                int index = chickenSlots.IndexOf(chickenSlot);
-                string bulletName = GetNameBullet(index);
-                canvasController.CheckPositionSpawnPoint.BulletOn(index, bulletName);
-            }
-        }
-    }
+    //protected virtual void CheckSlotChicken()
+    //{
+    //    foreach (Transform chickenSlot in chickenSlots)
+    //    {
+    //        if (chickenSlot.transform.childCount == 0)
+    //        {
+    //            int index = chickenSlots.IndexOf(chickenSlot);
+    //            canvasController.CheckPositionSpawnPoint.BulletOff(index);
+    //        }
+    //        else if (chickenSlot.transform.childCount > 0)
+    //        {
+    //            int index = chickenSlots.IndexOf(chickenSlot);
+    //            string bulletName = GetNameBullet(index);
+    //            canvasController.CheckPositionSpawnPoint.BulletOn(index, bulletName);
+    //        }
+    //    }
+    //}
 
     public virtual void SetAnimationIndex(int index)
     {
@@ -74,5 +74,18 @@ public class CheckPositionChicken : ErshenMonoBehaviour
         ChickenGun chickenGun = nameObj.GetComponentInChildren<ChickenGun>();
         string bullet = chickenGun.nameBullet;
         return bullet;
+    }
+
+    public virtual bool HaveChickenInSlot(int indexSlot)
+    {
+        if (chickenSlots[indexSlot].childCount == 0) return false;
+        return true;
+    }
+
+    public virtual int GetIndexChickenInList(int indexSlot)
+    {
+        ChickenController chickenController = chickenSlots[indexSlot].transform.GetComponentInChildren<ChickenController>();
+        string nameChicken = chickenController.gameObject.name;
+        return chickenController.ChickenSO.GetIndexChicken(nameChicken);
     }
 }

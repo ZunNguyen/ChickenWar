@@ -5,8 +5,6 @@ using UnityEngine;
 public class CanvasController : ErshenMonoBehaviour
 {
     [Header("Load Script Outside")]
-    [SerializeField] protected CheckPositionSpawnPoint checkPositionSpawnPoint;
-    public CheckPositionSpawnPoint CheckPositionSpawnPoint => checkPositionSpawnPoint;
 
     [SerializeField] protected PointSpawnBulletController pointSpawnBulletController;
     public PointSpawnBulletController PointSpawnBulletController => pointSpawnBulletController;
@@ -20,8 +18,8 @@ public class CanvasController : ErshenMonoBehaviour
     [SerializeField] protected DragItem dragItem;
     public DragItem DragItem => dragItem;
 
-    [SerializeField] protected SpawnChicken spawnPrefab;
-    public SpawnChicken SpawnPrefab => spawnPrefab;
+    [SerializeField] protected SpawnChicken spawnChicken;
+    public SpawnChicken SpawnChicken => spawnChicken;
 
     [SerializeField] protected ButtonSpawn buttonSpawn;
     public ButtonSpawn ButtonSpawn => buttonSpawn;
@@ -50,9 +48,8 @@ public class CanvasController : ErshenMonoBehaviour
         base.LoadComponent();
         LoadChickenSpawner();
         LoadDragItem();
-        LoadSpawnPrefab();
+        LoadSpawnChicken();
         LoadButtonSpawn();
-        LoadCheckPositionSpawnPoint();
         LoadCheckPositionChicken();
         LoadPointSpawnBulletController();
         LoadGoldPlayer();
@@ -77,22 +74,16 @@ public class CanvasController : ErshenMonoBehaviour
         dragItem = transform.GetComponentInChildren<DragItem>();
     }
 
-    protected virtual void LoadSpawnPrefab()
+    protected virtual void LoadSpawnChicken()
     {
-        if (spawnPrefab != null) return;
-        spawnPrefab = transform.GetComponentInChildren<SpawnChicken>();
+        if (spawnChicken != null) return;
+        spawnChicken = transform.GetComponentInChildren<SpawnChicken>();
     }
 
     protected virtual void LoadButtonSpawn()
     {
         if (buttonSpawn != null) return;
         buttonSpawn = transform.GetComponentInChildren<ButtonSpawn>();
-    }
-
-    protected virtual void LoadCheckPositionSpawnPoint()
-    {
-        if (checkPositionSpawnPoint != null) return;
-        checkPositionSpawnPoint = GameObject.Find("Point Spawn Bullet").GetComponent<CheckPositionSpawnPoint>();
     }
 
     protected virtual void LoadCheckPositionChicken()

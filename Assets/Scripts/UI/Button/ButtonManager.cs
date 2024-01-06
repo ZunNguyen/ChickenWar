@@ -9,7 +9,7 @@ public class ButtonManager : ErshenMonoBehaviour
     [SerializeField] protected PointSpawnDogController pointSpawnDogController;
 
     [Header("Connect Script Inside")]
-    [SerializeField] protected SpawnChicken spawnPrefab;
+    [SerializeField] protected SpawnChicken spawnChicken;
     [SerializeField] protected CanvasController canvasController;
 
     [Header("Instance")]
@@ -21,7 +21,7 @@ public class ButtonManager : ErshenMonoBehaviour
         base.LoadComponent();
         LoadPointSpawnDogController();
         LoadInstance();
-        LoadSpawnPrefab();
+        LoadSpawnChicken();
     }
 
     protected virtual void LoadPointSpawnDogController()
@@ -30,10 +30,10 @@ public class ButtonManager : ErshenMonoBehaviour
         pointSpawnDogController = GameObject.Find("Point Spawn Dog").GetComponent<PointSpawnDogController>();
     }
 
-    protected virtual void LoadSpawnPrefab()
+    protected virtual void LoadSpawnChicken()
     {
-        if (spawnPrefab != null) return;
-        spawnPrefab = GetComponentInChildren<SpawnChicken>();
+        if (spawnChicken != null) return;
+        spawnChicken = GetComponentInChildren<SpawnChicken>();
     }
 
     protected virtual void LoadInstance()
@@ -45,11 +45,11 @@ public class ButtonManager : ErshenMonoBehaviour
     public virtual void StartGame()
     {
         pointSpawnDogController.PointSpawnDog.enabled = true;
-        canvasController.CheckPositionChicken.testCheckPosition = true;
+        canvasController.PointSpawnBulletController.BulletOn();
     }
 
     public void SpawnChicken()
     {
-        spawnPrefab.SpawnPrefabInSlot();
+        canvasController.ButtonSpawn.SpawnChickenInGrid();
     }
 }

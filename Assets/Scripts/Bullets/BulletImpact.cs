@@ -8,6 +8,6 @@ public class BulletImpact : BulletAbstract
     {
         if (collision.gameObject.name == "Bullet Damage Sender") return;
         if (collision.gameObject.name == "Shield Damage Reciver") return;
-        bulletCtrl.DamageSender.Send(collision.transform);
+        bulletCtrl.BulletDamSender.Send(collision.transform);
     }
 }

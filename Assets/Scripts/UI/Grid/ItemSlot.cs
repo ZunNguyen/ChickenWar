@@ -78,7 +78,7 @@ public class ItemSlot : ErshenMonoBehaviour, IDropHandler
 
     protected virtual void SpawnChicken(Transform prefab)
     {
-        canvasController.SpawnPrefab.SpawnChickenHighLevel(prefab, this.transform);
+        canvasController.SpawnChicken.SpawnChickenHighLevel(prefab, this.transform);
     }
 
     protected virtual void SwapChickens(DragItem dragItem)

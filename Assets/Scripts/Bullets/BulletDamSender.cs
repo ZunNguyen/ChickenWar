@@ -5,6 +5,8 @@ using UnityEngine;
 public class BulletDamSender : DamageSender
 {
     [SerializeField] protected BulletCtrl bulletCtrl;
+    public int index;
+    public int damge = 10;
 
     protected override void LoadComponent()
     {
@@ -20,8 +22,13 @@ public class BulletDamSender : DamageSender
 
     public override void Send(DamageReciver damageReciver)
     {
-        base.Send(damageReciver);
+        damageReciver.Deduct(this.damge);
         // Despawn Obj
         bulletCtrl.BulletDespawn.DespawnObj();
+    }
+
+    public virtual void GetDamgeBullet(int indexLevelChicken)
+    {
+        damge = bulletCtrl.BulletSO.levels[indexLevelChicken].damageSender;
     }
 }

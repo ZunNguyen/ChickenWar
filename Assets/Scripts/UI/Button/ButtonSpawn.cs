@@ -5,10 +5,26 @@ using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonSpawn : ErshenMonoBehaviour
+public class ButtonSpawn : CanvasAbstract
 {
+    [Header("Connect ScriptableObject")]
+    [SerializeField] protected UpdateChickenSO updateChickenSO;
+
     [SerializeField] protected int levelSpawnChicken = 1;
     public string nameNewChicken = "Chicken01";
+
+    protected override void LoadComponent()
+    {
+        base.LoadComponent();
+        LoadUpdateChickenSO();
+    }
+
+    protected virtual void LoadUpdateChickenSO()
+    {
+        if (updateChickenSO != null) return;
+        string resPath = "SO/Update Chicken/UpdateChicken";
+        updateChickenSO = Resources.Load<UpdateChickenSO>(resPath);
+    }
 
     public virtual void GetLevelChickenToSpawn(int levelChicken)
     {
@@ -27,7 +43,7 @@ public class ButtonSpawn : ErshenMonoBehaviour
         nameNewChicken = "Chicken0" + levelChicken.ToString();
         // Change chicken prefab in button spawn
         ChangeChickenObj(nameOldChicken, nameNewChicken);
-        Debug.Log(nameNewChicken);
+        Debug.Log(nameNewChicken); 
     }
 
     protected virtual void ChangeChickenObj(string oldChicken, string newChicken)
@@ -42,11 +58,32 @@ public class ButtonSpawn : ErshenMonoBehaviour
         obj.SetParent(this.transform);
     }
 
+    // Change Position when spawn chicken in button spawn
     protected virtual void SetPostion(Transform obj)
     {
         ChangePositionUI changePosition = obj.GetComponent<ChangePositionUI>();
         DragItem dragItem = obj.GetComponent<DragItem>();
         changePosition.enabled = true;
         dragItem.enabled = false;
+    }
+
+    public virtual void SpawnChickenInGrid()
+    {
+        if (!CanSpawn()) return;
+        canvasController.SpawnChicken.SpawnChickenInSlot();
+    }
+
+    protected virtual bool CanSpawn()
+    {
+        // Enough money
+        float goldPlayer = canvasController.GoldPlayer.gold;
+        float goldSpawn = updateChickenSO.levels[levelSpawnChicken-1].gold;
+        if (goldPlayer < goldSpawn)
+        {
+            Debug.Log("Don't have enough gold to spawn");
+            return false;
+        }
+        canvasController.GoldPlayer.gold = goldPlayer - goldSpawn;
+        return true;
     }
 }

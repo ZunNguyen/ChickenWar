@@ -4,5 +4,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Shield", menuName = "ScriptableObject/Shield")]
 public class ShieldSO : ScriptableObject
 {
-    public List<Level> levels;
+    public List<LevelShield> levels;
 }

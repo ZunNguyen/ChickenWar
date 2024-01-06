@@ -25,7 +25,7 @@ public class ChickenController : ErshenMonoBehaviour
     protected virtual void LoadChickenSO()
     {
         if (chickenSO != null) return;
-        string resPath = "SO/Chickens/" + this.transform.name;
+        string resPath = "SO/Chickens/Chickens";
         chickenSO = Resources.Load<ChickenSO>(resPath);
     }
 
@@ -49,8 +49,9 @@ public class ChickenController : ErshenMonoBehaviour
 
     protected virtual void LoadImageToObj()
     {
-        imageChicken.sprite = chickenSO.spriteChicken;
-        imageGun.sprite = chickenSO.spriteGun;
-        imageLevel.sprite = chickenSO.spriteLevel;
+        int indexChicken = chickenSO.GetIndexChicken(gameObject.name);
+        imageChicken.sprite = chickenSO.levels[indexChicken].spriteChicken;
+        imageGun.sprite = chickenSO.levels[indexChicken].spriteGun;
+        imageLevel.sprite = chickenSO.levels[indexChicken].spriteLevel;
     }
 }

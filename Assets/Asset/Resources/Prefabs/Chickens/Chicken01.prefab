@@ -116,6 +116,7 @@ MonoBehaviour:
   images:
   - {fileID: 6781176649914416790}
   - {fileID: 945817833200286897}
+  - {fileID: 1295583053745986288}
   realParent: {fileID: 0}
 --- !u!114 &6993610041442064053
 MonoBehaviour:
@@ -132,7 +133,7 @@ MonoBehaviour:
   imageGun: {fileID: 945817833200286897}
   imageChicken: {fileID: 6781176649914416790}
   imageLevel: {fileID: 1295583053745986288}
-  chickenSO: {fileID: 11400000, guid: 7ee02229d6192f5499ffe0a3ac9acbf0, type: 2}
+  chickenSO: {fileID: 11400000, guid: 3d8b75dda1d6fb4468adea56244912c5, type: 2}
 --- !u!114 &-4371414521028876259
 MonoBehaviour:
   m_ObjectHideFlags: 0

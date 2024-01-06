@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class PointSpawnBulletController : ErshenMonoBehaviour
 {
+    [Header("Connect Script")]
     [SerializeField] protected PointSpawnBullet pointSpawnBullet;
     public PointSpawnBullet PointSpawnBullet { get => pointSpawnBullet; }
-
-    //[SerializeField] protected DogController dogController;
-    //public DogController DogController { get => dogController; }
 
     [SerializeField] protected BulletSpawner bulletSpawner;
     public BulletSpawner BulletSpawner { get => bulletSpawner; }
@@ -16,13 +14,16 @@ public class PointSpawnBulletController : ErshenMonoBehaviour
     [SerializeField] protected CanvasController canvasController;
     public CanvasController CanvasController { get => canvasController; }
 
+    [Header("Load list point spawn bullet")]
+    [SerializeField] protected List<PointSpawnBullet> listPointSpawns;
+
     protected override void LoadComponent()
     {
         base.LoadComponent();
         LoadPointSpawnBullet();
-        //LoadDogController();
         LoadBulletSpawner();
         LoadCanvasController();
+        LoadPointSpawnBullets();
     }
 
     protected virtual void LoadPointSpawnBullet()
@@ -30,12 +31,6 @@ public class PointSpawnBulletController : ErshenMonoBehaviour
         if (pointSpawnBullet != null) return;
         pointSpawnBullet = gameObject.GetComponentInChildren<PointSpawnBullet>();
     }
-
-    //protected virtual void LoadDogController()
-    //{
-    //    if (dogController != null) return;
-    //    dogController = GameObject.Find("Dog01").GetComponent<DogController>();
-    //}
 
     protected virtual void LoadBulletSpawner()
     {
@@ -47,5 +42,31 @@ public class PointSpawnBulletController : ErshenMonoBehaviour
     {
         if (canvasController != null) return;
         canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
+    }
+
+    protected virtual void LoadPointSpawnBullets()
+    {
+        if (listPointSpawns.Count > 0) return;
+        foreach (Transform poinSpawn in this.transform)
+        {
+            PointSpawnBullet pointSpawnBullet = poinSpawn.GetComponentInChildren<PointSpawnBullet>();
+            listPointSpawns.Add(pointSpawnBullet);
+        }
+    }
+
+    public virtual void BulletOn()
+    {
+        foreach (PointSpawnBullet pointSpawnBullet in listPointSpawns)
+        {
+            pointSpawnBullet.enabled = true;
+        }
+    }
+
+    public virtual void BulletOff()
+    {
+        foreach (PointSpawnBullet pointSpawnBullet in listPointSpawns)
+        {
+            pointSpawnBullet.enabled = false;
+        }
     }
 }

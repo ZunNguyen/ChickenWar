@@ -47,7 +47,7 @@ public class SpawnChicken : ErshenMonoBehaviour
         dragItem.SetRaycastTarget(true);
     }
 
-    public virtual void SpawnPrefabInSlot()
+    public virtual void SpawnChickenInSlot()
     {
         // Check Index of list slots
         int indexSlot = CheckSlotEmtyInList();

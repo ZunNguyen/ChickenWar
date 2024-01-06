@@ -7,8 +7,8 @@ public class BulletCtrl : ErshenMonoBehaviour
     [SerializeField] protected BulletSO bulletSO;
     public BulletSO BulletSO => bulletSO;
 
-    [SerializeField] protected DamageSender damageSender;
-    public DamageSender DamageSender => damageSender;
+    [SerializeField] protected BulletDamSender bulletDamSender;
+    public BulletDamSender BulletDamSender => bulletDamSender;
 
     [SerializeField] protected BulletDespawn bulletDespawn;
     public BulletDespawn BulletDespawn => bulletDespawn;
@@ -17,21 +17,21 @@ public class BulletCtrl : ErshenMonoBehaviour
     {
         base.LoadComponent();
         LoadChickenSO();
-        LoadDamgeSender();
+        LoadBulletDamgeSender();
         LoadBulletDespawn();
     }
 
     protected virtual void LoadChickenSO()
     {
         if (bulletSO != null) return;
-        string resPath = "SO/Bullets/" + this.transform.name;
+        string resPath = "SO/Bullets/Bullets";
         bulletSO = Resources.Load<BulletSO>(resPath);
     }
 
-    protected virtual void LoadDamgeSender()
+    protected virtual void LoadBulletDamgeSender()
     {
-        if (damageSender != null) return;
-        damageSender = transform.GetComponentInChildren<DamageSender>();
+        if (bulletDamSender != null) return;
+        bulletDamSender = transform.GetComponentInChildren<BulletDamSender>();
     }
 
     protected virtual void LoadBulletDespawn()
