@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class PointSpawnBullet : ErshenMonoBehaviour
 {
+    [Header("Connect Script")]
     [SerializeField] protected PointSpawnBulletController pointSpawnBulletController;
-    [SerializeField] protected float distance;
+
+    [Header("Value")]
     [SerializeField] protected float timeCurrent;
     [SerializeField] protected float timeDelay = 1;
     [SerializeField] protected int index;
     public int levelChicken;
+
+    [Header("Shooting system")]
+    public List<Transform> listDog;
 
     protected override void LoadComponent()
     {
@@ -41,12 +46,12 @@ public class PointSpawnBullet : ErshenMonoBehaviour
 
     private void Update()
     {
-        CheckSpawnBullet();
+        SpawningBullet();
     }
 
-    protected virtual void CheckSpawnBullet()
+    protected virtual void SpawningBullet()
     {
-        if (CanSpawnBullet() == true)
+        if (CanSpawnBullet())
         {
             // Get name chicken
             levelChicken = pointSpawnBulletController.CanvasController.CheckPositionChicken.GetIndexChickenInList(index - 1);
@@ -63,12 +68,13 @@ public class PointSpawnBullet : ErshenMonoBehaviour
         if (timeCurrent >= timeDelay)
         {
             Transform newBullet = pointSpawnBulletController.BulletSpawner.Spawn("Bullet", this.transform.position, this.transform.rotation);
+            BulletCtrl bulletCtrl = newBullet.GetComponent<BulletCtrl>();
+            bulletCtrl.BulletMovement.objTarget = listDog[0];
             newBullet.gameObject.SetActive(true);
             timeCurrent = 0;
 
-            //Set Animation
+            //Set Animation for gun
             pointSpawnBulletController.CanvasController.CheckPositionChicken.SetAnimationIndex(index);
-            //GetIndexObject();
         }
     }
 
@@ -80,30 +86,33 @@ public class PointSpawnBullet : ErshenMonoBehaviour
         // Check chicken in line
         if (!pointSpawnBulletController.CanvasController.CheckPositionChicken.HaveChickenInSlot(index - 1)) return false;
         return true;
-
-        // 
-
-        //if (CheckDistance() < 10f) return true;
-        //else return false;
     }
 
     protected virtual bool HaveDogInLine()
     {
+        RemoveTransform();
+        if (listDog.Count == 0) return false;
         return true;
     }
 
-    //protected virtual float CheckDistance()
-    //{
-    //    //Vector3 distanceDog = pointSpawnBulletController.DogController.transform.position;
-    //    //distance = Vector3.Distance(this.transform.position, distanceDog);
-    //    return distance;
-    //}
+    // Remove transform enable in list
+    protected virtual void RemoveTransform()
+    {
+        foreach (Transform dog in listDog)
+        {
+            if (dog.gameObject.activeSelf == false)
+            {
+                listDog.Remove(dog);
+                return;
+            }
+        }
+    }
 
-    //protected virtual void GetIndexObject()
-    //{
-    //    string name = this.gameObject.name;
-    //    index = name[name.Length - 1];
-    //    index -= 48;
-    //    pointSpawnBulletController.CanvasController.CheckPositionChicken.SetAnimationIndex(index);
-    //}
+    protected virtual void GetTransNearestObj()
+    {
+        foreach (Transform dog in listDog)
+        {
+            
+        }
+    }
 }

@@ -19,6 +19,9 @@ public class DogCtrl : ErshenMonoBehaviour
     [SerializeField] protected DogDamageSender dogDamageSender;
     public DogDamageSender DogDamageSender => dogDamageSender;
 
+    [SerializeField] protected DogIndex dogIndex;
+    public DogIndex DogIndex => dogIndex;
+
     protected override void LoadComponent()
     {
         base.LoadComponent();
@@ -27,6 +30,7 @@ public class DogCtrl : ErshenMonoBehaviour
         LoadDogAnimation();
         LoadDogDamageReceiver();
         LoadDogDamageSender();
+        LoadDogIndex();
     }
 
     protected virtual void LoadDogMovement()
@@ -57,5 +61,11 @@ public class DogCtrl : ErshenMonoBehaviour
     {
         if (dogDamageSender != null) return;
         dogDamageSender = transform.GetComponentInChildren<DogDamageSender>();
+    }
+
+    protected virtual void LoadDogIndex()
+    {
+        if (dogIndex != null) return;
+        dogIndex = transform.GetComponentInChildren<DogIndex>();
     }
 }

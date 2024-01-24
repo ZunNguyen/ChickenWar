@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2f946f886e3f646b7d157939d0d61a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damge: 1
+  damgeSend: 0
   bulletCtrl: {fileID: 1848232613}
+  index: 0
+  damge: 10
 --- !u!1 &1669890426
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,8 +142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSO: {fileID: 11400000, guid: 4dad48edb99480943890946314467924, type: 2}
-  damageSender: {fileID: 1000242044}
+  bulletDamSender: {fileID: 1000242044}
   bulletDespawn: {fileID: 1669890428}
+  bulletMovement: {fileID: 0}
 --- !u!1 &8881203419453927302
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  objTarget: {fileID: 0}
 --- !u!1 &8881203419571725283
 GameObject:
   m_ObjectHideFlags: 0

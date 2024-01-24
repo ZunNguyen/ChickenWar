@@ -9,7 +9,8 @@ public class PointSpawnDog : ErshenMonoBehaviour
 
     [Header("Variable")]
     [SerializeField] protected float currentTime = 0f;
-    [SerializeField] protected float timeDelay = 2f;
+    [SerializeField] protected float timeDelay = 4f;
+    [SerializeField] protected int index;
 
     private void Update()
     {
@@ -20,12 +21,21 @@ public class PointSpawnDog : ErshenMonoBehaviour
     {
         base.LoadComponent();
         LoadPointSpawnDogController();
+        LoadIndex();
     }
 
     protected virtual void LoadPointSpawnDogController()
     {
         if (pointSpawnDogController != null) return;
         pointSpawnDogController = transform.GetComponentInParent<PointSpawnDogController>();
+    }
+
+    protected virtual void LoadIndex()
+    {
+        if (index > 0) return;
+        string name = gameObject.name;
+        index = name[name.Length - 1];
+        index -= 48;
     }
 
     protected virtual void Spawning()
@@ -36,6 +46,8 @@ public class PointSpawnDog : ErshenMonoBehaviour
         {
             Transform newDogSpawn = pointSpawnDogController.DogSpawner.Spawn("Dog01", transform.position, transform.rotation);
             newDogSpawn.gameObject.SetActive(true);
+            DogCtrl dogCtrl = newDogSpawn.GetComponent<DogCtrl>();
+            dogCtrl.DogIndex.indexDog = index;
             currentTime = 0;
         }
     }

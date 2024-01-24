@@ -13,12 +13,16 @@ public class BulletCtrl : ErshenMonoBehaviour
     [SerializeField] protected BulletDespawn bulletDespawn;
     public BulletDespawn BulletDespawn => bulletDespawn;
 
+    [SerializeField] protected BulletMovement bulletMovement;
+    public BulletMovement BulletMovement => bulletMovement;
+
     protected override void LoadComponent()
     {
         base.LoadComponent();
         LoadChickenSO();
         LoadBulletDamgeSender();
         LoadBulletDespawn();
+        LoadBulletMovement();
     }
 
     protected virtual void LoadChickenSO()
@@ -38,5 +42,11 @@ public class BulletCtrl : ErshenMonoBehaviour
     {
         if (bulletDespawn != null) return;
         bulletDespawn = transform.GetComponentInChildren<BulletDespawn>();
+    }
+
+    protected virtual void LoadBulletMovement()
+    {
+        if (bulletMovement != null) return;
+        bulletMovement = transform.GetComponentInChildren<BulletMovement>();
     }
 }
