@@ -25,6 +25,7 @@ public class DogDamageReceiver : DamageReciver
         dogCtrl.DogMovement.enabled = false;
         dogCtrl.DogDamageReceiver.gameObject.SetActive(false);
         dogCtrl.DogDamageSender.gameObject.SetActive(false);
+        dogCtrl.CanvasHP.gameObject.SetActive(false);
         this.transform.parent.parent.position = new Vector3(this.transform.position.x, this.transform.position.y, 10);
         Invoke("Despawn", 3);
     }

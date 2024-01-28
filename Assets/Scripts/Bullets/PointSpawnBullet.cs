@@ -69,7 +69,7 @@ public class PointSpawnBullet : ErshenMonoBehaviour
         {
             Transform newBullet = pointSpawnBulletController.BulletSpawner.Spawn("Bullet", this.transform.position, this.transform.rotation);
             BulletCtrl bulletCtrl = newBullet.GetComponent<BulletCtrl>();
-            bulletCtrl.BulletMovement.objTarget = listDog[0];
+            bulletCtrl.BulletMovement.objTarget = GetTransNearestObj();
             newBullet.gameObject.SetActive(true);
             timeCurrent = 0;
 
@@ -108,11 +108,20 @@ public class PointSpawnBullet : ErshenMonoBehaviour
         }
     }
 
-    protected virtual void GetTransNearestObj()
+    protected virtual Transform GetTransNearestObj()
     {
+        Transform tMin = null;
+        float minDist = Mathf.Infinity;
+        Vector3 currentPos = transform.position;
         foreach (Transform dog in listDog)
         {
-            
+            float dist = Vector3.Distance(currentPos, dog.transform.position);
+            if (dist < minDist)
+            {
+                tMin = dog;
+                minDist = dist;
+            }
         }
+        return tMin;
     }
 }

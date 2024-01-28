@@ -2615,6 +2615,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPrefabs: 10
+--- !u!224 &538113206 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7780454840564895875, guid: 0cab13bfe84e00d42a18f3d04c3f8324, type: 3}
+  m_PrefabInstance: {fileID: 7780454839194112528}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &547141566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12082,6 +12087,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7780454838775002561, guid: 0cab13bfe84e00d42a18f3d04c3f8324, type: 3}
+      propertyPath: canvasHP
+      value: 
+      objectReference: {fileID: 538113206}
+    - target: {fileID: 7780454838775002561, guid: 0cab13bfe84e00d42a18f3d04c3f8324, type: 3}
       propertyPath: dogIndex
       value: 
       objectReference: {fileID: 1454278899}
@@ -12204,6 +12213,10 @@ PrefabInstance:
     - target: {fileID: 7780454840457796207, guid: 0cab13bfe84e00d42a18f3d04c3f8324, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780454840564895874, guid: 0cab13bfe84e00d42a18f3d04c3f8324, type: 3}
+      propertyPath: m_Name
+      value: CanvasHP
       objectReference: {fileID: 0}
     - target: {fileID: 7780454840564895874, guid: 0cab13bfe84e00d42a18f3d04c3f8324, type: 3}
       propertyPath: m_IsActive
