@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4093949047388974954}
+  - component: {fileID: 2437520903110271945}
   m_Layer: 0
   m_Name: DogIndex
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 7780454838775002560}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2437520903110271945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4818029299315785957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31068bd9fb8406649b0ea661226e2f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexDog: 0
 --- !u!1 &7780454838699081220
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7780454838775002560
 Transform:
   m_ObjectHideFlags: 0
@@ -150,7 +164,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7780454838775002591}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.71, y: 2.89, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -181,8 +195,8 @@ MonoBehaviour:
   dogAniamtion: {fileID: 7780454840152828187}
   dogDamageReceiver: {fileID: 7780454840457796240}
   dogDamageSender: {fileID: 7780454838699081224}
-  canvasHP: {fileID: 0}
-  dogIndex: {fileID: 0}
+  canvasHP: {fileID: 7780454840564895875}
+  dogIndex: {fileID: 2437520903110271945}
 --- !u!1 &7780454838902441024
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +276,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.000015258789, y: 0}
   m_SizeDelta: {x: 0.000045776, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -701,7 +715,7 @@ GameObject:
   - component: {fileID: 7780454840457796207}
   - component: {fileID: 7780454840457796206}
   - component: {fileID: 7780454840457796240}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dog Damage Receiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +855,7 @@ GameObject:
   - component: {fileID: 7780454840564895875}
   - component: {fileID: 7780454840564895878}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: CanvasHP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

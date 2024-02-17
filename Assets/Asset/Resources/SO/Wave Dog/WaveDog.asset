@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fe350d312a34e40a996184f0fdde1f, type: 3}
+  m_Name: WaveDog
+  m_EditorClassIdentifier: 
+  waves:
+  - wave: 1
+    phases:
+    - phase: 1
+      levelDogs:
+      - dog: {fileID: 7780454838775002591, guid: 0cab13bfe84e00d42a18f3d04c3f8324, type: 3}
+        nums: 2
+        timeDelay: 2
+        indexs:
+        - line: 1
+        - line: 3
+        - line: 5
+    - phase: 2
+      levelDogs:
+      - dog: {fileID: 7780454838775002591, guid: da347a112641acb478fc83b3f6c725ec, type: 3}
+        nums: 3
+        timeDelay: 5
+        indexs:
+        - line: 1
+        - line: 4
+        - line: 6

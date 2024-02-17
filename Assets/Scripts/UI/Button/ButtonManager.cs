@@ -44,7 +44,7 @@ public class ButtonManager : ErshenMonoBehaviour
 
     public virtual void StartGame()
     {
-        pointSpawnDogController.PointSpawnDog.enabled = true;
+        pointSpawnDogController.OnList();
         canvasController.PointSpawnBulletController.BulletOn();
     }
 
