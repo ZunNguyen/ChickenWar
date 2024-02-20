@@ -5,7 +5,21 @@ using UnityEngine;
 
 public class GoldPlayer : ProcessGold
 {
+    [SerializeField] protected static GoldPlayer instance;
+    public static GoldPlayer Instance => instance;
     public float gold;
+
+    protected override void LoadComponent()
+    {
+        base.LoadComponent();
+        LoadInstance();
+    }
+
+    protected virtual void LoadInstance()
+    {
+        if (instance != null) return;
+        instance = this;
+    }
 
     protected override void LoadText()
     {

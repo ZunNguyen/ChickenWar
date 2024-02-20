@@ -11,6 +11,11 @@ public class PointSpawnDogController : ErshenMonoBehaviour
     [Header("Connect Script Childrent")]
     [SerializeField] protected List<PointSpawnDog> listPointSpawnDog;
 
+    [Header("Value")]
+    public int wave = 0;
+    public int phase = 0;
+    public int levelDog = 0;
+
     protected override void LoadComponent()
     {
         base.LoadComponent();

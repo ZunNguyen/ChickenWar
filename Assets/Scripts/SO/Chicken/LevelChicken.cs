@@ -19,4 +19,7 @@ public class LevelChicken
 
     [Header("Level Image")]
     public Sprite spriteLevel;
+
+    [Header("Earn Gold")]
+    public int gold;
 }

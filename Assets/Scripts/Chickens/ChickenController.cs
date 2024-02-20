@@ -6,11 +6,15 @@ using UnityEngine.UI;
 
 public class ChickenController : ErshenMonoBehaviour
 {
+    [Header("Connect Script")]
+    [SerializeField] protected ChickenSO chickenSO;
+    public ChickenSO ChickenSO => chickenSO;
+    [SerializeField] protected GoldEarn goldEarn;
+    public GoldEarn GoldEarn => goldEarn;
+
     [SerializeField] protected Image imageGun;
     [SerializeField] protected Image imageChicken;
     [SerializeField] protected Image imageLevel;
-    [SerializeField] protected ChickenSO chickenSO;
-    public ChickenSO ChickenSO => chickenSO;
 
     protected override void LoadComponent()
     {
@@ -19,6 +23,7 @@ public class ChickenController : ErshenMonoBehaviour
         LoadImageGun();
         LoadImageChicken();
         LoadImageLevel();
+        LoadGoldEarn();
         LoadImageToObj();
     }
 
@@ -47,11 +52,18 @@ public class ChickenController : ErshenMonoBehaviour
         imageLevel = this.transform.Find("Level").GetComponent<Image>();
     }
 
+    protected virtual void LoadGoldEarn()
+    {
+        if (goldEarn != null) return;
+        goldEarn = this.transform.Find("Gold").GetComponent<GoldEarn>();
+    }
+
     protected virtual void LoadImageToObj()
     {
         int indexChicken = chickenSO.GetIndexChicken(gameObject.name);
         imageChicken.sprite = chickenSO.levels[indexChicken].spriteChicken;
         imageGun.sprite = chickenSO.levels[indexChicken].spriteGun;
         imageLevel.sprite = chickenSO.levels[indexChicken].spriteLevel;
+        goldEarn.gold = chickenSO.levels[indexChicken].gold;
     }
 }

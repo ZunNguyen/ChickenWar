@@ -85,5 +85,7 @@ public class ButtonSpawn : CanvasAbstract
         }
         canvasController.GoldPlayer.gold = goldPlayer - goldSpawn;
         return true;
+
+        // Thieu check full slot
     }
 }

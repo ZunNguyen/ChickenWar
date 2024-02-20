@@ -100,6 +100,7 @@ public class PointSpawnDog : ErshenMonoBehaviour
         {
             dogNum = 0;
             levelDog += 1;
+            pointSpawnDogController.levelDog = levelDog;
             return true;
         }
         return false;
@@ -108,10 +109,13 @@ public class PointSpawnDog : ErshenMonoBehaviour
     // Check level dog is max?
     protected virtual bool CheckLevelDogIsMax()
     {
+        levelDog = pointSpawnDogController.levelDog;
         if (levelDog == waveDog.waves[wave].phases[phase].levelDogs.Count)
         {
             levelDog = 0;
-            phase += 1; 
+            pointSpawnDogController.levelDog = levelDog;
+            phase += 1;
+            pointSpawnDogController.phase = phase;
             return true;
         }
         return false;
@@ -120,10 +124,13 @@ public class PointSpawnDog : ErshenMonoBehaviour
     // Check phase is max?
     protected virtual bool CheckPhaseIsMax()
     {
+        phase = pointSpawnDogController.phase;
         if (phase == waveDog.waves[wave].phases.Count)
         {
             phase = 0;
+            pointSpawnDogController.phase = phase;
             wave += 1;
+            pointSpawnDogController.wave = wave;
             return true;
         }
         return false;
@@ -132,6 +139,7 @@ public class PointSpawnDog : ErshenMonoBehaviour
     // Check wave is max?
     protected virtual bool CheckWaveIsMax()
     {
+        wave = pointSpawnDogController.wave;
         if (wave == waveDog.waves.Count)
         {
             Debug.Log("You win");
