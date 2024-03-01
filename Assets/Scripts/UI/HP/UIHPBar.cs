@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIHPBar : ErshenMonoBehaviour
+public class UIHPBar : ProcessSlider
 {
-    [SerializeField] protected Slider slider;
+    [Header("Connect Script")]
     [SerializeField] protected DogDamageReceiver dogDamageReceiver;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
-        LoadSLider();
+        LoadDogDamageReceiver();
     }
 
-    protected virtual void LoadSLider()
+    protected virtual void LoadDogDamageReceiver()
     {
-        if (slider != null) return;
-        slider = transform.GetComponent<Slider>();
+        if (dogDamageReceiver != null) return;
+        dogDamageReceiver = transform.parent.parent.GetComponentInChildren<DogDamageReceiver>();
     }
 
     private void FixedUpdate()

@@ -51,7 +51,7 @@ public class ButtonSpawn : CanvasAbstract
         DragItem dragItem = this.transform.GetComponentInChildren<DragItem>();
         Transform obj = dragItem.transform;
         Spawner.Instance.Despawn(obj);
-        obj = Spawner.Instance.Spawn(newChicken, transform.position, transform.rotation);
+        obj = Spawner.Instance.Spawn(newChicken, transform.position, transform.rotation).transform;
         // Set position on rect tranform
         SetPostion(obj);
         obj.gameObject.SetActive(true);

@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShieldHPBar : CanvasAbstract
+public class ShieldHPBar : ProcessSlider
 {
-    [Header("Get Component")]
-    [SerializeField] protected Slider slider;
+    [Header("Canvas Abstract")]
+    [SerializeField] protected CanvasController canvasController;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
-        LoadSlider();
+        LoadCanvasController();
     }
 
-    protected virtual void LoadSlider()
+    protected virtual void LoadCanvasController()
     {
-        if (slider != null) return;
-        slider = transform.GetComponent<Slider>();
+        if (canvasController != null) return;
+        canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
     }
 
     public virtual void ChangeSlider(float hpCurrent, float hpMax)
@@ -29,10 +29,5 @@ public class ShieldHPBar : CanvasAbstract
         }
         float value = (hpCurrent * 100 / hpMax);
         slider.value = value;
-    }
-
-    public void Change()
-    {
-
     }
 }

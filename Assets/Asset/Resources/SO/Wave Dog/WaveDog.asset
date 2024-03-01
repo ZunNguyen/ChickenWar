@@ -13,23 +13,138 @@ MonoBehaviour:
   m_Name: WaveDog
   m_EditorClassIdentifier: 
   waves:
-  - wave: 1
+  - wave: 0
+    sum: 0
     phases:
-    - phase: 1
+    - phase: 0
+      sumPhase: 0
       levelDogs:
-      - dog: {fileID: 7780454838775002591, guid: 0cab13bfe84e00d42a18f3d04c3f8324, type: 3}
+      - levelDog: 0
+        nameDog: Dog01
         nums: 2
-        timeDelay: 2
+        timeDelay: 3
+        indexLine: 135
         indexs:
         - line: 1
         - line: 3
         - line: 5
-    - phase: 2
+      - levelDog: 1
+        nameDog: Dog01
+        nums: 2
+        timeDelay: 3
+        indexLine: 246
+        indexs:
+        - line: 2
+        - line: 4
+        - line: 6
+    - phase: 1
+      sumPhase: 0
       levelDogs:
-      - dog: {fileID: 7780454838775002591, guid: da347a112641acb478fc83b3f6c725ec, type: 3}
-        nums: 3
-        timeDelay: 5
+      - levelDog: 0
+        nameDog: Dog02
+        nums: 2
+        timeDelay: 3
+        indexLine: 135
         indexs:
         - line: 1
+        - line: 3
+        - line: 5
+      - levelDog: 1
+        nameDog: Dog02
+        nums: 2
+        timeDelay: 3
+        indexLine: 246
+        indexs:
+        - line: 2
+        - line: 4
+        - line: 6
+  - wave: 1
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        nums: 2
+        timeDelay: 3
+        indexLine: 135
+        indexs:
+        - line: 1
+        - line: 3
+        - line: 5
+      - levelDog: 1
+        nameDog: Dog02
+        nums: 2
+        timeDelay: 3
+        indexLine: 246
+        indexs:
+        - line: 2
+        - line: 4
+        - line: 6
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        nums: 2
+        timeDelay: 3
+        indexLine: 135
+        indexs:
+        - line: 1
+        - line: 3
+        - line: 5
+      - levelDog: 1
+        nameDog: Dog02
+        nums: 2
+        timeDelay: 3
+        indexLine: 246
+        indexs:
+        - line: 2
+        - line: 4
+        - line: 6
+  - wave: 2
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        nums: 2
+        timeDelay: 3
+        indexLine: 135
+        indexs:
+        - line: 1
+        - line: 3
+        - line: 5
+      - levelDog: 1
+        nameDog: Dog02
+        nums: 2
+        timeDelay: 3
+        indexLine: 246
+        indexs:
+        - line: 2
+        - line: 4
+        - line: 6
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        nums: 2
+        timeDelay: 3
+        indexLine: 135
+        indexs:
+        - line: 1
+        - line: 3
+        - line: 5
+      - levelDog: 1
+        nameDog: Dog02
+        nums: 2
+        timeDelay: 3
+        indexLine: 246
+        indexs:
+        - line: 2
         - line: 4
         - line: 6

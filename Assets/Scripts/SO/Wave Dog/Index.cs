@@ -6,4 +6,9 @@ using UnityEngine;
 public class Index
 {
     public int line;
+
+    public Index(int _line)
+    {
+        line = _line;
+    }
 }

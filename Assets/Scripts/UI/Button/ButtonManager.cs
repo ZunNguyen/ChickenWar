@@ -46,6 +46,7 @@ public class ButtonManager : ErshenMonoBehaviour
     {
         pointSpawnDogController.OnList();
         canvasController.PointSpawnBulletController.BulletOn();
+        TrackingWave.Instance.GetSumDogMax();
     }
 
     public void SpawnChicken()

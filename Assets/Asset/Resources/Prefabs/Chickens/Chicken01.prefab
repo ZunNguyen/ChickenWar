@@ -137,7 +137,6 @@ MonoBehaviour:
   imageGun: {fileID: 945817833200286897}
   imageChicken: {fileID: 6781176649914416790}
   imageLevel: {fileID: 1295583053745986288}
-  gold: 0
 --- !u!114 &-4371414521028876259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,9 +329,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fcd3d661e089a4e9b0fa7d3d961456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 945817832484430500}
+  chickenController: {fileID: 0}
   timeCurrent: 0
-  timeDelay: 0
+  timeDelay: 5
   gold: 0
 --- !u!1 &3833779452665149324
 GameObject:
