@@ -10,9 +10,6 @@ public class PointSpawnDog : ErshenMonoBehaviour
     [Header("Variable")]
     public int index;
 
-    [Header("Load ScriptableObject")]
-    [SerializeField] protected WaveDogSO waveDog;
-
     protected override void LoadComponent()
     {
         base.LoadComponent();
@@ -32,12 +29,6 @@ public class PointSpawnDog : ErshenMonoBehaviour
         string name = gameObject.name;
         index = name[name.Length - 1];
         index -= 48;
-    }
-
-    protected virtual void SetOffScript()
-    {
-        PointSpawnDog pointSpawnDog = this.transform.GetComponent<PointSpawnDog>();
-        pointSpawnDog.enabled = false;
     }
     
     public virtual IEnumerator Spawning(string nameDog, float timeDelay)

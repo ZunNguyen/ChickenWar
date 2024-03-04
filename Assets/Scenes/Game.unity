@@ -168,7 +168,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30973774}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc8d79f1a752ee54c936c6b8d191436a, type: 3}
   m_Name: 
@@ -187,11 +187,12 @@ MonoBehaviour:
   levelDog: 0
   timeDelay: 0
   dogNum: 0
+  indexLine: 
+  isSpawning: 0
   checkWaveMax: 0
   checkPhaseMax: 0
   checkLevelDogMax: 0
   checkDogMax: 0
-  checkCanSpawn: 0
 --- !u!1 &36652136
 GameObject:
   m_ObjectHideFlags: 0
@@ -5080,7 +5081,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointSpawnDogController: {fileID: 30973776}
   index: 2
-  waveDog: {fileID: 11400000, guid: 5cf63922470491e4eaf8f316cdaf0e48, type: 2}
 --- !u!1 &962622667
 GameObject:
   m_ObjectHideFlags: 0
@@ -5777,7 +5777,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointSpawnDogController: {fileID: 30973776}
   index: 6
-  waveDog: {fileID: 11400000, guid: 5cf63922470491e4eaf8f316cdaf0e48, type: 2}
 --- !u!1 &1089558275
 GameObject:
   m_ObjectHideFlags: 0
@@ -6982,7 +6981,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointSpawnDogController: {fileID: 30973776}
   index: 5
-  waveDog: {fileID: 11400000, guid: 5cf63922470491e4eaf8f316cdaf0e48, type: 2}
 --- !u!1 &1312066356
 GameObject:
   m_ObjectHideFlags: 0
@@ -9710,7 +9708,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointSpawnDogController: {fileID: 30973776}
   index: 4
-  waveDog: {fileID: 11400000, guid: 5cf63922470491e4eaf8f316cdaf0e48, type: 2}
 --- !u!1 &1658748747
 GameObject:
   m_ObjectHideFlags: 0
@@ -10568,7 +10565,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointSpawnDogController: {fileID: 30973776}
   index: 1
-  waveDog: {fileID: 11400000, guid: 5cf63922470491e4eaf8f316cdaf0e48, type: 2}
 --- !u!1 &1761030480
 GameObject:
   m_ObjectHideFlags: 0
@@ -10855,7 +10851,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointSpawnDogController: {fileID: 30973776}
   index: 3
-  waveDog: {fileID: 11400000, guid: 5cf63922470491e4eaf8f316cdaf0e48, type: 2}
 --- !u!1 &1811602565
 GameObject:
   m_ObjectHideFlags: 0

@@ -57,20 +57,10 @@ public class PointSpawnDogController : ErshenMonoBehaviour
         waveDogSO = Resources.Load<WaveDogSO>(resPath);
     }
 
-    public virtual void OnList()
+    protected virtual void SetOffScript()
     {
-        foreach (PointSpawnDog pointSpawnDog in listPointSpawnDog)
-        {
-            pointSpawnDog.enabled = true;
-        }
-    }
-
-    public virtual void OffList()
-    {
-        foreach (PointSpawnDog pointSpawnDog in listPointSpawnDog)
-        {
-            pointSpawnDog.enabled = false;
-        }
+        PointSpawnDogController pointSpawnDogController = this.GetComponent<PointSpawnDogController>();
+        pointSpawnDogController.enabled = false;
     }
 
     private void Update()
@@ -81,10 +71,10 @@ public class PointSpawnDogController : ErshenMonoBehaviour
     protected virtual void CanSpawn()
     {
         if (isSpawning) return;
-        if (CheckNumDogIsMax()) return;
-        if (CheckLevelDogIsMax()) return;
-        if (CheckPhaseIsMax()) return;
         if (CheckWaveIsMax()) return;
+        if (CheckPhaseIsMax()) return;
+        if (CheckLevelDogIsMax()) return;
+        if (CheckNumDogIsMax()) return;
         Spawn();
     }
 
@@ -106,7 +96,7 @@ public class PointSpawnDogController : ErshenMonoBehaviour
     // Check Dog Number is Max?
     protected virtual bool CheckNumDogIsMax()
     {
-        if (dogNum == waveDogSO.waves[wave].phases[phase].levelDogs[levelDog].nums)
+        if ((dogNum/3) == waveDogSO.waves[wave].phases[phase].levelDogs[levelDog].nums)
         {
             dogNum = 0;
             levelDog += 1;
@@ -140,6 +130,7 @@ public class PointSpawnDogController : ErshenMonoBehaviour
             wave += 1;
             Debug.Log("Finish wave " + wave);
             checkPhaseMax = true;
+            SetOffScript();
             return true;
         }
         checkPhaseMax = false;
