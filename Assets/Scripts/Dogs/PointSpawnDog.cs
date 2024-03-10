@@ -35,7 +35,7 @@ public class PointSpawnDog : ErshenMonoBehaviour
     {
         pointSpawnDogController.isSpawning = true;
         yield return new WaitForSeconds(timeDelay);
-        Transform newDogSpawn = pointSpawnDogController.DogSpawner.Spawn(nameDog, transform.position, transform.rotation).transform;
+        Transform newDogSpawn = pointSpawnDogController.GameObjectSpawner.Spawn(nameDog, transform.position, transform.rotation).transform;
         newDogSpawn.gameObject.SetActive(true);
         DogCtrl dogCtrl = newDogSpawn.GetComponent<DogCtrl>();
         dogCtrl.DogIndex.indexDog = index;

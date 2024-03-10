@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ItemSlot : ErshenMonoBehaviour, IDropHandler
 {
     [SerializeField] protected CanvasController canvasController;
-    [SerializeField] protected string chickenLevelHighest = "Chicken10";
+    [SerializeField] protected string chickenLevelHighest = "Chicken40";
 
     protected override void LoadComponent()
     {

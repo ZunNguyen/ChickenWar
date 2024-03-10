@@ -15,11 +15,15 @@ public class TrackingWave : ProcessSlider
     [SerializeField] protected static TrackingWave instance;
     public static TrackingWave Instance => instance;
 
+    [Header("Connect Script parent")]
+    [SerializeField] protected TrackingWaveController trackingWaveController;
+
     protected override void LoadComponent()
     {
         base.LoadComponent();
         LoadWaveDogSO();
         LoadInstance();
+        LoadTrackingWaveController();
     }
 
     protected virtual void LoadWaveDogSO()
@@ -27,6 +31,12 @@ public class TrackingWave : ProcessSlider
         if (waveDogSO != null) return;
         string resPath = "SO/Wave Dog/WaveDog";
         waveDogSO = Resources.Load<WaveDogSO>(resPath);
+    }
+
+    protected virtual void LoadTrackingWaveController()
+    {
+        if (trackingWaveController != null) return;
+        trackingWaveController = transform.GetComponentInParent<TrackingWaveController>();
     }
 
     protected virtual void LoadInstance()
@@ -42,13 +52,14 @@ public class TrackingWave : ProcessSlider
 
     protected virtual void Slidering()
     {
-        test = 90 / sumDogMax * sumDogCurrent;
+        test = sumDogCurrent / sumDogMax * 100;
         slider.value = test;
     }
 
     public virtual void GetSumDogMax()
     {
-        sumDogMax = waveDogSO.waves[0].GetSumDogWave();
+        int index = trackingWaveController.CanvasController.PointSpawnDogController.wave;
+        sumDogMax = waveDogSO.waves[index].GetSumDogWave();
         sumDogCurrent = sumDogMax;
     }
 }

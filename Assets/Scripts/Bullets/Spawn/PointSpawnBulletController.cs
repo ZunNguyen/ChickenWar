@@ -8,8 +8,8 @@ public class PointSpawnBulletController : ErshenMonoBehaviour
     [SerializeField] protected PointSpawnBullet pointSpawnBullet;
     public PointSpawnBullet PointSpawnBullet { get => pointSpawnBullet; }
 
-    [SerializeField] protected BulletSpawner bulletSpawner;
-    public BulletSpawner BulletSpawner { get => bulletSpawner; }
+    [SerializeField] protected GameObjectSpawner gameObjectSpawner;
+    public GameObjectSpawner GameObjectSpawner => gameObjectSpawner;
 
     [SerializeField] protected CanvasController canvasController;
     public CanvasController CanvasController { get => canvasController; }
@@ -21,7 +21,7 @@ public class PointSpawnBulletController : ErshenMonoBehaviour
     {
         base.LoadComponent();
         LoadPointSpawnBullet();
-        LoadBulletSpawner();
+        LoadGameObjectSpawner();
         LoadCanvasController();
         LoadPointSpawnBullets();
     }
@@ -32,10 +32,10 @@ public class PointSpawnBulletController : ErshenMonoBehaviour
         pointSpawnBullet = gameObject.GetComponentInChildren<PointSpawnBullet>();
     }
 
-    protected virtual void LoadBulletSpawner()
+    protected virtual void LoadGameObjectSpawner()
     {
-        if (bulletSpawner != null) return;
-        bulletSpawner = GameObject.Find("Bullet Spawner").GetComponent<BulletSpawner>();
+        if (gameObjectSpawner != null) return;
+        gameObjectSpawner = GameObject.Find("GameObject Spawner").GetComponent<GameObjectSpawner>();
     }
 
     protected virtual void LoadCanvasController()

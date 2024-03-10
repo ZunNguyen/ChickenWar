@@ -7,7 +7,7 @@ public class GoldPlayer : ProcessGold
 {
     [SerializeField] protected static GoldPlayer instance;
     public static GoldPlayer Instance => instance;
-    public float gold;
+    public int gold;
 
     protected override void LoadComponent()
     {
@@ -19,12 +19,6 @@ public class GoldPlayer : ProcessGold
     {
         if (instance != null) return;
         instance = this;
-    }
-
-    protected override void LoadText()
-    {
-        if (text != null) return;
-        text = transform.GetComponentInChildren<TMP_Text>();
     }
 
     private void Update()

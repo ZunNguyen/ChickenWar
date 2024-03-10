@@ -9,6 +9,9 @@ public class CanvasController : ErshenMonoBehaviour
     [SerializeField] protected PointSpawnBulletController pointSpawnBulletController;
     public PointSpawnBulletController PointSpawnBulletController => pointSpawnBulletController;
 
+    [SerializeField] protected PointSpawnDogController pointSpawnDogController;
+    public PointSpawnDogController PointSpawnDogController => pointSpawnDogController;
+
     [Header("Load Script inside")]
     [SerializeField] protected ChickenSpawner chickenSpawner;
     public ChickenSpawner ChickenSpawner => chickenSpawner;
@@ -25,7 +28,10 @@ public class CanvasController : ErshenMonoBehaviour
     public ButtonSpawn ButtonSpawn => buttonSpawn;
     
     [SerializeField] protected GoldPlayer goldPlayer;
-    public GoldPlayer GoldPlayer => goldPlayer;   
+    public GoldPlayer GoldPlayer => goldPlayer;
+
+    [SerializeField] protected TrackingWaveController trackingWaveController;
+    public TrackingWaveController TrackingWaveController => trackingWaveController;
 
     [Header("Load script for shield")]
     [SerializeField] protected ShieldUpdate shieldUpdate;
@@ -52,7 +58,9 @@ public class CanvasController : ErshenMonoBehaviour
         LoadButtonSpawn();
         LoadCheckPositionChicken();
         LoadPointSpawnBulletController();
+        LoadPointSpawnDogController();
         LoadGoldPlayer();
+        LoadTrackingWaveController();
 
         // Load Script for Shield
         LoadShieldGoldUpdate();
@@ -60,6 +68,12 @@ public class CanvasController : ErshenMonoBehaviour
         LoadShieldSumHP();
         LoadShielHPBar();
         LoadShieldHPText();
+    }
+
+    protected virtual void LoadPointSpawnDogController()
+    {
+        if (pointSpawnDogController != null) return;
+        pointSpawnDogController = GameObject.Find("Point Spawn Dog").GetComponent<PointSpawnDogController>();
     }
 
     protected virtual void LoadChickenSpawner()
@@ -114,6 +128,12 @@ public class CanvasController : ErshenMonoBehaviour
     {
         if (goldPlayer != null) return;
         goldPlayer = transform.GetComponentInChildren<GoldPlayer>();
+    }
+
+    protected virtual void LoadTrackingWaveController()
+    {
+        if (trackingWaveController != null) return;
+        trackingWaveController = transform.GetComponentInChildren<TrackingWaveController>();
     }
 
     protected virtual void LoadShieldGoldUpdate()

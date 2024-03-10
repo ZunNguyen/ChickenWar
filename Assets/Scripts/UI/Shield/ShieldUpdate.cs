@@ -5,9 +5,9 @@ using UnityEngine;
 public class ShieldUpdate : CanvasAbstract
 {
     public ShieldSO shieldSO;
-    public int levelCurrent = 0;
-    [SerializeField] protected float goldPlayer;
-    [SerializeField] protected float goldUpgrade;
+    public int levelCurrent;
+    [SerializeField] protected int goldPlayer;
+    [SerializeField] protected int goldUpgrade;
 
     protected override void LoadComponent()
     {
@@ -20,6 +20,19 @@ public class ShieldUpdate : CanvasAbstract
         if (shieldSO != null) return;
         string resPath = "SO/Shield/Shield";
         shieldSO = Resources.Load<ShieldSO>(resPath);
+    }
+
+    private void Start()
+    {
+        LoadBeginGame();
+    }
+
+    protected virtual void LoadBeginGame()
+    {
+        UpdateGoldUpgradeShield(levelCurrent);
+        ChangeValueSumHpShield(levelCurrent);
+        
+        LoadShielHPBegin();
     }
 
     // The HP Shield will be updated
@@ -59,7 +72,7 @@ public class ShieldUpdate : CanvasAbstract
         return true;
     }
 
-    protected virtual void UpdateGoldPlayer(float goldPlayer, float goldUpgrade)
+    protected virtual void UpdateGoldPlayer(int goldPlayer, int goldUpgrade)
     {
         canvasController.GoldPlayer.gold = goldPlayer - goldUpgrade;
     }
@@ -74,9 +87,14 @@ public class ShieldUpdate : CanvasAbstract
     }
 
     // Change Value Hp Max for Sum HP Shield
-    protected virtual void ChangeValueSumHpShield(int level)
+    protected virtual void ChangeValueSumHpShield(int levelCurrent)
     {
-        Debug.Log("have");
-        canvasController.ShieldHPSum.sumHpMax = shieldSO.levels[level].hp;
+        canvasController.ShieldHPSum.sumHpMax = shieldSO.levels[levelCurrent].hp;
+    }
+
+    protected virtual void LoadShielHPBegin()
+    {
+        int hp = shieldSO.levels[levelCurrent].hp;
+        canvasController.ShieldHPText.Print(hp, hp);
     }
 }

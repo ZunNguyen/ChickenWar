@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Text.RegularExpressions;
+using System;
 
 public abstract class ProcessGold : CanvasAbstract
 {
@@ -18,16 +19,16 @@ public abstract class ProcessGold : CanvasAbstract
     protected virtual void LoadText()
     {
         if (text != null) return;
-        text = transform.GetComponent<TMP_Text>();
+        text = transform.GetComponentInChildren<TMP_Text>();
     }
 
-    protected virtual void PrintText(float value)
+    protected virtual void PrintText(Int32 value)
     {
         string printValue = ShortText(value);
         text.text = printValue;
     }
 
-    protected virtual string ShortText(float value)
+    protected virtual string ShortText(Int64 value)
     {
         if (value < 1000)
         {

@@ -44,9 +44,14 @@ public class ButtonManager : ErshenMonoBehaviour
 
     public virtual void StartGame()
     {
+        // On Spawn Dog
         pointSpawnDogController.enabled = true;
+        // On Bullet
         canvasController.PointSpawnBulletController.BulletOn();
+        // On tracking wave
         TrackingWave.Instance.GetSumDogMax();
+        // Show wave text
+        canvasController.TrackingWaveController.CountWave.LoadText();
     }
 
     public void SpawnChicken()

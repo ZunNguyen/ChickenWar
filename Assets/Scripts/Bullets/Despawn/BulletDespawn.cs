@@ -6,6 +6,6 @@ public class BulletDespawn : Despawn
 {
     public override void DespawnObj()
     {
-        BulletSpawner.Instance.Despawn(transform.parent);
+        GameObjectSpawner.Instance.Despawn(transform.parent);
     }
 }

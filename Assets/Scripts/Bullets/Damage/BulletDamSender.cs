@@ -29,6 +29,6 @@ public class BulletDamSender : DamageSender
 
     public virtual void GetDamgeBullet(int indexLevelChicken)
     {
-        damge = bulletCtrl.BulletSO.levels[indexLevelChicken].damageSender;
+        damge = bulletCtrl.ChickenSO.levels[indexLevelChicken].damage;
     }
 }

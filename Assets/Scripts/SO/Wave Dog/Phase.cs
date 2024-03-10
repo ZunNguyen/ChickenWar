@@ -22,7 +22,7 @@ public class Phase
         sumPhase = 0;
         foreach (LevelDog levelDog in levelDogs)
         {
-            sumPhase = sumPhase + levelDog.nums * levelDog.indexs.Count;
+            sumPhase = sumPhase + levelDog.nums * levelDog.indexLine.ToString().Length - 1;
         }
         return sumPhase;
     }

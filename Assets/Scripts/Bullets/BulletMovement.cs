@@ -14,7 +14,10 @@ public class BulletMovement : ErshenMonoBehaviour
 
     protected virtual void Movement()
     {
-        if (objTarget == null) transform.parent.Translate(Vector3.right * Time.fixedDeltaTime * speed); ;
-        transform.parent.position = Vector2.MoveTowards(transform.position, objTarget.position, speed * Time.fixedDeltaTime);
+        if (objTarget.gameObject.activeSelf == false)
+        {
+            transform.parent.Translate(Vector3.right * Time.fixedDeltaTime * speed);
+        }
+        if (objTarget.gameObject.activeSelf == true) transform.parent.position = Vector2.MoveTowards(transform.position, objTarget.position, speed * Time.fixedDeltaTime);
     }
 }

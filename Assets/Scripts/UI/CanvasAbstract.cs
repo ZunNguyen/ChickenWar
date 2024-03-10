@@ -6,6 +6,7 @@ public abstract class CanvasAbstract : ErshenMonoBehaviour
 {
     [Header("Canvas Abstract")]
     [SerializeField] protected CanvasController canvasController;
+    public CanvasController CanvasController => canvasController;
 
     protected override void LoadComponent()
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShieldGoldUpdate : ProcessGold
 {
-    public float goldUpgrade = 200;
+    public int goldUpgrade = 200;
 
     private void Update()
     {

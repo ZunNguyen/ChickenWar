@@ -14,50 +14,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - wave: 0
-    sum: 0
+    sum: 16
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 8
       levelDogs:
       - levelDog: 0
         nameDog: Dog01
-        nums: 2
+        nums: 1
+        hpDog: 10
         timeDelay: 3
-        indexLine: 135
-        indexs:
-        - line: 1
-        - line: 3
-        - line: 5
+        indexLine: "135\r"
       - levelDog: 1
         nameDog: Dog01
-        nums: 2
+        nums: 1
+        hpDog: 20
         timeDelay: 3
-        indexLine: 246
-        indexs:
-        - line: 2
-        - line: 4
-        - line: 6
+        indexLine: "246\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 8
       levelDogs:
       - levelDog: 0
         nameDog: Dog02
-        nums: 2
+        nums: 1
+        hpDog: 50
         timeDelay: 3
-        indexLine: 135
-        indexs:
-        - line: 1
-        - line: 3
-        - line: 5
+        indexLine: "135\r"
       - levelDog: 1
         nameDog: Dog02
-        nums: 2
+        nums: 1
+        hpDog: 100
         timeDelay: 3
-        indexLine: 246
-        indexs:
-        - line: 2
-        - line: 4
-        - line: 6
+        indexLine: "246\r"
   - wave: 1
     sum: 0
     phases:
@@ -66,43 +54,31 @@ MonoBehaviour:
       levelDogs:
       - levelDog: 0
         nameDog: Dog01
-        nums: 2
+        nums: 1
+        hpDog: 200
         timeDelay: 3
-        indexLine: 135
-        indexs:
-        - line: 1
-        - line: 3
-        - line: 5
+        indexLine: "135\r"
       - levelDog: 1
         nameDog: Dog02
-        nums: 2
+        nums: 1
+        hpDog: 500
         timeDelay: 3
-        indexLine: 246
-        indexs:
-        - line: 2
-        - line: 4
-        - line: 6
+        indexLine: "246\r"
     - phase: 1
       sumPhase: 0
       levelDogs:
       - levelDog: 0
         nameDog: Dog01
-        nums: 2
+        nums: 1
+        hpDog: 1000
         timeDelay: 3
-        indexLine: 135
-        indexs:
-        - line: 1
-        - line: 3
-        - line: 5
+        indexLine: "135\r"
       - levelDog: 1
         nameDog: Dog02
-        nums: 2
+        nums: 1
+        hpDog: 2000
         timeDelay: 3
-        indexLine: 246
-        indexs:
-        - line: 2
-        - line: 4
-        - line: 6
+        indexLine: "246\r"
   - wave: 2
     sum: 0
     phases:
@@ -111,40 +87,28 @@ MonoBehaviour:
       levelDogs:
       - levelDog: 0
         nameDog: Dog01
-        nums: 2
+        nums: 1
+        hpDog: 5000
         timeDelay: 3
-        indexLine: 135
-        indexs:
-        - line: 1
-        - line: 3
-        - line: 5
+        indexLine: "135\r"
       - levelDog: 1
         nameDog: Dog02
-        nums: 2
+        nums: 1
+        hpDog: 10000
         timeDelay: 3
-        indexLine: 246
-        indexs:
-        - line: 2
-        - line: 4
-        - line: 6
+        indexLine: "246\r"
     - phase: 1
       sumPhase: 0
       levelDogs:
       - levelDog: 0
         nameDog: Dog01
-        nums: 2
+        nums: 1
+        hpDog: 10000
         timeDelay: 3
-        indexLine: 135
-        indexs:
-        - line: 1
-        - line: 3
-        - line: 5
+        indexLine: "135\r"
       - levelDog: 1
         nameDog: Dog02
-        nums: 2
+        nums: 1
+        hpDog: 10000
         timeDelay: 3
-        indexLine: 246
-        indexs:
-        - line: 2
-        - line: 4
-        - line: 6
+        indexLine: "246\r"

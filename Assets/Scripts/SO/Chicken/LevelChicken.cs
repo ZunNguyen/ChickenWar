@@ -5,21 +5,34 @@ using UnityEngine;
 [Serializable]
 public class LevelChicken
 {
-    [Header("Name Chicken")]
-    public string name;
+    public string nameChicken;
 
-    [Header("Name Bullet")]
-    public string nameBullet = "Bullet01";
+    public Sprite chickenImage;
 
-    [Header("Chicken Image")]
-    public Sprite spriteChicken;
+    public Sprite gunImage;
 
-    [Header("Gun Image")]
-    public Sprite spriteGun;
+    public Sprite levelImage;
 
-    [Header("Level Image")]
-    public Sprite spriteLevel;
+    public int goldEarn;
 
-    [Header("Earn Gold")]
-    public int gold;
+    public int goldUpdate;
+
+    public string nameBullet;
+
+    public Sprite bulletImage;
+
+    public int damage;
+
+    public LevelChicken(string _nameChicken, Sprite _chickenImage, Sprite _gunImage, Sprite _levelImage, int _goldEarn, int _goldUpdate,string _nameBullet, Sprite _bulletImage, int _damage)
+    {
+        nameChicken = _nameChicken;
+        chickenImage = _chickenImage;
+        gunImage = _gunImage;
+        levelImage = _levelImage;
+        goldEarn = _goldEarn;
+        goldUpdate = _goldUpdate;
+        nameBullet = _nameBullet;
+        bulletImage = _bulletImage;
+        damage = _damage;
+    }
 }

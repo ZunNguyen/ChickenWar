@@ -9,8 +9,10 @@ public class ShieldHPSum : ErshenMonoBehaviour
     [SerializeField] protected CanvasController canvasController;
 
     [SerializeField] protected List<Transform> shields;
-    public float sumHpMax = 100;
-    [SerializeField] protected float sumHpCurrent;
+
+    [Header("Variable")]
+    public int sumHpMax = 100;
+    [SerializeField] protected int sumHpCurrent;
 
     protected override void LoadComponent()
     {
@@ -34,20 +36,15 @@ public class ShieldHPSum : ErshenMonoBehaviour
         }
     }
 
-    //private void Update()
-    //{
-    //    LoadSumHpCurrent();
-    //}
-
     public virtual void LoadSumHpCurrent()
     {
         sumHpMax = LoadHpMax();
         sumHpCurrent = sumHpMax;
-        float sum = 0;
+        int sum = 0;
         foreach (Transform shield in shields)
         {
             ShieldDamageReciever shieldDamageReciever = shield.GetComponentInChildren<ShieldDamageReciever>();
-            float tem = shieldDamageReciever.hpMax - shieldDamageReciever.hpCurrent;
+            int tem = shieldDamageReciever.hpMax - shieldDamageReciever.hpCurrent;
             sum += tem;
         }
         sumHpCurrent -= sum;
@@ -55,17 +52,11 @@ public class ShieldHPSum : ErshenMonoBehaviour
         canvasController.ShieldHPText.Print(sumHpCurrent, sumHpMax);
     }
 
-    // Change Hp current for hp shield text
-    protected virtual void ChangeValueHPShieldText()
-    {
-        //canvasController.
-    }
-
     // Load Hp Max
-    protected virtual float LoadHpMax()
+    protected virtual int LoadHpMax()
     {
         int levelCurrent = canvasController.ShieldUpdate.levelCurrent;
-        float HpMax = canvasController.ShieldUpdate.shieldSO.levels[levelCurrent].hp;
+        int HpMax = canvasController.ShieldUpdate.shieldSO.levels[levelCurrent].hp;
         return HpMax;
     }
 }

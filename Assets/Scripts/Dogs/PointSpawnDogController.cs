@@ -4,15 +4,15 @@ using UnityEngine;
 public class PointSpawnDogController : ErshenMonoBehaviour
 {
     [Header("Connect Script Outside")]
-    [SerializeField] protected DogSpawner dogSpawner;
-    public DogSpawner DogSpawner { get => dogSpawner; }
+    [SerializeField] protected GameObjectSpawner gameObjectSpawner;
+    public GameObjectSpawner GameObjectSpawner => gameObjectSpawner;
     [SerializeField] protected WaveDogSO waveDogSO;
 
     [Header("Connect Script Childrent")]
     [SerializeField] protected List<PointSpawnDog> listPointSpawnDog;
 
     [Header("Variable")]
-    [SerializeField] protected int wave = 0;
+    public int wave = 0;
     [SerializeField] protected int phase = 0;
     [SerializeField] protected int levelDog = 0;
     [SerializeField] protected float timeDelay;
@@ -29,15 +29,15 @@ public class PointSpawnDogController : ErshenMonoBehaviour
     protected override void LoadComponent()
     {
         base.LoadComponent();
-        LoadDogSpawner();
+        LoadGameObjectSpawner();    
         LoadListPointSpawnDog();
         LoadWaveDogSO();
     }
 
-    protected virtual void LoadDogSpawner()
+    protected virtual void LoadGameObjectSpawner()
     {
-        if (dogSpawner != null) return;
-        dogSpawner = GameObject.Find("Dog Spawner").GetComponent<DogSpawner>();
+        if (gameObjectSpawner != null) return;
+        gameObjectSpawner = GameObject.Find("GameObject Spawner").GetComponent<GameObjectSpawner>();
     }
 
     protected virtual void LoadListPointSpawnDog()
@@ -85,6 +85,7 @@ public class PointSpawnDogController : ErshenMonoBehaviour
         timeDelay = waveDogSO.waves[wave].phases[phase].levelDogs[levelDog].timeDelay;
         foreach (PointSpawnDog pointSpawnDog in listPointSpawnDog)
         {
+            // Check dog have index equal with index in wave dog data
             int index = pointSpawnDog.index;
             if (indexLine.Contains(index.ToString()))
             {

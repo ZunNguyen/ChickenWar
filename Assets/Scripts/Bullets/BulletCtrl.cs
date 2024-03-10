@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BulletCtrl : ErshenMonoBehaviour
 {
-    [SerializeField] protected BulletSO bulletSO;
-    public BulletSO BulletSO => bulletSO;
+    [SerializeField] protected ChickenSO chickenSO;
+    public ChickenSO ChickenSO => chickenSO;
 
     [SerializeField] protected BulletDamSender bulletDamSender;
     public BulletDamSender BulletDamSender => bulletDamSender;
@@ -27,9 +27,9 @@ public class BulletCtrl : ErshenMonoBehaviour
 
     protected virtual void LoadChickenSO()
     {
-        if (bulletSO != null) return;
-        string resPath = "SO/Bullets/Bullets";
-        bulletSO = Resources.Load<BulletSO>(resPath);
+        if (chickenSO != null) return;
+        string resPath = "SO/Chickens/Chickens";
+        chickenSO = Resources.Load<ChickenSO>(resPath);
     }
 
     protected virtual void LoadBulletDamgeSender()

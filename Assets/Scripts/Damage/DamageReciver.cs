@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class DamageReciver : ErshenMonoBehaviour
 {
-    public float hpMax = 99999;
-    public float hpCurrent = 1;
+    public int hpMax = 99999;
+    public int hpCurrent = 1;
     [SerializeField] protected bool isDead = false;
 
     protected override void ResetValue()

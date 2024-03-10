@@ -70,7 +70,8 @@ public class SpawnChicken : ErshenMonoBehaviour
         
     }
 
-    protected virtual Transform InstantiatePrefab(string namePrefab, int indexSlot)
+    // Spawn chicken
+    public virtual Transform InstantiatePrefab(string namePrefab, int indexSlot)
     {
         Transform newPrefab = canvasController.ChickenSpawner.Spawn(namePrefab, this.transform.position, this.transform.rotation).transform;
         newPrefab.gameObject.SetActive(true);
@@ -79,7 +80,7 @@ public class SpawnChicken : ErshenMonoBehaviour
         return newPrefab;
     }
 
-    protected virtual int CheckSlotEmtyInList()
+    public virtual int CheckSlotEmtyInList()
     {
         foreach (Transform slot in slots)
         {
@@ -103,7 +104,21 @@ public class SpawnChicken : ErshenMonoBehaviour
         string S = nameChicken;
         int levelChicken = S[8];
         levelChicken -= 48;
-        //Debug.Log(levelChicken);
+
+        if (levelChicken > canvasController.ButtonSpawn.highestLevelChicken) canvasController.ButtonSpawn.highestLevelChicken = levelChicken;
         canvasController.ButtonSpawn.GetLevelChickenToSpawn(levelChicken);
+    }
+
+    // For save game
+    public virtual void SaveSlotChicken(List<int> _indexSlot, List<string> _nameChicken)
+    {
+        foreach (Transform slot in slots)
+        {
+            if (slot.childCount > 0)
+            {
+                _indexSlot.Add(slots.IndexOf(slot));
+                _nameChicken.Add(slot.GetChild(0).gameObject.name);
+            }
+        }
     }
 }

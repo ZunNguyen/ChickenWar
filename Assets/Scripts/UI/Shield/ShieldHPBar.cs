@@ -5,21 +5,6 @@ using UnityEngine.UI;
 
 public class ShieldHPBar : ProcessSlider
 {
-    [Header("Canvas Abstract")]
-    [SerializeField] protected CanvasController canvasController;
-
-    protected override void LoadComponent()
-    {
-        base.LoadComponent();
-        LoadCanvasController();
-    }
-
-    protected virtual void LoadCanvasController()
-    {
-        if (canvasController != null) return;
-        canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
-    }
-
     public virtual void ChangeSlider(float hpCurrent, float hpMax)
     {
         if (hpCurrent <= 0)

@@ -6,6 +6,6 @@ public class DogDespawn : Despawn
 {
     public override void DespawnObj()
     {
-        DogSpawner.Instance.Despawn(transform.parent);
+        GameObjectSpawner.Instance.Despawn(transform.parent);
     }
 }

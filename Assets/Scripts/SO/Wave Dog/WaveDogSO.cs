@@ -32,15 +32,9 @@ public class WaveDogSO : ScriptableObject
         wave.phases.Add(phase);
     }
 
-    public virtual void CreatNewLevelDog(Phase phase, int _levelDog, string _nameDog, int _nums, float _timeDelay, string _indexLine)
+    public virtual void CreatNewLevelDog(Phase phase, int _levelDog, string _nameDog, int _nums, int _hpDog,float _timeDelay, string _indexLine)
     {
-        LevelDog levelDog = new LevelDog(_levelDog, _nameDog, _nums, _timeDelay, _indexLine);
+        LevelDog levelDog = new LevelDog(_levelDog, _nameDog, _nums, _hpDog, _timeDelay, _indexLine);
         phase.levelDogs.Add(levelDog);
-    }
-
-    public virtual void CreatNewIndex(LevelDog levelDog, int _line)
-    {
-        Index index = new Index(_line);
-        levelDog.indexs.Add(index);
     }
 }

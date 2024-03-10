@@ -31,9 +31,4 @@ public class AnimationGun : ErshenMonoBehaviour
     {
         anima.SetTrigger("Shooting");
     }
-
-    //protected virtual void SpawnBullet()
-    //{
-    //    canvasController.PointSpawnBulletController.PointSpawnBullet.SpawnBulletByTime();
-    //}
 }

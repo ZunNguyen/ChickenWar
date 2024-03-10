@@ -37,43 +37,11 @@ public class CheckPositionChicken : ErshenMonoBehaviour
         canvasController = GetComponentInParent<CanvasController>();
     }
 
-    protected void Update()
-    {
-        //if (testCheckPosition)
-        //CheckSlotChicken();
-    }
-
-    //protected virtual void CheckSlotChicken()
-    //{
-    //    foreach (Transform chickenSlot in chickenSlots)
-    //    {
-    //        if (chickenSlot.transform.childCount == 0)
-    //        {
-    //            int index = chickenSlots.IndexOf(chickenSlot);
-    //            canvasController.CheckPositionSpawnPoint.BulletOff(index);
-    //        }
-    //        else if (chickenSlot.transform.childCount > 0)
-    //        {
-    //            int index = chickenSlots.IndexOf(chickenSlot);
-    //            string bulletName = GetNameBullet(index);
-    //            canvasController.CheckPositionSpawnPoint.BulletOn(index, bulletName);
-    //        }
-    //    }
-    //}
-
     public virtual void SetAnimationIndex(int index)
     {
         nameObj = chickenSlots[index - 1];
         animationGun = nameObj.GetComponentInChildren<AnimationGun>();
         animationGun.SetAnimationOn();
-    }
-
-    protected virtual string GetNameBullet(int index)
-    {
-        nameObj = chickenSlots[index];
-        ChickenGun chickenGun = nameObj.GetComponentInChildren<ChickenGun>();
-        string bullet = chickenGun.nameBullet;
-        return bullet;
     }
 
     public virtual bool HaveChickenInSlot(int indexSlot)
