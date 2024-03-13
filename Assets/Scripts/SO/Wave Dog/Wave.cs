@@ -16,7 +16,7 @@ public class Wave
         wave = _wave;
     }
 
-    public virtual int GetSumDogWave()
+    public virtual float GetSumDogWave()
     {
         sum = 0;
         foreach (Phase phase in phases)

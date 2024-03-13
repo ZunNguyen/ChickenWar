@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class SaveDataManager : ErshenMonoBehaviour
 {
+    [Header("Reset Game")]
+    [SerializeField] protected bool resetGame = false;
+
     [Header("Load Script")]
     [SerializeField] protected CanvasController canvasController;
-
-    [Header("Reset Game")]
-    [SerializeField] protected bool restGame = false;
 
     protected override void LoadComponent()
     {
@@ -17,16 +17,15 @@ public class SaveDataManager : ErshenMonoBehaviour
         ResetGame();
         LoadGame();
     }
-
     protected virtual void LoadCanvasController()
     {
         if (canvasController != null) return;
-        canvasController = this.transform.Find("Canvas").GetComponent<CanvasController>();
+        canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
     }
 
     protected virtual void ResetGame()
     {
-        if (restGame)
+        if (resetGame)
         {
             string path = "Assets/DataGame.json";
             File.Delete(path);
@@ -46,12 +45,14 @@ public class SaveDataManager : ErshenMonoBehaviour
     // Save value to playerprefs
     protected virtual void SaveGame()
     {
-        DataGame dataGame = new DataGame();
-        dataGame.goldPlayer = canvasController.GoldPlayer.gold;
-        dataGame.waveDog = canvasController.PointSpawnDogController.wave;
-        dataGame.levelShield = canvasController.ShieldUpdate.levelCurrent;
-        dataGame.highestLevelChicken = canvasController.ButtonSpawn.highestLevelChicken;
-        dataGame.levelSpawnChicken = canvasController.ButtonSpawn.levelSpawnChicken;
+        DataGame dataGame = new()
+        {
+            goldPlayer = canvasController.GoldPlayer.gold,
+            waveDog = canvasController.PointSpawnDogController.wave,
+            levelShield = canvasController.ShieldUpdate.levelCurrent,
+            highestLevelChicken = canvasController.ButtonSpawn.highestLevelChicken,
+            levelSpawnChicken = canvasController.ButtonSpawn.levelSpawnChicken
+        };
         canvasController.SpawnChicken.SaveSlotChicken(dataGame.indexSlot, dataGame.nameChicken);
 
         string json = JsonUtility.ToJson(dataGame);
@@ -61,7 +62,7 @@ public class SaveDataManager : ErshenMonoBehaviour
     // Load value from playerprefs
     protected virtual void LoadGame()
     {
-        if (restGame) return;
+        if (resetGame) return;
         string json = File.ReadAllText(Application.dataPath + "/DataGame.json");
         DataGame dataGame = JsonUtility.FromJson<DataGame>(json);
 
@@ -70,6 +71,7 @@ public class SaveDataManager : ErshenMonoBehaviour
         canvasController.ShieldUpdate.levelCurrent = dataGame.levelShield;
         canvasController.ButtonSpawn.highestLevelChicken = dataGame.highestLevelChicken;
         canvasController.ButtonSpawn.levelSpawnChicken = dataGame.levelSpawnChicken;
+        canvasController.TWUpgradeChicken.indexLVHighest = dataGame.highestLevelChicken;
 
         for (int i  = 0; i < dataGame.indexSlot.Count; i++)
         {

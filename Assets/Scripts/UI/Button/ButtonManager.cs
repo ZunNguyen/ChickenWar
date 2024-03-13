@@ -5,57 +5,53 @@ using UnityEngine.UI;
 
 public class ButtonManager : ErshenMonoBehaviour
 {
-    [Header("Connect Script Outside")]
-    [SerializeField] protected PointSpawnDogController pointSpawnDogController;
-
-    [Header("Connect Script Inside")]
-    [SerializeField] protected SpawnChicken spawnChicken;
     [SerializeField] protected CanvasController canvasController;
-
-    [Header("Instance")]
-    [SerializeField] protected static ButtonManager instance;
-    public static ButtonManager Instance => instance;
+    public bool isStarting = false;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
-        LoadPointSpawnDogController();
-        LoadInstance();
-        LoadSpawnChicken();
+        LoadCanvasController();
     }
 
-    protected virtual void LoadPointSpawnDogController()
+    protected virtual void LoadCanvasController()
     {
-        if (pointSpawnDogController != null) return;
-        pointSpawnDogController = GameObject.Find("Point Spawn Dog").GetComponent<PointSpawnDogController>();
-    }
-
-    protected virtual void LoadSpawnChicken()
-    {
-        if (spawnChicken != null) return;
-        spawnChicken = GetComponentInChildren<SpawnChicken>();
-    }
-
-    protected virtual void LoadInstance()
-    {
-        if (instance != null) return;
-        ButtonManager.instance = this;
+        if (canvasController != null) return;
+        canvasController = this.transform.GetComponent<CanvasController>();
     }
 
     public virtual void StartGame()
     {
+        if (isStarting) return;
         // On Spawn Dog
-        pointSpawnDogController.enabled = true;
+        canvasController.PointSpawnDogController.enabled = true;
         // On Bullet
         canvasController.PointSpawnBulletController.BulletOn();
         // On tracking wave
         TrackingWave.Instance.GetSumDogMax();
         // Show wave text
         canvasController.TrackingWaveController.CountWave.LoadText();
+        canvasController.TrackingWaveController.TWTrackingWave.TW_TrackingWaveOn();
     }
 
     public void SpawnChicken()
     {
         canvasController.ButtonSpawn.SpawnChickenInGrid();
+    }
+
+    public virtual void ButtonClaim()
+    {
+        canvasController.ButtonManager.isStarting = false;
+
+        // Off panel tracking wave
+        canvasController.TrackingWaveController.TWTrackingWave.TW_TrackingWaveOff();
+
+        // Off panel victory
+        canvasController.TWPanelVictory.TW_PanelVictoryOff();
+    }
+
+    public virtual void ButtonUnclockChickenUpgrade()
+    {
+        canvasController.TWUpgradeChicken.TW_UpgradeOff();
     }
 }

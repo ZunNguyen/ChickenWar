@@ -5,7 +5,7 @@ using TMPro;
 using System.Text.RegularExpressions;
 using System;
 
-public abstract class ProcessGold : CanvasAbstract
+public abstract class ProcessGold :ErshenMonoBehaviour
 {
     [Header("Process Gold")]
     [SerializeField] protected TMP_Text text;

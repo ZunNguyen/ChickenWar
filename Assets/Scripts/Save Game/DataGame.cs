@@ -19,6 +19,6 @@ public class DataGame
     public int levelSpawnChicken;
 
     // Save chicken in board
-    public List<int> indexSlot = new List<int>();
-    public List<string> nameChicken = new List<string>();
+    public List<int> indexSlot = new();
+    public List<string> nameChicken = new();
 }

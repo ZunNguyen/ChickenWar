@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CoinCollectSpawner : ErshenMonoBehaviour
 {
-    [SerializeField] protected static CoinCollectSpawner instance;
+    protected static CoinCollectSpawner instance;
     public static CoinCollectSpawner Instance { get => instance; }
 
     [SerializeField] protected GameObject holder;

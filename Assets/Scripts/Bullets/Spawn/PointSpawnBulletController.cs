@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class PointSpawnBulletController : ErshenMonoBehaviour
 {
-    [Header("Connect Script")]
+    [Header("Connect InSide")]
     [SerializeField] protected PointSpawnBullet pointSpawnBullet;
     public PointSpawnBullet PointSpawnBullet { get => pointSpawnBullet; }
 
+    [Header("Connect OutSide")]
     [SerializeField] protected GameObjectSpawner gameObjectSpawner;
     public GameObjectSpawner GameObjectSpawner => gameObjectSpawner;
-
-    [SerializeField] protected CanvasController canvasController;
-    public CanvasController CanvasController { get => canvasController; }
 
     [Header("Load list point spawn bullet")]
     [SerializeField] protected List<PointSpawnBullet> listPointSpawns;
@@ -22,7 +20,6 @@ public class PointSpawnBulletController : ErshenMonoBehaviour
         base.LoadComponent();
         LoadPointSpawnBullet();
         LoadGameObjectSpawner();
-        LoadCanvasController();
         LoadPointSpawnBullets();
     }
 
@@ -36,12 +33,6 @@ public class PointSpawnBulletController : ErshenMonoBehaviour
     {
         if (gameObjectSpawner != null) return;
         gameObjectSpawner = GameObject.Find("GameObject Spawner").GetComponent<GameObjectSpawner>();
-    }
-
-    protected virtual void LoadCanvasController()
-    {
-        if (canvasController != null) return;
-        canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
     }
 
     protected virtual void LoadPointSpawnBullets()

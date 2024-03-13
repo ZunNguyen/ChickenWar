@@ -27,7 +27,7 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 6b6a39f85b6b5fe409e552092e73d9a6, type: 3}
     levelImage: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
     goldEarn: 2
-    goldUpdate: 2
+    goldUpdate: 20
     nameBullet: Bullet01
     bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
     damage: 2
@@ -36,7 +36,7 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 6b6a39f85b6b5fe409e552092e73d9a6, type: 3}
     levelImage: {fileID: 21300000, guid: c10501d2f535e83479d231d0a352e3d6, type: 3}
     goldEarn: 5
-    goldUpdate: 5
+    goldUpdate: 50
     nameBullet: Bullet01
     bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
     damage: 5
@@ -45,7 +45,7 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 6b6a39f85b6b5fe409e552092e73d9a6, type: 3}
     levelImage: {fileID: 21300000, guid: 91b91b480455dda4884985e674b4b700, type: 3}
     goldEarn: 10
-    goldUpdate: 10
+    goldUpdate: 100
     nameBullet: Bullet01
     bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
     damage: 10
@@ -54,7 +54,7 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 7b66956778951d04a9d188766e261bdc, type: 3}
     levelImage: {fileID: 21300000, guid: f54d507f375157743924e25ce006565f, type: 3}
     goldEarn: 20
-    goldUpdate: 20
+    goldUpdate: 200
     nameBullet: Bullet01
     bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
     damage: 20
@@ -63,7 +63,7 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 7b66956778951d04a9d188766e261bdc, type: 3}
     levelImage: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
     goldEarn: 50
-    goldUpdate: 50
+    goldUpdate: 500
     nameBullet: Bullet01
     bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
     damage: 50
@@ -72,7 +72,7 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 7b66956778951d04a9d188766e261bdc, type: 3}
     levelImage: {fileID: 21300000, guid: c10501d2f535e83479d231d0a352e3d6, type: 3}
     goldEarn: 100
-    goldUpdate: 100
+    goldUpdate: 1000
     nameBullet: Bullet01
     bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
     damage: 100
@@ -81,7 +81,7 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 7b66956778951d04a9d188766e261bdc, type: 3}
     levelImage: {fileID: 21300000, guid: 91b91b480455dda4884985e674b4b700, type: 3}
     goldEarn: 200
-    goldUpdate: 200
+    goldUpdate: 2000
     nameBullet: Bullet01
     bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
     damage: 200
@@ -90,7 +90,7 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 83561ee9aa53eda4fa8add95d0fb3815, type: 3}
     levelImage: {fileID: 21300000, guid: f54d507f375157743924e25ce006565f, type: 3}
     goldEarn: 500
-    goldUpdate: 500
+    goldUpdate: 5000
     nameBullet: Bullet01
     bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
     damage: 500
@@ -99,7 +99,7 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 83561ee9aa53eda4fa8add95d0fb3815, type: 3}
     levelImage: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
     goldEarn: 1000
-    goldUpdate: 1000
+    goldUpdate: 10000
     nameBullet: Bullet01
     bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
     damage: 1000

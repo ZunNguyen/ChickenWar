@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PointSpawnDog : ErshenMonoBehaviour
@@ -38,6 +39,7 @@ public class PointSpawnDog : ErshenMonoBehaviour
         Transform newDogSpawn = pointSpawnDogController.GameObjectSpawner.Spawn(nameDog, transform.position, transform.rotation).transform;
         newDogSpawn.gameObject.SetActive(true);
         DogCtrl dogCtrl = newDogSpawn.GetComponent<DogCtrl>();
+        dogCtrl.EnableComponent();
         dogCtrl.DogIndex.indexDog = index;
         pointSpawnDogController.dogNum += 1;
         pointSpawnDogController.isSpawning = false;

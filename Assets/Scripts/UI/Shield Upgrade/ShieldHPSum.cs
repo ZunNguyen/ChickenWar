@@ -5,26 +5,17 @@ using UnityEngine;
 
 public class ShieldHPSum : ErshenMonoBehaviour
 {
-    [Header("Connect Script")]
-    [SerializeField] protected CanvasController canvasController;
-
     [SerializeField] protected List<Transform> shields;
 
     [Header("Variable")]
     public int sumHpMax = 100;
+    public int sum = 0;
     [SerializeField] protected int sumHpCurrent;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
         LoadListShields();
-        LoadCanvasController();
-    }
-
-    protected virtual void LoadCanvasController()
-    {
-        if (canvasController != null) return;
-        canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
     }
 
     protected virtual void LoadListShields()
@@ -48,15 +39,15 @@ public class ShieldHPSum : ErshenMonoBehaviour
             sum += tem;
         }
         sumHpCurrent -= sum;
-        canvasController.ShieldHPBar.ChangeSlider(sumHpCurrent, sumHpMax);
-        canvasController.ShieldHPText.Print(sumHpCurrent, sumHpMax);
+        CanvasController.Instance.ShieldUpdateController.ShieldHPBar.ChangeSlider(sumHpCurrent, sumHpMax);
+        CanvasController.Instance.ShieldUpdateController.ShieldHPText.Print(sumHpCurrent, sumHpMax);
     }
 
     // Load Hp Max
     protected virtual int LoadHpMax()
     {
-        int levelCurrent = canvasController.ShieldUpdate.levelCurrent;
-        int HpMax = canvasController.ShieldUpdate.shieldSO.levels[levelCurrent].hp;
+        int levelCurrent = CanvasController.Instance.ShieldUpdate.levelCurrent;
+        int HpMax = CanvasController.Instance.ShieldUpdate.shieldSO.levels[levelCurrent].hp;
         return HpMax;
     }
 }

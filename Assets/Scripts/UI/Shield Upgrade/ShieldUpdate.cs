@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShieldUpdate : CanvasAbstract
+public class ShieldUpdate : ErshenMonoBehaviour
 {
+    [Header("Connect InSide")]
+    [SerializeField] protected ShieldUpdateController shieldUpdateController;
+    public ShieldUpdateController ShieldUpdateController => shieldUpdateController;
+
     public ShieldSO shieldSO;
     public int levelCurrent;
     [SerializeField] protected int goldPlayer;
@@ -13,6 +17,7 @@ public class ShieldUpdate : CanvasAbstract
     {
         base.LoadComponent();
         LoadShieldSO();
+        LoadShieldUpdateController();
     }
 
     protected virtual void LoadShieldSO()
@@ -20,6 +25,12 @@ public class ShieldUpdate : CanvasAbstract
         if (shieldSO != null) return;
         string resPath = "SO/Shield/Shield";
         shieldSO = Resources.Load<ShieldSO>(resPath);
+    }
+
+    protected virtual void LoadShieldUpdateController()
+    {
+        if (shieldUpdateController != null) return;
+        shieldUpdateController = this.transform.GetComponent<ShieldUpdateController>();
     }
 
     private void Start()
@@ -31,7 +42,6 @@ public class ShieldUpdate : CanvasAbstract
     {
         UpdateGoldUpgradeShield(levelCurrent);
         ChangeValueSumHpShield(levelCurrent);
-        
         LoadShielHPBegin();
     }
 
@@ -44,7 +54,7 @@ public class ShieldUpdate : CanvasAbstract
             UpdateGoldUpgradeShield(levelCurrent);
             // Change Value Hp Max for Sum HP Shield
             ChangeValueSumHpShield(levelCurrent);
-            canvasController.ShieldHPSum.LoadSumHpCurrent();
+            shieldUpdateController.CanvasController.ShieldHPSum.LoadSumHpCurrent();
             Debug.Log("Level Shield: " + levelCurrent);
         }
     }
@@ -65,7 +75,7 @@ public class ShieldUpdate : CanvasAbstract
 
     protected virtual bool GoldEnough()
     {
-        goldPlayer = canvasController.GoldPlayer.gold;
+        goldPlayer = shieldUpdateController.CanvasController.GoldPlayer.gold;
         goldUpgrade = shieldSO.levels[levelCurrent + 1].gold;
         if (goldUpgrade > goldPlayer) return false;
         UpdateGoldPlayer(goldPlayer, goldUpgrade);
@@ -74,7 +84,7 @@ public class ShieldUpdate : CanvasAbstract
 
     protected virtual void UpdateGoldPlayer(int goldPlayer, int goldUpgrade)
     {
-        canvasController.GoldPlayer.gold = goldPlayer - goldUpgrade;
+        shieldUpdateController.CanvasController.GoldPlayer.gold = goldPlayer - goldUpgrade;
     }
 
     protected virtual void UpdateGoldUpgradeShield(int levelCurrent)
@@ -82,19 +92,19 @@ public class ShieldUpdate : CanvasAbstract
         if (levelCurrent < shieldSO.levels.Count - 1)
         {
             int index = levelCurrent + 1;
-            canvasController.ShieldGoldUpdate.goldUpgrade = shieldSO.levels[index].gold;
+            shieldUpdateController.ShieldGoldUpdate.goldUpgrade = shieldSO.levels[index].gold;
         }
     }
 
     // Change Value Hp Max for Sum HP Shield
     protected virtual void ChangeValueSumHpShield(int levelCurrent)
     {
-        canvasController.ShieldHPSum.sumHpMax = shieldSO.levels[levelCurrent].hp;
+        shieldUpdateController.CanvasController.ShieldHPSum.sumHpMax = shieldSO.levels[levelCurrent].hp;
     }
 
     protected virtual void LoadShielHPBegin()
     {
         int hp = shieldSO.levels[levelCurrent].hp;
-        canvasController.ShieldHPText.Print(hp, hp);
+        shieldUpdateController.ShieldHPText.Print(hp, hp);
     }
 }

@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ChickenSpawner : ErshenMonoBehaviour
@@ -24,7 +21,7 @@ public class ChickenSpawner : ErshenMonoBehaviour
     protected virtual void LoadInstance()
     {
         if (instance != null) return;
-        ChickenSpawner.instance = this;
+        instance = this;
     }
 
     protected virtual void LoadHolder()
@@ -105,10 +102,14 @@ public class ChickenSpawner : ErshenMonoBehaviour
         obj.gameObject.SetActive(false);
     }
 
-    public string GetNameChickenHighLevel(Transform obj)
+    public int GetIndexChicken(Transform obj)
     {
         int index = prefabs.IndexOf(GetChickenInList(obj));
-        index += 1;
+        return index;
+    }
+
+    public string GetNameChicken(int index)
+    {
         string nameChicken = prefabs[index].gameObject.name;
         return nameChicken;
     }

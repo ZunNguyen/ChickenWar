@@ -25,8 +25,12 @@ public class DogDamageSender : DamageSender
         {
             // Stop movement
             StopMovement();
+            // Set Animation for Shield Shake
+            ShieldShake shieldShake = collision.transform.parent.GetComponentInChildren<ShieldShake>();
+            shieldShake.Animating();
             // Set Animation for Attack Damage
             SetAnimationAttack();
+
             Send(collision.transform);
 
             // Set Update HP Shield

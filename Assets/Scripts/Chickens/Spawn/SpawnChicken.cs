@@ -8,24 +8,14 @@ using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SpawnChicken : ErshenMonoBehaviour
+public class SpawnChicken : CanvasAbstract
 {
-    [Header("Load Script inside")]
-    [SerializeField] protected CanvasController canvasController;
-
     [SerializeField] List<Transform> slots;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
         LoadListSlots();
-        LoadCanvasController();
-    }
-
-    protected virtual void LoadCanvasController()
-    {
-        if (canvasController != null) return;
-        canvasController = transform.GetComponentInParent<CanvasController>();
     }
 
     protected virtual void LoadListSlots()
@@ -59,21 +49,23 @@ public class SpawnChicken : ErshenMonoBehaviour
 
     public void SpawnChickenHighLevel(Transform prefab, Transform parentPrefab)
     {
-        string namePrefabHighLevel = canvasController.ChickenSpawner.GetNameChickenHighLevel(prefab);
+        int indexChicken = canvasController.ChickenSpawner.GetIndexChicken(prefab);
+        string namePrefabHighLevel = canvasController.ChickenSpawner.GetNameChicken(indexChicken + 1);
         // Check Index of parentPrefabz
-        int indexSlot = CheckSlotInList(parentPrefab.gameObject.name);
+        int indexSlot = CheckSlotInList(parentPrefab.transform);
         // If indexSlot = 99 -> don't allow add prefab on slot
-        if (indexSlot == 99) return;
+        //if (indexSlot == 99) return;
         // Instantiate prefab
-        Transform instance = InstantiatePrefab(namePrefabHighLevel, indexSlot);
-        UpdateChickenForSpawn(instance.gameObject.name);
-        
-    }
+        Transform chickenHigherLV = InstantiatePrefab(namePrefabHighLevel, indexSlot);
+        // Show aniamtion update new chicken higher level
+        canvasController.TWUpgradeChicken.ProcessShowUpgradePanel(indexChicken + 1, prefab, chickenHigherLV);
+        UpdateChickenForSpawn(chickenHigherLV.gameObject.name);
+    } 
 
     // Spawn chicken
     public virtual Transform InstantiatePrefab(string namePrefab, int indexSlot)
     {
-        Transform newPrefab = canvasController.ChickenSpawner.Spawn(namePrefab, this.transform.position, this.transform.rotation).transform;
+        Transform newPrefab = canvasController.ChickenSpawner.Spawn(namePrefab, this.transform.position, this.transform.rotation);
         newPrefab.gameObject.SetActive(true);
         newPrefab.SetParent(slots[indexSlot]);
         SetRaycastTargetOn(newPrefab);
@@ -89,13 +81,15 @@ public class SpawnChicken : ErshenMonoBehaviour
         return 99;
     }
 
-    protected virtual int CheckSlotInList(string prefab)
+    protected virtual int CheckSlotInList(Transform prefab)
     {
-        foreach (Transform slot in slots)
-        {
-            if (slot.gameObject.name == prefab) return slots.IndexOf(slot);
-        }
-        return 99;
+        //foreach (Transform slot in slots)
+        //{
+        //    if (slot.gameObject.name == prefab) return slots.IndexOf(slot);
+        //}
+        //return 99;
+
+        return slots.IndexOf(prefab);
     }
 
     // Set chicken high level - 3 for Spawn Button

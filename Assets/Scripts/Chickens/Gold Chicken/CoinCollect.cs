@@ -7,9 +7,6 @@ using TMPro;
 
 public class CoinCollect : ErshenMonoBehaviour
 {
-    [SerializeField] protected static CoinCollect instance;
-    public static CoinCollect Instance => instance;
-
     [Header("Connect Script")]
     [SerializeField] protected TMP_Text text;
     [SerializeField] protected RectTransform rectTransform;
@@ -24,21 +21,14 @@ public class CoinCollect : ErshenMonoBehaviour
     {
         base.LoadComponent();
         LoadText();
-        LoadSpriteCoin();
-        LoadInstance();
+        LoadTextCoin();
         LoadRectTransform();
     }
 
-    protected virtual void LoadSpriteCoin()
+    protected virtual void LoadTextCoin()
     {
         if (textCoin != null) return;
         textCoin = GameObject.Find("Text Coin").transform;
-    }
-
-    protected virtual void LoadInstance()
-    {
-        if (instance != null) return;
-        instance = this;
     }
 
     protected virtual void LoadText()
@@ -56,7 +46,7 @@ public class CoinCollect : ErshenMonoBehaviour
     private void Update()
     {
         transform.DOMoveY(rectTransform.position.y + posTarget, durTimeMove);
-        Invoke("DestroyObj", durTimeDes);
+        Invoke(nameof(DestroyObj), durTimeDes);
     }
     
     protected virtual void DestroyObj()

@@ -1,30 +1,31 @@
+using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using UnityEngine;
 
 public class PointSpawnDogController : ErshenMonoBehaviour
 {
-    [Header("Connect Script Outside")]
-    [SerializeField] protected GameObjectSpawner gameObjectSpawner;
-    public GameObjectSpawner GameObjectSpawner => gameObjectSpawner;
+    [Header("Connect Outside")]
     [SerializeField] protected WaveDogSO waveDogSO;
 
-    [Header("Connect Script Childrent")]
+    [SerializeField] protected GameObjectSpawner gameObjectSpawner;
+    public GameObjectSpawner GameObjectSpawner => gameObjectSpawner;
+
+    [SerializeField] protected CanvasController canvasController;
+    public CanvasController CanvasController => canvasController;
+
+    [Header("Connect Inside")]
     [SerializeField] protected List<PointSpawnDog> listPointSpawnDog;
 
     [Header("Variable")]
-    public int wave = 0;
     [SerializeField] protected int phase = 0;
     [SerializeField] protected int levelDog = 0;
     [SerializeField] protected float timeDelay;
-    public int dogNum = 0;
     [SerializeField] protected string indexLine;
+    public int wave = 0;
+    public int dogNum = 0;
     public bool isSpawning = false;
 
-    [Header("Debug")]
-    [SerializeField] protected bool checkWaveMax;
-    [SerializeField] protected bool checkPhaseMax;
-    [SerializeField] protected bool checkLevelDogMax;
-    [SerializeField] protected bool checkDogMax;
 
     protected override void LoadComponent()
     {
@@ -32,6 +33,7 @@ public class PointSpawnDogController : ErshenMonoBehaviour
         LoadGameObjectSpawner();    
         LoadListPointSpawnDog();
         LoadWaveDogSO();
+        LoadCanvasController();
     }
 
     protected virtual void LoadGameObjectSpawner()
@@ -57,6 +59,12 @@ public class PointSpawnDogController : ErshenMonoBehaviour
         waveDogSO = Resources.Load<WaveDogSO>(resPath);
     }
 
+    protected virtual void LoadCanvasController()
+    {
+        if (canvasController != null) return;
+        canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
+    }
+
     protected virtual void SetOffScript()
     {
         PointSpawnDogController pointSpawnDogController = this.GetComponent<PointSpawnDogController>();
@@ -70,6 +78,7 @@ public class PointSpawnDogController : ErshenMonoBehaviour
 
     protected virtual void CanSpawn()
     {
+        canvasController.ButtonManager.isStarting = true;
         if (isSpawning) return;
         if (CheckWaveIsMax()) return;
         if (CheckPhaseIsMax()) return;
@@ -97,14 +106,13 @@ public class PointSpawnDogController : ErshenMonoBehaviour
     // Check Dog Number is Max?
     protected virtual bool CheckNumDogIsMax()
     {
-        if ((dogNum/3) == waveDogSO.waves[wave].phases[phase].levelDogs[levelDog].nums)
+        int countIndex = waveDogSO.waves[wave].phases[phase].levelDogs[levelDog].indexLine.Length - 1;
+        if ((dogNum/ countIndex) == waveDogSO.waves[wave].phases[phase].levelDogs[levelDog].nums)
         {
             dogNum = 0;
             levelDog += 1;
-            checkDogMax = true;
             return true;
         }
-        checkDogMax = false;
         return false;
     }
 
@@ -115,10 +123,12 @@ public class PointSpawnDogController : ErshenMonoBehaviour
         {
             levelDog = 0;
             phase += 1;
-            checkLevelDogMax = true;
+
+            // Delay 5s before change the new phase
+            StartCoroutine(RunAfterDelay(7));
+
             return true;
         }
-        checkLevelDogMax = false;
         return false;
     }
 
@@ -127,14 +137,11 @@ public class PointSpawnDogController : ErshenMonoBehaviour
     {
         if (phase == waveDogSO.waves[wave].phases.Count)
         {
-            phase = 0;
-            wave += 1;
-            Debug.Log("Finish wave " + wave);
-            checkPhaseMax = true;
+            Debug.Log("have"); 
+            CheckWin();
             SetOffScript();
             return true;
         }
-        checkPhaseMax = false;
         return false;
     }
 
@@ -144,10 +151,27 @@ public class PointSpawnDogController : ErshenMonoBehaviour
         if (wave == waveDogSO.waves.Count)
         {
             Debug.Log("Wave max");
-            checkWaveMax = true;
             return true;
         }
-        checkWaveMax = false;
         return false;
+    }
+
+    // Check Win
+    protected virtual void CheckWin()
+    {
+        if (canvasController.TrackingWaveController.TrackingWave.CheckEndWave())
+        {
+            phase = 0;
+            wave += 1;
+            Debug.Log("Finish wave " + wave);
+            canvasController.TWPanelVictory.TW_PanelVictoryOn();
+        }
+    }
+
+    protected virtual IEnumerator RunAfterDelay(float timeDelay)
+    {
+        isSpawning = true;
+        yield return new WaitForSeconds(timeDelay);
+        isSpawning = false;
     }
 }

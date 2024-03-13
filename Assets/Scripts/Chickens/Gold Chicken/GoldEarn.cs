@@ -41,7 +41,7 @@ public class GoldEarn : ErshenMonoBehaviour
         GameObject newTrans = CoinCollectSpawner.Instance.Spawn("Coin Collection", this.transform.position, this.transform.rotation);
         CoinCollect coinCollect = newTrans.GetComponent<CoinCollect>();
         coinCollect.GetValueText(gold);
-        newTrans.gameObject.SetActive(true);
+        newTrans.SetActive(true);
     }
 
     // Check can earn gold

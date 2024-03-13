@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class ErshenMonoBehaviour : MonoBehaviour
 {
-    protected void Start()
-    {
-        //For Override
-    }
-
     protected void Awake()
     {
         this.LoadComponent();

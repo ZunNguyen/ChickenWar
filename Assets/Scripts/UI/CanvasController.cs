@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CanvasController : ErshenMonoBehaviour
 {
+    [Header("Instance")]
+    [SerializeField] protected static CanvasController instance;
+    public static CanvasController Instance => instance;
+    
     [Header("Load Script Outside")]
 
     [SerializeField] protected PointSpawnBulletController pointSpawnBulletController;
@@ -33,25 +37,31 @@ public class CanvasController : ErshenMonoBehaviour
     [SerializeField] protected TrackingWaveController trackingWaveController;
     public TrackingWaveController TrackingWaveController => trackingWaveController;
 
+    [SerializeField] protected TWPanelVictory tWPanelVictory;
+    public TWPanelVictory TWPanelVictory => tWPanelVictory;
+
+    [SerializeField] protected TWUpgradeChicken tWUpgradeChicken;
+    public TWUpgradeChicken TWUpgradeChicken => tWUpgradeChicken;
+
+    [SerializeField] protected ShieldUpdateController shieldUpdateController;
+    public ShieldUpdateController ShieldUpdateController => shieldUpdateController;
+
     [Header("Load script for shield")]
     [SerializeField] protected ShieldUpdate shieldUpdate;
     public ShieldUpdate ShieldUpdate => shieldUpdate;
 
-    [SerializeField] protected ShieldGoldUpdate shieldGoldUpdate;
-    public ShieldGoldUpdate ShieldGoldUpdate => shieldGoldUpdate;
-
-    [SerializeField] protected ShieldHPBar shieldHPBar;
-    public ShieldHPBar ShieldHPBar => shieldHPBar;
-
     [SerializeField] protected ShieldHPSum shieldHPSum;
     public ShieldHPSum ShieldHPSum => shieldHPSum;
 
-    [SerializeField] protected ShieldHPText shieldHPText;
-    public ShieldHPText ShieldHPText => shieldHPText;
+    [SerializeField] protected ButtonManager buttonManager;
+    public ButtonManager ButtonManager => buttonManager;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
+        // Instance
+        LoadInstance();
+
         LoadChickenSpawner();
         LoadDragItem();
         LoadSpawnChicken();
@@ -61,13 +71,14 @@ public class CanvasController : ErshenMonoBehaviour
         LoadPointSpawnDogController();
         LoadGoldPlayer();
         LoadTrackingWaveController();
+        LoadTWPanelVictory();
+        LoadButtonManager();
+        LoadShieldUpdateController();
+        LoadTWUpgradeChicken();
 
         // Load Script for Shield
-        LoadShieldGoldUpdate();
         LoadShieldUpdate();
         LoadShieldSumHP();
-        LoadShielHPBar();
-        LoadShieldHPText();
     }
 
     protected virtual void LoadPointSpawnDogController()
@@ -118,12 +129,6 @@ public class CanvasController : ErshenMonoBehaviour
         shieldHPSum = GameObject.Find("Shields").GetComponent<ShieldHPSum>();
     }
 
-    protected virtual void LoadShielHPBar()
-    {
-        if (shieldHPBar != null) return;
-        shieldHPBar = transform.GetComponentInChildren<ShieldHPBar>();
-    }
-
     protected virtual void LoadGoldPlayer()
     {
         if (goldPlayer != null) return;
@@ -136,21 +141,39 @@ public class CanvasController : ErshenMonoBehaviour
         trackingWaveController = transform.GetComponentInChildren<TrackingWaveController>();
     }
 
-    protected virtual void LoadShieldGoldUpdate()
-    {
-        if (shieldGoldUpdate != null) return;
-        shieldGoldUpdate = transform.GetComponentInChildren<ShieldGoldUpdate>();
-    }
-
     protected virtual void LoadShieldUpdate()
     {
         if (shieldUpdate != null) return;
         shieldUpdate = transform.GetComponentInChildren<ShieldUpdate>();
     }
 
-    protected virtual void LoadShieldHPText()
+    protected virtual void LoadTWPanelVictory()
     {
-        if (shieldHPText != null) return;
-        shieldHPText = transform.GetComponentInChildren<ShieldHPText>();
+        if (tWPanelVictory != null) return;
+        tWPanelVictory = transform.Find("Panel - Victory").GetComponent<TWPanelVictory>();
+    }
+
+    protected virtual void LoadTWUpgradeChicken()
+    {
+        if (tWUpgradeChicken != null) return;
+        tWUpgradeChicken = transform.Find("Panel - Upgrade").GetComponent<TWUpgradeChicken>();
+    }
+
+    protected virtual void LoadButtonManager()
+    {
+        if (buttonManager != null) return;
+        buttonManager = this.transform.GetComponent<ButtonManager>();
+    }
+
+    protected virtual void LoadShieldUpdateController()
+    {
+        if (shieldUpdateController != null) return;
+        shieldUpdateController = transform.Find("Update Shield").GetComponent<ShieldUpdateController>();
+    }
+
+    protected virtual void LoadInstance()
+    {
+        if (instance != null) return;
+        instance = this;
     }
 }

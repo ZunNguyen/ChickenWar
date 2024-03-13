@@ -40,7 +40,7 @@ public class DogCtrl : ErshenMonoBehaviour
     protected virtual void LoadDogMovement()
     {
         if (dogMovement != null) return;
-        dogMovement = transform.GetComponentInChildren<DogMovement>();
+        dogMovement = transform.Find("DogMovement").GetComponent<DogMovement>();
     }
 
     protected virtual void LoadDogDespawn()
@@ -58,7 +58,7 @@ public class DogCtrl : ErshenMonoBehaviour
     protected virtual void LoadDogDamageReceiver()
     {
         if (dogDamageReceiver != null) return;
-        dogDamageReceiver = transform.GetComponentInChildren<DogDamageReceiver>();
+        dogDamageReceiver = transform.Find("Animation").transform.Find("Dog Damage Receiver").GetComponent<DogDamageReceiver>();
     }
 
     protected virtual void LoadDogDamageSender()
@@ -77,5 +77,27 @@ public class DogCtrl : ErshenMonoBehaviour
     {
         if (dogIndex != null) return;
         dogIndex = transform.GetComponentInChildren<DogIndex>();
+    }
+
+    // DisableComponents
+    public virtual void DisaleComponents()
+    {
+        // Off Hp canvas
+        canvasHP.gameObject.SetActive(false);
+        // Disable obj movement
+        dogMovement.gameObject.SetActive(false);
+        // Disable obj damage recieve
+        DogDamageReceiver.gameObject.SetActive(false);
+    }
+
+    // EnableComponents
+    public virtual void EnableComponent()
+    {
+        // On Hp canvas
+        canvasHP.gameObject.SetActive(true);
+        // Enable obj movement
+        dogMovement.gameObject.SetActive(true);
+        // Enable obj damage recieve
+        DogDamageReceiver.gameObject.SetActive(true);
     }
 }

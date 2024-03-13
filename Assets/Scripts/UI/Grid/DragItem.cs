@@ -5,9 +5,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DragItem : ErshenMonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class DragItem : CanvasAbstract, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    
     // The score game have 2 object image
     [SerializeField] public Image[] images;
     [SerializeField] public Transform realParent;
@@ -34,7 +33,7 @@ public class DragItem : ErshenMonoBehaviour, IDragHandler, IBeginDragHandler, IE
     {
         //Debug.Log("Begin Drag");
         realParent = this.transform.parent;
-        this.transform.SetParent(ButtonManager.Instance.transform);
+        this.transform.SetParent(canvasController.transform);
         SetRaycastTarget(false);
     }
 

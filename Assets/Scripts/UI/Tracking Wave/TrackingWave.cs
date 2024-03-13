@@ -6,9 +6,9 @@ using UnityEngine;
 public class TrackingWave : ProcessSlider
 {
     [Header("Value")]
-    [SerializeField] protected int sumDogMax;
-    public int sumDogCurrent;
-    [SerializeField] protected float test;
+    [SerializeField] protected float sumDogMax = 1;
+    public float sumDogCurrent = 1;
+    [SerializeField] protected float valueText = 1;
 
     [Header("Connect Script")]
     [SerializeField] protected WaveDogSO waveDogSO;
@@ -52,14 +52,20 @@ public class TrackingWave : ProcessSlider
 
     protected virtual void Slidering()
     {
-        test = sumDogCurrent / sumDogMax * 100;
-        slider.value = test;
+        valueText = sumDogCurrent / sumDogMax * 100;
+        slider.value = valueText;
     }
 
     public virtual void GetSumDogMax()
     {
         int index = trackingWaveController.CanvasController.PointSpawnDogController.wave;
         sumDogMax = waveDogSO.waves[index].GetSumDogWave();
-        sumDogCurrent = sumDogMax;
+        sumDogCurrent = 0;
+    }
+
+    public virtual bool CheckEndWave()
+    {
+        if (sumDogCurrent == sumDogMax) return true;
+        return false;
     }
 }

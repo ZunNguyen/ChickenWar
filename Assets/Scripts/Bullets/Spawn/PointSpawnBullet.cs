@@ -54,8 +54,8 @@ public class PointSpawnBullet : ErshenMonoBehaviour
         if (CanSpawnBullet())
         {
             // Get name chicken
-            levelChicken = pointSpawnBulletController.CanvasController.CheckPositionChicken.GetIndexChickenInList(index - 1);
-            pointSpawnBulletController.CanvasController.PointSpawnBulletController.GameObjectSpawner.BulletCtrl.BulletDamSender.GetDamgeBullet(levelChicken);
+            levelChicken = CanvasController.Instance.CheckPositionChicken.GetIndexChickenInList(index - 1);
+            CanvasController.Instance.PointSpawnBulletController.GameObjectSpawner.BulletCtrl.BulletDamSender.GetDamgeBullet(levelChicken);
             SpawnBulletByTime();
         }
     }
@@ -74,7 +74,7 @@ public class PointSpawnBullet : ErshenMonoBehaviour
             timeCurrent = 0;
 
             //Set Animation for gun
-            pointSpawnBulletController.CanvasController.CheckPositionChicken.SetAnimationIndex(index);
+            CanvasController.Instance.CheckPositionChicken.SetAnimationIndex(index);
         }
     }
 
@@ -84,7 +84,7 @@ public class PointSpawnBullet : ErshenMonoBehaviour
         if (!HaveDogInLine()) return false;
 
         // Check chicken in line
-        if (!pointSpawnBulletController.CanvasController.CheckPositionChicken.HaveChickenInSlot(index - 1)) return false;
+        if (!CanvasController.Instance.CheckPositionChicken.HaveChickenInSlot(index - 1)) return false;
         return true;
     }
 
