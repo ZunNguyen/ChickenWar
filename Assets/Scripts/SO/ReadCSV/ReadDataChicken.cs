@@ -10,7 +10,7 @@ public class ReadDataChicken : ErshenMonoBehaviour
     [SerializeField] protected TextAsset textAssetData;
 
     [Header("Variable")]
-    [SerializeField] protected int length = 9;
+    [SerializeField] protected int length = 10;
 
     protected override void LoadComponent()
     {
@@ -52,17 +52,19 @@ public class ReadDataChicken : ErshenMonoBehaviour
 
             int goldEarn = int.Parse(data[length * (i + 1) + 4]);
 
-            int goldUpdate = int.Parse(data[length * (i + 1) + 5]);
+            int timeDelayEarnGold = int.Parse(data[length * (i + 1) + 5]);
 
-            string nameBullet = data[length * (i + 1) + 6];
+            int goldUpdate = int.Parse(data[length * (i + 1) + 6]);
+
+            string nameBullet = data[length * (i + 1) + 7];
             
-            string bulletImage = data[length * (i + 1) + 7];
+            string bulletImage = data[length * (i + 1) + 8];
             Sprite bulletSprite = GetImage("Bullets/" + bulletImage);
 
-            int damage = int.Parse(data[length * (i + 1) + 8]);
+            int damage = int.Parse(data[length * (i + 1) + 9]);
 
             // Creat data
-            ChickenSO.Instance.CreatNewLevelChicken(nameChicken, chickenSprite, gunSprite, levelSprite, goldEarn, goldUpdate, nameBullet, bulletSprite, damage);
+            ChickenSO.Instance.CreatNewLevelChicken(nameChicken, chickenSprite, gunSprite, levelSprite, goldEarn, timeDelayEarnGold, goldUpdate, nameBullet, bulletSprite, damage);
         }
     }
 

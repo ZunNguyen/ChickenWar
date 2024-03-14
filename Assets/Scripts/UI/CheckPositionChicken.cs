@@ -50,10 +50,17 @@ public class CheckPositionChicken : ErshenMonoBehaviour
         return true;
     }
 
-    public virtual int GetIndexChickenInList(int indexSlot)
+    public virtual string GetNameBullet(int indexSlot)
     {
         ChickenController chickenController = chickenSlots[indexSlot].transform.GetComponentInChildren<ChickenController>();
-        string nameChicken = chickenController.gameObject.name;
-        return chickenController.ChickenSO.GetIndexChicken(nameChicken);
+        string nameBullet = chickenController.ChickenGun.nameBullet;
+        return nameBullet;
+    }
+
+    public virtual int GetDamageBullet(int indexSlot)
+    {
+        ChickenController chickenController = chickenSlots[indexSlot].transform.GetComponentInChildren<ChickenController>();
+        int damageBullet = chickenController.ChickenGun.damage;
+        return damageBullet;
     }
 }

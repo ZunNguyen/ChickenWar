@@ -15,6 +15,8 @@ public class LevelChicken
 
     public int goldEarn;
 
+    public int timeDelyEarnGold;
+
     public int goldUpdate;
 
     public string nameBullet;
@@ -23,13 +25,14 @@ public class LevelChicken
 
     public int damage;
 
-    public LevelChicken(string _nameChicken, Sprite _chickenImage, Sprite _gunImage, Sprite _levelImage, int _goldEarn, int _goldUpdate,string _nameBullet, Sprite _bulletImage, int _damage)
+    public LevelChicken(string _nameChicken, Sprite _chickenImage, Sprite _gunImage, Sprite _levelImage, int _goldEarn, int _timeDelayEarnGold, int _goldUpdate,string _nameBullet, Sprite _bulletImage, int _damage)
     {
         nameChicken = _nameChicken;
         chickenImage = _chickenImage;
         gunImage = _gunImage;
         levelImage = _levelImage;
         goldEarn = _goldEarn;
+        timeDelyEarnGold = _timeDelayEarnGold;
         goldUpdate = _goldUpdate;
         nameBullet = _nameBullet;
         bulletImage = _bulletImage;

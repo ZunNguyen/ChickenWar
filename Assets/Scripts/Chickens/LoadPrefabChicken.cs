@@ -76,5 +76,6 @@ public class LoadPrefabChicken : MonoBehaviour
     {
         GoldEarn goldEarn = chicken.transform.Find("Gold").GetComponent<GoldEarn>();
         goldEarn.gold = chickenSO.levels[index].goldEarn;
+        goldEarn.timeDelay = chickenSO.levels[index].timeDelyEarnGold;
     }
 }

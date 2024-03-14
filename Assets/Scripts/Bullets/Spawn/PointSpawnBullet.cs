@@ -53,9 +53,6 @@ public class PointSpawnBullet : ErshenMonoBehaviour
     {
         if (CanSpawnBullet())
         {
-            // Get name chicken
-            levelChicken = CanvasController.Instance.CheckPositionChicken.GetIndexChickenInList(index - 1);
-            CanvasController.Instance.PointSpawnBulletController.GameObjectSpawner.BulletCtrl.BulletDamSender.GetDamgeBullet(levelChicken);
             SpawnBulletByTime();
         }
     }
@@ -67,9 +64,13 @@ public class PointSpawnBullet : ErshenMonoBehaviour
         if (timeCurrent < timeDelay) return;
         if (timeCurrent >= timeDelay)
         {
-            GameObject newBullet = pointSpawnBulletController.GameObjectSpawner.Spawn("Bullet", this.transform.position, this.transform.rotation).gameObject;
+            // Set information bullet
+            string nameBullet = CanvasController.Instance.CheckPositionChicken.GetNameBullet(index - 1);
+            int damageBullet = CanvasController.Instance.CheckPositionChicken.GetDamageBullet(index - 1);
+            GameObject newBullet = pointSpawnBulletController.GameObjectSpawner.Spawn(nameBullet, this.transform.position, this.transform.rotation).gameObject;
             BulletCtrl bulletCtrl = newBullet.GetComponent<BulletCtrl>();
             bulletCtrl.BulletMovement.objTarget = GetTransNearestObj();
+            bulletCtrl.BulletDamSender.damge = damageBullet;
             newBullet.SetActive(true);
             timeCurrent = 0;
 

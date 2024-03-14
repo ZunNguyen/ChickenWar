@@ -98,8 +98,8 @@ public class CoinCollectSpawner : ErshenMonoBehaviour
 
     public virtual void Despawn(GameObject obj)
     {
-        poolObjs.Add(obj.gameObject);
+        poolObjs.Add(obj);
         obj.transform.SetParent(holder.transform);
-        obj.gameObject.SetActive(false);
+        obj.SetActive(false);
     }
 }

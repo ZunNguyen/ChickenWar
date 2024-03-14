@@ -10,7 +10,7 @@ public class GoldEarn : ErshenMonoBehaviour
 
     [Header("Value")]
     [SerializeField] protected float timeCurrent;
-    [SerializeField] protected float timeDelay = 2;
+    public float timeDelay = 6;
     public int gold;
 
     protected void Update()
@@ -41,6 +41,7 @@ public class GoldEarn : ErshenMonoBehaviour
         GameObject newTrans = CoinCollectSpawner.Instance.Spawn("Coin Collection", this.transform.position, this.transform.rotation);
         CoinCollect coinCollect = newTrans.GetComponent<CoinCollect>();
         coinCollect.GetValueText(gold);
+        coinCollect.TWCoinCollectOn();
         newTrans.SetActive(true);
     }
 

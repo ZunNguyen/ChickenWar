@@ -55,12 +55,12 @@ public class PanelVictory : ErshenMonoBehaviour
     public virtual void GetTextKillDog()
     {
         int numsDog = 0;
-        textWaveDog.text = numsDog.ToString("d2");
+        textKillDog.text = numsDog.ToString("d2");
     }
 
     public virtual void GetTextEarnGold()
     {
         int goldEarn = 0;
-        textWaveDog.text = goldEarn.ToString("d2");
+        textEarnGold.text = goldEarn.ToString("d2");
     }
 }

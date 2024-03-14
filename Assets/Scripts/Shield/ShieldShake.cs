@@ -20,13 +20,11 @@ public class ShieldShake : ErshenMonoBehaviour
 
     public virtual void Animating()
     {
-        Debug.Log("have");
         animator.SetBool("isShaking", true);
     }
 
     protected virtual void SetFalseShaking()
     {
-        Debug.Log("ha");
         animator.SetBool("isShaking", false);
     }
 }

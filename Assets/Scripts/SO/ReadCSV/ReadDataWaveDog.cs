@@ -9,7 +9,7 @@ public class ReadDataWaveDog : ErshenMonoBehaviour
     [SerializeField] protected TextAsset textAssetData;
 
     [Header("Variable")]
-    [SerializeField] protected int horizolNums = 8;
+    [SerializeField] protected int horizolNums = 9;
 
     protected override void LoadComponent()
     {
@@ -104,10 +104,10 @@ public class ReadDataWaveDog : ErshenMonoBehaviour
                 string nameDog = data[horizolNums * (i + 1) + 3];
                 int nums = int.Parse(data[horizolNums * (i + 1) + 4]);
                 int hpDog = int.Parse(data[horizolNums * (i + 1) + 5]);
-                int timeDelay = int.Parse(data[horizolNums * (i + 1) + 6]);
-                string indexLine = data[horizolNums * (i + 1) + 7];
-                string dataIndex = data[horizolNums * (i + 1) + 7];
-                WaveDogSO.Instance.CreatNewLevelDog(WaveDogSO.Instance.waves[waveIndex].phases[phaseIndex], levelDog, nameDog, nums, hpDog, timeDelay, indexLine);
+                int damageDog = int.Parse(data[horizolNums * (i + 1) + 6]);
+                int timeDelay = int.Parse(data[horizolNums * (i + 1) + 7]);
+                string indexLine = data[horizolNums * (i + 1) + 8];
+                WaveDogSO.Instance.CreatNewLevelDog(WaveDogSO.Instance.waves[waveIndex].phases[phaseIndex], levelDog, nameDog, nums, hpDog, damageDog, timeDelay, indexLine);
                 countSameLevelDog = 0;
             }
         }

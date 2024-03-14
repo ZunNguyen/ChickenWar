@@ -14,36 +14,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - wave: 0
-    sum: 8
+    sum: 0
     phases:
     - phase: 0
-      sumPhase: 2
+      sumPhase: 0
       levelDogs:
       - levelDog: 0
         nameDog: Dog02
         nums: 1
-        hpDog: 10
+        hpDog: 20
         timeDelay: 1
         indexLine: "2\r"
       - levelDog: 1
         nameDog: Dog03
         nums: 1
-        hpDog: 10
+        hpDog: 20
         timeDelay: 3
         indexLine: "1\r"
+      - levelDog: 2
+        nameDog: Dog02
+        nums: 1
+        hpDog: 20
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 3
+        nameDog: Dog03
+        nums: 1
+        hpDog: 20
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 4
+        nameDog: Dog02
+        nums: 1
+        hpDog: 20
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 5
+        nameDog: Dog03
+        nums: 1
+        hpDog: 20
+        timeDelay: 3
+        indexLine: "5\r"
     - phase: 1
-      sumPhase: 6
+      sumPhase: 0
       levelDogs:
       - levelDog: 0
         nameDog: Dog02
         nums: 1
-        hpDog: 10
+        hpDog: 20
         timeDelay: 3
         indexLine: "135\r"
       - levelDog: 1
         nameDog: Dog03
         nums: 1
-        hpDog: 10
+        hpDog: 20
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 2
+        nameDog: Dog02
+        nums: 1
+        hpDog: 20
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 3
+        nameDog: Dog03
+        nums: 1
+        hpDog: 20
         timeDelay: 5
         indexLine: "246\r"
   - wave: 1

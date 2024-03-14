@@ -21,9 +21,9 @@ public class ChickenSO : ScriptableObject
         instance = this;
     }
 
-    public void CreatNewLevelChicken(string _nameChicken, Sprite _chickenImage, Sprite _gunImage, Sprite _levelImage, int _goldEarn, int _goldUpdate,string _nameBullet, Sprite _bulletImage, int _damage)
+    public void CreatNewLevelChicken(string _nameChicken, Sprite _chickenImage, Sprite _gunImage, Sprite _levelImage, int _goldEarn, int _timeDelayEarnGold, int _goldUpdate,string _nameBullet, Sprite _bulletImage, int _damage)
     {
-        LevelChicken levelChicken = new LevelChicken(_nameChicken, _chickenImage, _gunImage, _levelImage, _goldEarn, _goldUpdate, _nameBullet, _bulletImage, _damage);
+        LevelChicken levelChicken = new LevelChicken(_nameChicken, _chickenImage, _gunImage, _levelImage, _goldEarn, _timeDelayEarnGold,_goldUpdate, _nameBullet, _bulletImage, _damage);
         levels.Add(levelChicken);
     }
 

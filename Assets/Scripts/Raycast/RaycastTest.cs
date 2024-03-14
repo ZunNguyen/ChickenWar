@@ -36,7 +36,7 @@ public class RaycastTest : ErshenMonoBehaviour
 
     protected virtual void RaycastProcess()
     {
-        //Debug.DrawRay(transform.position, transform.right * rayLength, Color.red);
+        Debug.DrawRay(transform.position, transform.right * rayLength, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, rayLength, layer);
         if (hit)
         {

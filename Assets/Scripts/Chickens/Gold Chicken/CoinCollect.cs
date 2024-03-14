@@ -43,17 +43,16 @@ public class CoinCollect : ErshenMonoBehaviour
         rectTransform = transform.GetComponent<RectTransform>();
     }
 
-    private void Update()
+    public virtual void TWCoinCollectOn()
     {
-        transform.DOMoveY(rectTransform.position.y + posTarget, durTimeMove);
+        rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + posTarget, durTimeMove);
         Invoke(nameof(DestroyObj), durTimeDes);
     }
     
     protected virtual void DestroyObj()
     {
-        rectTransform.anchoredPosition = new Vector2(0, 0);
-        Destroy(gameObject);
-        //CoinCollectSpawner.Instance.Despawn(gameObject);
+        //rectTransform.anchoredPosition = Vector2.zero;
+        CoinCollectSpawner.Instance.Despawn(gameObject);
     }
 
     public void GetValueText(int value)

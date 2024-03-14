@@ -46,6 +46,9 @@ public class CanvasController : ErshenMonoBehaviour
     [SerializeField] protected ShieldUpdateController shieldUpdateController;
     public ShieldUpdateController ShieldUpdateController => shieldUpdateController;
 
+    [SerializeField] protected PanelLoseController panelLoseController;
+    public PanelLoseController PanelLoseController => panelLoseController;
+
     [Header("Load script for shield")]
     [SerializeField] protected ShieldUpdate shieldUpdate;
     public ShieldUpdate ShieldUpdate => shieldUpdate;
@@ -75,6 +78,7 @@ public class CanvasController : ErshenMonoBehaviour
         LoadButtonManager();
         LoadShieldUpdateController();
         LoadTWUpgradeChicken();
+        LoadpanelLoseController();
 
         // Load Script for Shield
         LoadShieldUpdate();
@@ -169,6 +173,12 @@ public class CanvasController : ErshenMonoBehaviour
     {
         if (shieldUpdateController != null) return;
         shieldUpdateController = transform.Find("Update Shield").GetComponent<ShieldUpdateController>();
+    }
+
+    protected virtual void LoadpanelLoseController()
+    {
+        if (panelLoseController != null) return;
+        panelLoseController = transform.Find("Panel - Lose").GetComponent<PanelLoseController>();
     }
 
     protected virtual void LoadInstance()

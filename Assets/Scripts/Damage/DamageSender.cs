@@ -8,8 +8,7 @@ public class DamageSender : ErshenMonoBehaviour
 
     public virtual void Send(Transform obj)
     {
-        DamageReciver damageReciver = obj.transform.GetComponent<DamageReciver>();
-        if (damageReciver == null) return;
+        if (!obj.transform.TryGetComponent<DamageReciver>(out var damageReciver)) return;
         this.Send(damageReciver);
     }
 

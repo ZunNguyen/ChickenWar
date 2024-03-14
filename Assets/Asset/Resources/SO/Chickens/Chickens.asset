@@ -18,6 +18,7 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 6b6a39f85b6b5fe409e552092e73d9a6, type: 3}
     levelImage: {fileID: 21300000, guid: f54d507f375157743924e25ce006565f, type: 3}
     goldEarn: 1
+    timeDelyEarnGold: 7
     goldUpdate: 1
     nameBullet: Bullet01
     bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
@@ -27,6 +28,7 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 6b6a39f85b6b5fe409e552092e73d9a6, type: 3}
     levelImage: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
     goldEarn: 2
+    timeDelyEarnGold: 7
     goldUpdate: 20
     nameBullet: Bullet01
     bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
@@ -36,6 +38,7 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 6b6a39f85b6b5fe409e552092e73d9a6, type: 3}
     levelImage: {fileID: 21300000, guid: c10501d2f535e83479d231d0a352e3d6, type: 3}
     goldEarn: 5
+    timeDelyEarnGold: 7
     goldUpdate: 50
     nameBullet: Bullet01
     bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
@@ -45,6 +48,7 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 6b6a39f85b6b5fe409e552092e73d9a6, type: 3}
     levelImage: {fileID: 21300000, guid: 91b91b480455dda4884985e674b4b700, type: 3}
     goldEarn: 10
+    timeDelyEarnGold: 7
     goldUpdate: 100
     nameBullet: Bullet01
     bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
@@ -54,322 +58,358 @@ MonoBehaviour:
     gunImage: {fileID: 21300000, guid: 7b66956778951d04a9d188766e261bdc, type: 3}
     levelImage: {fileID: 21300000, guid: f54d507f375157743924e25ce006565f, type: 3}
     goldEarn: 20
+    timeDelyEarnGold: 7
     goldUpdate: 200
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet02
+    bulletImage: {fileID: 21300000, guid: e6b3f73bb5365d34ea2db3f764cd7fe2, type: 3}
     damage: 20
   - nameChicken: Chicken06
     chickenImage: {fileID: 21300000, guid: 07aed1e86c18879458f17ddf66774c82, type: 3}
     gunImage: {fileID: 21300000, guid: 7b66956778951d04a9d188766e261bdc, type: 3}
     levelImage: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
     goldEarn: 50
+    timeDelyEarnGold: 7
     goldUpdate: 500
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet02
+    bulletImage: {fileID: 21300000, guid: e6b3f73bb5365d34ea2db3f764cd7fe2, type: 3}
     damage: 50
   - nameChicken: Chicken07
     chickenImage: {fileID: 21300000, guid: 07aed1e86c18879458f17ddf66774c82, type: 3}
     gunImage: {fileID: 21300000, guid: 7b66956778951d04a9d188766e261bdc, type: 3}
     levelImage: {fileID: 21300000, guid: c10501d2f535e83479d231d0a352e3d6, type: 3}
     goldEarn: 100
+    timeDelyEarnGold: 7
     goldUpdate: 1000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet02
+    bulletImage: {fileID: 21300000, guid: e6b3f73bb5365d34ea2db3f764cd7fe2, type: 3}
     damage: 100
   - nameChicken: Chicken08
     chickenImage: {fileID: 21300000, guid: 07aed1e86c18879458f17ddf66774c82, type: 3}
     gunImage: {fileID: 21300000, guid: 7b66956778951d04a9d188766e261bdc, type: 3}
     levelImage: {fileID: 21300000, guid: 91b91b480455dda4884985e674b4b700, type: 3}
     goldEarn: 200
+    timeDelyEarnGold: 7
     goldUpdate: 2000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet02
+    bulletImage: {fileID: 21300000, guid: e6b3f73bb5365d34ea2db3f764cd7fe2, type: 3}
     damage: 200
   - nameChicken: Chicken09
     chickenImage: {fileID: 21300000, guid: f3ff42f49de70df46b36f505fe6d10f9, type: 3}
     gunImage: {fileID: 21300000, guid: 83561ee9aa53eda4fa8add95d0fb3815, type: 3}
     levelImage: {fileID: 21300000, guid: f54d507f375157743924e25ce006565f, type: 3}
     goldEarn: 500
+    timeDelyEarnGold: 7
     goldUpdate: 5000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet03
+    bulletImage: {fileID: 21300000, guid: 6d5558550b4309740b796c51fd6db688, type: 3}
     damage: 500
   - nameChicken: Chicken10
     chickenImage: {fileID: 21300000, guid: f3ff42f49de70df46b36f505fe6d10f9, type: 3}
     gunImage: {fileID: 21300000, guid: 83561ee9aa53eda4fa8add95d0fb3815, type: 3}
     levelImage: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
     goldEarn: 1000
+    timeDelyEarnGold: 7
     goldUpdate: 10000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet03
+    bulletImage: {fileID: 21300000, guid: 6d5558550b4309740b796c51fd6db688, type: 3}
     damage: 1000
   - nameChicken: Chicken11
     chickenImage: {fileID: 21300000, guid: f3ff42f49de70df46b36f505fe6d10f9, type: 3}
     gunImage: {fileID: 21300000, guid: 83561ee9aa53eda4fa8add95d0fb3815, type: 3}
     levelImage: {fileID: 21300000, guid: c10501d2f535e83479d231d0a352e3d6, type: 3}
     goldEarn: 2000
+    timeDelyEarnGold: 7
     goldUpdate: 2000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet03
+    bulletImage: {fileID: 21300000, guid: 6d5558550b4309740b796c51fd6db688, type: 3}
     damage: 2000
   - nameChicken: Chicken12
     chickenImage: {fileID: 21300000, guid: f3ff42f49de70df46b36f505fe6d10f9, type: 3}
     gunImage: {fileID: 21300000, guid: 83561ee9aa53eda4fa8add95d0fb3815, type: 3}
     levelImage: {fileID: 21300000, guid: 91b91b480455dda4884985e674b4b700, type: 3}
     goldEarn: 5000
+    timeDelyEarnGold: 7
     goldUpdate: 5000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet03
+    bulletImage: {fileID: 21300000, guid: 6d5558550b4309740b796c51fd6db688, type: 3}
     damage: 5000
   - nameChicken: Chicken13
     chickenImage: {fileID: 21300000, guid: e8d61e30d63ab8840aa53b8df54962a5, type: 3}
     gunImage: {fileID: 21300000, guid: 308bd997c41a10941837e9c814c6f669, type: 3}
     levelImage: {fileID: 21300000, guid: f54d507f375157743924e25ce006565f, type: 3}
     goldEarn: 10000
+    timeDelyEarnGold: 7
     goldUpdate: 10000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet04
+    bulletImage: {fileID: 21300000, guid: bc5075661a801c64eaf4a198ea0909e2, type: 3}
     damage: 5000
   - nameChicken: Chicken14
     chickenImage: {fileID: 21300000, guid: e8d61e30d63ab8840aa53b8df54962a5, type: 3}
     gunImage: {fileID: 21300000, guid: 308bd997c41a10941837e9c814c6f669, type: 3}
     levelImage: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
     goldEarn: 20000
+    timeDelyEarnGold: 7
     goldUpdate: 20000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet04
+    bulletImage: {fileID: 21300000, guid: bc5075661a801c64eaf4a198ea0909e2, type: 3}
     damage: 5000
   - nameChicken: Chicken15
     chickenImage: {fileID: 21300000, guid: e8d61e30d63ab8840aa53b8df54962a5, type: 3}
     gunImage: {fileID: 21300000, guid: 308bd997c41a10941837e9c814c6f669, type: 3}
     levelImage: {fileID: 21300000, guid: c10501d2f535e83479d231d0a352e3d6, type: 3}
     goldEarn: 50000
+    timeDelyEarnGold: 7
     goldUpdate: 50000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet04
+    bulletImage: {fileID: 21300000, guid: bc5075661a801c64eaf4a198ea0909e2, type: 3}
     damage: 5000
   - nameChicken: Chicken16
     chickenImage: {fileID: 21300000, guid: e8d61e30d63ab8840aa53b8df54962a5, type: 3}
     gunImage: {fileID: 21300000, guid: 308bd997c41a10941837e9c814c6f669, type: 3}
     levelImage: {fileID: 21300000, guid: 91b91b480455dda4884985e674b4b700, type: 3}
     goldEarn: 100000
+    timeDelyEarnGold: 7
     goldUpdate: 100000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet04
+    bulletImage: {fileID: 21300000, guid: bc5075661a801c64eaf4a198ea0909e2, type: 3}
     damage: 5000
   - nameChicken: Chicken17
     chickenImage: {fileID: 21300000, guid: e701ce5d7baeef846a07a01d45c96324, type: 3}
     gunImage: {fileID: 21300000, guid: acca3e709f0f43943ad60e38dfd633c8, type: 3}
     levelImage: {fileID: 21300000, guid: f54d507f375157743924e25ce006565f, type: 3}
     goldEarn: 200000
+    timeDelyEarnGold: 7
     goldUpdate: 200000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet05
+    bulletImage: {fileID: 21300000, guid: b7033a641395a734485ec8821697c170, type: 3}
     damage: 5000
   - nameChicken: Chicken18
     chickenImage: {fileID: 21300000, guid: e701ce5d7baeef846a07a01d45c96324, type: 3}
     gunImage: {fileID: 21300000, guid: acca3e709f0f43943ad60e38dfd633c8, type: 3}
     levelImage: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
     goldEarn: 500000
+    timeDelyEarnGold: 7
     goldUpdate: 500000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet05
+    bulletImage: {fileID: 21300000, guid: b7033a641395a734485ec8821697c170, type: 3}
     damage: 5000
   - nameChicken: Chicken19
     chickenImage: {fileID: 21300000, guid: e701ce5d7baeef846a07a01d45c96324, type: 3}
     gunImage: {fileID: 21300000, guid: acca3e709f0f43943ad60e38dfd633c8, type: 3}
     levelImage: {fileID: 21300000, guid: c10501d2f535e83479d231d0a352e3d6, type: 3}
     goldEarn: 1000000
+    timeDelyEarnGold: 7
     goldUpdate: 1000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet05
+    bulletImage: {fileID: 21300000, guid: b7033a641395a734485ec8821697c170, type: 3}
     damage: 5000
   - nameChicken: Chicken20
     chickenImage: {fileID: 21300000, guid: e701ce5d7baeef846a07a01d45c96324, type: 3}
     gunImage: {fileID: 21300000, guid: acca3e709f0f43943ad60e38dfd633c8, type: 3}
     levelImage: {fileID: 21300000, guid: 91b91b480455dda4884985e674b4b700, type: 3}
     goldEarn: 2000000
+    timeDelyEarnGold: 7
     goldUpdate: 2000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet05
+    bulletImage: {fileID: 21300000, guid: b7033a641395a734485ec8821697c170, type: 3}
     damage: 5000
   - nameChicken: Chicken21
     chickenImage: {fileID: 21300000, guid: e0d493b5174d04c4f878a2ec0a182dc9, type: 3}
     gunImage: {fileID: 21300000, guid: 533585d13c612b542a67ac32d9f27f9a, type: 3}
     levelImage: {fileID: 21300000, guid: f54d507f375157743924e25ce006565f, type: 3}
     goldEarn: 5000000
+    timeDelyEarnGold: 7
     goldUpdate: 5000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet06
+    bulletImage: {fileID: 21300000, guid: cbe355b2e40483e419d1f432a643e4d9, type: 3}
     damage: 5000
   - nameChicken: Chicken22
     chickenImage: {fileID: 21300000, guid: e0d493b5174d04c4f878a2ec0a182dc9, type: 3}
     gunImage: {fileID: 21300000, guid: 533585d13c612b542a67ac32d9f27f9a, type: 3}
     levelImage: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
     goldEarn: 10000000
+    timeDelyEarnGold: 7
     goldUpdate: 10000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet06
+    bulletImage: {fileID: 21300000, guid: cbe355b2e40483e419d1f432a643e4d9, type: 3}
     damage: 5000
   - nameChicken: Chicken23
     chickenImage: {fileID: 21300000, guid: e0d493b5174d04c4f878a2ec0a182dc9, type: 3}
     gunImage: {fileID: 21300000, guid: 533585d13c612b542a67ac32d9f27f9a, type: 3}
     levelImage: {fileID: 21300000, guid: c10501d2f535e83479d231d0a352e3d6, type: 3}
     goldEarn: 20000000
+    timeDelyEarnGold: 7
     goldUpdate: 20000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet06
+    bulletImage: {fileID: 21300000, guid: cbe355b2e40483e419d1f432a643e4d9, type: 3}
     damage: 5000
   - nameChicken: Chicken24
     chickenImage: {fileID: 21300000, guid: e0d493b5174d04c4f878a2ec0a182dc9, type: 3}
     gunImage: {fileID: 21300000, guid: 533585d13c612b542a67ac32d9f27f9a, type: 3}
     levelImage: {fileID: 21300000, guid: 91b91b480455dda4884985e674b4b700, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet06
+    bulletImage: {fileID: 21300000, guid: cbe355b2e40483e419d1f432a643e4d9, type: 3}
     damage: 5000
   - nameChicken: Chicken25
     chickenImage: {fileID: 21300000, guid: 2aa3c35fe8f91c04d99ba25f0b134bc6, type: 3}
     gunImage: {fileID: 21300000, guid: 6d3dac3d7e884cf4e9a17b8c2cbb446e, type: 3}
     levelImage: {fileID: 21300000, guid: f54d507f375157743924e25ce006565f, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet07
+    bulletImage: {fileID: 21300000, guid: 0fb3805f25717bd4c935e44ffae0ba7f, type: 3}
     damage: 5000
   - nameChicken: Chicken26
     chickenImage: {fileID: 21300000, guid: 2aa3c35fe8f91c04d99ba25f0b134bc6, type: 3}
     gunImage: {fileID: 21300000, guid: 6d3dac3d7e884cf4e9a17b8c2cbb446e, type: 3}
     levelImage: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet07
+    bulletImage: {fileID: 21300000, guid: 0fb3805f25717bd4c935e44ffae0ba7f, type: 3}
     damage: 5000
   - nameChicken: Chicken27
     chickenImage: {fileID: 21300000, guid: 2aa3c35fe8f91c04d99ba25f0b134bc6, type: 3}
     gunImage: {fileID: 21300000, guid: 6d3dac3d7e884cf4e9a17b8c2cbb446e, type: 3}
     levelImage: {fileID: 21300000, guid: c10501d2f535e83479d231d0a352e3d6, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet07
+    bulletImage: {fileID: 21300000, guid: 0fb3805f25717bd4c935e44ffae0ba7f, type: 3}
     damage: 5000
   - nameChicken: Chicken28
     chickenImage: {fileID: 21300000, guid: 2aa3c35fe8f91c04d99ba25f0b134bc6, type: 3}
     gunImage: {fileID: 21300000, guid: 6d3dac3d7e884cf4e9a17b8c2cbb446e, type: 3}
     levelImage: {fileID: 21300000, guid: 91b91b480455dda4884985e674b4b700, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet07
+    bulletImage: {fileID: 21300000, guid: 0fb3805f25717bd4c935e44ffae0ba7f, type: 3}
     damage: 5000
   - nameChicken: Chicken29
     chickenImage: {fileID: 21300000, guid: cb0a1e09457fd604c8c775cb2b20d5cc, type: 3}
     gunImage: {fileID: 21300000, guid: e4234e669457a054494ca93f9f3232e9, type: 3}
     levelImage: {fileID: 21300000, guid: f54d507f375157743924e25ce006565f, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet08
+    bulletImage: {fileID: 21300000, guid: b553f5b988476d84481e6f11a44d1b4a, type: 3}
     damage: 5000
   - nameChicken: Chicken30
     chickenImage: {fileID: 21300000, guid: cb0a1e09457fd604c8c775cb2b20d5cc, type: 3}
     gunImage: {fileID: 21300000, guid: e4234e669457a054494ca93f9f3232e9, type: 3}
     levelImage: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet08
+    bulletImage: {fileID: 21300000, guid: b553f5b988476d84481e6f11a44d1b4a, type: 3}
     damage: 5000
   - nameChicken: Chicken31
     chickenImage: {fileID: 21300000, guid: cb0a1e09457fd604c8c775cb2b20d5cc, type: 3}
     gunImage: {fileID: 21300000, guid: e4234e669457a054494ca93f9f3232e9, type: 3}
     levelImage: {fileID: 21300000, guid: c10501d2f535e83479d231d0a352e3d6, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet08
+    bulletImage: {fileID: 21300000, guid: b553f5b988476d84481e6f11a44d1b4a, type: 3}
     damage: 5000
   - nameChicken: Chicken32
     chickenImage: {fileID: 21300000, guid: cb0a1e09457fd604c8c775cb2b20d5cc, type: 3}
     gunImage: {fileID: 21300000, guid: e4234e669457a054494ca93f9f3232e9, type: 3}
     levelImage: {fileID: 21300000, guid: 91b91b480455dda4884985e674b4b700, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet08
+    bulletImage: {fileID: 21300000, guid: b553f5b988476d84481e6f11a44d1b4a, type: 3}
     damage: 5000
   - nameChicken: Chicken33
     chickenImage: {fileID: 21300000, guid: c60a6b7a165537143b2e644d453818cb, type: 3}
     gunImage: {fileID: 21300000, guid: 15dc26f1e7f3adc408dd98675ad62594, type: 3}
     levelImage: {fileID: 21300000, guid: f54d507f375157743924e25ce006565f, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet09
+    bulletImage: {fileID: 21300000, guid: dbea74ee85d2cc545aa84a4567c25307, type: 3}
     damage: 5000
   - nameChicken: Chicken34
     chickenImage: {fileID: 21300000, guid: c60a6b7a165537143b2e644d453818cb, type: 3}
     gunImage: {fileID: 21300000, guid: 15dc26f1e7f3adc408dd98675ad62594, type: 3}
     levelImage: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet09
+    bulletImage: {fileID: 21300000, guid: dbea74ee85d2cc545aa84a4567c25307, type: 3}
     damage: 5000
   - nameChicken: Chicken35
     chickenImage: {fileID: 21300000, guid: c60a6b7a165537143b2e644d453818cb, type: 3}
     gunImage: {fileID: 21300000, guid: 15dc26f1e7f3adc408dd98675ad62594, type: 3}
     levelImage: {fileID: 21300000, guid: c10501d2f535e83479d231d0a352e3d6, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet09
+    bulletImage: {fileID: 21300000, guid: dbea74ee85d2cc545aa84a4567c25307, type: 3}
     damage: 5000
   - nameChicken: Chicken36
     chickenImage: {fileID: 21300000, guid: c60a6b7a165537143b2e644d453818cb, type: 3}
     gunImage: {fileID: 21300000, guid: 15dc26f1e7f3adc408dd98675ad62594, type: 3}
     levelImage: {fileID: 21300000, guid: 91b91b480455dda4884985e674b4b700, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet09
+    bulletImage: {fileID: 21300000, guid: dbea74ee85d2cc545aa84a4567c25307, type: 3}
     damage: 5000
   - nameChicken: Chicken37
     chickenImage: {fileID: 21300000, guid: 233f17fe5a620344888fe3bd13a91d25, type: 3}
     gunImage: {fileID: 21300000, guid: bcd6f0a64079425448f48e805b5d3128, type: 3}
     levelImage: {fileID: 21300000, guid: f54d507f375157743924e25ce006565f, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet10
+    bulletImage: {fileID: 21300000, guid: 0176e3c26b53f7c43a986a9e8b639da1, type: 3}
     damage: 5000
   - nameChicken: Chicken38
     chickenImage: {fileID: 21300000, guid: 233f17fe5a620344888fe3bd13a91d25, type: 3}
     gunImage: {fileID: 21300000, guid: bcd6f0a64079425448f48e805b5d3128, type: 3}
     levelImage: {fileID: 21300000, guid: 6abadb58ee42e5143b8e026b26cde3ad, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet10
+    bulletImage: {fileID: 21300000, guid: 0176e3c26b53f7c43a986a9e8b639da1, type: 3}
     damage: 5000
   - nameChicken: Chicken39
     chickenImage: {fileID: 21300000, guid: 233f17fe5a620344888fe3bd13a91d25, type: 3}
     gunImage: {fileID: 21300000, guid: bcd6f0a64079425448f48e805b5d3128, type: 3}
     levelImage: {fileID: 21300000, guid: c10501d2f535e83479d231d0a352e3d6, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet10
+    bulletImage: {fileID: 21300000, guid: 0176e3c26b53f7c43a986a9e8b639da1, type: 3}
     damage: 5000
   - nameChicken: Chicken40
     chickenImage: {fileID: 21300000, guid: 233f17fe5a620344888fe3bd13a91d25, type: 3}
     gunImage: {fileID: 21300000, guid: bcd6f0a64079425448f48e805b5d3128, type: 3}
     levelImage: {fileID: 21300000, guid: 91b91b480455dda4884985e674b4b700, type: 3}
     goldEarn: 50000000
+    timeDelyEarnGold: 7
     goldUpdate: 50000000
-    nameBullet: Bullet01
-    bulletImage: {fileID: 21300000, guid: b0cea2e8a40f74b49898197eea183f25, type: 3}
+    nameBullet: Bullet10
+    bulletImage: {fileID: 21300000, guid: 0176e3c26b53f7c43a986a9e8b639da1, type: 3}
     damage: 5000

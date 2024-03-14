@@ -9,14 +9,19 @@ public class ChickenController : ErshenMonoBehaviour
     [Header("Connect Script")]
     [SerializeField] protected ChickenSO chickenSO;
     public ChickenSO ChickenSO => chickenSO;
+
     [SerializeField] protected GoldEarn goldEarn;
     public GoldEarn GoldEarn => goldEarn;
+
+    [SerializeField] protected ChickenGun chickenGun;
+    public ChickenGun ChickenGun => chickenGun;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
         LoadChickenSO();
         LoadGoldEarn();
+        LoadChickenGun();
     }
 
     protected virtual void LoadChickenSO()
@@ -29,6 +34,12 @@ public class ChickenController : ErshenMonoBehaviour
     protected virtual void LoadGoldEarn()
     {
         if (goldEarn != null) return;
-        goldEarn = this.transform.Find("Gold").GetComponent<GoldEarn>();
+        goldEarn = this.transform.GetComponentInChildren<GoldEarn>();
+    }
+
+    protected virtual void LoadChickenGun()
+    {
+        if (chickenGun != null) return;
+        chickenGun = this.transform.GetComponentInChildren<ChickenGun>();
     }
 }
