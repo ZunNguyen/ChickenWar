@@ -16,13 +16,12 @@ public class DogDamageReceiver : DamageReciver
     protected virtual void LoadDogCtrl()
     {
         if (dogCtrl != null) return;
-        dogCtrl = transform.parent.GetComponent<DogCtrl>();
+        dogCtrl = transform.parent.parent.GetComponent<DogCtrl>();
     }
 
     protected override void OnDead()
     {
         dogCtrl.DogAniamtion.Dead();
-
         dogCtrl.DisaleComponents();
 
         this.transform.parent.parent.position = new Vector3(this.transform.position.x, this.transform.position.y, 10);

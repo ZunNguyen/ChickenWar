@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class GoldEarn : ErshenMonoBehaviour
+public class GoldEarn : ChickenAbstract
 {
-    [Header("Connect Script")]
-    [SerializeField] protected ChickenController chickenController;
-
     [Header("Value")]
     [SerializeField] protected float timeCurrent;
     public float timeDelay = 6;
@@ -18,18 +15,6 @@ public class GoldEarn : ErshenMonoBehaviour
         EarningGold();
     }
 
-    protected override void LoadComponent()
-    {
-        base.LoadComponent();
-        LoadChickenController();
-    }
-
-    protected virtual void LoadChickenController()
-    {
-        if (chickenController != null) return;
-        chickenController = transform.GetComponentInParent<ChickenController>();
-    }
-    
     protected virtual void EarningGold()
     {
         if (!CanEarnGold()) return;

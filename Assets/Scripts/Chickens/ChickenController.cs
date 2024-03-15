@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChickenController : ErshenMonoBehaviour
+public class ChickenController : CanvasAbstract
 {
     [Header("Connect Script")]
     [SerializeField] protected ChickenSO chickenSO;

@@ -12,7 +12,7 @@ public class TrackingWave : ProcessSlider
 
     [Header("Connect Script")]
     [SerializeField] protected WaveDogSO waveDogSO;
-    [SerializeField] protected static TrackingWave instance;
+    protected static TrackingWave instance;
     public static TrackingWave Instance => instance;
 
     [Header("Connect Script parent")]

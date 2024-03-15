@@ -8,9 +8,9 @@ public class ShieldHPSum : ErshenMonoBehaviour
     [SerializeField] protected List<Transform> shields;
 
     [Header("Variable")]
-    public int sumHpMax = 100;
-    public int sum = 0;
-    [SerializeField] protected int sumHpCurrent;
+    public float sumHpMax = 100;
+    public float sum = 0;
+    [SerializeField] protected float sumHpCurrent;
 
     protected override void LoadComponent()
     {
@@ -31,11 +31,11 @@ public class ShieldHPSum : ErshenMonoBehaviour
     {
         sumHpMax = LoadHpMax();
         sumHpCurrent = sumHpMax;
-        int sum = 0;
+        float sum = 0;
         foreach (Transform shield in shields)
         {
             ShieldDamageReciever shieldDamageReciever = shield.GetComponentInChildren<ShieldDamageReciever>();
-            int tem = shieldDamageReciever.hpMax - shieldDamageReciever.hpCurrent;
+            float tem = shieldDamageReciever.hpMax - shieldDamageReciever.hpCurrent;
             sum += tem;
         }
         sumHpCurrent -= sum;

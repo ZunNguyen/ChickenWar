@@ -40,7 +40,7 @@ public class DogDamageSender : DamageSender
 
     protected virtual void StopMovement()
     {
-        dogCtrl.DogMovement.enabled = false;
+        dogCtrl.DogMovement.gameObject.SetActive(false);
     }
 
     protected virtual void SetAnimationAttack()

@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7780454838775002560}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2437520903110271945
 MonoBehaviour:
@@ -156,7 +156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7780454838775002560
 Transform:
   m_ObjectHideFlags: 0
@@ -172,7 +172,6 @@ Transform:
   - {fileID: 7780454840152828184}
   - {fileID: 7780454838902441025}
   - {fileID: 7780454840491141234}
-  - {fileID: 7780454839446589113}
   - {fileID: 7780454840564895875}
   - {fileID: 4093949047388974954}
   m_Father: {fileID: 0}
@@ -328,7 +327,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7780454839236459950}
   - component: {fileID: 7780454839236459951}
-  - component: {fileID: 7780454839236459984}
   m_Layer: 0
   m_Name: HP bar
   m_TagString: Untagged
@@ -409,65 +407,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7780454839236459984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7780454839236459949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc6388f850f2a42498c3411af3a2c81a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 7780454839236459951}
-  dogDamageReceiver: {fileID: 7780454840457796240}
---- !u!1 &7780454839446589112
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7780454839446589113}
-  - component: {fileID: 7780454839446589114}
-  m_Layer: 0
-  m_Name: HP
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7780454839446589113
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7780454839446589112}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7780454838775002560}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7780454839446589114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7780454839446589112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 454dab3fc6c477d4c9e42e425fdd6caa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHP: 100
 --- !u!1 &7780454839922647978
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7780454840564895875}
   - component: {fileID: 7780454840564895878}
+  - component: {fileID: 1293096895}
   m_Layer: 0
   m_Name: CanvasHP
   m_TagString: Untagged
@@ -875,7 +815,7 @@ RectTransform:
   m_Children:
   - {fileID: 7780454839236459950}
   m_Father: {fileID: 7780454838775002560}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -903,3 +843,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1293096895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7780454840564895874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc6388f850f2a42498c3411af3a2c81a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 7780454839236459951}
+  dogCtrl: {fileID: 7780454838775002561}

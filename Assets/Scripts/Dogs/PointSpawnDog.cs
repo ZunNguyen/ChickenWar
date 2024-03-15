@@ -32,16 +32,25 @@ public class PointSpawnDog : ErshenMonoBehaviour
         index -= 48;
     }
     
-    public virtual IEnumerator Spawning(string nameDog, float timeDelay)
+    public virtual IEnumerator Spawning(string nameDog, float timeDelay, int hpDog, int damageDog)
     {
         pointSpawnDogController.isSpawning = true;
         yield return new WaitForSeconds(timeDelay);
+       
+        SpawnDog(nameDog, timeDelay, hpDog, damageDog);
+
+        pointSpawnDogController.dogNum += 1;
+        pointSpawnDogController.isSpawning = false;
+    }
+
+    protected virtual void SpawnDog(string nameDog, float timeDelay, int hpDog, int damageDog)
+    {
         Transform newDogSpawn = pointSpawnDogController.GameObjectSpawner.Spawn(nameDog, transform.position, transform.rotation).transform;
         newDogSpawn.gameObject.SetActive(true);
         DogCtrl dogCtrl = newDogSpawn.GetComponent<DogCtrl>();
-        dogCtrl.EnableComponent();
         dogCtrl.DogIndex.indexDog = index;
-        pointSpawnDogController.dogNum += 1;
-        pointSpawnDogController.isSpawning = false;
+        dogCtrl.DogDamageReceiver.hpMax = hpDog;
+        dogCtrl.DogDamageSender.damgeSend = damageDog;
+        dogCtrl.EnableComponent();
     }
 }

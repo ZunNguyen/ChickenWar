@@ -13,6 +13,6 @@ public class DogMovement : ErshenMonoBehaviour
 
     protected virtual void Walking()
     {
-        transform.parent.Translate(Vector3.left * Time.fixedDeltaTime * speed);
+        transform.parent.Translate(speed * Time.fixedDeltaTime * Vector3.left);
     }
 }

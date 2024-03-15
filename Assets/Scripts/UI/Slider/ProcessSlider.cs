@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public abstract class ProcessSlider : ErshenMonoBehaviour
 {
-    [Header("Get Component")]
     [SerializeField] protected Slider slider;
 
     protected override void LoadComponent()
@@ -17,6 +16,6 @@ public abstract class ProcessSlider : ErshenMonoBehaviour
     protected virtual void LoadSlider()
     {
         if (slider != null) return;
-        slider = transform.GetComponent<Slider>();
+        slider = transform.GetComponentInChildren<Slider>();
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamageSender : ErshenMonoBehaviour
 {
-    [SerializeField] protected int damgeSend;
+    public int damgeSend;
 
     public virtual void Send(Transform obj)
     {

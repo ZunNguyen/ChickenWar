@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class PointSpawnBulletController : ErshenMonoBehaviour
 {
-    [Header("Connect InSide")]
-    [SerializeField] protected PointSpawnBullet pointSpawnBullet;
-    public PointSpawnBullet PointSpawnBullet { get => pointSpawnBullet; }
-
     [Header("Connect OutSide")]
     [SerializeField] protected GameObjectSpawner gameObjectSpawner;
     public GameObjectSpawner GameObjectSpawner => gameObjectSpawner;
@@ -18,15 +14,8 @@ public class PointSpawnBulletController : ErshenMonoBehaviour
     protected override void LoadComponent()
     {
         base.LoadComponent();
-        LoadPointSpawnBullet();
         LoadGameObjectSpawner();
         LoadPointSpawnBullets();
-    }
-
-    protected virtual void LoadPointSpawnBullet()
-    {
-        if (pointSpawnBullet != null) return;
-        pointSpawnBullet = gameObject.GetComponentInChildren<PointSpawnBullet>();
     }
 
     protected virtual void LoadGameObjectSpawner()

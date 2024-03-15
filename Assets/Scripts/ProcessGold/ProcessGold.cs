@@ -22,13 +22,13 @@ public abstract class ProcessGold :ErshenMonoBehaviour
         text = transform.GetComponentInChildren<TMP_Text>();
     }
 
-    protected virtual void PrintText(Int32 value)
+    protected virtual void PrintText(float value)
     {
         string printValue = ShortText(value);
         text.text = printValue;
     }
 
-    protected virtual string ShortText(Int64 value)
+    protected virtual string ShortText(float value)
     {
         if (value < 1000)
         {

@@ -93,11 +93,11 @@ public class DogCtrl : ErshenMonoBehaviour
     // EnableComponents
     public virtual void EnableComponent()
     {
+        // Enable obj damage recieve
+        DogDamageReceiver.gameObject.SetActive(true);
         // On Hp canvas
         canvasHP.gameObject.SetActive(true);
         // Enable obj movement
         dogMovement.gameObject.SetActive(true);
-        // Enable obj damage recieve
-        DogDamageReceiver.gameObject.SetActive(true);
     }
 }

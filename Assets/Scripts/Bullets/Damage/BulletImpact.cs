@@ -8,6 +8,7 @@ public class BulletImpact : BulletAbstract
     {
         if (collision.gameObject.name == "Bullet Damage Sender") return;
         if (collision.gameObject.name == "Shield Damage Reciver") return;
+        if (collision.gameObject.name == "Block Wall") bulletCtrl.BulletDespawn.DespawnObj();
 
         bulletCtrl.BulletDamSender.Send(collision.transform);
         Transform newObj = Spawner.Instance.Spawn("Bullet Effect", this.transform.position, this.transform.rotation);

@@ -47,7 +47,7 @@ public class ButtonManager : ErshenMonoBehaviour
         canvasController.TrackingWaveController.TWTrackingWave.TW_TrackingWaveOff();
 
         // Off panel victory
-        canvasController.TWPanelVictory.TW_PanelVictoryOff();
+        canvasController.PanelController.Panel.PanelOff();
     }
 
     public virtual void ButtonUnclockChickenUpgrade()

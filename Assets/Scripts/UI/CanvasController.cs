@@ -37,8 +37,8 @@ public class CanvasController : ErshenMonoBehaviour
     [SerializeField] protected TrackingWaveController trackingWaveController;
     public TrackingWaveController TrackingWaveController => trackingWaveController;
 
-    [SerializeField] protected TWPanelVictory tWPanelVictory;
-    public TWPanelVictory TWPanelVictory => tWPanelVictory;
+    [SerializeField] protected PanelController panelController;
+    public PanelController PanelController => panelController;
 
     [SerializeField] protected TWUpgradeChicken tWUpgradeChicken;
     public TWUpgradeChicken TWUpgradeChicken => tWUpgradeChicken;
@@ -74,7 +74,7 @@ public class CanvasController : ErshenMonoBehaviour
         LoadPointSpawnDogController();
         LoadGoldPlayer();
         LoadTrackingWaveController();
-        LoadTWPanelVictory();
+        LoadPanelController();
         LoadButtonManager();
         LoadShieldUpdateController();
         LoadTWUpgradeChicken();
@@ -151,10 +151,10 @@ public class CanvasController : ErshenMonoBehaviour
         shieldUpdate = transform.GetComponentInChildren<ShieldUpdate>();
     }
 
-    protected virtual void LoadTWPanelVictory()
+    protected virtual void LoadPanelController()
     {
-        if (tWPanelVictory != null) return;
-        tWPanelVictory = transform.Find("Panel - Victory").GetComponent<TWPanelVictory>();
+        if (panelController != null) return;
+        panelController = transform.Find("Panel").GetComponent<PanelController>();
     }
 
     protected virtual void LoadTWUpgradeChicken()

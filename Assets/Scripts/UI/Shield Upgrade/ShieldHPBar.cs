@@ -25,7 +25,6 @@ public class ShieldHPBar : ProcessSlider
     {
         if (hpCurrent <= 0)
         {
-            Debug.Log("Shield death");
             shieldUpdateController.CanvasController.PanelLoseController.TWPanelLose.TW_PanelLoseOn();
             hpCurrent = 0;
         }

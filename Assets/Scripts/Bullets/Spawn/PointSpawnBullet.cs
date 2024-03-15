@@ -64,19 +64,23 @@ public class PointSpawnBullet : ErshenMonoBehaviour
         if (timeCurrent < timeDelay) return;
         if (timeCurrent >= timeDelay)
         {
-            // Set information bullet
-            string nameBullet = CanvasController.Instance.CheckPositionChicken.GetNameBullet(index - 1);
-            int damageBullet = CanvasController.Instance.CheckPositionChicken.GetDamageBullet(index - 1);
-            GameObject newBullet = pointSpawnBulletController.GameObjectSpawner.Spawn(nameBullet, this.transform.position, this.transform.rotation).gameObject;
-            BulletCtrl bulletCtrl = newBullet.GetComponent<BulletCtrl>();
-            bulletCtrl.BulletMovement.objTarget = GetTransNearestObj();
-            bulletCtrl.BulletDamSender.damge = damageBullet;
-            newBullet.SetActive(true);
+            SpawnBullet();
             timeCurrent = 0;
-
             //Set Animation for gun
             CanvasController.Instance.CheckPositionChicken.SetAnimationIndex(index);
         }
+    }
+
+    protected virtual void SpawnBullet()
+    {
+        // Set information bullet
+        string nameBullet = CanvasController.Instance.CheckPositionChicken.GetNameBullet(index - 1);
+        int damageBullet = CanvasController.Instance.CheckPositionChicken.GetDamageBullet(index - 1);
+        GameObject newBullet = pointSpawnBulletController.GameObjectSpawner.Spawn(nameBullet, this.transform.position, this.transform.rotation).gameObject;
+        BulletCtrl bulletCtrl = newBullet.GetComponent<BulletCtrl>();
+        bulletCtrl.BulletMovement.objTarget = GetTransNearestObj();
+        bulletCtrl.BulletDamSender.damge = damageBullet;
+        newBullet.SetActive(true);
     }
 
     protected virtual bool CanSpawnBullet()
@@ -91,13 +95,13 @@ public class PointSpawnBullet : ErshenMonoBehaviour
 
     protected virtual bool HaveDogInLine()
     {
-        RemoveTransform();
+        RemoveTransformDisable();
         if (listDog.Count == 0) return false;
         return true;
     }
 
-    // Remove transform enable in list
-    protected virtual void RemoveTransform()
+    // Remove transform disable in list
+    protected virtual void RemoveTransformDisable()
     {
         foreach (Transform dog in listDog)
         {

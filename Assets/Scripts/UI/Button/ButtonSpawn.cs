@@ -17,7 +17,7 @@ public class ButtonSpawn : CanvasAbstract
     [Header("Variable")]
     [SerializeField] protected int goldPlayer;
     [SerializeField] protected int goldUpdate;
-    public int highestLevelChicken;
+    public int highestLevelChicken = 1;
 
     protected override void LoadComponent()
     {

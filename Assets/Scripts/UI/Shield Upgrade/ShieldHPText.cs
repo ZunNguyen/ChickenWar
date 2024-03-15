@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ShieldHPText : ProcessGold
 {
-    public virtual void Print(int value_1, int value_2)
+    public virtual void Print(float value_1, float value_2)
     {
         //if (value_2 == 0) return;
         string printValue = ShortText(value_1) + "|" + ShortText(value_2);

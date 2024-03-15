@@ -23,36 +23,42 @@ MonoBehaviour:
         nameDog: Dog02
         nums: 1
         hpDog: 20
+        damageDog: 1
         timeDelay: 1
         indexLine: "2\r"
       - levelDog: 1
         nameDog: Dog03
         nums: 1
         hpDog: 20
+        damageDog: 1
         timeDelay: 3
         indexLine: "1\r"
       - levelDog: 2
         nameDog: Dog02
         nums: 1
         hpDog: 20
+        damageDog: 1
         timeDelay: 3
         indexLine: "4\r"
       - levelDog: 3
         nameDog: Dog03
         nums: 1
         hpDog: 20
+        damageDog: 1
         timeDelay: 3
         indexLine: "3\r"
       - levelDog: 4
         nameDog: Dog02
         nums: 1
         hpDog: 20
+        damageDog: 1
         timeDelay: 3
         indexLine: "6\r"
       - levelDog: 5
         nameDog: Dog03
         nums: 1
         hpDog: 20
+        damageDog: 1
         timeDelay: 3
         indexLine: "5\r"
     - phase: 1
@@ -62,24 +68,28 @@ MonoBehaviour:
         nameDog: Dog02
         nums: 1
         hpDog: 20
+        damageDog: 1
         timeDelay: 3
         indexLine: "135\r"
       - levelDog: 1
         nameDog: Dog03
         nums: 1
         hpDog: 20
+        damageDog: 1
         timeDelay: 5
         indexLine: "246\r"
       - levelDog: 2
         nameDog: Dog02
         nums: 1
         hpDog: 20
+        damageDog: 1
         timeDelay: 5
         indexLine: "135\r"
       - levelDog: 3
         nameDog: Dog03
         nums: 1
         hpDog: 20
+        damageDog: 1
         timeDelay: 5
         indexLine: "246\r"
   - wave: 1
@@ -92,36 +102,42 @@ MonoBehaviour:
         nameDog: Dog01
         nums: 1
         hpDog: 100
+        damageDog: 1
         timeDelay: 1
         indexLine: "135\r"
       - levelDog: 1
         nameDog: Dog01
         nums: 1
         hpDog: 100
+        damageDog: 1
         timeDelay: 5
         indexLine: "246\r"
       - levelDog: 2
         nameDog: Dog03
         nums: 1
         hpDog: 30
+        damageDog: 1
         timeDelay: 5
         indexLine: "135\r"
       - levelDog: 3
         nameDog: Dog02
         nums: 1
         hpDog: 30
+        damageDog: 1
         timeDelay: 5
         indexLine: "246\r"
       - levelDog: 4
         nameDog: Dog03
         nums: 1
         hpDog: 30
+        damageDog: 1
         timeDelay: 5
         indexLine: "135\r"
       - levelDog: 5
         nameDog: Dog02
         nums: 1
         hpDog: 30
+        damageDog: 1
         timeDelay: 5
         indexLine: "246\r"
     - phase: 1
@@ -131,30 +147,35 @@ MonoBehaviour:
         nameDog: Dog03
         nums: 1
         hpDog: 30
+        damageDog: 1
         timeDelay: 1
         indexLine: "246\r"
       - levelDog: 1
         nameDog: Dog03
         nums: 1
         hpDog: 30
+        damageDog: 1
         timeDelay: 5
         indexLine: "135\r"
       - levelDog: 2
         nameDog: Dog01
         nums: 1
         hpDog: 100
+        damageDog: 1
         timeDelay: 5
         indexLine: "123456\r"
       - levelDog: 3
         nameDog: Dog02
         nums: 1
         hpDog: 50
+        damageDog: 1
         timeDelay: 5
         indexLine: "135\r"
       - levelDog: 4
         nameDog: Dog02
         nums: 1
         hpDog: 50
+        damageDog: 1
         timeDelay: 5
         indexLine: "246\r"
   - wave: 2
@@ -167,36 +188,42 @@ MonoBehaviour:
         nameDog: Dog03
         nums: 1
         hpDog: 100
+        damageDog: 1
         timeDelay: 1
         indexLine: "135\r"
       - levelDog: 1
         nameDog: Dog02
         nums: 1
         hpDog: 100
+        damageDog: 1
         timeDelay: 5
         indexLine: "246\r"
       - levelDog: 2
         nameDog: Dog04
         nums: 1
         hpDog: 300
+        damageDog: 1
         timeDelay: 7
         indexLine: "35\r"
       - levelDog: 3
         nameDog: Dog01
         nums: 1
         hpDog: 300
+        damageDog: 1
         timeDelay: 5
         indexLine: "246\r"
       - levelDog: 4
         nameDog: Dog03
         nums: 1
         hpDog: 100
+        damageDog: 1
         timeDelay: 5
         indexLine: "135\r"
       - levelDog: 5
         nameDog: Dog03
         nums: 1
         hpDog: 100
+        damageDog: 1
         timeDelay: 3
         indexLine: "246\r"
     - phase: 1
@@ -206,36 +233,42 @@ MonoBehaviour:
         nameDog: Dog04
         nums: 1
         hpDog: 300
+        damageDog: 1
         timeDelay: 1
         indexLine: "135\r"
       - levelDog: 1
         nameDog: Dog01
         nums: 1
         hpDog: 300
+        damageDog: 1
         timeDelay: 0
         indexLine: "246\r"
       - levelDog: 2
         nameDog: Dog02
         nums: 1
         hpDog: 100
+        damageDog: 1
         timeDelay: 7
         indexLine: "135\r"
       - levelDog: 3
         nameDog: Dog03
         nums: 1
         hpDog: 100
+        damageDog: 1
         timeDelay: 0
         indexLine: "246\r"
       - levelDog: 4
         nameDog: Dog02
         nums: 3
         hpDog: 100
+        damageDog: 1
         timeDelay: 7
         indexLine: "246\r"
       - levelDog: 5
         nameDog: Dog03
         nums: 3
         hpDog: 100
+        damageDog: 1
         timeDelay: 7
         indexLine: "135\r"
   - wave: 3
@@ -248,48 +281,56 @@ MonoBehaviour:
         nameDog: Dog04
         nums: 1
         hpDog: 500
+        damageDog: 1
         timeDelay: 1
         indexLine: "135\r"
       - levelDog: 1
         nameDog: Dog04
         nums: 1
         hpDog: 500
+        damageDog: 1
         timeDelay: 3
         indexLine: "246\r"
       - levelDog: 2
         nameDog: Dog03
         nums: 1
         hpDog: 300
+        damageDog: 1
         timeDelay: 7
         indexLine: "135\r"
       - levelDog: 3
         nameDog: Dog02
         nums: 1
         hpDog: 300
+        damageDog: 1
         timeDelay: 4
         indexLine: "246\r"
       - levelDog: 4
         nameDog: Dog03
         nums: 1
         hpDog: 300
+        damageDog: 1
         timeDelay: 4
         indexLine: "135\r"
       - levelDog: 5
         nameDog: Dog02
         nums: 1
         hpDog: 300
+        damageDog: 1
         timeDelay: 4
         indexLine: "246\r"
       - levelDog: 6
         nameDog: Dog03
         nums: 1
         hpDog: 300
+        damageDog: 1
         timeDelay: 4
         indexLine: "135\r"
       - levelDog: 7
         nameDog: Dog02
         nums: 1
         hpDog: 300
+        damageDog: 1
         timeDelay: 4
         indexLine: "246\r"
     - phase: 1
@@ -299,89 +340,104 @@ MonoBehaviour:
         nameDog: Dog02
         nums: 1
         hpDog: 400
+        damageDog: 1
         timeDelay: 1
         indexLine: "2\r"
       - levelDog: 1
         nameDog: Dog02
         nums: 1
         hpDog: 400
+        damageDog: 1
         timeDelay: 7
         indexLine: "4\r"
       - levelDog: 2
         nameDog: Dog03
         nums: 3
         hpDog: 400
+        damageDog: 1
         timeDelay: 5
         indexLine: "3\r"
       - levelDog: 3
         nameDog: Dog01
         nums: 1
         hpDog: 700
+        damageDog: 1
         timeDelay: 7
         indexLine: "246\r"
       - levelDog: 4
         nameDog: Dog01
         nums: 1
         hpDog: 700
+        damageDog: 1
         timeDelay: 5
         indexLine: "135\r"
       - levelDog: 5
         nameDog: Dog02
         nums: 1
         hpDog: 500
+        damageDog: 1
         timeDelay: 5
         indexLine: "24\r"
       - levelDog: 6
         nameDog: Dog02
         nums: 1
         hpDog: 500
+        damageDog: 1
         timeDelay: 5
         indexLine: "35\r"
       - levelDog: 7
         nameDog: Dog03
         nums: 1
         hpDog: 500
+        damageDog: 1
         timeDelay: 5
         indexLine: "34\r"
       - levelDog: 8
         nameDog: Dog03
         nums: 1
         hpDog: 500
+        damageDog: 1
         timeDelay: 5
         indexLine: "16\r"
       - levelDog: 9
         nameDog: Dog02
         nums: 1
         hpDog: 500
+        damageDog: 1
         timeDelay: 1
         indexLine: "135\r"
       - levelDog: 10
         nameDog: Dog03
         nums: 1
         hpDog: 500
+        damageDog: 1
         timeDelay: 1
         indexLine: "246\r"
       - levelDog: 11
         nameDog: Dog02
         nums: 1
         hpDog: 500
+        damageDog: 1
         timeDelay: 5
         indexLine: "135\r"
       - levelDog: 12
         nameDog: Dog03
         nums: 1
         hpDog: 500
+        damageDog: 1
         timeDelay: 1
         indexLine: "246\r"
       - levelDog: 13
         nameDog: Dog02
         nums: 1
         hpDog: 500
+        damageDog: 1
         timeDelay: 5
         indexLine: "135\r"
       - levelDog: 14
         nameDog: Dog03
         nums: 1
         hpDog: 500
+        damageDog: 1
         timeDelay: 1
         indexLine: "246\r"

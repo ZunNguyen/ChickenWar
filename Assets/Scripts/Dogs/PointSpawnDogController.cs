@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using UnityEngine;
@@ -92,13 +92,15 @@ public class PointSpawnDogController : ErshenMonoBehaviour
         indexLine = waveDogSO.waves[wave].phases[phase].levelDogs[levelDog].indexLine;
         string dogName = waveDogSO.waves[wave].phases[phase].levelDogs[levelDog].nameDog;
         timeDelay = waveDogSO.waves[wave].phases[phase].levelDogs[levelDog].timeDelay;
+        int hpDogMax = waveDogSO.waves[wave].phases[phase].levelDogs[levelDog].hpDog;
+        int damageDog = waveDogSO.waves[wave].phases[phase].levelDogs[levelDog].damageDog;
         foreach (PointSpawnDog pointSpawnDog in listPointSpawnDog)
         {
             // Check dog have index equal with index in wave dog data
             int index = pointSpawnDog.index;
             if (indexLine.Contains(index.ToString()))
             {
-                StartCoroutine(listPointSpawnDog[index - 1].Spawning(dogName, timeDelay));
+                StartCoroutine(listPointSpawnDog[index - 1].Spawning(dogName, timeDelay, hpDogMax, damageDog));
             }
         }
     }
@@ -137,9 +139,8 @@ public class PointSpawnDogController : ErshenMonoBehaviour
     {
         if (phase == waveDogSO.waves[wave].phases.Count)
         {
-            Debug.Log("have"); 
             CheckWin();
-            SetOffScript();
+            
             return true;
         }
         return false;
@@ -164,7 +165,8 @@ public class PointSpawnDogController : ErshenMonoBehaviour
             phase = 0;
             wave += 1;
             Debug.Log("Finish wave " + wave);
-            canvasController.TWPanelVictory.TW_PanelVictoryOn();
+            canvasController.PanelController.Panel.PanelVictoryOn();
+            SetOffScript();
         }
     }
 
