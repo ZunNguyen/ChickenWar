@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class GoldPlayer : ProcessGold
 {
-    [SerializeField] protected static GoldPlayer instance;
+    protected static GoldPlayer instance;
     public static GoldPlayer Instance => instance;
-    public int gold;
+    public float gold;
 
     protected override void LoadComponent()
     {

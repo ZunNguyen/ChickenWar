@@ -18,12 +18,12 @@ public class PointSpawnDogController : ErshenMonoBehaviour
     [SerializeField] protected List<PointSpawnDog> listPointSpawnDog;
 
     [Header("Variable")]
+    public int wave = 0;
     [SerializeField] protected int phase = 0;
     [SerializeField] protected int levelDog = 0;
+    public int dogNum = 0;
     [SerializeField] protected float timeDelay;
     [SerializeField] protected string indexLine;
-    public int wave = 0;
-    public int dogNum = 0;
     public bool isSpawning = false;
 
 

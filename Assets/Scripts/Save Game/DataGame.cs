@@ -6,7 +6,7 @@ using UnityEngine;
 public class DataGame
 {
     // Gold player
-    public int goldPlayer = 6;
+    public float goldPlayer = 6;
 
     // Wave Dog
     public int waveDog;

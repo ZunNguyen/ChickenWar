@@ -14,8 +14,8 @@ public class TWUpgradeChicken : CanvasAbstract
 
     public virtual void TW_UpgradeOn()
     {
-        chicken_2.GetComponent<RectTransform>().DOAnchorPosX(0f, 2f);
-        chicken_1.GetComponent<RectTransform>().DOAnchorPosX(0f, 2f).OnComplete(() =>
+        chicken_2.GetComponent<RectTransform>().DOAnchorPosX(0f, 1.5f);
+        chicken_1.GetComponent<RectTransform>().DOAnchorPosX(0f, 1.5f).OnComplete(() =>
         {
             canvasController.ChickenSpawner.Despawn(chicken_1.transform);
             canvasController.ChickenSpawner.Despawn(chicken_2.transform);

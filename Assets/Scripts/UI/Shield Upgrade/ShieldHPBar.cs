@@ -25,7 +25,7 @@ public class ShieldHPBar : ProcessSlider
     {
         if (hpCurrent <= 0)
         {
-            shieldUpdateController.CanvasController.PanelLoseController.TWPanelLose.TW_PanelLoseOn();
+            shieldUpdateController.CanvasController.PanelController.Panel.PanelLoseOn();
             hpCurrent = 0;
         }
         float value = (hpCurrent * 100 / hpMax);

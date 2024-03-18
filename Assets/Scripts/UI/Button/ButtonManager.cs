@@ -7,6 +7,7 @@ public class ButtonManager : ErshenMonoBehaviour
 {
     [SerializeField] protected CanvasController canvasController;
     public bool isStarting = false;
+    public bool isClaiming = false;
 
     protected override void LoadComponent()
     {
@@ -41,17 +42,32 @@ public class ButtonManager : ErshenMonoBehaviour
 
     public virtual void ButtonClaim()
     {
-        canvasController.ButtonManager.isStarting = false;
-
-        // Off panel tracking wave
-        canvasController.TrackingWaveController.TWTrackingWave.TW_TrackingWaveOff();
-
+        
+        OffTrackingWave();
         // Off panel victory
-        canvasController.PanelController.Panel.PanelOff();
+        canvasController.PanelController.Panel.PanelOff(1);
+    }
+
+    public virtual void ButtonClaimVD()
+    {
+        OffTrackingWave();
+        // Off panel victory
+        canvasController.PanelController.Panel.PanelOff(2);
     }
 
     public virtual void ButtonUnclockChickenUpgrade()
     {
         canvasController.TWUpgradeChicken.TW_UpgradeOff();
+    }
+
+    protected virtual void OffTrackingWave()
+    {
+        if (isClaiming) return;
+        isClaiming = true;
+        isStarting = false;
+        canvasController.GameObjectSpawner.OffObjInHolder();
+
+        // Off panel tracking wave
+        canvasController.TrackingWaveController.TWTrackingWave.TW_TrackingWaveOff();
     }
 }

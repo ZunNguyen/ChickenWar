@@ -5,8 +5,8 @@ using UnityEngine;
 
 public abstract class Spawner : ErshenMonoBehaviour
 {
-    [SerializeField] protected static Spawner instance;
-    public static Spawner Instance { get => instance; }
+    protected static Spawner instance;
+    public static Spawner Instance => instance;
 
     [SerializeField] protected Transform holder;
     [SerializeField] protected List<Transform> prefabs;

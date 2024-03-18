@@ -18,6 +18,10 @@ public class PanelController : CanvasAbstract
     [SerializeField] protected TextPanel textPanel;
     public TextPanel TextPanel => textPanel;
 
+    [Header("Connect GiftGold SO")]
+    [SerializeField] protected GoldGiftSO goldGiftSO;
+    public GoldGiftSO GoldGiftSO => goldGiftSO;
+
     protected override void LoadCanvasController()
     {
         base.LoadCanvasController();
@@ -26,6 +30,7 @@ public class PanelController : CanvasAbstract
         LoadTextKill();
         LoadTextEarnGold();
         LoadTextPanel();
+        LoadGoldGiftSO();
     }
 
     protected virtual void LoadPanel()
@@ -56,5 +61,12 @@ public class PanelController : CanvasAbstract
     {
         if (textPanel != null) return;
         textPanel = transform.GetComponentInChildren<TextPanel>();
+    }
+
+    protected virtual void LoadGoldGiftSO()
+    {
+        if (goldGiftSO != null) return;
+        string resPath = "SO/Gold Gift/GoldGiftSO";
+        goldGiftSO = Resources.Load<GoldGiftSO>(resPath);
     }
 }

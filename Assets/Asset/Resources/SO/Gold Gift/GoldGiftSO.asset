@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f227b0ed87a9714d873f7512b0319ef, type: 3}
+  m_Name: GoldGiftSO
+  m_EditorClassIdentifier: 
+  listGoldGift:
+  - wave: 1
+    gold: 100
+  - wave: 2
+    gold: 200
+  - wave: 3
+    gold: 500
+  - wave: 4
+    gold: 1000
+  - wave: 5
+    gold: 2000
+  - wave: 6
+    gold: 5000
+  - wave: 7
+    gold: 10000

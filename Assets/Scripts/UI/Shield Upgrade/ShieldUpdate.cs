@@ -10,8 +10,8 @@ public class ShieldUpdate : ErshenMonoBehaviour
 
     public ShieldSO shieldSO;
     public int levelCurrent;
-    [SerializeField] protected int goldPlayer;
-    [SerializeField] protected int goldUpgrade;
+    [SerializeField] protected float goldPlayer;
+    [SerializeField] protected float goldUpgrade;
 
     protected override void LoadComponent()
     {
@@ -82,7 +82,7 @@ public class ShieldUpdate : ErshenMonoBehaviour
         return true;
     }
 
-    protected virtual void UpdateGoldPlayer(int goldPlayer, int goldUpgrade)
+    protected virtual void UpdateGoldPlayer(float goldPlayer, float goldUpgrade)
     {
         shieldUpdateController.CanvasController.GoldPlayer.gold = goldPlayer - goldUpgrade;
     }

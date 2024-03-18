@@ -15,8 +15,8 @@ public class ButtonSpawn : CanvasAbstract
     public string nameNewChicken = "Chicken01";
 
     [Header("Variable")]
-    [SerializeField] protected int goldPlayer;
-    [SerializeField] protected int goldUpdate;
+    [SerializeField] protected float goldPlayer;
+    [SerializeField] protected float goldUpdate;
     public int highestLevelChicken = 1;
 
     protected override void LoadComponent()

@@ -26,20 +26,26 @@ public class Panel : ErshenMonoBehaviour
         panelController.TWPanel.TW_PanelOn();
         float numsdogKill = panelController.CanvasController.TrackingWaveController.TrackingWave.sumDogCurrent;
         panelController.TextKill.GetTextKillDog(numsdogKill);
-        float waveDog = panelController.CanvasController.PointSpawnDogController.wave;
+        int waveDog = panelController.CanvasController.PointSpawnDogController.wave;
         panelController.TextPanel.InputTextVictory(waveDog);
+        float goldEarn = panelController.GoldGiftSO.listGoldGift[waveDog].gold;
+        panelController.TextEarnGold.InputGoldValue(goldEarn);
     }
 
     public virtual void PanelLoseOn()
     {
+        panelController.CanvasController.GameObjectSpawner.OffMovementObjInHolder();
         panelController.TWPanel.TW_PanelOn();
         float numsdogKill = panelController.CanvasController.TrackingWaveController.TrackingWave.sumDogCurrent;
         panelController.TextKill.GetTextKillDog(numsdogKill);
+        int waveDog = panelController.CanvasController.PointSpawnDogController.wave;
+        float goldEarn = panelController.GoldGiftSO.listGoldGift[waveDog].gold;
+        panelController.TextEarnGold.InputGoldValue(goldEarn/2);
         panelController.TextPanel.InputTextLose();
     }
 
-    public virtual void PanelOff()
+    public virtual void PanelOff(int multiplier)
     {
-        panelController.TWPanel.TW_PanelVictoryOff();
+        panelController.TWPanel.TW_PanelVictoryOff(multiplier);
     }
 }

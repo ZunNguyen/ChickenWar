@@ -212,7 +212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7780454838902441025
 Transform:
   m_ObjectHideFlags: 0
@@ -735,8 +735,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2175cd3dae6a924a86138cc9405bc83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpMax: 10
-  hpCurrent: 1
+  hpMax: 0
+  hpCurrent: 0
   isDead: 0
   dogCtrl: {fileID: 7780454838775002561}
 --- !u!1 &7780454840491141233
@@ -800,7 +800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7780454840564895875
 RectTransform:
   m_ObjectHideFlags: 0
@@ -857,3 +857,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 7780454839236459951}
   dogCtrl: {fileID: 7780454838775002561}
+  hpMax: 0
+  hpCurrent: 0
