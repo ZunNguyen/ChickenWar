@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using System.Text.RegularExpressions;
 using System;
+using UnityEngine.UI;
 
 public abstract class ProcessGold :ErshenMonoBehaviour
 {
     [Header("Process Gold")]
-    [SerializeField] protected TMP_Text text;
+    [SerializeField] protected Text text;
 
     protected override void LoadComponent()
     {
@@ -19,10 +19,10 @@ public abstract class ProcessGold :ErshenMonoBehaviour
     protected virtual void LoadText()
     {
         if (text != null) return;
-        text = transform.GetComponentInChildren<TMP_Text>();
+        text = transform.GetComponentInChildren<Text>();
     }
 
-    protected virtual void PrintText(float value)
+    public virtual void PrintText(float value)
     {
         string printValue = ShortText(value);
         text.text = printValue;

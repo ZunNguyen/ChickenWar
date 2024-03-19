@@ -11,7 +11,8 @@ public class GameObjectSpawner : Spawner
             if (obj.gameObject.activeSelf)
             {
                 DogCtrl dogCtrl = obj.GetComponent<DogCtrl>();
-                dogCtrl.DogMovement.enabled = false;
+                dogCtrl.DisaleComponents();
+                Debug.Log("have");
             }
         }
     }

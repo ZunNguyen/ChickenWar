@@ -49,6 +49,9 @@ public class CanvasController : ErshenMonoBehaviour
     [SerializeField] protected ShieldUpdateController shieldUpdateController;
     public ShieldUpdateController ShieldUpdateController => shieldUpdateController;
 
+    [SerializeField] protected ChangeButtonStart changeButtonStart;
+    public ChangeButtonStart ChangeButtonStart => changeButtonStart;
+
     [Header("Load script for shield")]
     [SerializeField] protected ShieldUpdate shieldUpdate;
     public ShieldUpdate ShieldUpdate => shieldUpdate;
@@ -79,6 +82,7 @@ public class CanvasController : ErshenMonoBehaviour
         LoadShieldUpdateController();
         LoadTWUpgradeChicken();
         LoadGameObjSpawner();
+        LoadChangeButtonStart();
 
         // Load Script for Shield
         LoadShieldUpdate();
@@ -179,6 +183,12 @@ public class CanvasController : ErshenMonoBehaviour
     {
         if (gameObjectSpawner != null) return;
         gameObjectSpawner = GameObject.Find("GameObject Spawner").GetComponent<GameObjectSpawner>();
+    }
+
+    protected virtual void LoadChangeButtonStart()
+    {
+        if (changeButtonStart != null) return;
+        changeButtonStart = GameObject.Find("Button - Start").GetComponent<ChangeButtonStart>();
     }
 
     protected virtual void LoadInstance()

@@ -164,6 +164,7 @@ public class PointSpawnDogController : ErshenMonoBehaviour
         {
             phase = 0;
             wave += 1;
+            Time.timeScale = 1f;
             Debug.Log("Finish wave " + wave);
             canvasController.PanelController.Panel.PanelVictoryOn();
             SetOffScript();

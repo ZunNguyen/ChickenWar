@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class CountWave : ErshenMonoBehaviour
 {
     [Header("Connect Script")]
     [SerializeField] protected TrackingWaveController trackingWaveController;
 
-    [SerializeField] protected TMP_Text text;
+    [SerializeField] protected Text text;
 
     protected override void LoadComponent()
     {
@@ -20,7 +20,7 @@ public class CountWave : ErshenMonoBehaviour
     protected virtual void LoadTextTMP()
     {
         if (text != null) return;
-        text = transform.GetComponent<TMP_Text>();
+        text = transform.GetComponent<Text>();
     }
 
     protected virtual void LoadTrackingWave()

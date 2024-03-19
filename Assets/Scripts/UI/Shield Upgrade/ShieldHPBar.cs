@@ -25,7 +25,10 @@ public class ShieldHPBar : ProcessSlider
     {
         if (hpCurrent <= 0)
         {
+            // Game Over
+            shieldUpdateController.CanvasController.PointSpawnDogController.enabled = false;
             shieldUpdateController.CanvasController.PanelController.Panel.PanelLoseOn();
+            Time.timeScale = 1f;
             hpCurrent = 0;
         }
         float value = (hpCurrent * 100 / hpMax);

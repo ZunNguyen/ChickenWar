@@ -9,8 +9,21 @@ public class TWUpgradeChicken : CanvasAbstract
     [SerializeField] protected GameObject chicken_2;
     [SerializeField] protected GameObject chickenUpgrade;
     [SerializeField] protected GameObject fireWork;
+    [SerializeField] protected bool tw_UpgradeOff_On = false;
 
     public int indexLVHighest = 1;
+
+    protected override void LoadComponent()
+    {
+        base.LoadComponent();
+        LoadFireWork();
+    }
+
+    protected virtual void LoadFireWork()
+    {
+        if (fireWork != null) return;
+        fireWork = transform.Find("Fire").gameObject;
+    }
 
     public virtual void TW_UpgradeOn()
     {
@@ -19,6 +32,7 @@ public class TWUpgradeChicken : CanvasAbstract
         {
             canvasController.ChickenSpawner.Despawn(chicken_1.transform);
             canvasController.ChickenSpawner.Despawn(chicken_2.transform);
+            if (tw_UpgradeOff_On) return;
             chickenUpgrade.SetActive(true);
             fireWork.SetActive(true);
         });
@@ -26,6 +40,7 @@ public class TWUpgradeChicken : CanvasAbstract
 
     public virtual void TW_UpgradeOff()
     {
+        tw_UpgradeOff_On = true;
         canvasController.ChickenSpawner.Despawn(chickenUpgrade.transform);
         gameObject.SetActive(false);
         fireWork.SetActive(false);
@@ -33,6 +48,8 @@ public class TWUpgradeChicken : CanvasAbstract
 
     public void ProcessShowUpgradePanel(int indexLV, Transform oldChicken, Transform newChicken)
     {
+        tw_UpgradeOff_On = false;
+
         if (indexLV < indexLVHighest) return;
 
         indexLVHighest += 1;

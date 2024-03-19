@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class ShieldGoldUpdate : ProcessGold
 {
-    public int goldUpgrade = 200;
-
-    private void Update()
+    public virtual void PrintMaxShield()
     {
-        PrintText(goldUpgrade);
+        text.text = "Highest Shield";
     }
 }

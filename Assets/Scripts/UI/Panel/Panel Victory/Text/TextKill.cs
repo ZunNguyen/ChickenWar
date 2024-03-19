@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TextKill : ErshenMonoBehaviour
 {
-    [SerializeField] protected TMP_Text textKillDog;
+    [SerializeField] protected Text textKillDog;
 
     protected override void LoadComponent()
     {
@@ -16,7 +16,7 @@ public class TextKill : ErshenMonoBehaviour
     protected virtual void LoadTextKillDog()
     {
         if (textKillDog != null) return;
-        textKillDog = transform.GetComponentInChildren<TMP_Text>();
+        textKillDog = transform.GetComponentInChildren<Text>();
     }
 
     public virtual void GetTextKillDog(float numsDog)

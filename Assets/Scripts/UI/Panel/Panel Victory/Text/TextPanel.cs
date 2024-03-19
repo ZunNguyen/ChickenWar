@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class TextPanel : ErshenMonoBehaviour
 {
-    [SerializeField] protected TMP_Text textPanel;
+    [SerializeField] protected Text textPanel;
 
     protected override void LoadComponent()
     {
@@ -16,7 +16,7 @@ public class TextPanel : ErshenMonoBehaviour
     protected virtual void LoadTextWaveDog()
     {
         if (textPanel != null) return;
-        textPanel = transform.GetComponent<TMP_Text>();
+        textPanel = transform.GetComponent<Text>();
     }
 
     public virtual void InputTextVictory(float wave)

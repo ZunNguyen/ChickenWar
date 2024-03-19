@@ -38,7 +38,7 @@ public class ShieldUpdate : ErshenMonoBehaviour
         LoadBeginGame();
     }
 
-    protected virtual void LoadBeginGame()
+    public virtual void LoadBeginGame()
     {
         UpdateGoldUpgradeShield(levelCurrent);
         ChangeValueSumHpShield(levelCurrent);
@@ -92,7 +92,11 @@ public class ShieldUpdate : ErshenMonoBehaviour
         if (levelCurrent < shieldSO.levels.Count - 1)
         {
             int index = levelCurrent + 1;
-            shieldUpdateController.ShieldGoldUpdate.goldUpgrade = shieldSO.levels[index].gold;
+            shieldUpdateController.ShieldGoldUpdate.PrintText(shieldSO.levels[index].gold);
+        }
+        if (levelCurrent == shieldSO.levels.Count - 1)
+        {
+            shieldUpdateController.ShieldGoldUpdate.PrintMaxShield();
         }
     }
 
@@ -106,5 +110,6 @@ public class ShieldUpdate : ErshenMonoBehaviour
     {
         int hp = shieldSO.levels[levelCurrent].hp;
         shieldUpdateController.ShieldHPText.Print(hp, hp);
+        shieldUpdateController.ShieldHPBar.ChangeSlider(hp, hp);
     }
 }

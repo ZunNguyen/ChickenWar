@@ -5,22 +5,20 @@ using DG.Tweening;
 using Unity.VisualScripting;
 using TMPro;
 
-public class CoinCollect : ErshenMonoBehaviour
+public class CoinCollect : ProcessGold
 {
     [Header("Connect Script")]
-    [SerializeField] protected TMP_Text text;
     [SerializeField] protected RectTransform rectTransform;
 
     [Header("Value")]
     [SerializeField] protected Transform textCoin;
-    [SerializeField] protected float posTarget = 30f;
+    [SerializeField] protected float posTarget = 150f;
     [SerializeField] protected float durTimeMove = 1.5f;
-    [SerializeField] protected float durTimeDes = 2f;
+    [SerializeField] protected float durTimeDes = 1.3f;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
-        LoadText();
         LoadTextCoin();
         LoadRectTransform();
     }
@@ -29,12 +27,6 @@ public class CoinCollect : ErshenMonoBehaviour
     {
         if (textCoin != null) return;
         textCoin = GameObject.Find("Text Coin").transform;
-    }
-
-    protected virtual void LoadText()
-    {
-        if (text != null) return;
-        text = GameObject.Find("Text Coin").GetComponent<TMP_Text>();
     }
 
     protected virtual void LoadRectTransform()
@@ -57,6 +49,6 @@ public class CoinCollect : ErshenMonoBehaviour
 
     public void GetValueText(int value)
     {
-        text.text = "+" + value.ToString();
+        PrintText(value);
     }
 }
