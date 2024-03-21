@@ -19,14 +19,14 @@ public class CanvasController : ErshenMonoBehaviour
     [SerializeField] protected GameObjectSpawner gameObjectSpawner;
     public GameObjectSpawner GameObjectSpawner => gameObjectSpawner;
 
+    [SerializeField] protected AudioManager audioManager;
+    public AudioManager AudioManager => audioManager;
+
     [Header("Load Script inside")]
     [SerializeField] protected ChickenSpawner chickenSpawner;
     public ChickenSpawner ChickenSpawner => chickenSpawner;
     [SerializeField] protected CheckPositionChicken checkPositionChicken;
     public CheckPositionChicken CheckPositionChicken => checkPositionChicken;
-
-    [SerializeField] protected DragItem dragItem;
-    public DragItem DragItem => dragItem;
 
     [SerializeField] protected SpawnChicken spawnChicken;
     public SpawnChicken SpawnChicken => spawnChicken;
@@ -69,7 +69,6 @@ public class CanvasController : ErshenMonoBehaviour
         LoadInstance();
 
         LoadChickenSpawner();
-        LoadDragItem();
         LoadSpawnChicken();
         LoadButtonSpawn();
         LoadCheckPositionChicken();
@@ -83,6 +82,7 @@ public class CanvasController : ErshenMonoBehaviour
         LoadTWUpgradeChicken();
         LoadGameObjSpawner();
         LoadChangeButtonStart();
+        LoadAudioManager();
 
         // Load Script for Shield
         LoadShieldUpdate();
@@ -99,12 +99,6 @@ public class CanvasController : ErshenMonoBehaviour
     {
         if (chickenSpawner != null) return;
         chickenSpawner = transform.GetComponentInChildren<ChickenSpawner>();
-    }
-
-    protected virtual void LoadDragItem()
-    {
-        if (dragItem != null) return;
-        dragItem = transform.GetComponentInChildren<DragItem>();
     }
 
     protected virtual void LoadSpawnChicken()
@@ -189,6 +183,12 @@ public class CanvasController : ErshenMonoBehaviour
     {
         if (changeButtonStart != null) return;
         changeButtonStart = GameObject.Find("Button - Start").GetComponent<ChangeButtonStart>();
+    }
+
+    protected virtual void LoadAudioManager()
+    {
+        if (audioManager != null) return;
+        audioManager = GameObject.Find("Audio Manager").GetComponent<AudioManager>();
     }
 
     protected virtual void LoadInstance()

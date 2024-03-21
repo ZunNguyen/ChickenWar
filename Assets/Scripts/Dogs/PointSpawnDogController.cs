@@ -65,10 +65,13 @@ public class PointSpawnDogController : ErshenMonoBehaviour
         canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
     }
 
-    protected virtual void SetOffScript()
+    public virtual void OnObj()
     {
-        PointSpawnDogController pointSpawnDogController = this.GetComponent<PointSpawnDogController>();
-        pointSpawnDogController.enabled = false;
+        gameObject.SetActive(true);
+        phase = 0;
+        levelDog = 0;
+        dogNum = 0;
+        isSpawning = false;
     }
 
     private void Update()
@@ -167,7 +170,7 @@ public class PointSpawnDogController : ErshenMonoBehaviour
             Time.timeScale = 1f;
             Debug.Log("Finish wave " + wave);
             canvasController.PanelController.Panel.PanelVictoryOn();
-            SetOffScript();
+            gameObject.SetActive(false);
         }
     }
 
@@ -176,5 +179,14 @@ public class PointSpawnDogController : ErshenMonoBehaviour
         isSpawning = true;
         yield return new WaitForSeconds(timeDelay);
         isSpawning = false;
+    }
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        foreach (PointSpawnDog pointSpawnDog in listPointSpawnDog)
+        {
+            pointSpawnDog.x = 0.01f;
+        }
     }
 }

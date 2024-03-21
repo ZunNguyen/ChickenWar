@@ -8,11 +8,10 @@ public class GameObjectSpawner : Spawner
     {
         foreach (Transform obj in holder)
         {
-            if (obj.gameObject.activeSelf)
+            if (obj.gameObject.activeSelf && obj.CompareTag("Dog"))
             {
                 DogCtrl dogCtrl = obj.GetComponent<DogCtrl>();
                 dogCtrl.DisaleComponents();
-                Debug.Log("have");
             }
         }
     }

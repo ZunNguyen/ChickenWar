@@ -11,20 +11,19 @@ public class ButtonSpawn : CanvasAbstract
     [SerializeField] protected ChickenSO chickenSO;
     [SerializeField] protected GoldUpdateChicken goldUpdateChicken;
 
-    public int levelSpawnChicken = 1;
+    public int levelSpawnChicken = 0;
     public string nameNewChicken = "Chicken01";
 
     [Header("Variable")]
     [SerializeField] protected float goldPlayer;
     [SerializeField] protected float goldUpdate;
-    public int highestLevelChicken = 1;
+    public int highestLevelChicken = 0;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
         LoadChickenSO();
         LoadSpawnUpdateChicken();
-        LoadBeginGame();
     }
 
     protected virtual void LoadChickenSO()
@@ -40,6 +39,11 @@ public class ButtonSpawn : CanvasAbstract
         goldUpdateChicken = transform.GetComponentInChildren<GoldUpdateChicken>();
     }
 
+    private void Start()
+    {
+        LoadBeginGame();
+    }
+
     protected virtual void LoadBeginGame()
     {
         GetLevelChickenToSpawn(highestLevelChicken);
@@ -48,8 +52,8 @@ public class ButtonSpawn : CanvasAbstract
 
     public virtual void GetLevelChickenToSpawn(int levelChicken)
     {
-        // When chicken have level 1,2,3,4 -> level update chicken still 1
-        if (levelChicken >= 5)
+        // When chicken have level 0,1,2,3 -> level update chicken still 1
+        if (levelChicken >= 4)
         {
             int level = levelChicken - 3;
             UpdateNameChickenSpawn(level);
@@ -61,18 +65,19 @@ public class ButtonSpawn : CanvasAbstract
         // Prevent bug
         if (levelSpawnChicken > levelChicken) return;
         levelSpawnChicken = levelChicken;
-        nameNewChicken = "Chicken" + levelChicken.ToString("D2");
+        // Get name chicken
+        nameNewChicken = ChickenSpawner.Instance.GetNameChicken(levelChicken);
         // Change chicken prefab in button spawn
         ChangeChickenObj(nameNewChicken);
         // Update gold chicken spawn
-        goldUpdateChicken.GetValueText(chickenSO.levels[levelSpawnChicken - 1].goldUpdate);
+        goldUpdateChicken.GetValueText(chickenSO.levels[levelSpawnChicken].goldUpdate);
     }
 
     protected virtual void ChangeChickenObj(string newChicken)
     {
         DragItem dragItem = this.transform.GetComponentInChildren<DragItem>();
         Transform obj = dragItem.transform;
-        Spawner.Instance.Despawn(obj);
+        ChickenSpawner.Instance.Despawn(obj);
         obj = ChickenSpawner.Instance.Spawn(newChicken, transform.position, transform.rotation).transform;
         // Set position on rect tranform
         SetPostion(obj);
@@ -92,6 +97,10 @@ public class ButtonSpawn : CanvasAbstract
     public virtual void SpawnChickenInGrid()
     {
         if (!CanSpawn()) return;
+
+        // SFX
+        canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectSpawnButton);
+
         canvasController.SpawnChicken.SpawnChickenInSlot();
 
         // Subtract money
@@ -102,10 +111,20 @@ public class ButtonSpawn : CanvasAbstract
     {
         // Enough money
         goldPlayer = canvasController.GoldPlayer.gold;
-        goldUpdate = chickenSO.levels[levelSpawnChicken-1].goldUpdate;
+        goldUpdate = chickenSO.levels[levelSpawnChicken].goldUpdate;
         if (goldPlayer < goldUpdate)
         {
             Debug.Log("Don't have enough gold to spawn");
+
+            // Audio
+            canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectSpawnError);
+
+            // Spawn Text Not Enough Gold
+            GameObject newPrefab = CoinCollectSpawner.Instance.Spawn("Not Enough Gold", transform.position, transform.rotation);
+            NotEnoughGold notEnoughGold = newPrefab.GetComponent<NotEnoughGold>();
+            notEnoughGold.TWTextOn();
+            newPrefab.SetActive(true);
+
             return false;
         }
         
@@ -121,7 +140,7 @@ public class ButtonSpawn : CanvasAbstract
 
     protected virtual void UpdateGoldChickenSpawn()
     {
-        if (levelSpawnChicken - 1 < 0) return;
-        goldUpdateChicken.GetValueText(chickenSO.levels[levelSpawnChicken-1].goldUpdate);
+        //if (levelSpawnChicken - 1 < 0) return;
+        goldUpdateChicken.GetValueText(chickenSO.levels[levelSpawnChicken].goldUpdate);
     }
 }

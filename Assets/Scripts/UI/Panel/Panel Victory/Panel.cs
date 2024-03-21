@@ -23,6 +23,10 @@ public class Panel : ErshenMonoBehaviour
 
     public virtual void PanelVictoryOn()
     {
+        // Audio
+        panelController.CanvasController.AudioManager.PauseMusic(panelController.CanvasController.AudioManager.musicBattle);
+        panelController.CanvasController.AudioManager.PlaySFX(panelController.CanvasController.AudioManager.effectWinWave);
+
         panelController.TWPanel.TW_PanelOn();
         float numsdogKill = panelController.CanvasController.TrackingWaveController.TrackingWave.sumDogCurrent;
         panelController.TextKill.GetTextKillDog(numsdogKill);
@@ -34,6 +38,10 @@ public class Panel : ErshenMonoBehaviour
 
     public virtual void PanelLoseOn()
     {
+        // Audio
+        panelController.CanvasController.AudioManager.PauseMusic(panelController.CanvasController.AudioManager.musicBattle);
+        panelController.CanvasController.AudioManager.PlaySFX(panelController.CanvasController.AudioManager.effectGameOver);
+
         panelController.CanvasController.GameObjectSpawner.OffMovementObjInHolder();
         panelController.TWPanel.TW_PanelOn();
         float numsdogKill = panelController.CanvasController.TrackingWaveController.TrackingWave.sumDogCurrent;

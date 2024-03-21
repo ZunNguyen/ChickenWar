@@ -74,6 +74,9 @@ public class TWPanel : ErshenMonoBehaviour
 
     protected virtual void AddGoldEarn(int multiplier)
     {
+        // Audio
+        panelController.CanvasController.AudioManager.PlaySFX(panelController.CanvasController.AudioManager.effectEarnGold);
+
         float goldEarn = panelController.TextEarnGold.goldEarn / 5;
         GoldPlayer.Instance.gold += goldEarn * multiplier;
     }

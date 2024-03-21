@@ -21,6 +21,9 @@ public class ShieldShake : ErshenMonoBehaviour
     public virtual void Animating()
     {
         animator.SetBool("isShaking", true);
+
+        // Audio
+        CanvasController.Instance.AudioManager.PlaySFX(CanvasController.Instance.AudioManager.effectShieldCollision);
     }
 
     protected virtual void SetFalseShaking()

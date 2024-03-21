@@ -58,8 +58,8 @@ public class SpawnChicken : CanvasAbstract
         // Instantiate prefab
         Transform chickenHigherLV = InstantiatePrefab(namePrefabHighLevel, indexSlot);
         // Show aniamtion update new chicken higher level
-        canvasController.TWUpgradeChicken.ProcessShowUpgradePanel(indexChicken + 1, prefab, chickenHigherLV);
-        UpdateChickenForSpawn(chickenHigherLV.gameObject.name);
+        canvasController.TWUpgradeChicken.ProcessShowUpgradePanel(indexChicken, prefab, chickenHigherLV);
+        UpdateChickenForSpawn(chickenHigherLV);
     } 
 
     // Spawn chicken
@@ -67,6 +67,10 @@ public class SpawnChicken : CanvasAbstract
     {
         Transform newPrefab = canvasController.ChickenSpawner.Spawn(namePrefab, this.transform.position, this.transform.rotation);
         newPrefab.gameObject.SetActive(true);
+
+        DragItem dragItem = newPrefab.GetComponent<DragItem>();
+        dragItem.enabled = true;
+
         newPrefab.SetParent(slots[indexSlot]);
         SetRaycastTargetOn(newPrefab);
         return newPrefab;
@@ -83,24 +87,16 @@ public class SpawnChicken : CanvasAbstract
 
     protected virtual int CheckSlotInList(Transform prefab)
     {
-        //foreach (Transform slot in slots)
-        //{
-        //    if (slot.gameObject.name == prefab) return slots.IndexOf(slot);
-        //}
-        //return 99;
-
         return slots.IndexOf(prefab);
     }
 
     // Set chicken high level - 3 for Spawn Button
-    protected virtual void UpdateChickenForSpawn(string nameChicken)
+    protected virtual void UpdateChickenForSpawn(Transform chickenHigherLV)
     {
-        string S = nameChicken;
-        int levelChicken = S[8];
-        levelChicken -= 48;
+        int lvChicken = canvasController.ChickenSpawner.GetIndexChicken(chickenHigherLV);
 
-        if (levelChicken > canvasController.ButtonSpawn.highestLevelChicken) canvasController.ButtonSpawn.highestLevelChicken = levelChicken;
-        canvasController.ButtonSpawn.GetLevelChickenToSpawn(levelChicken);
+        if (lvChicken > canvasController.ButtonSpawn.highestLevelChicken) canvasController.ButtonSpawn.highestLevelChicken = lvChicken;
+        canvasController.ButtonSpawn.GetLevelChickenToSpawn(lvChicken);
     }
 
     // For save game

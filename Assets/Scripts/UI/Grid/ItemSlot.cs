@@ -25,11 +25,14 @@ public class ItemSlot : CanvasAbstract, IDropHandler
             if (UpdateLevelChicken(dropObj))
             {
                 if (CheckChickenIsHighestLevel(dropObj) == true) return;
+
+                // Audio
+                canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectUpgradeChicken);
+
                 // Spawn new chicken (higher level)
                 SpawnChicken(dropObj.transform);
                 // Delete 2 chicken same name
                 DeleteChicken(dropObj.transform);
-
                 return;
             }
             else

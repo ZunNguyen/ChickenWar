@@ -28,8 +28,13 @@ public class ButtonManager : ErshenMonoBehaviour
         if (timePressButton % 2 == 0 && timePressButton > 0) canvasController.ChangeButtonStart.ChangeImageButtonXTime(2,1);
         if (timePressButton % 2 == 1 && timePressButton > 0) canvasController.ChangeButtonStart.ChangeImageButtonXTime(1,2);
         if (isStarting) return;
+
+        //Audio
+        canvasController.AudioManager.PlayMusic(canvasController.AudioManager.musicBattle);
+
         // On Spawn Dog
-        canvasController.PointSpawnDogController.enabled = true;
+        canvasController.PointSpawnDogController.gameObject.SetActive(true);
+        canvasController.PointSpawnDogController.OnObj();
         // On Bullet
         canvasController.PointSpawnBulletController.BulletOn();
         // On tracking wave
@@ -46,6 +51,8 @@ public class ButtonManager : ErshenMonoBehaviour
 
     public virtual void ButtonClaim()
     {
+        // Audio
+        canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectEarnGold);
         
         OffTrackingWave();
         // Off panel victory
@@ -54,6 +61,9 @@ public class ButtonManager : ErshenMonoBehaviour
 
     public virtual void ButtonClaimVD()
     {
+        // Audio
+        canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectEarnGold);
+
         OffTrackingWave();
         // Off panel victory
         canvasController.PanelController.Panel.PanelOff(2);
@@ -67,6 +77,10 @@ public class ButtonManager : ErshenMonoBehaviour
     protected virtual void OffTrackingWave()
     {
         if (isClaiming) return;
+
+        // Audio
+        canvasController.AudioManager.PlayMusic(canvasController.AudioManager.musicMain);
+
         isClaiming = true;
         isStarting = false;
         timePressButton = 0;

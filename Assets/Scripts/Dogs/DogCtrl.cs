@@ -88,6 +88,8 @@ public class DogCtrl : ErshenMonoBehaviour
         dogMovement.gameObject.SetActive(false);
         // Disable obj damage recieve
         DogDamageReceiver.gameObject.SetActive(false);
+        // Disable obj damage sender
+        dogDamageSender.gameObject.SetActive(false);
     }
 
     // EnableComponents
@@ -99,5 +101,6 @@ public class DogCtrl : ErshenMonoBehaviour
         canvasHP.gameObject.SetActive(true);
         // Enable obj movement
         dogMovement.gameObject.SetActive(true);
+        dogDamageSender.gameObject.SetActive(true);
     }
 }

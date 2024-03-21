@@ -37,13 +37,13 @@ public class CoinCollect : ProcessGold
 
     public virtual void TWCoinCollectOn()
     {
+        CanvasController.Instance.AudioManager.PlaySFX(CanvasController.Instance.AudioManager.effectEarnGold);
         rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + posTarget, durTimeMove);
         Invoke(nameof(DestroyObj), durTimeDes);
     }
     
     protected virtual void DestroyObj()
     {
-        //rectTransform.anchoredPosition = Vector2.zero;
         CoinCollectSpawner.Instance.Despawn(gameObject);
     }
 

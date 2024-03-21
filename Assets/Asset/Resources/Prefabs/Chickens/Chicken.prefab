@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4f91977d54db54cb5c9320d2ab29ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasController: {fileID: 0}
   images:
   - {fileID: 6781176649914416790}
   - {fileID: 945817833200286897}
@@ -131,11 +132,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e81bd2a5ac59b4b9e42f695ca00898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasController: {fileID: 0}
   chickenSO: {fileID: 11400000, guid: 3d8b75dda1d6fb4468adea56244912c5, type: 2}
   goldEarn: {fileID: 1547573307587384833}
-  imageGun: {fileID: 945817833200286897}
-  imageChicken: {fileID: 6781176649914416790}
-  imageLevel: {fileID: 1295583053745986288}
+  chickenGun: {fileID: 5857661085183015586}
 --- !u!114 &-4371414521028876259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 0}
-  x: -75
-  y: 12
+  x: -84
+  y: 17
 --- !u!1 &945817833200286862
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,8 +263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a89f724e92564b428b6afe71d40a17d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chickenController: {fileID: 6993610041442064053}
   anima: {fileID: 945817833200286896}
-  canvasController: {fileID: 0}
 --- !u!114 &5857661085183015586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,8 +277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8768d0e098b99408bf1254efc1f580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chickenController: {fileID: 6993610041442064053}
   nameBullet: Bullet01
+  damage: 0
 --- !u!1 &2411480163127824297
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,9 +328,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fcd3d661e089a4e9b0fa7d3d961456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chickenController: {fileID: 0}
+  chickenController: {fileID: 6993610041442064053}
   timeCurrent: 0
-  timeDelay: 5
+  timeDelay: 6
   gold: 0
 --- !u!1 &3833779452665149324
 GameObject:

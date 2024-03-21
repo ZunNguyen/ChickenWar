@@ -58,4 +58,10 @@ public class DragItem : CanvasAbstract, IDragHandler, IBeginDragHandler, IEndDra
             image.raycastTarget = getValueImage;
         }
     }
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        Debug.Log("On enable chicken");
+    }
 }

@@ -11,7 +11,7 @@ public class TWUpgradeChicken : CanvasAbstract
     [SerializeField] protected GameObject fireWork;
     [SerializeField] protected bool tw_UpgradeOff_On = false;
 
-    public int indexLVHighest = 1;
+    public int indexLVHighest = 0;
 
     protected override void LoadComponent()
     {
@@ -27,6 +27,9 @@ public class TWUpgradeChicken : CanvasAbstract
 
     public virtual void TW_UpgradeOn()
     {
+        // Audio
+        canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectUpgradeNewChickenHigher);
+        
         chicken_2.GetComponent<RectTransform>().DOAnchorPosX(0f, 1.5f);
         chicken_1.GetComponent<RectTransform>().DOAnchorPosX(0f, 1.5f).OnComplete(() =>
         {

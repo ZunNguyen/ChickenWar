@@ -11,6 +11,8 @@ public class PointSpawnDog : ErshenMonoBehaviour
     [Header("Variable")]
     public int index;
 
+    public float x = 0.01f;
+
     protected override void LoadComponent()
     {
         base.LoadComponent();
@@ -36,7 +38,7 @@ public class PointSpawnDog : ErshenMonoBehaviour
     {
         pointSpawnDogController.isSpawning = true;
         yield return new WaitForSeconds(timeDelay);
-       
+     
         SpawnDog(nameDog, timeDelay, hpDog, damageDog);
 
         pointSpawnDogController.dogNum += 1;
@@ -46,6 +48,12 @@ public class PointSpawnDog : ErshenMonoBehaviour
     protected virtual void SpawnDog(string nameDog, float timeDelay, int hpDog, int damageDog)
     {
         Transform newDogSpawn = pointSpawnDogController.GameObjectSpawner.Spawn(nameDog, transform.position, transform.rotation).transform;
+
+        Vector3 newPos = newDogSpawn.position;
+        newPos.z -= x;
+        newDogSpawn.position = newPos;
+        x += 0.01f;
+
         newDogSpawn.gameObject.SetActive(true);
         DogCtrl dogCtrl = newDogSpawn.GetComponent<DogCtrl>();
         dogCtrl.DogIndex.indexDog = index;

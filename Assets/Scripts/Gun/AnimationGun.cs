@@ -21,6 +21,7 @@ public class AnimationGun : ChickenAbstract
 
     public void SetAnimationOn()
     {
+        chickenController.CanvasController.AudioManager.PlaySFX(chickenController.CanvasController.AudioManager.effectShooting);
         anima.SetTrigger("Shooting");
     }
 }

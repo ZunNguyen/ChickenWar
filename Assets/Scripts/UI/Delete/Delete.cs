@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Delete : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
+public class Delete : CanvasAbstract, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] protected GameObject highlight;
 
@@ -13,6 +13,9 @@ public class Delete : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
         DragItem dragItem = dropObj.GetComponent<DragItem>();
         if (dragItem == null) return;
         Spawner.Instance.Despawn(dragItem.transform);
+
+        // Audio
+        canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectDelete);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

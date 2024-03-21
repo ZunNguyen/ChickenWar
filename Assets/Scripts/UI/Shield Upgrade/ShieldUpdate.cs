@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShieldUpdate : ErshenMonoBehaviour
+public class ShieldUpdate : CanvasAbstract
 {
     [Header("Connect InSide")]
     [SerializeField] protected ShieldUpdateController shieldUpdateController;
@@ -50,6 +50,9 @@ public class ShieldUpdate : ErshenMonoBehaviour
     {
         if (CanUpdate())
         {
+            //SFX
+            shieldUpdateController.CanvasController.AudioManager.PlaySFX(shieldUpdateController.CanvasController.AudioManager.effectSpawnButton);
+
             levelCurrent += 1;
             UpdateGoldUpgradeShield(levelCurrent);
             // Change Value Hp Max for Sum HP Shield
@@ -69,7 +72,19 @@ public class ShieldUpdate : ErshenMonoBehaviour
             return false;
         }
         // Enough gold?
-        if (!GoldEnough()) return false;
+        if (!GoldEnough())
+        {
+            Debug.Log("Haven't enough gold");
+
+            // Audio
+            canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectSpawnError);
+            GameObject newPrefab = CoinCollectSpawner.Instance.Spawn("Not Enough Gold", transform.position, transform.rotation);
+            NotEnoughGold notEnoughGold = newPrefab.GetComponent<NotEnoughGold>();
+            notEnoughGold.TWTextOn();
+            newPrefab.SetActive(true);
+
+            return false;
+        }
         return true;
     }
 

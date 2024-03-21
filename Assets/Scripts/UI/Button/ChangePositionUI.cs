@@ -5,8 +5,8 @@ using UnityEngine;
 public class ChangePositionUI : MonoBehaviour
 {
     [SerializeField] protected RectTransform rectTransform;
-    [SerializeField] protected float x = -75;
-    [SerializeField] protected float y = 12;
+    [SerializeField] protected float x = -84;
+    [SerializeField] protected float y = 17;
 
     public void Start()
     {
