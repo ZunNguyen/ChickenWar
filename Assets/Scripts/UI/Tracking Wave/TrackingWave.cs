@@ -1,71 +1,66 @@
-using Mono.Cecil;
+﻿using Mono.Cecil;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrackingWave : ProcessSlider
+public class TrackingWave : ErshenMonoBehaviour
 {
-    [Header("Value")]
-    [SerializeField] protected float sumDogMax = 1;
-    public float sumDogCurrent = 1;
-    [SerializeField] protected float valueText = 1;
+    [Header("---Connect Ctrl---")]
+    [SerializeField] protected TrackingWaveCtrl trackingWaveCtrl;
 
-    [Header("Connect Script")]
-    [SerializeField] protected WaveDogSO waveDogSO;
-    protected static TrackingWave instance;
-    public static TrackingWave Instance => instance;
-
-    [Header("Connect Script parent")]
-    [SerializeField] protected TrackingWaveController trackingWaveController;
+    [Header("---Value---")]
+    [SerializeField] protected int sumDogMax;
+    public int sumDogCurrent;
+    public int sumDogDeath;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
-        LoadWaveDogSO();
-        LoadInstance();
-        LoadTrackingWaveController();
+        LoadTrackingWaveCtrl();
     }
 
-    protected virtual void LoadWaveDogSO()
+    protected virtual void LoadTrackingWaveCtrl()
     {
-        if (waveDogSO != null) return;
-        string resPath = "SO/Wave Dog/WaveDog";
-        waveDogSO = Resources.Load<WaveDogSO>(resPath);
+        if (trackingWaveCtrl != null) return;
+        trackingWaveCtrl = transform.GetComponent<TrackingWaveCtrl>();
     }
 
-    protected virtual void LoadTrackingWaveController()
+    public virtual void TrackingWaveOn()
     {
-        if (trackingWaveController != null) return;
-        trackingWaveController = transform.GetComponentInParent<TrackingWaveController>();
+        int index = trackingWaveCtrl.CanvasController.PointSpawnDogController.wave;
+        GetSumDog(index);
+        GetTextWaveDog(index);
+        trackingWaveCtrl.TWTrackingWave.TW_TrackingWaveOn();
     }
 
-    protected virtual void LoadInstance()
+    public virtual void TrackingWaveOff()
     {
-        if (instance != null) return;
-        instance = this;
+        trackingWaveCtrl.TWTrackingWave.TW_TrackingWaveOff();
     }
 
-    private void FixedUpdate()
+    protected virtual void GetSumDog(int indexWave)
     {
-        Slidering();
-    }
-
-    protected virtual void Slidering()
-    {
-        valueText = sumDogCurrent / sumDogMax * 100;
-        slider.value = valueText;
-    }
-
-    public virtual void GetSumDogMax()
-    {
-        int index = trackingWaveController.CanvasController.PointSpawnDogController.wave;
-        sumDogMax = waveDogSO.waves[index].GetSumDogWave();
+        sumDogMax = trackingWaveCtrl.WaveDogSO.waves[indexWave].GetSumDogWave();
         sumDogCurrent = 0;
+        sumDogDeath = 0;
+    }
+
+    public virtual void GetTextWaveDog(int indexWave)
+    {
+        // Because indexWave begin is 0, but the text must show 1
+        trackingWaveCtrl.TextCountWave.ChangeText(indexWave + 1);
+    }
+
+    public virtual void AddNumDogCurrent()
+    {
+        sumDogCurrent += 1;
+        trackingWaveCtrl.SliderTrackingWave.Slidering(sumDogCurrent, sumDogMax);
     }
 
     public virtual bool CheckEndWave()
     {
-        if (sumDogCurrent == sumDogMax) return true;
+        if (sumDogDeath == sumDogMax) return true;
         return false;
     }
 }

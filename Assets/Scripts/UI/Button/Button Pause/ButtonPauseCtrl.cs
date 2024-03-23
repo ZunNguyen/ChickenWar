@@ -11,11 +11,15 @@ public class ButtonPauseCtrl : CanvasAbstract
     [SerializeField] protected TWPanelSetting tWPanelSetting;
     public TWPanelSetting TWPanelSetting => tWPanelSetting;
 
+    [SerializeField] protected SettingVolume settingVolume;
+    public SettingVolume SettingVolume => settingVolume;
+
     protected override void LoadComponent()
     {
         base.LoadComponent();
         LoadTWPanelPause();
         LoadTWPanelSetting();
+        LoadSettingVolume();
     }
 
     protected virtual void LoadTWPanelPause()
@@ -28,5 +32,11 @@ public class ButtonPauseCtrl : CanvasAbstract
     {
         if (tWPanelSetting != null) return;
         tWPanelSetting = GameObject.Find("Panel - Setting").GetComponent<TWPanelSetting>();
+    }
+
+    protected virtual void LoadSettingVolume()
+    {
+        if (settingVolume != null) return;
+        settingVolume = transform.GetComponentInChildren<SettingVolume>();
     }
 }

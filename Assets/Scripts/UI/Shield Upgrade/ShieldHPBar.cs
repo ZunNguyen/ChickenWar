@@ -27,7 +27,7 @@ public class ShieldHPBar : ProcessSlider
         {
             // Game Over
             shieldUpdateController.CanvasController.PointSpawnDogController.gameObject.SetActive(false);
-            shieldUpdateController.CanvasController.PanelController.Panel.PanelLoseOn();
+            shieldUpdateController.CanvasController.PanelVictoyLoseCtrl.PanelVictoryLose.PanelLoseOn();
             Time.timeScale = 1f;
             hpCurrent = 0;
         }

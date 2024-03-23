@@ -42,6 +42,7 @@ public class PointSpawnDog : ErshenMonoBehaviour
         SpawnDog(nameDog, timeDelay, hpDog, damageDog);
 
         pointSpawnDogController.dogNum += 1;
+        pointSpawnDogController.CanvasController.TrackingWaveController.TrackingWave.AddNumDogCurrent();
         pointSpawnDogController.isSpawning = false;
     }
 

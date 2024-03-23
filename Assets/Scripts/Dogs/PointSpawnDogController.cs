@@ -169,7 +169,7 @@ public class PointSpawnDogController : ErshenMonoBehaviour
             wave += 1;
             Time.timeScale = 1f;
             Debug.Log("Finish wave " + wave);
-            canvasController.PanelController.Panel.PanelVictoryOn();
+            canvasController.PanelVictoyLoseCtrl.PanelVictoryLose.PanelVictoryOn();
             gameObject.SetActive(false);
         }
     }

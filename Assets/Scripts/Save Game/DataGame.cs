@@ -6,7 +6,7 @@ using UnityEngine;
 public class DataGame
 {
     // Gold player
-    public float goldPlayer;
+    public int goldPlayer;
 
     // Wave Dog
     public int waveDog;
@@ -21,4 +21,11 @@ public class DataGame
     // Save chicken in board
     public List<int> indexSlot = new();
     public List<string> nameChicken = new();
+
+    // Save Volume
+    public float volumeMusic;
+    public float volumeSFX;
+
+    // Save Time Game
+    public string lastTimeExit;
 }

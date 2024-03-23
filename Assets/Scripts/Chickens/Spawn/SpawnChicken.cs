@@ -53,8 +53,6 @@ public class SpawnChicken : CanvasAbstract
         string namePrefabHighLevel = canvasController.ChickenSpawner.GetNameChicken(indexChicken + 1);
         // Check Index of parentPrefabz
         int indexSlot = CheckSlotInList(parentPrefab.transform);
-        // If indexSlot = 99 -> don't allow add prefab on slot
-        //if (indexSlot == 99) return;
         // Instantiate prefab
         Transform chickenHigherLV = InstantiatePrefab(namePrefabHighLevel, indexSlot);
         // Show aniamtion update new chicken higher level

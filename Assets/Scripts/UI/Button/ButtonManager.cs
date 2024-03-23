@@ -38,10 +38,7 @@ public class ButtonManager : ErshenMonoBehaviour
         // On Bullet
         canvasController.PointSpawnBulletController.BulletOn();
         // On tracking wave
-        TrackingWave.Instance.GetSumDogMax();
-        // Show wave text
-        canvasController.TrackingWaveController.CountWave.LoadText();
-        canvasController.TrackingWaveController.TWTrackingWave.TW_TrackingWaveOn();
+        canvasController.TrackingWaveController.TrackingWave.TrackingWaveOn();
     }
 
     public void SpawnChicken()
@@ -55,8 +52,8 @@ public class ButtonManager : ErshenMonoBehaviour
         canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectEarnGold);
         
         OffTrackingWave();
-        // Off panel victory
-        canvasController.PanelController.Panel.PanelOff(1);
+        // Off panel
+        canvasController.PanelVictoyLoseCtrl.PanelVictoryLose.PanelOff(1);
     }
 
     public virtual void ButtonClaimVD()
@@ -66,7 +63,7 @@ public class ButtonManager : ErshenMonoBehaviour
 
         OffTrackingWave();
         // Off panel victory
-        canvasController.PanelController.Panel.PanelOff(2);
+        canvasController.PanelVictoyLoseCtrl.PanelVictoryLose.PanelOff(2);
     }
 
     public virtual void ButtonUnclockChickenUpgrade()
@@ -89,6 +86,6 @@ public class ButtonManager : ErshenMonoBehaviour
         canvasController.ShieldUpdate.LoadBeginGame();
 
         // Off panel tracking wave
-        canvasController.TrackingWaveController.TWTrackingWave.TW_TrackingWaveOff();
+        canvasController.TrackingWaveController.TrackingWave.TrackingWaveOff();
     }
 }

@@ -10,8 +10,8 @@ public class ShieldUpdate : CanvasAbstract
 
     public ShieldSO shieldSO;
     public int levelCurrent;
-    [SerializeField] protected float goldPlayer;
-    [SerializeField] protected float goldUpgrade;
+    [SerializeField] protected int goldPlayer;
+    [SerializeField] protected int goldUpgrade;
 
     protected override void LoadComponent()
     {
@@ -97,9 +97,9 @@ public class ShieldUpdate : CanvasAbstract
         return true;
     }
 
-    protected virtual void UpdateGoldPlayer(float goldPlayer, float goldUpgrade)
+    protected virtual void UpdateGoldPlayer(int goldPlayer, int goldUpgrade)
     {
-        shieldUpdateController.CanvasController.GoldPlayer.gold = goldPlayer - goldUpgrade;
+        shieldUpdateController.CanvasController.GoldPlayer.SubtractGoldPlayer(goldUpgrade);
     }
 
     protected virtual void UpdateGoldUpgradeShield(int levelCurrent)

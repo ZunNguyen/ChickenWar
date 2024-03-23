@@ -15,8 +15,8 @@ public class ButtonSpawn : CanvasAbstract
     public string nameNewChicken = "Chicken01";
 
     [Header("Variable")]
-    [SerializeField] protected float goldPlayer;
-    [SerializeField] protected float goldUpdate;
+    [SerializeField] protected int goldPlayer;
+    [SerializeField] protected int goldUpdate;
     public int highestLevelChicken = 0;
 
     protected override void LoadComponent()
@@ -104,7 +104,7 @@ public class ButtonSpawn : CanvasAbstract
         canvasController.SpawnChicken.SpawnChickenInSlot();
 
         // Subtract money
-        canvasController.GoldPlayer.gold = goldPlayer - goldUpdate;
+        canvasController.GoldPlayer.SubtractGoldPlayer(goldUpdate);
     }
 
     protected virtual bool CanSpawn()

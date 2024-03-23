@@ -25,7 +25,6 @@ public class DogDamageReceiver : DamageReciver
         dogCtrl.DisaleComponents();
 
         this.transform.parent.parent.position = new Vector3(this.transform.position.x, this.transform.position.y, 10);
-        TrackingWave.Instance.sumDogCurrent += 1;
         Invoke(nameof(Despawn), 3);
     }
 

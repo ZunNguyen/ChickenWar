@@ -62,7 +62,9 @@ public class ButtonPause : ErshenMonoBehaviour
         // Audio
         buttonPauseCtrl.CanvasController.AudioManager.PlaySFX(buttonPauseCtrl.CanvasController.AudioManager.effectClick);
 
-        buttonPauseCtrl.TWPanelPasue.TW_PanelPasueOff();
+        //buttonPauseCtrl.TWPanelPasue.TW_PanelPasueOff();
+
+        buttonPauseCtrl.CanvasController.SaveDataManager.ResetGame();
         Debug.Log("restart game");
     }
 }

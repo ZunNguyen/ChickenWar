@@ -7,15 +7,8 @@ using UnityEngine.UI;
 
 public class DragItem : CanvasAbstract, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    // The score game have 2 object image
-    [SerializeField] public Image[] images;
-    [SerializeField] public Transform realParent;
-
-    // Set new parent after drag and drop object
-    public virtual void SetRealParent(Transform setRealParent)
-    {
-        realParent = setRealParent;
-    }
+    [SerializeField] protected Image[] images;
+    public Transform realParent;
 
     protected override void LoadComponent()
     {
@@ -59,9 +52,15 @@ public class DragItem : CanvasAbstract, IDragHandler, IBeginDragHandler, IEndDra
         }
     }
 
-    protected override void OnEnable()
+    //protected override void OnEnable()
+    //{
+    //    base.OnEnable();
+    //    //Debug.Log("On enable chicken");
+    //}
+
+    // Set new parent after drag and drop object
+    public virtual void SetRealParent(Transform setRealParent)
     {
-        base.OnEnable();
-        Debug.Log("On enable chicken");
+        realParent = setRealParent;
     }
 }

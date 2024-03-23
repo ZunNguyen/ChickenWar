@@ -21,7 +21,7 @@ public class GoldEarn : ChickenAbstract
         timeCurrent += Time.deltaTime;
         if (timeCurrent < timeDelay) return;
         timeCurrent = 0;
-        GoldPlayer.Instance.gold += gold;
+        GoldPlayer.Instance.AddGoldPlayer(gold);
         //coinCollect.gameObject.SetActive(true);
         GameObject newTrans = CoinCollectSpawner.Instance.Spawn("Coin Collection", this.transform.position, this.transform.rotation);
         CoinCollect coinCollect = newTrans.GetComponent<CoinCollect>();

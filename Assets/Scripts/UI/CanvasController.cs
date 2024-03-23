@@ -22,6 +22,9 @@ public class CanvasController : ErshenMonoBehaviour
     [SerializeField] protected AudioManager audioManager;
     public AudioManager AudioManager => audioManager;
 
+    [SerializeField] protected SaveDataManager saveDataManager;
+    public SaveDataManager SaveDataManager => saveDataManager;
+
     [Header("Load Script inside")]
     [SerializeField] protected ChickenSpawner chickenSpawner;
     public ChickenSpawner ChickenSpawner => chickenSpawner;
@@ -37,11 +40,11 @@ public class CanvasController : ErshenMonoBehaviour
     [SerializeField] protected GoldPlayer goldPlayer;
     public GoldPlayer GoldPlayer => goldPlayer;
 
-    [SerializeField] protected TrackingWaveController trackingWaveController;
-    public TrackingWaveController TrackingWaveController => trackingWaveController;
+    [SerializeField] protected TrackingWaveCtrl trackingWaveController;
+    public TrackingWaveCtrl TrackingWaveController => trackingWaveController;
 
-    [SerializeField] protected PanelController panelController;
-    public PanelController PanelController => panelController;
+    [SerializeField] protected PanelVictoyLoseCtrl panelVictoyLoseCtrl;
+    public PanelVictoyLoseCtrl PanelVictoyLoseCtrl => panelVictoyLoseCtrl;
 
     [SerializeField] protected TWUpgradeChicken tWUpgradeChicken;
     public TWUpgradeChicken TWUpgradeChicken => tWUpgradeChicken;
@@ -51,6 +54,12 @@ public class CanvasController : ErshenMonoBehaviour
 
     [SerializeField] protected ChangeButtonStart changeButtonStart;
     public ChangeButtonStart ChangeButtonStart => changeButtonStart;
+
+    [SerializeField] protected ButtonPauseCtrl buttonPauseCtrl;
+    public ButtonPauseCtrl ButtonPauseCtrl => buttonPauseCtrl;
+
+    [SerializeField] protected PanelEarnGoldOfflineCtrl panelEarnGoldOfflineCtrl;
+    public PanelEarnGoldOfflineCtrl PanelEarnGoldOfflineCtrl => panelEarnGoldOfflineCtrl;
 
     [Header("Load script for shield")]
     [SerializeField] protected ShieldUpdate shieldUpdate;
@@ -73,16 +82,19 @@ public class CanvasController : ErshenMonoBehaviour
         LoadButtonSpawn();
         LoadCheckPositionChicken();
         LoadPointSpawnBulletController();
-        LoadPointSpawnDogController();
+        //LoadPointSpawnDogController();
         LoadGoldPlayer();
         LoadTrackingWaveController();
-        LoadPanelController();
+        LoadPanelVictoryLoseCtrl();
         LoadButtonManager();
         LoadShieldUpdateController();
         LoadTWUpgradeChicken();
         LoadGameObjSpawner();
         LoadChangeButtonStart();
         LoadAudioManager();
+        LoadButtonPauseCtrl();
+        LoadPanelEarnGoldOfflineCtrl();
+        LoadSaveDataManager();
 
         // Load Script for Shield
         LoadShieldUpdate();
@@ -140,7 +152,7 @@ public class CanvasController : ErshenMonoBehaviour
     protected virtual void LoadTrackingWaveController()
     {
         if (trackingWaveController != null) return;
-        trackingWaveController = transform.GetComponentInChildren<TrackingWaveController>();
+        trackingWaveController = transform.GetComponentInChildren<TrackingWaveCtrl>();
     }
 
     protected virtual void LoadShieldUpdate()
@@ -149,16 +161,16 @@ public class CanvasController : ErshenMonoBehaviour
         shieldUpdate = transform.GetComponentInChildren<ShieldUpdate>();
     }
 
-    protected virtual void LoadPanelController()
+    protected virtual void LoadPanelVictoryLoseCtrl()
     {
-        if (panelController != null) return;
-        panelController = transform.Find("Panel").GetComponent<PanelController>();
+        if (panelVictoyLoseCtrl != null) return;
+        panelVictoyLoseCtrl = GameObject.Find("Panel - Victory - Lose").GetComponent<PanelVictoyLoseCtrl>();
     }
 
     protected virtual void LoadTWUpgradeChicken()
     {
         if (tWUpgradeChicken != null) return;
-        tWUpgradeChicken = transform.Find("Panel - Upgrade").GetComponent<TWUpgradeChicken>();
+        tWUpgradeChicken = transform.Find("Panel").Find("Panel - Upgrade").GetComponent<TWUpgradeChicken>();
     }
 
     protected virtual void LoadButtonManager()
@@ -189,6 +201,24 @@ public class CanvasController : ErshenMonoBehaviour
     {
         if (audioManager != null) return;
         audioManager = GameObject.Find("Audio Manager").GetComponent<AudioManager>();
+    }
+
+    protected virtual void LoadButtonPauseCtrl()
+    {
+        if (buttonPauseCtrl != null) return;
+        buttonPauseCtrl = transform.GetComponentInChildren<ButtonPauseCtrl>();
+    }
+
+    protected virtual void LoadPanelEarnGoldOfflineCtrl()
+    {
+        if (panelEarnGoldOfflineCtrl != null) return;
+        panelEarnGoldOfflineCtrl = GameObject.Find("Panel - Earn Gold Offline").GetComponent<PanelEarnGoldOfflineCtrl>();
+    }
+
+    protected virtual void LoadSaveDataManager()
+    {
+        if (saveDataManager != null) return;
+        saveDataManager = GameObject.Find("Game Manager").GetComponent<SaveDataManager>();
     }
 
     protected virtual void LoadInstance()

@@ -74,6 +74,8 @@ public class TWUpgradeChicken : CanvasAbstract
         newPrefab.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
         newPrefab.GetComponent<RectTransform>().DOAnchorPos(new Vector2(rectX, 80), 0);
         newPrefab.gameObject.SetActive(true);
+        DragItem dragItem = newPrefab.GetComponent<DragItem>();
+        dragItem.enabled = false;
         return newPrefab;
     }
 }

@@ -16,12 +16,12 @@ public class Wave
         wave = _wave;
     }
 
-    public virtual float GetSumDogWave()
+    public virtual int GetSumDogWave()
     {
         sum = 0;
         foreach (Phase phase in phases)
         {
-            sum = sum + phase.GetSumDogPhase();
+            sum += phase.GetSumDogPhase();
         }
         return sum;
     }

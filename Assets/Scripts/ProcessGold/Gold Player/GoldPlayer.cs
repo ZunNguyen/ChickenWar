@@ -7,7 +7,7 @@ public class GoldPlayer : ProcessGold
 {
     protected static GoldPlayer instance;
     public static GoldPlayer Instance => instance;
-    public float gold;
+    public int gold = 0;
 
     protected override void LoadComponent()
     {
@@ -21,8 +21,15 @@ public class GoldPlayer : ProcessGold
         instance = this;
     }
 
-    private void Update()
+    public virtual void AddGoldPlayer(int addGold)
     {
+        gold += addGold;
+        PrintText(gold);
+    }
+
+    public virtual void SubtractGoldPlayer(int subtractGold)
+    {
+        gold -= subtractGold;
         PrintText(gold);
     }
 }

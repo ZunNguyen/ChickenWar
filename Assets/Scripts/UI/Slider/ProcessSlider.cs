@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public abstract class ProcessSlider : ErshenMonoBehaviour
 {
+    [Header("---Connect Slider---")]
     [SerializeField] protected Slider slider;
 
     protected override void LoadComponent()

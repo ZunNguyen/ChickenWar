@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class CanvasAbstract : ErshenMonoBehaviour
 {
-    [Header("Canvas Abstract")]
+    [Header("---Connect CanvasCtrl---")]
     [SerializeField] protected CanvasController canvasController;
     public CanvasController CanvasController => canvasController;
 
