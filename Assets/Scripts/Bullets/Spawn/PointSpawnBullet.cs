@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PointSpawnBullet : ErshenMonoBehaviour
+public class PointSpawnBullet : LoadIndexObj
 {
     [Header("Connect Script")]
     [SerializeField] protected PointSpawnBulletController pointSpawnBulletController;
@@ -10,7 +10,6 @@ public class PointSpawnBullet : ErshenMonoBehaviour
     [Header("Value")]
     [SerializeField] protected float timeCurrent;
     [SerializeField] protected float timeDelay = 1;
-    [SerializeField] protected int index;
     public int levelChicken;
 
     [Header("Shooting system")]
@@ -20,7 +19,6 @@ public class PointSpawnBullet : ErshenMonoBehaviour
     {
         base.LoadComponent();
         this.LoadPointSpawnBulletController();
-        LoadIndex();
         TurnOffScript();
     }
 
@@ -28,14 +26,6 @@ public class PointSpawnBullet : ErshenMonoBehaviour
     {
         if (pointSpawnBulletController != null) return;
         pointSpawnBulletController = transform.GetComponentInParent<PointSpawnBulletController>();
-    }
-
-    protected virtual void LoadIndex()
-    {
-        if (index > 0) return;
-        string name = gameObject.name;
-        index = name[name.Length - 1];
-        index -= 48;
     }
 
     protected virtual void TurnOffScript()

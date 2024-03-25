@@ -44,6 +44,9 @@ public class TrackingWave : ErshenMonoBehaviour
         sumDogMax = trackingWaveCtrl.WaveDogSO.waves[indexWave].GetSumDogWave();
         sumDogCurrent = 0;
         sumDogDeath = 0;
+
+        // Reset slider
+        trackingWaveCtrl.SliderTrackingWave.Slidering(sumDogCurrent, sumDogMax);
     }
 
     public virtual void GetTextWaveDog(int indexWave)

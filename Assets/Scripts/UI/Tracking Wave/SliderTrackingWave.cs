@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SliderTrackingWave : ProcessSlider
 {
+    public float valueText; 
+
     public virtual void Slidering(int numDogCurrent, int numDogMax)
     {
-        float valueText = numDogCurrent / numDogMax * 100;
+        valueText = (float)numDogCurrent / (float)numDogMax * 100;
         slider.value = valueText;
     }
 }

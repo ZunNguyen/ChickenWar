@@ -49,7 +49,7 @@ public class ButtonManager : ErshenMonoBehaviour
     public virtual void ButtonClaim()
     {
         // Audio
-        canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectEarnGold);
+        canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectClick);
         
         OffTrackingWave();
         // Off panel
@@ -59,7 +59,7 @@ public class ButtonManager : ErshenMonoBehaviour
     public virtual void ButtonClaimVD()
     {
         // Audio
-        canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectEarnGold);
+        canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectClick);
 
         OffTrackingWave();
         // Off panel victory

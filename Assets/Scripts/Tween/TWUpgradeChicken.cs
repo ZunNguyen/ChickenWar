@@ -22,7 +22,7 @@ public class TWUpgradeChicken : CanvasAbstract
     protected virtual void LoadFireWork()
     {
         if (fireWork != null) return;
-        fireWork = transform.Find("Fire").gameObject;
+        fireWork = transform.Find("Image - Fire").gameObject;
     }
 
     public virtual void TW_UpgradeOn()
@@ -72,7 +72,7 @@ public class TWUpgradeChicken : CanvasAbstract
         newPrefab.SetParent(transform);
         newPrefab.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.5f);
         newPrefab.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
-        newPrefab.GetComponent<RectTransform>().DOAnchorPos(new Vector2(rectX, 80), 0);
+        newPrefab.GetComponent<RectTransform>().DOAnchorPos(new Vector2(rectX, 0), 0);
         newPrefab.gameObject.SetActive(true);
         DragItem dragItem = newPrefab.GetComponent<DragItem>();
         dragItem.enabled = false;

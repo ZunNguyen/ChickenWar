@@ -6,17 +6,33 @@ public class ButtonPause : ErshenMonoBehaviour
 {
     [Header("---Connect Ctrl---")]
     [SerializeField] protected ButtonPauseCtrl buttonPauseCtrl;
+    [SerializeField] protected GameObject panelConfirm;
+    [SerializeField] protected GameObject panelPause;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
         LoadButtonPauseCtrl();
+        LoadPanelConfirm();
+        LoadPanelPause();
     }
 
     protected virtual void LoadButtonPauseCtrl()
     {
         if (buttonPauseCtrl != null) return;
         buttonPauseCtrl = transform.GetComponent<ButtonPauseCtrl>();
+    }
+
+    protected virtual void LoadPanelConfirm()
+    {
+        if (panelConfirm != null) return;
+        panelConfirm = transform.Find("Panel - Confirm").gameObject;
+    }
+
+    protected virtual void LoadPanelPause()
+    {
+        if (panelPause != null) return;
+        panelPause = transform.Find("Panel - Pause").gameObject;
     }
 
     public virtual void PressPauseButton()
@@ -62,9 +78,19 @@ public class ButtonPause : ErshenMonoBehaviour
         // Audio
         buttonPauseCtrl.CanvasController.AudioManager.PlaySFX(buttonPauseCtrl.CanvasController.AudioManager.effectClick);
 
-        //buttonPauseCtrl.TWPanelPasue.TW_PanelPasueOff();
+        panelPause.SetActive(false);
+        panelConfirm.SetActive(true);
+    }
 
+    public virtual void PressNoButton()
+    {
+        panelPause.SetActive(true);
+        panelConfirm.SetActive(false);
+    }
+
+    public virtual void PressYesButton()
+    {
+        // Reset Game
         buttonPauseCtrl.CanvasController.SaveDataManager.ResetGame();
-        Debug.Log("restart game");
     }
 }
