@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using UnityEngine;
 
-public class TWPanelEarnGoldOffline : ErshenMonoBehaviour
+public class TWPanelEarnGoldOffline : TWEarnGoldPanel
 {
     [Header("---Connect Ctrl---")]
     [SerializeField] protected PanelEarnGoldOfflineCtrl panelEarnGoldOfflineCtrl;
 
-    [SerializeField] protected List<GameObject> golds;
+    [Header("---Gold Position---")]
     [SerializeField] protected Vector2 savePosition = new(-40, -9);
 
     protected override void LoadComponent()
@@ -24,49 +24,19 @@ public class TWPanelEarnGoldOffline : ErshenMonoBehaviour
         panelEarnGoldOfflineCtrl = this.transform.GetComponent<PanelEarnGoldOfflineCtrl>();
     }
 
-    public virtual void TW_PanelEarnGoldOfflineOn()
+    protected override void ResetStatusBtn()
     {
-        this.transform.GetComponent<RectTransform>().DOAnchorPosY(0, 1.5f);
+        panelEarnGoldOfflineCtrl.TWPanelEarnGoldOffline.SetIsClaimingIsFalse();
     }
 
-    public virtual void TW_PanelEarnGoldOfflineOff(int multiplier)
+    protected override Vector2 SavePosition()
     {
-        TW_EarnGold(multiplier);
-        Invoke(nameof(TW_PanelOff), 2f);
+        Vector2 position = savePosition;
+        return position;
     }
 
-    protected virtual void TW_PanelOff()
+    protected override void SetAudioEffectEarnGold()
     {
-        this.transform.GetComponent<RectTransform>().DOAnchorPosY(-1188, 2f).OnComplete(() =>
-        {
-            panelEarnGoldOfflineCtrl.CanvasController.ButtonManager.isClaiming = false;
-        });
-    }
-
-    protected virtual void TW_EarnGold(int multiplier)
-    {
-        float delay = 0;
-        foreach (GameObject gold in golds)
-        {
-            gold.transform.DOScale(1f, 0.3f).SetDelay(delay).SetEase(Ease.OutBack);
-            gold.GetComponent<RectTransform>().DOAnchorPos(new Vector2(-620, 570), 1f).SetDelay(delay).SetEase(Ease.OutBack).OnComplete(() =>
-            {
-                gold.transform.DOScale(0f, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
-                {
-                    // Audio
-                    panelEarnGoldOfflineCtrl.CanvasController.AudioManager.PlaySFX(panelEarnGoldOfflineCtrl.CanvasController.AudioManager.effectEarnGold);
-                    gold.GetComponent<RectTransform>().anchoredPosition = savePosition;
-                    AddGoldEarn(multiplier);
-                });
-            });
-            delay += 0.2f;
-        }
-    }
-
-    protected virtual void AddGoldEarn(int multiplier)
-    {
-        float goldEarn = panelEarnGoldOfflineCtrl.TextEarnGoldOffline.goldEarn / 5;
-        int addGold = (int)goldEarn * multiplier;
-        GoldPlayer.Instance.AddGoldPlayer(addGold);
+        panelEarnGoldOfflineCtrl.CanvasController.AudioManager.PlaySFX(panelEarnGoldOfflineCtrl.CanvasController.AudioManager.effectEarnGold);
     }
 }

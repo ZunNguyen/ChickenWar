@@ -61,6 +61,9 @@ public class CanvasController : ErshenMonoBehaviour
     [SerializeField] protected PanelEarnGoldOfflineCtrl panelEarnGoldOfflineCtrl;
     public PanelEarnGoldOfflineCtrl PanelEarnGoldOfflineCtrl => panelEarnGoldOfflineCtrl;
 
+    [SerializeField] protected PanelMissionCtrl panelMissionCtrl;
+    public PanelMissionCtrl PanelMissionCtrl => panelMissionCtrl;
+
     [Header("Load script for shield")]
     [SerializeField] protected ShieldUpdate shieldUpdate;
     public ShieldUpdate ShieldUpdate => shieldUpdate;
@@ -95,6 +98,7 @@ public class CanvasController : ErshenMonoBehaviour
         LoadButtonPauseCtrl();
         LoadPanelEarnGoldOfflineCtrl();
         LoadSaveDataManager();
+        LoadPanelMissionCtrl();
 
         // Load Script for Shield
         LoadShieldUpdate();
@@ -182,7 +186,7 @@ public class CanvasController : ErshenMonoBehaviour
     protected virtual void LoadShieldUpdateController()
     {
         if (shieldUpdateController != null) return;
-        shieldUpdateController = transform.Find("Update Shield").GetComponent<ShieldUpdateController>();
+        shieldUpdateController = transform.Find("Button").Find("Update Shield").GetComponent<ShieldUpdateController>();
     }
 
     protected virtual void LoadGameObjSpawner()
@@ -219,6 +223,12 @@ public class CanvasController : ErshenMonoBehaviour
     {
         if (saveDataManager != null) return;
         saveDataManager = GameObject.Find("Game Manager").GetComponent<SaveDataManager>();
+    }
+
+    protected virtual void LoadPanelMissionCtrl()
+    {
+        if (panelMissionCtrl != null) return;
+        panelMissionCtrl = GameObject.Find("Panel - Mission").GetComponent<PanelMissionCtrl>();
     }
 
     protected virtual void LoadInstance()

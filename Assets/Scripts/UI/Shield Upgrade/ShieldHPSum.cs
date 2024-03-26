@@ -47,7 +47,7 @@ public class ShieldHPSum : ErshenMonoBehaviour
     protected virtual int LoadHpMax()
     {
         int levelCurrent = CanvasController.Instance.ShieldUpdate.levelCurrent;
-        int HpMax = CanvasController.Instance.ShieldUpdate.shieldSO.levels[levelCurrent].hp;
+        int HpMax = CanvasController.Instance.ShieldUpdate.shieldSO.listLevelShields[levelCurrent].hp;
         return HpMax;
     }
 }

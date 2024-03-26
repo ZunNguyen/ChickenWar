@@ -27,7 +27,7 @@ public class PanelVictoryLose : ErshenMonoBehaviour
         panelVictoyLoseCtrl.CanvasController.AudioManager.PauseMusic(panelVictoyLoseCtrl.CanvasController.AudioManager.musicBattle);
         panelVictoyLoseCtrl.CanvasController.AudioManager.PlaySFX(panelVictoyLoseCtrl.CanvasController.AudioManager.effectWinWave);
 
-        panelVictoyLoseCtrl.TWPanelVictoryLose.TW_PanelVictoryLoseOn();
+        panelVictoyLoseCtrl.TWPanelVictoryLose.TW_PanelOn();
         float numsdogKill = panelVictoyLoseCtrl.CanvasController.TrackingWaveController.TrackingWave.sumDogCurrent;
         panelVictoyLoseCtrl.TextKill.GetTextKillDog(numsdogKill);
         int waveDog = panelVictoyLoseCtrl.CanvasController.PointSpawnDogController.wave;
@@ -43,7 +43,7 @@ public class PanelVictoryLose : ErshenMonoBehaviour
         panelVictoyLoseCtrl.CanvasController.AudioManager.PlaySFX(panelVictoyLoseCtrl.CanvasController.AudioManager.effectGameOver);
 
         panelVictoyLoseCtrl.CanvasController.GameObjectSpawner.OffMovementObjInHolder();
-        panelVictoyLoseCtrl.TWPanelVictoryLose.TW_PanelVictoryLoseOn();
+        panelVictoyLoseCtrl.TWPanelVictoryLose.TW_PanelOn();
         float numsdogKill = panelVictoyLoseCtrl.CanvasController.TrackingWaveController.TrackingWave.sumDogCurrent;
         panelVictoyLoseCtrl.TextKill.GetTextKillDog(numsdogKill);
         int waveDog = panelVictoyLoseCtrl.CanvasController.PointSpawnDogController.wave;
@@ -54,6 +54,8 @@ public class PanelVictoryLose : ErshenMonoBehaviour
 
     public virtual void PanelOff(int multiplier)
     {
-        panelVictoyLoseCtrl.TWPanelVictoryLose.TW_PanelVictoryLoseOff(multiplier);
+        float goldEarn = panelVictoyLoseCtrl.TextEarnGold.goldEarn;
+
+        panelVictoyLoseCtrl.TWPanelVictoryLose.TW_PanelOff(multiplier, goldEarn);
     }
 }

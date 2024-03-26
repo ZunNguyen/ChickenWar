@@ -56,7 +56,7 @@ public class AudioManager : ErshenMonoBehaviour
 
     public virtual void PlaySFX(AudioClip clipName)
     {
-        sfxSource.PlayOneShot(clipName);  
+        sfxSource.PlayOneShot(clipName);
     }
 
     public virtual void PauseMusic(AudioClip clipName)

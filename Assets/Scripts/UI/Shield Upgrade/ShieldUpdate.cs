@@ -66,7 +66,7 @@ public class ShieldUpdate : CanvasAbstract
     protected virtual bool CanUpdate()
     {
         // The level current is highest?
-        if (levelCurrent >= shieldSO.levels.Count - 1)
+        if (levelCurrent >= shieldSO.listLevelShields.Count - 1)
         {
             Debug.Log("The level shield is highest level");
             return false;
@@ -91,7 +91,7 @@ public class ShieldUpdate : CanvasAbstract
     protected virtual bool GoldEnough()
     {
         goldPlayer = shieldUpdateController.CanvasController.GoldPlayer.gold;
-        goldUpgrade = shieldSO.levels[levelCurrent + 1].gold;
+        goldUpgrade = (int)shieldSO.listLevelShields[levelCurrent + 1].gold;
         if (goldUpgrade > goldPlayer) return false;
         UpdateGoldPlayer(goldPlayer, goldUpgrade);
         return true;
@@ -104,12 +104,12 @@ public class ShieldUpdate : CanvasAbstract
 
     protected virtual void UpdateGoldUpgradeShield(int levelCurrent)
     {
-        if (levelCurrent < shieldSO.levels.Count - 1)
+        if (levelCurrent < shieldSO.listLevelShields.Count - 1)
         {
             int index = levelCurrent + 1;
-            shieldUpdateController.ShieldGoldUpdate.PrintText(shieldSO.levels[index].gold);
+            shieldUpdateController.ShieldGoldUpdate.PrintText(shieldSO.listLevelShields[index].gold);
         }
-        if (levelCurrent == shieldSO.levels.Count - 1)
+        if (levelCurrent == shieldSO.listLevelShields.Count - 1)
         {
             shieldUpdateController.ShieldGoldUpdate.PrintMaxShield();
         }
@@ -118,12 +118,12 @@ public class ShieldUpdate : CanvasAbstract
     // Change Value Hp Max for Sum HP Shield
     protected virtual void ChangeValueSumHpShield(int levelCurrent)
     {
-        shieldUpdateController.CanvasController.ShieldHPSum.sumHpMax = shieldSO.levels[levelCurrent].hp;
+        shieldUpdateController.CanvasController.ShieldHPSum.sumHpMax = shieldSO.listLevelShields[levelCurrent].hp;
     }
 
     protected virtual void LoadShielHPBegin()
     {
-        int hp = shieldSO.levels[levelCurrent].hp;
+        int hp = shieldSO.listLevelShields[levelCurrent].hp;
         shieldUpdateController.ShieldHPText.Print(hp, hp);
         shieldUpdateController.ShieldHPBar.ChangeSlider(hp, hp);
     }

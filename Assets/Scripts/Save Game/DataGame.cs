@@ -28,4 +28,9 @@ public class DataGame
 
     // Save Time Game
     public string lastTimeExit;
+
+    // Save achievement player
+    public List<float> achievementList = new();
+    public List<float> missionCurrentList = new();
+    public List<int> indexMissionList = new();
 }

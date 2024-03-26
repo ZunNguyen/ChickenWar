@@ -5,6 +5,12 @@ using UnityEngine;
 [Serializable]
 public class LevelShield
 {
-    public int gold;
+    public float gold;
     public int hp;
+
+    public LevelShield(float _gold, int _hp)
+    {
+        gold = _gold;
+        hp = _hp;
+    }
 }

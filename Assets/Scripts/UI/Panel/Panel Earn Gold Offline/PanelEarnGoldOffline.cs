@@ -22,14 +22,15 @@ public class PanelEarnGoldOffline : ErshenMonoBehaviour
 
     public virtual void PanelEarnGoldOfflineOn()
     {
-        panelEarnGoldOfflineCtrl.TWPanelEarnGoldOffline.TW_PanelEarnGoldOfflineOn();
+        panelEarnGoldOfflineCtrl.TWPanelEarnGoldOffline.TW_PanelOn();
     }
 
     public virtual void PanelEarnGoldOfflineOff(int multiplier)
     {
         // Audio
         panelEarnGoldOfflineCtrl.CanvasController.AudioManager.PlaySFX(panelEarnGoldOfflineCtrl.CanvasController.AudioManager.effectClick);
-        
-        panelEarnGoldOfflineCtrl.TWPanelEarnGoldOffline.TW_PanelEarnGoldOfflineOff(multiplier);
+
+        float goldEarn = panelEarnGoldOfflineCtrl.TextEarnGoldOffline.goldEarn;
+        panelEarnGoldOfflineCtrl.TWPanelEarnGoldOffline.TW_PanelOff(multiplier, goldEarn);
     }
 }

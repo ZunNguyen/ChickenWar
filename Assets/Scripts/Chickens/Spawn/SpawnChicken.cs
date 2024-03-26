@@ -91,7 +91,13 @@ public class SpawnChicken : CanvasAbstract
     {
         int lvChicken = canvasController.ChickenSpawner.GetIndexChicken(chickenHigherLV);
 
-        if (lvChicken > canvasController.ButtonSpawn.highestLevelChicken) canvasController.ButtonSpawn.highestLevelChicken = lvChicken;
+        if (lvChicken > canvasController.ButtonSpawn.highestLevelChicken)
+        {
+            canvasController.ButtonSpawn.highestLevelChicken = lvChicken;
+
+            // Add achievement
+            canvasController.PanelMissionCtrl.PanelMission_1.AddAchievementPlayer(1);
+        }
         canvasController.ButtonSpawn.GetLevelChickenToSpawn(lvChicken);
     }
 

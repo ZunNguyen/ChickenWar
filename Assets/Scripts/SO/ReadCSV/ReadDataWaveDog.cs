@@ -20,6 +20,7 @@ public class ReadDataWaveDog : ErshenMonoBehaviour
 
     protected virtual void LoadTextAssetData()
     {
+        if (textAssetData != null) return;
         string resPath = "SO/Wave Dog/Data_WaveDog";
         textAssetData = Resources.Load<TextAsset>(resPath);
     }

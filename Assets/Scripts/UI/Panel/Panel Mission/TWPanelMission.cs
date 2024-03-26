@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
-public class TWPanelMission : MonoBehaviour
+public class TWPanelMission : ErshenMonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public virtual void TW_PanelMissionOn()
     {
-        
+        transform.GetComponent<RectTransform>().DOAnchorPosY(0, 2f).SetEase(Ease.OutBack);
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void TW_PanelMissionOff()
     {
-        
+        transform.GetComponent<RectTransform>().DOAnchorPosY(-1150, 2f).SetEase(Ease.OutBack);
     }
 }

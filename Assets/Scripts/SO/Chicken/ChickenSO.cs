@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SO", menuName = "ScriptableObject/Chickens")]
 public class ChickenSO : ScriptableObject
 {
-    [SerializeField] protected static ChickenSO instance;
+    protected static ChickenSO instance;
     public static ChickenSO Instance => instance;
 
     public List<LevelChicken> levels;
@@ -23,7 +23,7 @@ public class ChickenSO : ScriptableObject
 
     public void CreatNewLevelChicken(string _nameChicken, Sprite _chickenImage, Sprite _gunImage, Sprite _levelImage, int _goldEarn, int _timeDelayEarnGold, int _goldUpdate,string _nameBullet, Sprite _bulletImage, int _damage)
     {
-        LevelChicken levelChicken = new LevelChicken(_nameChicken, _chickenImage, _gunImage, _levelImage, _goldEarn, _timeDelayEarnGold,_goldUpdate, _nameBullet, _bulletImage, _damage);
+        LevelChicken levelChicken = new (_nameChicken, _chickenImage, _gunImage, _levelImage, _goldEarn, _timeDelayEarnGold,_goldUpdate, _nameBullet, _bulletImage, _damage);
         levels.Add(levelChicken);
     }
 

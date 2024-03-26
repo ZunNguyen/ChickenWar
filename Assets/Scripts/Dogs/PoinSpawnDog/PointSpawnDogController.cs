@@ -171,6 +171,10 @@ public class PointSpawnDogController : ErshenMonoBehaviour
             Time.timeScale = 1f;
             Debug.Log("Finish wave " + wave);
             canvasController.PanelVictoyLoseCtrl.PanelVictoryLose.PanelVictoryOn();
+
+            // Add achievement
+            canvasController.PanelMissionCtrl.PanelMission_3.AddAchievementPlayer(1);
+
             gameObject.SetActive(false);
         }
     }

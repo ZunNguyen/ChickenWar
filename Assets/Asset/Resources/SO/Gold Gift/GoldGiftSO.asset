@@ -14,16 +14,92 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listGoldGift:
   - wave: 1
-    gold: 100
-  - wave: 2
-    gold: 200
-  - wave: 3
-    gold: 500
-  - wave: 4
     gold: 1000
-  - wave: 5
+  - wave: 2
     gold: 2000
-  - wave: 6
+  - wave: 3
+    gold: 3000
+  - wave: 4
+    gold: 4000
+  - wave: 5
     gold: 5000
+  - wave: 6
+    gold: 6000
   - wave: 7
+    gold: 7000
+  - wave: 8
+    gold: 8000
+  - wave: 9
+    gold: 9000
+  - wave: 10
     gold: 10000
+  - wave: 11
+    gold: 11000
+  - wave: 12
+    gold: 12000
+  - wave: 13
+    gold: 13000
+  - wave: 14
+    gold: 14000
+  - wave: 15
+    gold: 15000
+  - wave: 16
+    gold: 16000
+  - wave: 17
+    gold: 17000
+  - wave: 18
+    gold: 18000
+  - wave: 19
+    gold: 19000
+  - wave: 20
+    gold: 20000
+  - wave: 21
+    gold: 21000
+  - wave: 22
+    gold: 22000
+  - wave: 23
+    gold: 23000
+  - wave: 24
+    gold: 24000
+  - wave: 25
+    gold: 25000
+  - wave: 26
+    gold: 26000
+  - wave: 27
+    gold: 27000
+  - wave: 28
+    gold: 28000
+  - wave: 29
+    gold: 29000
+  - wave: 30
+    gold: 30000
+  - wave: 31
+    gold: 31000
+  - wave: 32
+    gold: 32000
+  - wave: 33
+    gold: 33000
+  - wave: 34
+    gold: 34000
+  - wave: 35
+    gold: 35000
+  - wave: 36
+    gold: 36000
+  - wave: 37
+    gold: 37000
+  - wave: 38
+    gold: 38000
+  - wave: 39
+    gold: 39000
+  - wave: 40
+    gold: 40000
+  - wave: 41
+    gold: 41000
+  - wave: 42
+    gold: 42000
+  - wave: 43
+    gold: 43000
+  - wave: 44
+    gold: 44000
+  - wave: 45
+    gold: 45000

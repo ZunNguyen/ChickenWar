@@ -1,8 +1,5 @@
-using JetBrains.Annotations;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,6 +17,11 @@ public class SaveDataManager : ErshenMonoBehaviour
     {
         if (canvasController != null) return;
         canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveGame();
     }
 
     private void OnApplicationPause(bool pauseStatus)
@@ -46,9 +48,37 @@ public class SaveDataManager : ErshenMonoBehaviour
             volumeSFX = canvasController.ButtonPauseCtrl.SettingVolume.volumeSFX,
             lastTimeExit = DateTime.Now.ToString(),
         };
+        SaveAchievement(dataGame);
+        SaveMissionCurrent(dataGame);
+        SaveIndexMission(dataGame);
+
         canvasController.SpawnChicken.SaveSlotChicken(dataGame.indexSlot, dataGame.nameChicken);
         string json = JsonUtility.ToJson(dataGame);
         File.WriteAllText(Application.dataPath + "/DataGame.json", json);
+    }
+
+    protected virtual void SaveAchievement(DataGame dataGame)
+    {
+        dataGame.achievementList.Add(canvasController.PanelMissionCtrl.PanelMission_1.achievementPlayer);
+        dataGame.achievementList.Add(canvasController.PanelMissionCtrl.PanelMission_2.achievementPlayer);
+        dataGame.achievementList.Add(canvasController.PanelMissionCtrl.PanelMission_3.achievementPlayer);
+        dataGame.achievementList.Add(canvasController.PanelMissionCtrl.PanelMission_4.achievementPlayer);
+    }
+
+    protected virtual void SaveMissionCurrent(DataGame dataGame)
+    {
+        dataGame.missionCurrentList.Add(canvasController.PanelMissionCtrl.PanelMission_1.missionCurrent);
+        dataGame.missionCurrentList.Add(canvasController.PanelMissionCtrl.PanelMission_2.missionCurrent);
+        dataGame.missionCurrentList.Add(canvasController.PanelMissionCtrl.PanelMission_3.missionCurrent);
+        dataGame.missionCurrentList.Add(canvasController.PanelMissionCtrl.PanelMission_4.missionCurrent);
+    }
+
+    protected virtual void SaveIndexMission(DataGame dataGame)
+    {
+        dataGame.indexMissionList.Add(canvasController.PanelMissionCtrl.PanelMission_1.indexMission);
+        dataGame.indexMissionList.Add(canvasController.PanelMissionCtrl.PanelMission_2.indexMission);
+        dataGame.indexMissionList.Add(canvasController.PanelMissionCtrl.PanelMission_3.indexMission);
+        dataGame.indexMissionList.Add(canvasController.PanelMissionCtrl.PanelMission_4.indexMission);
     }
 
     // Load value from playerprefs
@@ -65,7 +95,7 @@ public class SaveDataManager : ErshenMonoBehaviour
         string json = File.ReadAllText(Application.dataPath + "/DataGame.json");
         DataGame dataGame = JsonUtility.FromJson<DataGame>(json);
         
-        canvasController.GoldPlayer.AddGoldPlayer(dataGame.goldPlayer);
+        canvasController.GoldPlayer.LoadBegin(dataGame.goldPlayer);
         canvasController.PointSpawnDogController.wave = dataGame.waveDog;
         canvasController.ShieldUpdate.levelCurrent = dataGame.levelShield;
         canvasController.ButtonSpawn.highestLevelChicken = dataGame.highestLevelChicken;
@@ -79,6 +109,9 @@ public class SaveDataManager : ErshenMonoBehaviour
         {
             canvasController.SpawnChicken.InstantiatePrefab(dataGame.nameChicken[i],dataGame.indexSlot[i]);
         }
+        LoadAchievement(dataGame);
+        LoadMissionCurrent(dataGame);
+        LoadIndexMission(dataGame);
     }
 
     protected virtual void ProcessTimeGame(string timeLastGame)
@@ -93,6 +126,33 @@ public class SaveDataManager : ErshenMonoBehaviour
         canvasController.PanelEarnGoldOfflineCtrl.PanelEarnGoldOffline.PanelEarnGoldOfflineOn();
         canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.InputGoldValue(gold);
         canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.goldEarn = gold;
+    }
+
+     protected virtual void LoadAchievement(DataGame dataGame)
+     {
+        if (dataGame.achievementList.Count < 4) return;
+        canvasController.PanelMissionCtrl.PanelMission_1.achievementPlayer = dataGame.achievementList[0];
+        canvasController.PanelMissionCtrl.PanelMission_2.achievementPlayer = dataGame.achievementList[1];
+        canvasController.PanelMissionCtrl.PanelMission_3.achievementPlayer = dataGame.achievementList[2];
+        canvasController.PanelMissionCtrl.PanelMission_4.achievementPlayer = dataGame.achievementList[3];
+     }
+
+    protected virtual void LoadMissionCurrent(DataGame dataGame)
+    {
+        if (dataGame.missionCurrentList.Count < 4) return;
+        canvasController.PanelMissionCtrl.PanelMission_1.missionCurrent = dataGame.missionCurrentList[0];
+        canvasController.PanelMissionCtrl.PanelMission_2.missionCurrent = dataGame.missionCurrentList[1];
+        canvasController.PanelMissionCtrl.PanelMission_3.missionCurrent = dataGame.missionCurrentList[2];
+        canvasController.PanelMissionCtrl.PanelMission_4.missionCurrent = dataGame.missionCurrentList[3];
+    }
+
+    protected virtual void LoadIndexMission(DataGame dataGame)
+    {
+        if (dataGame.indexMissionList.Count < 4) return;
+        canvasController.PanelMissionCtrl.PanelMission_1.indexMission = dataGame.indexMissionList[0];
+        canvasController.PanelMissionCtrl.PanelMission_2.indexMission = dataGame.indexMissionList[1];
+        canvasController.PanelMissionCtrl.PanelMission_3.indexMission = dataGame.indexMissionList[2];
+        canvasController.PanelMissionCtrl.PanelMission_4.indexMission = dataGame.indexMissionList[3];
     }
 
     public virtual void ResetGame()

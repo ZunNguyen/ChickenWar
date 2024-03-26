@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5381ab0a7b74c994d85f11f102b3df76, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  levels:
+  listLevelShields:
   - gold: 100
     hp: 100
   - gold: 200
