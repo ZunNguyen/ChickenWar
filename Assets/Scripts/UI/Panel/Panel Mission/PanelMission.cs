@@ -9,6 +9,8 @@ public class PanelMission : ErshenMonoBehaviour
 
     [SerializeField] protected GameObject mark;
 
+    public bool isActingPanel;
+
     protected override void LoadComponent()
     {
         base.LoadComponent();
@@ -47,6 +49,7 @@ public class PanelMission : ErshenMonoBehaviour
 
     protected virtual void GetSFX()
     {
+        isActingPanel = true;
         panelMissionCtrl.CanvasController.AudioManager.PlaySFX(panelMissionCtrl.CanvasController.AudioManager.effectClick);
     }
 

@@ -14,7 +14,6 @@ public class CoinCollect : ProcessGold
     [SerializeField] protected Transform textCoin;
     [SerializeField] protected float posTarget = 150f;
     [SerializeField] protected float durTimeMove = 1.5f;
-    [SerializeField] protected float durTimeDes = 1.3f;
 
     protected override void LoadComponent()
     {
@@ -38,13 +37,10 @@ public class CoinCollect : ProcessGold
     public virtual void TWCoinCollectOn()
     {
         CanvasController.Instance.AudioManager.PlaySFX(CanvasController.Instance.AudioManager.effectEarnGold);
-        rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + posTarget, durTimeMove);
-        Invoke(nameof(DestroyObj), durTimeDes);
-    }
-    
-    protected virtual void DestroyObj()
-    {
-        CoinCollectSpawner.Instance.Despawn(gameObject);
+        rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + posTarget, durTimeMove).OnComplete(() =>
+        {
+            CoinCollectSpawner.Instance.Despawn(gameObject);
+        });
     }
 
     public void GetValueText(int value)

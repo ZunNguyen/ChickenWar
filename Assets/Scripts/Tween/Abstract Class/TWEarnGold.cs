@@ -32,10 +32,11 @@ public abstract class TWEarnGold : ErshenMonoBehaviour
         if (isClaiming) return;
         isClaiming = true;
         float delay = 0;
+        Vector2 position = GetPositionGoldPlayer();
         foreach (GameObject gold in golds)
         {
             gold.transform.DOScale(1f, 0.3f).SetDelay(delay).SetEase(Ease.OutBack);
-            gold.GetComponent<RectTransform>().DOAnchorPos(new Vector2(-615, 555), 1f).SetDelay(delay).SetEase(Ease.OutBack).OnComplete(() =>
+            gold.GetComponent<RectTransform>().DOAnchorPos(position, 1f).SetDelay(delay).SetEase(Ease.OutBack).OnComplete(() =>
             {
                 gold.transform.DOScale(0f, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
                 {
@@ -46,6 +47,8 @@ public abstract class TWEarnGold : ErshenMonoBehaviour
             delay += 0.2f;
         }
     }
+
+    protected abstract Vector2 GetPositionGoldPlayer();
 
     public virtual void SetIsClaimingIsFalse()
     {

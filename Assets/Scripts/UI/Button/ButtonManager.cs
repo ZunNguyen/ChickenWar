@@ -7,7 +7,6 @@ public class ButtonManager : ErshenMonoBehaviour
 {
     [SerializeField] protected CanvasController canvasController;
     public bool isStarting = false;
-    public bool isClaiming = false;
     public int timePressButton = 0;
 
     protected override void LoadComponent()
@@ -25,7 +24,7 @@ public class ButtonManager : ErshenMonoBehaviour
     public virtual void StartGame()
     {
         timePressButton += 1;
-        if (timePressButton % 2 == 0 && timePressButton > 0) canvasController.ChangeButtonStart.ChangeImageButtonXTime(2,1);
+        if (timePressButton % 2 == 0 && timePressButton > 0) canvasController.ChangeButtonStart.ChangeImageButtonXTime(5,1);
         if (timePressButton % 2 == 1 && timePressButton > 0) canvasController.ChangeButtonStart.ChangeImageButtonXTime(1,2);
         if (isStarting) return;
 
@@ -73,19 +72,13 @@ public class ButtonManager : ErshenMonoBehaviour
 
     protected virtual void OffTrackingWave()
     {
-        if (isClaiming) return;
-
         // Audio
         canvasController.AudioManager.PlayMusic(canvasController.AudioManager.musicMain);
 
-        isClaiming = true;
         isStarting = false;
         timePressButton = 0;
-        canvasController.ChangeButtonStart.ChangeImageButtonStart();
+        
         canvasController.GameObjectSpawner.OffObjInHolder();
         canvasController.ShieldUpdate.LoadBeginGame();
-
-        // Off panel tracking wave
-        canvasController.TrackingWaveController.TrackingWave.TrackingWaveOff();
     }
 }

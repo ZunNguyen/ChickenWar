@@ -21,10 +21,9 @@ public class DogDamageReceiver : DamageReciver
 
     protected override void OnDead()
     {
-        dogCtrl.DogAniamtion.Dead();
         dogCtrl.DisaleComponents();
-
-        this.transform.parent.parent.position = new Vector3(this.transform.position.x, this.transform.position.y, 10);
+        dogCtrl.DogAniamtion.Dead();
+        //this.transform.parent.parent.position = new Vector3(this.transform.position.x, this.transform.position.y, 10);
         Invoke(nameof(Despawn), 3);
     }
 

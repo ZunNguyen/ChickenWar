@@ -79,8 +79,10 @@ public class ButtonSpawn : CanvasAbstract
         obj = ChickenSpawner.Instance.Spawn(newChicken, transform.position, transform.rotation).transform;
         // Set position on rect tranform
         SetPostion(obj);
-        obj.gameObject.SetActive(true);
         obj.SetParent(this.transform);
+        obj.gameObject.SetActive(true);
+        ChangePositionUI changePositionUI = obj.GetComponent<ChangePositionUI>();
+        changePositionUI.SetPosition();
     }
 
     // Change Position when spawn chicken in button spawn

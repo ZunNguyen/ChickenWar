@@ -122,10 +122,10 @@ public class SaveDataManager : ErshenMonoBehaviour
         int offlineSecond = (int)(offlineDuration.TotalSeconds);
         float goldCount = offlineSecond * 0.1f;
         int gold = (int)goldCount;
-        if (gold < 10) return;
-        canvasController.PanelEarnGoldOfflineCtrl.PanelEarnGoldOffline.PanelEarnGoldOfflineOn();
-        canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.InputGoldValue(gold);
-        canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.goldEarn = gold;
+        //if (gold < 10) return;
+        //canvasController.PanelEarnGoldOfflineCtrl.PanelEarnGoldOffline.PanelEarnGoldOfflineOn();
+        //canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.InputGoldValue(gold);
+        //canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.goldEarn = gold;
     }
 
      protected virtual void LoadAchievement(DataGame dataGame)

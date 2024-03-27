@@ -12,6 +12,10 @@ public abstract class PanelMissionAbstract : ErshenMonoBehaviour
     [SerializeField] protected Text textDescription;
     [SerializeField] protected Text textGold;
 
+    [Header("---Load Image---")]
+    [SerializeField] protected Image imageButton;
+    [SerializeField] protected Image imageGold;
+
     [Header("---Value---")]
     [SerializeField] protected float goldPrice;
     [SerializeField] protected float indexMissionMax;
@@ -25,6 +29,8 @@ public abstract class PanelMissionAbstract : ErshenMonoBehaviour
         LoadPanelMissionCtrl();
         LoadTextDescription();
         LoadTextGold();
+        LoadImageButton();
+        LoadImageGold();
     }
 
     protected virtual void LoadPanelMissionCtrl()
@@ -45,6 +51,29 @@ public abstract class PanelMissionAbstract : ErshenMonoBehaviour
         textGold = transform.Find("Button - Mission").GetComponentInChildren<Text>();
     }
 
+    protected virtual void LoadImageButton()
+    {
+        if (imageButton != null) return;
+        imageButton = transform.Find("Button - Mission").GetComponent<Image>();
+    }
+
+    protected virtual void LoadImageGold()
+    {
+        if (imageGold != null) return;
+        imageGold = transform.Find("Button - Mission").Find("Image - Gold").GetComponent<Image>();
+    }
+
+    private void Start()
+    {
+        LoadBegin();
+    }
+
+    protected virtual void LoadBegin()
+    {
+        LoadMissionInformation();
+        AddAchievementPlayer(0);
+    }
+
     public virtual void PressButtonClaim()
     {
         // Audio
@@ -60,6 +89,9 @@ public abstract class PanelMissionAbstract : ErshenMonoBehaviour
         // Animation for earn gold
         TW_EarnGold();
         indexMission += 1;
+
+        imageButton.color = Color.gray;
+        imageGold.color = Color.gray;
 
         LoadMissionInformation();
     }
@@ -119,9 +151,11 @@ public abstract class PanelMissionAbstract : ErshenMonoBehaviour
     public virtual void AddAchievementPlayer(float add)
     {
         achievementPlayer += add;
-        GetMissionCurrent();
-        if (achievementPlayer >= missionCurrent) panelMissionCtrl.PanelMission.OnMark();
+        if (achievementPlayer >= missionCurrent)
+        {
+            imageButton.color = Color.white;
+            imageGold.color = Color.white;
+            if(!panelMissionCtrl.PanelMission.isActingPanel) panelMissionCtrl.PanelMission.OnMark();
+        }
     }
-
-    protected abstract float GetMissionCurrent();
 }

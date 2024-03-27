@@ -28,6 +28,8 @@ public class ShieldHPBar : ProcessSlider
             // Game Over
             shieldUpdateController.CanvasController.PointSpawnDogController.gameObject.SetActive(false);
             shieldUpdateController.CanvasController.PanelVictoyLoseCtrl.PanelVictoryLose.PanelLoseOn();
+            shieldUpdateController.CanvasController.TrackingWaveController.TWTrackingWave.TW_TrackingWaveOff();
+            shieldUpdateController.CanvasController.ChangeButtonStart.ChangeImageButtonStart();
             Time.timeScale = 1f;
             hpCurrent = 0;
         }

@@ -12,7 +12,6 @@ public class NotEnoughGold : CanvasAbstract
     [Header("Value")]
     [SerializeField] protected float posTarget = 150f;
     [SerializeField] protected float durTimeMove = 1.5f;
-    [SerializeField] protected float durTimeDes = 1.3f;
 
     protected override void LoadComponent()
     {
@@ -28,12 +27,9 @@ public class NotEnoughGold : CanvasAbstract
 
     public virtual void TWTextOn()
     {
-        rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + posTarget, durTimeMove);
-        Invoke(nameof(DestroyObj), durTimeDes);
-    }
-    
-    protected virtual void DestroyObj()
-    {
-        CoinCollectSpawner.Instance.Despawn(gameObject);
+        rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + posTarget, durTimeMove).OnComplete(()=>
+        {
+            CoinCollectSpawner.Instance.Despawn(gameObject);
+        });
     }
 }

@@ -5,11 +5,10 @@ using UnityEngine.UI;
 
 public class ChangeButtonStart : CanvasAbstract
 {
-    [Header("Connect InSide")]
+    [Header("---Connect InSide---")]
     [SerializeField] protected Text text;
     [SerializeField] protected GameObject imageChicken;
     [SerializeField] protected GameObject imageClock;
-
 
     protected override void LoadComponent()
     {

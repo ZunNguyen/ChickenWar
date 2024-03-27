@@ -12,6 +12,12 @@ public class TWPanelEarnGoldOffline : TWEarnGoldPanel
     [Header("---Gold Position---")]
     [SerializeField] protected Vector2 savePosition = new(-40, -9);
 
+    protected override Vector2 GetPositionGoldPlayer()
+    {
+        Vector2 position = new(-615, 555);
+        return position;
+    }
+
     protected override void LoadComponent()
     {
         base.LoadComponent();

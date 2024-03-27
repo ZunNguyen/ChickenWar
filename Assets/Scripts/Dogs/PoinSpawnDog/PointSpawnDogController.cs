@@ -171,7 +171,9 @@ public class PointSpawnDogController : ErshenMonoBehaviour
             Time.timeScale = 1f;
             Debug.Log("Finish wave " + wave);
             canvasController.PanelVictoyLoseCtrl.PanelVictoryLose.PanelVictoryOn();
-
+            // Off panel tracking wave
+            canvasController.TrackingWaveController.TrackingWave.TrackingWaveOff();
+            canvasController.ChangeButtonStart.ChangeImageButtonStart();
             // Add achievement
             canvasController.PanelMissionCtrl.PanelMission_3.AddAchievementPlayer(1);
 

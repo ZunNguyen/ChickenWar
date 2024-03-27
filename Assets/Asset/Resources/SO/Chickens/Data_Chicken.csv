@@ -1,15 +1,15 @@
 ﻿Name Chicken,Chicken Image,Gun Image,Level Image,Earn Gold,Time Delay Earn Gold,Gold Update,Name Bullet,Bullet Image,Damage
 Chicken01,1c.png,1g.png,Level 1.png,1,7,1,Bullet01,Bullet01.png,1
-Chicken02,1c.png,1g.png,Level 2.png,2,7,20,Bullet01,Bullet01.png,2
-Chicken03,1c.png,1g.png,Level 3.png,5,7,50,Bullet01,Bullet01.png,5
-Chicken04,1c.png,1g.png,Level 4.png,10,7,100,Bullet01,Bullet01.png,10
-Chicken05,2c.png,2g.png,Level 1.png,20,7,200,Bullet02,Bullet02.png,20
-Chicken06,2c.png,2g.png,Level 2.png,50,7,500,Bullet02,Bullet02.png,50
-Chicken07,2c.png,2g.png,Level 3.png,100,7,1000,Bullet02,Bullet02.png,100
-Chicken08,2c.png,2g.png,Level 4.png,200,7,2000,Bullet02,Bullet02.png,200
-Chicken09,3c.png,3g.png,Level 1.png,500,7,5000,Bullet03,Bullet03.png,500
-Chicken10,3c.png,3g.png,Level 2.png,1000,7,10000,Bullet03,Bullet03.png,1000
-Chicken11,3c.png,3g.png,Level 3.png,2000,7,2000,Bullet03,Bullet03.png,2000
+Chicken02,1c.png,1g.png,Level 2.png,2,7,10,Bullet01,Bullet01.png,2
+Chicken03,1c.png,1g.png,Level 3.png,4,7,40,Bullet01,Bullet01.png,4
+Chicken04,1c.png,1g.png,Level 4.png,6,7,80,Bullet01,Bullet01.png,6
+Chicken05,2c.png,2g.png,Level 1.png,8,7,110,Bullet02,Bullet02.png,8
+Chicken06,2c.png,2g.png,Level 2.png,10,7,180,Bullet02,Bullet02.png,10
+Chicken07,2c.png,2g.png,Level 3.png,15,7,300,Bullet02,Bullet02.png,15
+Chicken08,2c.png,2g.png,Level 4.png,20,7,1000,Bullet02,Bullet02.png,20
+Chicken09,3c.png,3g.png,Level 1.png,30,7,1000,Bullet03,Bullet03.png,30
+Chicken10,3c.png,3g.png,Level 2.png,50,7,1000,Bullet03,Bullet03.png,50
+Chicken11,3c.png,3g.png,Level 3.png,2000,7,1000,Bullet03,Bullet03.png,2000
 Chicken12,3c.png,3g.png,Level 4.png,5000,7,5000,Bullet03,Bullet03.png,5000
 Chicken13,4c.png,4g.png,Level 1.png,10000,7,10000,Bullet04,Bullet04.png,5000
 Chicken14,4c.png,4g.png,Level 2.png,20000,7,20000,Bullet04,Bullet04.png,5000

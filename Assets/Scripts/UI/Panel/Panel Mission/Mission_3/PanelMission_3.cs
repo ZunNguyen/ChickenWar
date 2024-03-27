@@ -10,11 +10,6 @@ public class PanelMission_3 : PanelMissionAbstract
         return goldEarn;
     }
 
-    protected override float GetMissionCurrent()
-    {
-        return panelMissionCtrl.MissionSO.mission_1[indexMission].mission;
-    }
-
     protected override void InputTextDescription()
     {
         indexMissionMax = panelMissionCtrl.MissionSO.missionMax_3;
