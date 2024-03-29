@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class ShieldDamageReciever : DamageReciver
 {
+    public override void Deduct(int deduct)
+    {
+        CanvasController.Instance.ShieldUpdateController.ShieldUpdate.SubtractHPShield(deduct);
+    }
+
     protected override void OnDead()
     {
-        Debug.Log("Shield dead");
+        throw new System.NotImplementedException();
     }
 }

@@ -625,6 +625,119 @@ MonoBehaviour:
       sumPhase: 0
       levelDogs:
       - levelDog: 0
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 600
+        damageDog: 30
+        timeDelay: 1
+        indexLine: "25\r"
+      - levelDog: 1
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 130
+        damageDog: 40
+        timeDelay: 7
+        indexLine: "16\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 3
+        hpDog: 60
+        damageDog: 100
+        timeDelay: 4
+        indexLine: "34\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 60
+        damageDog: 100
+        timeDelay: 0
+        indexLine: "16\r"
+      - levelDog: 4
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 130
+        damageDog: 40
+        timeDelay: 6
+        indexLine: "34\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 130
+        damageDog: 40
+        timeDelay: 1
+        indexLine: "24\r"
+      - levelDog: 1
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 130
+        damageDog: 40
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 60
+        damageDog: 100
+        timeDelay: 5
+        indexLine: "24\r"
+      - levelDog: 3
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 600
+        damageDog: 30
+        timeDelay: 6
+        indexLine: "135\r"
+      - levelDog: 4
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 600
+        damageDog: 30
+        timeDelay: 7
+        indexLine: "246\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 60
+        damageDog: 100
+        timeDelay: 1
+        indexLine: "34\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 60
+        damageDog: 100
+        timeDelay: 3
+        indexLine: "25\r"
+      - levelDog: 7
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 60
+        damageDog: 100
+        timeDelay: 3
+        indexLine: "16\r"
+  - wave: 6
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
         nameDog: Dog01
         scaleValue: 1
         nums: 1
@@ -636,8 +749,8 @@ MonoBehaviour:
         nameDog: Dog02
         scaleValue: 1
         nums: 1
-        hpDog: 100
-        damageDog: 50
+        hpDog: 250
+        damageDog: 40
         timeDelay: 3
         indexLine: "16\r"
       - levelDog: 2
@@ -645,7 +758,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 3
         hpDog: 60
-        damageDog: 150
+        damageDog: 100
         timeDelay: 4
         indexLine: "34\r"
       - levelDog: 3
@@ -653,15 +766,15 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 60
-        damageDog: 150
+        damageDog: 100
         timeDelay: 5
         indexLine: "16\r"
       - levelDog: 4
         nameDog: Dog03
         scaleValue: 1
         nums: 1
-        hpDog: 100
-        damageDog: 50
+        hpDog: 250
+        damageDog: 40
         timeDelay: 0
         indexLine: "34\r"
     - phase: 1
@@ -671,24 +784,24 @@ MonoBehaviour:
         nameDog: Dog02
         scaleValue: 1
         nums: 1
-        hpDog: 100
-        damageDog: 50
+        hpDog: 250
+        damageDog: 40
         timeDelay: 1
         indexLine: "24\r"
       - levelDog: 1
         nameDog: Dog03
         scaleValue: 1
         nums: 1
-        hpDog: 100
-        damageDog: 50
+        hpDog: 250
+        damageDog: 40
         timeDelay: 5
         indexLine: "135\r"
       - levelDog: 2
         nameDog: Dog02
         scaleValue: 1
         nums: 1
-        hpDog: 100
-        damageDog: 50
+        hpDog: 250
+        damageDog: 40
         timeDelay: 5
         indexLine: "24\r"
       - levelDog: 3
@@ -712,7 +825,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 60
-        damageDog: 150
+        damageDog: 100
         timeDelay: 1
         indexLine: "34\r"
       - levelDog: 6
@@ -720,7 +833,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 60
-        damageDog: 150
+        damageDog: 100
         timeDelay: 3
         indexLine: "25\r"
       - levelDog: 7
@@ -728,6 +841,6385 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 60
+        damageDog: 100
+        timeDelay: 3
+        indexLine: "16\r"
+  - wave: 7
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 900
+        damageDog: 30
+        timeDelay: 1
+        indexLine: "25\r"
+      - levelDog: 1
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 150
+        damageDog: 100
+        timeDelay: 7
+        indexLine: "34\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 3
+        hpDog: 150
+        damageDog: 100
+        timeDelay: 3
+        indexLine: "34\r"
+      - levelDog: 3
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 900
+        damageDog: 30
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 4
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 500
+        damageDog: 40
+        timeDelay: 6
+        indexLine: "16\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 150
+        damageDog: 100
+        timeDelay: 1
+        indexLine: "35\r"
+      - levelDog: 1
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 150
+        damageDog: 100
+        timeDelay: 4
+        indexLine: "246\r"
+      - levelDog: 2
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 850
+        damageDog: 30
+        timeDelay: 6
+        indexLine: "135\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 500
+        damageDog: 100
+        timeDelay: 6
+        indexLine: "24\r"
+      - levelDog: 4
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 500
+        damageDog: 40
+        timeDelay: 0
+        indexLine: "16\r"
+  - wave: 8
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 750
+        damageDog: 45
+        timeDelay: 1
+        indexLine: "24\r"
+      - levelDog: 1
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 1500
+        damageDog: 40
+        timeDelay: 6
+        indexLine: "35\r"
+      - levelDog: 2
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 750
+        damageDog: 45
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 3
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 1500
+        damageDog: 40
+        timeDelay: 6
+        indexLine: "35\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 170
+        damageDog: 120
+        timeDelay: 4
+        indexLine: "135\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 170
+        damageDog: 120
+        timeDelay: 1
+        indexLine: "34\r"
+      - levelDog: 1
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 170
+        damageDog: 120
+        timeDelay: 3
+        indexLine: "25\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 170
+        damageDog: 120
+        timeDelay: 3
+        indexLine: "16\r"
+      - levelDog: 3
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 750
+        damageDog: 45
+        timeDelay: 6
+        indexLine: "16\r"
+      - levelDog: 4
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 1500
+        damageDog: 40
+        timeDelay: 0
+        indexLine: "25\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 170
+        damageDog: 120
+        timeDelay: 6
+        indexLine: "34\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 170
+        damageDog: 120
+        timeDelay: 3
+        indexLine: "34\r"
+  - wave: 9
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 200
+        damageDog: 140
+        timeDelay: 1
+        indexLine: "25\r"
+      - levelDog: 1
+        nameDog: Dog01
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 2000
+        damageDog: 50
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 2
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 850
+        damageDog: 50
+        timeDelay: 6
+        indexLine: "34\r"
+      - levelDog: 3
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 850
+        damageDog: 50
+        timeDelay: 6
+        indexLine: "16\r"
+      - levelDog: 4
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 850
+        damageDog: 50
+        timeDelay: 6
+        indexLine: "3\r"
+      - levelDog: 5
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 850
+        damageDog: 50
+        timeDelay: 0
+        indexLine: "5\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 850
+        damageDog: 50
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 1
+        nameDog: Dog01
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 2000
+        damageDog: 50
+        timeDelay: 6
+        indexLine: "246\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200
+        damageDog: 140
+        timeDelay: 7
+        indexLine: "135\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200
+        damageDog: 140
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 4
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 850
+        damageDog: 50
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200
+        damageDog: 140
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200
+        damageDog: 140
+        timeDelay: 2
+        indexLine: "246\r"
+  - wave: 10
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 2200
+        damageDog: 70
+        timeDelay: 1
+        indexLine: "135\r"
+      - levelDog: 1
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 1000
+        damageDog: 80
+        timeDelay: 7
+        indexLine: "246\r"
+      - levelDog: 2
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 1000
+        damageDog: 80
+        timeDelay: 7
+        indexLine: "246\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 220
+        damageDog: 150
+        timeDelay: 7
+        indexLine: "25\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 220
+        damageDog: 150
+        timeDelay: 3
+        indexLine: "34\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 1000
+        damageDog: 80
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 1
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 1000
+        damageDog: 80
+        timeDelay: 4
+        indexLine: "26\r"
+      - levelDog: 2
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 1000
+        damageDog: 80
+        timeDelay: 4
+        indexLine: "3\r"
+      - levelDog: 3
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 1000
+        damageDog: 80
+        timeDelay: 4
+        indexLine: "15\r"
+      - levelDog: 4
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 2200
+        damageDog: 70
+        timeDelay: 7
+        indexLine: "135\r"
+      - levelDog: 5
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 1000
+        damageDog: 80
+        timeDelay: 6
+        indexLine: "246\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 220
+        damageDog: 150
+        timeDelay: 3
+        indexLine: "35\r"
+  - wave: 11
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700
+        damageDog: 90
+        timeDelay: 1
+        indexLine: "24\r"
+      - levelDog: 1
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700
+        damageDog: 90
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 300
+        damageDog: 150
+        timeDelay: 5
+        indexLine: "24\r"
+      - levelDog: 3
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000
+        damageDog: 100
+        timeDelay: 6
+        indexLine: "135\r"
+      - levelDog: 4
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000
+        damageDog: 100
+        timeDelay: 7
+        indexLine: "246\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 300
+        damageDog: 150
+        timeDelay: 1
+        indexLine: "34\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 300
+        damageDog: 150
+        timeDelay: 3
+        indexLine: "25\r"
+      - levelDog: 7
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 300
         damageDog: 150
         timeDelay: 3
         indexLine: "16\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000
+        damageDog: 100
+        timeDelay: 1
+        indexLine: "24\r"
+      - levelDog: 1
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000
+        damageDog: 100
+        timeDelay: 6
+        indexLine: "35\r"
+      - levelDog: 2
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700
+        damageDog: 90
+        timeDelay: 3
+        indexLine: "1\r"
+      - levelDog: 3
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000
+        damageDog: 90
+        timeDelay: 0
+        indexLine: "6\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 300
+        damageDog: 150
+        timeDelay: 5
+        indexLine: "123\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 300
+        damageDog: 150
+        timeDelay: 5
+        indexLine: "456\r"
+  - wave: 12
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 4000
+        damageDog: 110
+        timeDelay: 1
+        indexLine: "2\r"
+      - levelDog: 1
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500
+        damageDog: 120
+        timeDelay: 5
+        indexLine: "1\r"
+      - levelDog: 2
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500
+        damageDog: 120
+        timeDelay: 0
+        indexLine: "3\r"
+      - levelDog: 3
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 4000
+        damageDog: 110
+        timeDelay: 0
+        indexLine: "5\r"
+      - levelDog: 4
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500
+        damageDog: 120
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 5
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500
+        damageDog: 120
+        timeDelay: 0
+        indexLine: "6\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 6
+        indexLine: "135\r"
+      - levelDog: 7
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 6
+        indexLine: "246\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 4000
+        damageDog: 110
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 1
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500
+        damageDog: 120
+        timeDelay: 2
+        indexLine: "2\r"
+      - levelDog: 2
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500
+        damageDog: 120
+        timeDelay: 2
+        indexLine: "3\r"
+      - levelDog: 3
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500
+        damageDog: 120
+        timeDelay: 2
+        indexLine: "4\r"
+      - levelDog: 4
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500
+        damageDog: 120
+        timeDelay: 2
+        indexLine: "5\r"
+      - levelDog: 5
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 4000
+        damageDog: 110
+        timeDelay: 2
+        indexLine: "6\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 5
+        indexLine: "1\r"
+      - levelDog: 7
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 1
+        indexLine: "2\r"
+      - levelDog: 8
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 9
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 10
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 1
+        indexLine: "5\r"
+      - levelDog: 11
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 1
+        indexLine: "6\r"
+      - levelDog: 12
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 1
+        indexLine: "6\r"
+      - levelDog: 13
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 1
+        indexLine: "5\r"
+      - levelDog: 14
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 15
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 16
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 1
+        indexLine: "2\r"
+      - levelDog: 17
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 400
+        damageDog: 170
+        timeDelay: 1
+        indexLine: "1\r"
+  - wave: 13
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 5000
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "25\r"
+      - levelDog: 1
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500
+        damageDog: 300
+        timeDelay: 5
+        indexLine: "36\r"
+      - levelDog: 2
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500
+        damageDog: 300
+        timeDelay: 5
+        indexLine: "14\r"
+      - levelDog: 3
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 5000
+        damageDog: 300
+        timeDelay: 6
+        indexLine: "35\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 500
+        damageDog: 200
+        timeDelay: 6
+        indexLine: "26\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 500
+        damageDog: 200
+        timeDelay: 3
+        indexLine: "26\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 5000
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 1
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 5000
+        damageDog: 400
+        timeDelay: 5
+        indexLine: "15\r"
+      - levelDog: 2
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500
+        damageDog: 300
+        timeDelay: 5
+        indexLine: "24\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 500
+        damageDog: 200
+        timeDelay: 3
+        indexLine: "16\r"
+      - levelDog: 4
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500
+        damageDog: 300
+        timeDelay: 5
+        indexLine: "35\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 500
+        damageDog: 200
+        timeDelay: 5
+        indexLine: "246\r"
+  - wave: 14
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 1
+        indexLine: "34\r"
+      - levelDog: 1
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 2
+        indexLine: "25\r"
+      - levelDog: 2
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 2
+        indexLine: "16\r"
+      - levelDog: 3
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 2
+        indexLine: "16\r"
+      - levelDog: 4
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 2
+        indexLine: "25\r"
+      - levelDog: 5
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 2
+        indexLine: "34\r"
+      - levelDog: 6
+        nameDog: Dog06
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 7000
+        damageDog: 500
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 7
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 4500
+        damageDog: 400
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 8
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 2
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 2
+        indexLine: "34\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog09
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 7000
+        damageDog: 500
+        timeDelay: 1
+        indexLine: "135\r"
+      - levelDog: 1
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 4500
+        damageDog: 400
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 2
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 4500
+        damageDog: 400
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 3
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 4
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 1
+        indexLine: "2\r"
+      - levelDog: 5
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 7
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 1
+        indexLine: "5\r"
+      - levelDog: 8
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 1
+        indexLine: "6\r"
+      - levelDog: 9
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 1
+        indexLine: "6\r"
+      - levelDog: 10
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 1
+        indexLine: "5\r"
+      - levelDog: 11
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 12
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 13
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 1
+        indexLine: "2\r"
+      - levelDog: 14
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 650
+        damageDog: 250
+        timeDelay: 1
+        indexLine: "1\r"
+  - wave: 15
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 5500
+        damageDog: 500
+        timeDelay: 1
+        indexLine: "34\r"
+      - levelDog: 1
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 5500
+        damageDog: 500
+        timeDelay: 4
+        indexLine: "25\r"
+      - levelDog: 2
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 8500
+        damageDog: 600
+        timeDelay: 4
+        indexLine: "16\r"
+      - levelDog: 3
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 8500
+        damageDog: 600
+        timeDelay: 7
+        indexLine: "25\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 750
+        damageDog: 300
+        timeDelay: 3
+        indexLine: "16\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 750
+        damageDog: 300
+        timeDelay: 3
+        indexLine: "34\r"
+      - levelDog: 6
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 5500
+        damageDog: 500
+        timeDelay: 5
+        indexLine: "246\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 750
+        damageDog: 300
+        timeDelay: 1
+        indexLine: "25\r"
+      - levelDog: 1
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 750
+        damageDog: 300
+        timeDelay: 3
+        indexLine: "136\r"
+      - levelDog: 2
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 750
+        damageDog: 300
+        timeDelay: 3
+        indexLine: "25\r"
+      - levelDog: 3
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 750
+        damageDog: 300
+        timeDelay: 3
+        indexLine: "136\r"
+      - levelDog: 4
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 8500
+        damageDog: 600
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 5
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 5500
+        damageDog: 500
+        timeDelay: 6
+        indexLine: "135\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 2
+        hpDog: 750
+        damageDog: 300
+        timeDelay: 3
+        indexLine: "25\r"
+  - wave: 16
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "6\r"
+      - levelDog: 1
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "5\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "2\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "2\r"
+      - levelDog: 7
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 8
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 9
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "5\r"
+      - levelDog: 10
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "6\r"
+      - levelDog: 11
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "5\r"
+      - levelDog: 12
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 13
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 14
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "2\r"
+      - levelDog: 15
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 16
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 11000
+        damageDog: 700
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 17
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 11000
+        damageDog: 700
+        timeDelay: 6
+        indexLine: "246\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 15000
+        damageDog: 800
+        timeDelay: 2
+        indexLine: "35\r"
+      - levelDog: 1
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 7500
+        damageDog: 600
+        timeDelay: 6
+        indexLine: "246\r"
+      - levelDog: 2
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 7500
+        damageDog: 600
+        timeDelay: 6
+        indexLine: "135\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 3
+        hpDog: 1200
+        damageDog: 400
+        timeDelay: 2
+        indexLine: "25\r"
+  - wave: 17
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 1
+        indexLine: "6\r"
+      - levelDog: 1
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 1
+        indexLine: "5\r"
+      - levelDog: 2
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 3
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 4
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 1
+        indexLine: "2\r"
+      - levelDog: 5
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 6
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 5
+        indexLine: "6\r"
+      - levelDog: 7
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 1
+        indexLine: "5\r"
+      - levelDog: 8
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 9
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 10
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 1
+        indexLine: "2\r"
+      - levelDog: 11
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 12
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500
+        damageDog: 800
+        timeDelay: 3
+        indexLine: "135\r"
+      - levelDog: 13
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500
+        damageDog: 800
+        timeDelay: 3
+        indexLine: "246\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 15000
+        damageDog: 1000
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 1
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 15000
+        damageDog: 1000
+        timeDelay: 4
+        indexLine: "15\r"
+      - levelDog: 2
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 2
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 5
+        indexLine: "24\r"
+      - levelDog: 3
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500
+        damageDog: 800
+        timeDelay: 3
+        indexLine: "135\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500
+        damageDog: 800
+        timeDelay: 3
+        indexLine: "246\r"
+      - levelDog: 5
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 2
+        hpDog: 13000
+        damageDog: 900
+        timeDelay: 5
+        indexLine: "16\r"
+  - wave: 18
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog02
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 15000
+        damageDog: 1000
+        timeDelay: 1
+        indexLine: "25\r"
+      - levelDog: 1
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 15000
+        damageDog: 1000
+        timeDelay: 2
+        indexLine: "34\r"
+      - levelDog: 2
+        nameDog: Dog02
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 15000
+        damageDog: 1000
+        timeDelay: 2
+        indexLine: "25\r"
+      - levelDog: 3
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 2
+        hpDog: 15000
+        damageDog: 1000
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 4000
+        damageDog: 1000
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 5
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 2
+        hpDog: 4000
+        damageDog: 1000
+        timeDelay: 5
+        indexLine: "16\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 17000
+        damageDog: 1100
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 1
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 17000
+        damageDog: 1100
+        timeDelay: 2
+        indexLine: "24\r"
+      - levelDog: 2
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 17000
+        damageDog: 1100
+        timeDelay: 2
+        indexLine: "15\r"
+      - levelDog: 3
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 17000
+        damageDog: 1100
+        timeDelay: 2
+        indexLine: "6\r"
+      - levelDog: 4
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 4000
+        damageDog: 1000
+        timeDelay: 7
+        indexLine: "135\r"
+      - levelDog: 5
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 4000
+        damageDog: 1000
+        timeDelay: 3
+        indexLine: "246\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 4000
+        damageDog: 1000
+        timeDelay: 3
+        indexLine: "135\r"
+      - levelDog: 7
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 4000
+        damageDog: 1000
+        timeDelay: 3
+        indexLine: "246\r"
+  - wave: 19
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 20000
+        damageDog: 1500
+        timeDelay: 1
+        indexLine: "1346\r"
+      - levelDog: 1
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 20000
+        damageDog: 1500
+        timeDelay: 4
+        indexLine: "25\r"
+      - levelDog: 2
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000
+        damageDog: 1400
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 3
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000
+        damageDog: 1500
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 4
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 6500
+        damageDog: 1400
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 5
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 6500
+        damageDog: 1400
+        timeDelay: 5
+        indexLine: "135\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000
+        damageDog: 1500
+        timeDelay: 1
+        indexLine: "25\r"
+      - levelDog: 1
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000
+        damageDog: 1500
+        timeDelay: 5
+        indexLine: "136\r"
+      - levelDog: 2
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 20000
+        damageDog: 1500
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 3
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 20000
+        damageDog: 1500
+        timeDelay: 5
+        indexLine: "136\r"
+      - levelDog: 4
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000
+        damageDog: 1400
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 6500
+        damageDog: 1400
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 6500
+        damageDog: 1400
+        timeDelay: 0
+        indexLine: "5\r"
+      - levelDog: 7
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 6500
+        damageDog: 1400
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 8
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 6500
+        damageDog: 1400
+        timeDelay: 0
+        indexLine: "5\r"
+      - levelDog: 9
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 6500
+        damageDog: 1400
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 10
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 6500
+        damageDog: 1400
+        timeDelay: 0
+        indexLine: "5\r"
+      - levelDog: 11
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 6500
+        damageDog: 1400
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 12
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 6500
+        damageDog: 1400
+        timeDelay: 0
+        indexLine: "5\r"
+      - levelDog: 13
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 6500
+        damageDog: 1400
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 14
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 6500
+        damageDog: 1400
+        timeDelay: 0
+        indexLine: "5\r"
+  - wave: 20
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 1
+        indexLine: "246\r"
+      - levelDog: 1
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 2
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 3
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 4
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 45000
+        damageDog: 1400
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 5
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 35000
+        damageDog: 1500
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 4
+        indexLine: "34\r"
+      - levelDog: 7
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 5
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 2
+        indexLine: "34\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog06
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 70000
+        damageDog: 1400
+        timeDelay: 1
+        indexLine: "25\r"
+      - levelDog: 1
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 7
+        indexLine: "3\r"
+      - levelDog: 2
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 1
+        indexLine: "24\r"
+      - levelDog: 3
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 1
+        indexLine: "15\r"
+      - levelDog: 4
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 1
+        indexLine: "6\r"
+      - levelDog: 5
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 1
+        indexLine: "24\r"
+      - levelDog: 7
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 1
+        indexLine: "15\r"
+      - levelDog: 8
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 10000
+        damageDog: 2500
+        timeDelay: 1
+        indexLine: "6\r"
+      - levelDog: 9
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 35000
+        damageDog: 1500
+        timeDelay: 5
+        indexLine: "1346\r"
+  - wave: 21
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 70000
+        damageDog: 1500
+        timeDelay: 1
+        indexLine: "135\r"
+      - levelDog: 1
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 70000
+        damageDog: 1500
+        timeDelay: 4
+        indexLine: "24\r"
+      - levelDog: 2
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 70000
+        damageDog: 1500
+        timeDelay: 4
+        indexLine: "3\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 20000
+        damageDog: 3000
+        timeDelay: 4
+        indexLine: "246\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 20000
+        damageDog: 3000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 20000
+        damageDog: 3000
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 20000
+        damageDog: 3000
+        timeDelay: 2
+        indexLine: "135\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 100000
+        damageDog: 5000
+        timeDelay: 1
+        indexLine: "16\r"
+      - levelDog: 1
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 100000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "25\r"
+      - levelDog: 2
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 100000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "34\r"
+      - levelDog: 3
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 70000
+        damageDog: 1500
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 4
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 70000
+        damageDog: 1500
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 20000
+        damageDog: 3000
+        timeDelay: 6
+        indexLine: "25\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 2
+        hpDog: 20000
+        damageDog: 3000
+        timeDelay: 2
+        indexLine: "25\r"
+  - wave: 22
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 100000
+        damageDog: 2000
+        timeDelay: 1
+        indexLine: "246\r"
+      - levelDog: 1
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 100000
+        damageDog: 2000
+        timeDelay: 3
+        indexLine: "135\r"
+      - levelDog: 2
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 100000
+        damageDog: 2000
+        timeDelay: 3
+        indexLine: "24\r"
+      - levelDog: 3
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 100000
+        damageDog: 2000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 4
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 150000
+        damageDog: 5000
+        timeDelay: 6
+        indexLine: "25\r"
+      - levelDog: 5
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000
+        damageDog: 3000
+        timeDelay: 7
+        indexLine: "135\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000
+        damageDog: 3000
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 7
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000
+        damageDog: 3000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 8
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000
+        damageDog: 3000
+        timeDelay: 2
+        indexLine: "246\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 100000
+        damageDog: 2000
+        timeDelay: 1
+        indexLine: "13\r"
+      - levelDog: 1
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 100000
+        damageDog: 2000
+        timeDelay: 4
+        indexLine: "24\r"
+      - levelDog: 2
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 100000
+        damageDog: 2000
+        timeDelay: 4
+        indexLine: "35\r"
+      - levelDog: 3
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 100000
+        damageDog: 2000
+        timeDelay: 4
+        indexLine: "46\r"
+      - levelDog: 4
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 150000
+        damageDog: 5000
+        timeDelay: 6
+        indexLine: "13\r"
+      - levelDog: 5
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 150000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "46\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000
+        damageDog: 3000
+        timeDelay: 6
+        indexLine: "16\r"
+      - levelDog: 7
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000
+        damageDog: 3000
+        timeDelay: 2
+        indexLine: "25\r"
+      - levelDog: 8
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000
+        damageDog: 3000
+        timeDelay: 2
+        indexLine: "3\r"
+      - levelDog: 9
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000
+        damageDog: 3000
+        timeDelay: 2
+        indexLine: "4\r"
+  - wave: 23
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 1
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "24\r"
+      - levelDog: 2
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 3
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 4
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 3
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 5
+        indexLine: "25\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 1
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 2
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 3
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 4
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 5
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 6
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 4
+        indexLine: "1\r"
+      - levelDog: 7
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 8
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 9
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 10
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 11
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 12
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "1\r"
+      - levelDog: 13
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 14
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 15
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 16
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 17
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 18
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "1\r"
+      - levelDog: 19
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 20
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 21
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 22
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 23
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 3
+        indexLine: "6\r"
+  - wave: 24
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 1
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "24\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "15\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "6\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "15\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "24\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "3\r"
+      - levelDog: 7
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 8
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 6
+        indexLine: "135\r"
+      - levelDog: 9
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "135\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 250000
+        damageDog: 30000
+        timeDelay: 1
+        indexLine: "25\r"
+      - levelDog: 1
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 250000
+        damageDog: 30000
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 2
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 250000
+        damageDog: 30000
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 3
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 250000
+        damageDog: 30000
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 4
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 5
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 6
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 7
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 130000
+        damageDog: 5000
+        timeDelay: 5
+        indexLine: "135\r"
+  - wave: 25
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 400000
+        damageDog: 50000
+        timeDelay: 1
+        indexLine: "24\r"
+      - levelDog: 1
+        nameDog: Dog01
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 400000
+        damageDog: 50000
+        timeDelay: 5
+        indexLine: "35\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 6
+        indexLine: "16\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "25\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "34\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "1\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "2\r"
+      - levelDog: 7
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "3\r"
+      - levelDog: 8
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "4\r"
+      - levelDog: 9
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "5\r"
+      - levelDog: 10
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "6\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 1
+        indexLine: "2\r"
+      - levelDog: 1
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "4\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "35\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "16\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 7
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 8
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 9
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 10
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 11
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 50000
+        damageDog: 10000
+        timeDelay: 2
+        indexLine: "246\r"
+  - wave: 26
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 600000
+        damageDog: 5000
+        timeDelay: 1
+        indexLine: "6\r"
+      - levelDog: 1
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 600000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "5\r"
+      - levelDog: 2
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 600000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "4\r"
+      - levelDog: 3
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 600000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "3\r"
+      - levelDog: 4
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 600000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "2\r"
+      - levelDog: 5
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 600000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "1\r"
+      - levelDog: 6
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "6\r"
+      - levelDog: 7
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "5\r"
+      - levelDog: 8
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "4\r"
+      - levelDog: 9
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "3\r"
+      - levelDog: 10
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "2\r"
+      - levelDog: 11
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "1\r"
+      - levelDog: 12
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "6\r"
+      - levelDog: 13
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "5\r"
+      - levelDog: 14
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "4\r"
+      - levelDog: 15
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "3\r"
+      - levelDog: 16
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "2\r"
+      - levelDog: 17
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "1\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 600000
+        damageDog: 5000
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 1
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 600000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "2\r"
+      - levelDog: 2
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 600000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "3\r"
+      - levelDog: 3
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 600000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "4\r"
+      - levelDog: 4
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 600000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "5\r"
+      - levelDog: 5
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 600000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "6\r"
+      - levelDog: 6
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "5\r"
+      - levelDog: 7
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "4\r"
+      - levelDog: 8
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "3\r"
+      - levelDog: 9
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "2\r"
+      - levelDog: 10
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "1\r"
+      - levelDog: 11
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "2\r"
+      - levelDog: 12
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "3\r"
+      - levelDog: 13
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "4\r"
+      - levelDog: 14
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "5\r"
+      - levelDog: 15
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 5000
+        timeDelay: 4
+        indexLine: "6\r"
+  - wave: 27
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog03
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 1000000
+        damageDog: 7500
+        timeDelay: 1
+        indexLine: "24\r"
+      - levelDog: 1
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 750000
+        damageDog: 7500
+        timeDelay: 6
+        indexLine: "35\r"
+      - levelDog: 2
+        nameDog: Dog03
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 1000000
+        damageDog: 7500
+        timeDelay: 6
+        indexLine: "24\r"
+      - levelDog: 3
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 750000
+        damageDog: 7500
+        timeDelay: 6
+        indexLine: "35\r"
+      - levelDog: 4
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 100000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 5
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 1000000
+        damageDog: 7500
+        timeDelay: 6
+        indexLine: "35\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 100000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 7
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 3
+        hpDog: 100000
+        damageDog: 7500
+        timeDelay: 2
+        indexLine: "16\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 650000
+        damageDog: 7500
+        timeDelay: 1
+        indexLine: "135\r"
+      - levelDog: 1
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 650000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 2
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 650000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 3
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 650000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 4
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 650000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "34\r"
+      - levelDog: 5
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 1000000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "35\r"
+      - levelDog: 6
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 650000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "24\r"
+      - levelDog: 7
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 650000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 8
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 650000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "24\r"
+      - levelDog: 9
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 650000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 10
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 650000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "24\r"
+      - levelDog: 11
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 650000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 12
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 650000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "24\r"
+      - levelDog: 13
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 650000
+        damageDog: 7500
+        timeDelay: 5
+        indexLine: "16\r"
+  - wave: 28
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 1
+        indexLine: "13\r"
+      - levelDog: 1
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "24\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "35\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "46\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "35\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "24\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "13\r"
+      - levelDog: 7
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "1\r"
+      - levelDog: 8
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "2\r"
+      - levelDog: 9
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "3\r"
+      - levelDog: 10
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "4\r"
+      - levelDog: 11
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "5\r"
+      - levelDog: 12
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "6\r"
+      - levelDog: 13
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "5\r"
+      - levelDog: 14
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "4\r"
+      - levelDog: 15
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "3\r"
+      - levelDog: 16
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "2\r"
+      - levelDog: 17
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "1\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 1500000
+        damageDog: 50000
+        timeDelay: 1
+        indexLine: "135\r"
+      - levelDog: 1
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 1500000
+        damageDog: 50000
+        timeDelay: 6
+        indexLine: "246\r"
+      - levelDog: 2
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 3
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 2
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "16\r"
+      - levelDog: 4
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 5
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 2
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "25\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 5
+        indexLine: "34\r"
+      - levelDog: 7
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 2
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "34\r"
+      - levelDog: 8
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 1500000
+        damageDog: 50000
+        timeDelay: 5
+        indexLine: "24\r"
+      - levelDog: 9
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200000
+        damageDog: 50000
+        timeDelay: 5
+        indexLine: "35\r"
+      - levelDog: 10
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 1200000
+        damageDog: 50000
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 11
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 5
+        indexLine: "34\r"
+      - levelDog: 12
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 2
+        hpDog: 200000
+        damageDog: 20000
+        timeDelay: 2
+        indexLine: "34\r"
+  - wave: 29
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700000
+        damageDog: 60000
+        timeDelay: 1
+        indexLine: "135\r"
+      - levelDog: 1
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700000
+        damageDog: 60000
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 210000
+        damageDog: 35000
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 210000
+        damageDog: 35000
+        timeDelay: 2
+        indexLine: "25\r"
+      - levelDog: 4
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700000
+        damageDog: 60000
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 5
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700000
+        damageDog: 60000
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 210000
+        damageDog: 35000
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 7
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 210000
+        damageDog: 35000
+        timeDelay: 2
+        indexLine: "16\r"
+      - levelDog: 8
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700000
+        damageDog: 60000
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 9
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700000
+        damageDog: 60000
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 10
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 210000
+        damageDog: 35000
+        timeDelay: 5
+        indexLine: "34\r"
+      - levelDog: 11
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 2
+        hpDog: 210000
+        damageDog: 35000
+        timeDelay: 2
+        indexLine: "34\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700000
+        damageDog: 60000
+        timeDelay: 1
+        indexLine: "2\r"
+      - levelDog: 1
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700000
+        damageDog: 60000
+        timeDelay: 0
+        indexLine: "5\r"
+      - levelDog: 2
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700000
+        damageDog: 60000
+        timeDelay: 5
+        indexLine: "1\r"
+      - levelDog: 3
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700000
+        damageDog: 60000
+        timeDelay: 0
+        indexLine: "6\r"
+      - levelDog: 4
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 210000
+        damageDog: 35000
+        timeDelay: 6
+        indexLine: "146\r"
+      - levelDog: 5
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 5
+        hpDog: 210000
+        damageDog: 35000
+        timeDelay: 2
+        indexLine: "146\r"
+      - levelDog: 6
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 1700000
+        damageDog: 60000
+        timeDelay: 8
+        indexLine: "246\r"
+  - wave: 30
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 2100000
+        damageDog: 70000
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 1
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 2100000
+        damageDog: 70000
+        timeDelay: 4
+        indexLine: "2\r"
+      - levelDog: 2
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 2100000
+        damageDog: 70000
+        timeDelay: 4
+        indexLine: "3\r"
+      - levelDog: 3
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 2100000
+        damageDog: 70000
+        timeDelay: 4
+        indexLine: "4\r"
+      - levelDog: 4
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 2100000
+        damageDog: 70000
+        timeDelay: 4
+        indexLine: "5\r"
+      - levelDog: 5
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 2100000
+        damageDog: 70000
+        timeDelay: 4
+        indexLine: "6\r"
+      - levelDog: 6
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 4
+        indexLine: "1\r"
+      - levelDog: 7
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "2\r"
+      - levelDog: 8
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "3\r"
+      - levelDog: 9
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "4\r"
+      - levelDog: 10
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "5\r"
+      - levelDog: 11
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "6\r"
+      - levelDog: 12
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 1800000
+        damageDog: 60000
+        timeDelay: 4
+        indexLine: "1\r"
+      - levelDog: 13
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 1800000
+        damageDog: 60000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 14
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 1800000
+        damageDog: 60000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 15
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 1800000
+        damageDog: 60000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 16
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 1800000
+        damageDog: 60000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 17
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 1800000
+        damageDog: 60000
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 18
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 4
+        indexLine: "1\r"
+      - levelDog: 19
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "2\r"
+      - levelDog: 20
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "3\r"
+      - levelDog: 21
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "4\r"
+      - levelDog: 22
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "5\r"
+      - levelDog: 23
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "6\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 1800000
+        damageDog: 60000
+        timeDelay: 1
+        indexLine: "13\r"
+      - levelDog: 1
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 1800000
+        damageDog: 60000
+        timeDelay: 3
+        indexLine: "24\r"
+      - levelDog: 2
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 1800000
+        damageDog: 60000
+        timeDelay: 3
+        indexLine: "35\r"
+      - levelDog: 3
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 1800000
+        damageDog: 60000
+        timeDelay: 3
+        indexLine: "46\r"
+      - levelDog: 4
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 1800000
+        damageDog: 60000
+        timeDelay: 3
+        indexLine: "35\r"
+      - levelDog: 5
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 1800000
+        damageDog: 60000
+        timeDelay: 3
+        indexLine: "24\r"
+      - levelDog: 6
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 1800000
+        damageDog: 60000
+        timeDelay: 3
+        indexLine: "13\r"
+      - levelDog: 7
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 4
+        indexLine: "1\r"
+      - levelDog: 8
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "2\r"
+      - levelDog: 9
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "3\r"
+      - levelDog: 10
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "4\r"
+      - levelDog: 11
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "5\r"
+      - levelDog: 12
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "6\r"
+      - levelDog: 13
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 4
+        indexLine: "1\r"
+      - levelDog: 14
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "2\r"
+      - levelDog: 15
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "3\r"
+      - levelDog: 16
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "4\r"
+      - levelDog: 17
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "5\r"
+      - levelDog: 18
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 300000
+        damageDog: 50000
+        timeDelay: 2
+        indexLine: "6\r"
+  - wave: 31
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500000
+        damageDog: 80000
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 1
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500000
+        damageDog: 80000
+        timeDelay: 4
+        indexLine: "24\r"
+      - levelDog: 2
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500000
+        damageDog: 80000
+        timeDelay: 4
+        indexLine: "15\r"
+      - levelDog: 3
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500000
+        damageDog: 80000
+        timeDelay: 4
+        indexLine: "6\r"
+      - levelDog: 4
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500000
+        damageDog: 80000
+        timeDelay: 0
+        indexLine: "1\r"
+      - levelDog: 5
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500000
+        damageDog: 80000
+        timeDelay: 4
+        indexLine: "2\r"
+      - levelDog: 6
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500000
+        damageDog: 80000
+        timeDelay: 4
+        indexLine: "3\r"
+      - levelDog: 7
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500000
+        damageDog: 80000
+        timeDelay: 4
+        indexLine: "4\r"
+      - levelDog: 8
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500000
+        damageDog: 80000
+        timeDelay: 4
+        indexLine: "5\r"
+      - levelDog: 9
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 2500000
+        damageDog: 80000
+        timeDelay: 4
+        indexLine: "6\r"
+      - levelDog: 10
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 2
+        hpDog: 350000
+        damageDog: 60000
+        timeDelay: 0
+        indexLine: "16\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2200000
+        damageDog: 70000
+        timeDelay: 1
+        indexLine: "26\r"
+      - levelDog: 1
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 2200000
+        damageDog: 70000
+        timeDelay: 0
+        indexLine: "4\r"
+      - levelDog: 2
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 2200000
+        damageDog: 70000
+        timeDelay: 5
+        indexLine: "15\r"
+      - levelDog: 3
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2200000
+        damageDog: 70000
+        timeDelay: 0
+        indexLine: "3\r"
+      - levelDog: 4
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 2200000
+        damageDog: 70000
+        timeDelay: 5
+        indexLine: "1\r"
+      - levelDog: 5
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2200000
+        damageDog: 70000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 6
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 2200000
+        damageDog: 70000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 7
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2200000
+        damageDog: 70000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 8
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 2200000
+        damageDog: 70000
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 9
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 350000
+        damageDog: 60000
+        timeDelay: 5
+        indexLine: "13\r"
+      - levelDog: 10
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 350000
+        damageDog: 60000
+        timeDelay: 2
+        indexLine: "24\r"
+      - levelDog: 11
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 2
+        hpDog: 350000
+        damageDog: 60000
+        timeDelay: 2
+        indexLine: "35\r"
+      - levelDog: 12
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 2
+        hpDog: 350000
+        damageDog: 60000
+        timeDelay: 2
+        indexLine: "46\r"
+      - levelDog: 13
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 2
+        hpDog: 350000
+        damageDog: 60000
+        timeDelay: 2
+        indexLine: "35\r"
+      - levelDog: 14
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 350000
+        damageDog: 60000
+        timeDelay: 2
+        indexLine: "24\r"
+      - levelDog: 15
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 350000
+        damageDog: 60000
+        timeDelay: 2
+        indexLine: "13\r"
+  - wave: 32
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 100000
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 1
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 2
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 3
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 4
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 5
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 6
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 0
+        indexLine: "1\r"
+      - levelDog: 7
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 8
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 9
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 10
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 11
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 12
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 0
+        indexLine: "1\r"
+      - levelDog: 13
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 14
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 15
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 16
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 17
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 18
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 0
+        indexLine: "1\r"
+      - levelDog: 19
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 20
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 21
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 22
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 23
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "6\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 100000
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 1
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 2
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 3
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 4
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 5
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 6
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 0
+        indexLine: "1\r"
+      - levelDog: 7
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 8
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 9
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 10
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 11
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 12
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 0
+        indexLine: "1\r"
+      - levelDog: 13
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 14
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 15
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 16
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 17
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 18
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 0
+        indexLine: "1\r"
+      - levelDog: 19
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 20
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 21
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 22
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 23
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 2700000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "6\r"
+  - wave: 33
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 4000000
+        damageDog: 125000
+        timeDelay: 1
+        indexLine: "135\r"
+      - levelDog: 1
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 4000000
+        damageDog: 125000
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 3
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 5
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 6
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 5
+        indexLine: "1\r"
+      - levelDog: 7
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 8
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 9
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 10
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 11
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 12
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 13
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 14
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 15
+        nameDog: Dog10
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "246\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 1
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 4
+        indexLine: "35\r"
+      - levelDog: 2
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 4
+        indexLine: "26\r"
+      - levelDog: 3
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 4
+        indexLine: "1\r"
+      - levelDog: 4
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 0
+        indexLine: "6\r"
+      - levelDog: 5
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 4
+        indexLine: "25\r"
+      - levelDog: 6
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 4
+        indexLine: "34\r"
+      - levelDog: 7
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 5
+        indexLine: "1\r"
+      - levelDog: 8
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "2\r"
+      - levelDog: 9
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "3\r"
+      - levelDog: 10
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "4\r"
+      - levelDog: 11
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "5\r"
+      - levelDog: 12
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "6\r"
+      - levelDog: 13
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 0
+        indexLine: "1\r"
+      - levelDog: 14
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "2\r"
+      - levelDog: 15
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "3\r"
+      - levelDog: 16
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "4\r"
+      - levelDog: 17
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "5\r"
+      - levelDog: 18
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 400000
+        damageDog: 70000
+        timeDelay: 2
+        indexLine: "6\r"
+  - wave: 34
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog06
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 4500000
+        damageDog: 125000
+        timeDelay: 1
+        indexLine: "25\r"
+      - levelDog: 1
+        nameDog: Dog06
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 4500000
+        damageDog: 125000
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 2
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 5
+        indexLine: "3\r"
+      - levelDog: 3
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 4
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 5
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 7
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 8
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 9
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 10
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 11
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 12
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 13
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 1
+        indexLine: "4\r"
+      - levelDog: 14
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 15
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 4
+        indexLine: "25\r"
+      - levelDog: 16
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 100000
+        timeDelay: 4
+        indexLine: "34\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 4000000
+        damageDog: 120000
+        timeDelay: 1
+        indexLine: "246\r"
+      - levelDog: 1
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 4000000
+        damageDog: 120000
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 2
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 4000000
+        damageDog: 120000
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 3
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 120000
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 4
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 4500000
+        damageDog: 120000
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 5
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 3500000
+        damageDog: 120000
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 5
+        indexLine: "16\r"
+      - levelDog: 7
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 8
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 2
+        hpDog: 500000
+        damageDog: 80000
+        timeDelay: 2
+        indexLine: "16\r"
+  - wave: 35
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 3
+        hpDog: 800000
+        damageDog: 100000
+        timeDelay: 2
+        indexLine: "35\r"
+      - levelDog: 1
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 6000000
+        damageDog: 120000
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 2
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 5000000
+        damageDog: 120000
+        timeDelay: 4
+        indexLine: "135\r"
+      - levelDog: 3
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 5000000
+        damageDog: 120000
+        timeDelay: 4
+        indexLine: "6\r"
+      - levelDog: 4
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 5000000
+        damageDog: 120000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 5
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 5000000
+        damageDog: 120000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 6
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 5000000
+        damageDog: 120000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 7
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 5000000
+        damageDog: 120000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 8
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 5000000
+        damageDog: 120000
+        timeDelay: 3
+        indexLine: "1\r"
+      - levelDog: 9
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 6000000
+        damageDog: 120000
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 10
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 800000
+        damageDog: 100000
+        timeDelay: 6
+        indexLine: "35\r"
+      - levelDog: 11
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 2
+        hpDog: 800000
+        damageDog: 100000
+        timeDelay: 2
+        indexLine: "35\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 6000000
+        damageDog: 120000
+        timeDelay: 1
+        indexLine: "3\r"
+      - levelDog: 1
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 6000000
+        damageDog: 120000
+        timeDelay: 3
+        indexLine: "24\r"
+      - levelDog: 2
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 6000000
+        damageDog: 120000
+        timeDelay: 3
+        indexLine: "15\r"
+      - levelDog: 3
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 6000000
+        damageDog: 120000
+        timeDelay: 3
+        indexLine: "24\r"
+      - levelDog: 4
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 6000000
+        damageDog: 120000
+        timeDelay: 3
+        indexLine: "3\r"
+      - levelDog: 5
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 7000000
+        damageDog: 120000
+        timeDelay: 5
+        indexLine: "246\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 800000
+        damageDog: 100000
+        timeDelay: 6
+        indexLine: "135\r"
+      - levelDog: 7
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 3
+        hpDog: 800000
+        damageDog: 100000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 8
+        nameDog: Dog08
+        scaleValue: 1.5
+        nums: 1
+        hpDog: 10000000
+        damageDog: 150000
+        timeDelay: 6
+        indexLine: "25\r"
+  - wave: 36
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 1500000
+        damageDog: 1000000
+        timeDelay: 1
+        indexLine: "135\r"
+      - levelDog: 1
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 1500000
+        damageDog: 1000000
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 1500000
+        damageDog: 1000000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 1500000
+        damageDog: 1000000
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 4
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 1500000
+        damageDog: 1000000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 5
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 1500000
+        damageDog: 1000000
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 6
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 4
+        indexLine: "1\r"
+      - levelDog: 7
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 5
+        indexLine: "2\r"
+      - levelDog: 8
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 5
+        indexLine: "3\r"
+      - levelDog: 9
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 10
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 5
+        indexLine: "5\r"
+      - levelDog: 11
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 5
+        indexLine: "6\r"
+      - levelDog: 12
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 0
+        indexLine: "1\r"
+      - levelDog: 13
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 5
+        indexLine: "2\r"
+      - levelDog: 14
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 5
+        indexLine: "3\r"
+      - levelDog: 15
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 16
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 5
+        indexLine: "5\r"
+      - levelDog: 17
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 5
+        indexLine: "6\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 1
+        indexLine: "135\r"
+      - levelDog: 1
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 6
+        indexLine: "246\r"
+      - levelDog: 2
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 1500000
+        damageDog: 1000000
+        timeDelay: 7
+        indexLine: "16\r"
+      - levelDog: 3
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 1500000
+        damageDog: 1000000
+        timeDelay: 1
+        indexLine: "16\r"
+      - levelDog: 4
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 5
+        indexLine: "2\r"
+      - levelDog: 5
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 2
+        indexLine: "4\r"
+      - levelDog: 6
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 2
+        indexLine: "6\r"
+      - levelDog: 7
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 2
+        indexLine: "1\r"
+      - levelDog: 8
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 2
+        indexLine: "3\r"
+      - levelDog: 9
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 2
+        indexLine: "5\r"
+      - levelDog: 10
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 1500000
+        damageDog: 1000000
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 11
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 1500000
+        damageDog: 1000000
+        timeDelay: 2
+        indexLine: "246\r"
+      - levelDog: 12
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 1500000
+        damageDog: 1000000
+        timeDelay: 2
+        indexLine: "135\r"
+      - levelDog: 13
+        nameDog: Dog05
+        scaleValue: 0.5
+        nums: 1
+        hpDog: 1500000
+        damageDog: 1000000
+        timeDelay: 2
+        indexLine: "246\r"
+  - wave: 37
+    sum: 0
+    phases:
+    - phase: 0
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 12000000
+        damageDog: 1500000
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 1
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 12000000
+        damageDog: 1500000
+        timeDelay: 4
+        indexLine: "2\r"
+      - levelDog: 2
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 12000000
+        damageDog: 1500000
+        timeDelay: 4
+        indexLine: "3\r"
+      - levelDog: 3
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 12000000
+        damageDog: 1500000
+        timeDelay: 4
+        indexLine: "4\r"
+      - levelDog: 4
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 12000000
+        damageDog: 1500000
+        timeDelay: 4
+        indexLine: "5\r"
+      - levelDog: 5
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 12000000
+        damageDog: 1500000
+        timeDelay: 4
+        indexLine: "6\r"
+      - levelDog: 6
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 1200000
+        timeDelay: 5
+        indexLine: "25\r"
+      - levelDog: 7
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 1200000
+        timeDelay: 1
+        indexLine: "25\r"
+      - levelDog: 8
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 1200000
+        timeDelay: 1
+        indexLine: "25\r"
+      - levelDog: 9
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 1200000
+        timeDelay: 1
+        indexLine: "25\r"
+      - levelDog: 10
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 12000000
+        damageDog: 1500000
+        timeDelay: 5
+        indexLine: "6\r"
+      - levelDog: 11
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 12000000
+        damageDog: 1500000
+        timeDelay: 4
+        indexLine: "5\r"
+      - levelDog: 12
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 12000000
+        damageDog: 1500000
+        timeDelay: 4
+        indexLine: "4\r"
+      - levelDog: 13
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 12000000
+        damageDog: 1500000
+        timeDelay: 4
+        indexLine: "3\r"
+      - levelDog: 14
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 12000000
+        damageDog: 1500000
+        timeDelay: 4
+        indexLine: "2\r"
+    - phase: 1
+      sumPhase: 0
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 1
+        indexLine: "2\r"
+      - levelDog: 1
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 3
+        indexLine: "13\r"
+      - levelDog: 2
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 3
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 4
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 3
+        indexLine: "6\r"
+      - levelDog: 5
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 3
+        indexLine: "5\r"
+      - levelDog: 6
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 3
+        indexLine: "4\r"
+      - levelDog: 7
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 3
+        indexLine: "13\r"
+      - levelDog: 8
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 10000000
+        damageDog: 1500000
+        timeDelay: 3
+        indexLine: "2\r"
+      - levelDog: 9
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 12000000
+        damageDog: 1500000
+        timeDelay: 5
+        indexLine: "135\r"
+      - levelDog: 10
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 3000000
+        damageDog: 1200000
+        timeDelay: 6
+        indexLine: "246\r"
+      - levelDog: 11
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 3
+        hpDog: 3000000
+        damageDog: 1200000
+        timeDelay: 1
+        indexLine: "246\r"
+  - wave: 38
+    sum: 0
+    phases: []
+  - wave: 39
+    sum: 60
+    phases:
+    - phase: 0
+      sumPhase: 30
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 30000000
+        damageDog: 3000000
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 1
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 30000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "2\r"
+      - levelDog: 2
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 30000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "3\r"
+      - levelDog: 3
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 30000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 4
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 30000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "5\r"
+      - levelDog: 5
+        nameDog: Dog01
+        scaleValue: 1
+        nums: 1
+        hpDog: 30000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "6\r"
+      - levelDog: 6
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 7
+        indexLine: "6\r"
+      - levelDog: 7
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "5\r"
+      - levelDog: 8
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 9
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "3\r"
+      - levelDog: 10
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "2\r"
+      - levelDog: 11
+        nameDog: Dog02
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "1\r"
+      - levelDog: 12
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 7
+        indexLine: "1\r"
+      - levelDog: 13
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "2\r"
+      - levelDog: 14
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "3\r"
+      - levelDog: 15
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 16
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "5\r"
+      - levelDog: 17
+        nameDog: Dog03
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "6\r"
+      - levelDog: 18
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 7
+        indexLine: "6\r"
+      - levelDog: 19
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "5\r"
+      - levelDog: 20
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 21
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "3\r"
+      - levelDog: 22
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "2\r"
+      - levelDog: 23
+        nameDog: Dog04
+        scaleValue: 1
+        nums: 1
+        hpDog: 25000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "1\r"
+      - levelDog: 24
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 15000000
+        damageDog: 3000000
+        timeDelay: 7
+        indexLine: "1\r"
+      - levelDog: 25
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 15000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "2\r"
+      - levelDog: 26
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 15000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "3\r"
+      - levelDog: 27
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 15000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 28
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 15000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "5\r"
+      - levelDog: 29
+        nameDog: Dog05
+        scaleValue: 1
+        nums: 1
+        hpDog: 15000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "6\r"
+    - phase: 1
+      sumPhase: 30
+      levelDogs:
+      - levelDog: 0
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 27000000
+        damageDog: 3000000
+        timeDelay: 1
+        indexLine: "1\r"
+      - levelDog: 1
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 27000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "2\r"
+      - levelDog: 2
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 27000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "3\r"
+      - levelDog: 3
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 27000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 4
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 27000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "5\r"
+      - levelDog: 5
+        nameDog: Dog06
+        scaleValue: 1
+        nums: 1
+        hpDog: 27000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "6\r"
+      - levelDog: 6
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 7
+        indexLine: "6\r"
+      - levelDog: 7
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "5\r"
+      - levelDog: 8
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 9
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "3\r"
+      - levelDog: 10
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "2\r"
+      - levelDog: 11
+        nameDog: Dog07
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "1\r"
+      - levelDog: 12
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 7
+        indexLine: "1\r"
+      - levelDog: 13
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "2\r"
+      - levelDog: 14
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "3\r"
+      - levelDog: 15
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 16
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "5\r"
+      - levelDog: 17
+        nameDog: Dog08
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "6\r"
+      - levelDog: 18
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 7
+        indexLine: "6\r"
+      - levelDog: 19
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "5\r"
+      - levelDog: 20
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 21
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "3\r"
+      - levelDog: 22
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "2\r"
+      - levelDog: 23
+        nameDog: Dog09
+        scaleValue: 1
+        nums: 1
+        hpDog: 23000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "1\r"
+      - levelDog: 24
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000000
+        damageDog: 3000000
+        timeDelay: 7
+        indexLine: "1\r"
+      - levelDog: 25
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "2\r"
+      - levelDog: 26
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "3\r"
+      - levelDog: 27
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "4\r"
+      - levelDog: 28
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "5\r"
+      - levelDog: 29
+        nameDog: Dog10
+        scaleValue: 1
+        nums: 1
+        hpDog: 13000000
+        damageDog: 3000000
+        timeDelay: 5
+        indexLine: "6\r"

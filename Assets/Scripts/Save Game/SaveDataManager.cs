@@ -98,6 +98,7 @@ public class SaveDataManager : ErshenMonoBehaviour
         canvasController.GoldPlayer.LoadBegin(dataGame.goldPlayer);
         canvasController.PointSpawnDogController.wave = dataGame.waveDog;
         canvasController.ShieldUpdate.levelCurrent = dataGame.levelShield;
+        canvasController.ShieldUpdate.LoadBeginGame();
         canvasController.ButtonSpawn.highestLevelChicken = dataGame.highestLevelChicken;
         canvasController.ButtonSpawn.levelSpawnChicken = dataGame.levelSpawnChicken;
         canvasController.TWUpgradeChicken.indexLVHighest = dataGame.highestLevelChicken;

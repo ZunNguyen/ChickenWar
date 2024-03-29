@@ -68,9 +68,6 @@ public class CanvasController : ErshenMonoBehaviour
     [SerializeField] protected ShieldUpdate shieldUpdate;
     public ShieldUpdate ShieldUpdate => shieldUpdate;
 
-    [SerializeField] protected ShieldHPSum shieldHPSum;
-    public ShieldHPSum ShieldHPSum => shieldHPSum;
-
     [SerializeField] protected ButtonManager buttonManager;
     public ButtonManager ButtonManager => buttonManager;
 
@@ -102,7 +99,6 @@ public class CanvasController : ErshenMonoBehaviour
 
         // Load Script for Shield
         LoadShieldUpdate();
-        LoadShieldSumHP();
     }
 
     protected virtual void LoadPointSpawnDogController()
@@ -139,12 +135,6 @@ public class CanvasController : ErshenMonoBehaviour
     {
         if (pointSpawnBulletController != null) return;
         pointSpawnBulletController = GameObject.Find("Point Spawn Bullet").GetComponentInChildren<PointSpawnBulletController>();
-    }
-
-    protected virtual void LoadShieldSumHP()
-    {
-        if (shieldHPSum != null) return;
-        shieldHPSum = GameObject.Find("Shields").GetComponent<ShieldHPSum>();
     }
 
     protected virtual void LoadGoldPlayer()

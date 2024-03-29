@@ -46,6 +46,10 @@ public abstract class ProcessGold :ErshenMonoBehaviour
         {
             return (value / 1000000000).ToString("n1") + "B";
         }
+        if (value >= 1000000000000 && value < 1000000000000000)
+        {
+            return (value / 1000000000000).ToString("n1") + "T";
+        }
         return "";
     }
 }

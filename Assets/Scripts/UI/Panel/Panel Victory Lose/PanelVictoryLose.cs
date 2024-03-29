@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PanelVictoryLose : ErshenMonoBehaviour
 {
-    [Header("Connect controller")]
+    [Header("---Connect controller---")]
     [SerializeField] protected PanelVictoyLoseCtrl panelVictoyLoseCtrl;
     public PanelVictoyLoseCtrl PanelVictoyLoseCtrl => panelVictoyLoseCtrl;
 
@@ -23,13 +23,11 @@ public class PanelVictoryLose : ErshenMonoBehaviour
 
     public virtual void PanelVictoryOn()
     {
+        SetPanel();
+
         // Audio
-        panelVictoyLoseCtrl.CanvasController.AudioManager.PauseMusic(panelVictoyLoseCtrl.CanvasController.AudioManager.musicBattle);
         panelVictoyLoseCtrl.CanvasController.AudioManager.PlaySFX(panelVictoyLoseCtrl.CanvasController.AudioManager.effectWinWave);
 
-        panelVictoyLoseCtrl.TWPanelVictoryLose.TW_PanelOn();
-        float numsdogKill = panelVictoyLoseCtrl.CanvasController.TrackingWaveController.TrackingWave.sumDogCurrent;
-        panelVictoyLoseCtrl.TextKill.GetTextKillDog(numsdogKill);
         int waveDog = panelVictoyLoseCtrl.CanvasController.PointSpawnDogController.wave;
         panelVictoyLoseCtrl.TextPanel.InputTextVictory(waveDog);
         float goldEarn = panelVictoyLoseCtrl.GoldGiftSO.listGoldGift[waveDog].gold;
@@ -38,18 +36,25 @@ public class PanelVictoryLose : ErshenMonoBehaviour
 
     public virtual void PanelLoseOn()
     {
+        SetPanel();
+
         // Audio
-        panelVictoyLoseCtrl.CanvasController.AudioManager.PauseMusic(panelVictoyLoseCtrl.CanvasController.AudioManager.musicBattle);
         panelVictoyLoseCtrl.CanvasController.AudioManager.PlaySFX(panelVictoyLoseCtrl.CanvasController.AudioManager.effectGameOver);
 
         panelVictoyLoseCtrl.CanvasController.GameObjectSpawner.OffMovementObjInHolder();
-        panelVictoyLoseCtrl.TWPanelVictoryLose.TW_PanelOn();
-        float numsdogKill = panelVictoyLoseCtrl.CanvasController.TrackingWaveController.TrackingWave.sumDogCurrent;
-        panelVictoyLoseCtrl.TextKill.GetTextKillDog(numsdogKill);
+        
         int waveDog = panelVictoyLoseCtrl.CanvasController.PointSpawnDogController.wave;
         float goldEarn = panelVictoyLoseCtrl.GoldGiftSO.listGoldGift[waveDog].gold;
         panelVictoyLoseCtrl.TextEarnGold.InputGoldValue(goldEarn/2);
         panelVictoyLoseCtrl.TextPanel.InputTextLose();
+    }
+
+    protected virtual void SetPanel()
+    {
+        panelVictoyLoseCtrl.CanvasController.AudioManager.PauseMusic(panelVictoyLoseCtrl.CanvasController.AudioManager.musicBattle);
+        panelVictoyLoseCtrl.TWPanelVictoryLose.TW_PanelOn();
+        float numsdogKill = panelVictoyLoseCtrl.CanvasController.TrackingWaveController.TrackingWave.sumDogCurrent;
+        panelVictoyLoseCtrl.TextKill.GetTextKillDog(numsdogKill);
     }
 
     public virtual void PanelOff(int multiplier)

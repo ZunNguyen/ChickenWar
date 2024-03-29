@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,7 +14,7 @@ public class GoldPlayer : ProcessGold
     [SerializeField] protected CanvasController canvasController;
 
     [Header("---Value---")]
-    public int gold = 0;
+    public Int64 gold = 0;
 
     protected override void LoadComponent()
     {
@@ -34,7 +35,7 @@ public class GoldPlayer : ProcessGold
         canvasController = transform.GetComponentInParent<CanvasController>();
     }
 
-    public virtual void LoadBegin(int goldSave)
+    public virtual void LoadBegin(Int64 goldSave)
     {
         gold = goldSave;
         PrintText(gold);

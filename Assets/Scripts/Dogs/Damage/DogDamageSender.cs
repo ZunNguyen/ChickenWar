@@ -32,9 +32,6 @@ public class DogDamageSender : DamageSender
             SetAnimationAttack();
 
             Send(collision.transform);
-
-            // Set Update HP Shield
-            SetUpdateHPShield(collision.transform);
         }
     }
 
@@ -46,11 +43,5 @@ public class DogDamageSender : DamageSender
     protected virtual void SetAnimationAttack()
     {
         dogCtrl.DogAniamtion.Attack();
-    }
-
-    protected virtual void SetUpdateHPShield(Transform obj)
-    {
-        ShieldHPSum shieldHPSum = obj.parent.parent.GetComponent<ShieldHPSum>();
-        shieldHPSum.LoadSumHpCurrent();
     }
 }

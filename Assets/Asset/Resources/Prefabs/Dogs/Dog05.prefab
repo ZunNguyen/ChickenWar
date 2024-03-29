@@ -56,7 +56,6 @@ GameObject:
   - component: {fileID: 7780454838699081221}
   - component: {fileID: 7780454838699081222}
   - component: {fileID: 7780454838699081223}
-  - component: {fileID: 7780454838699081224}
   - component: {fileID: 1733847767}
   m_Layer: 0
   m_Name: Dog Damage Sender
@@ -127,20 +126,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7780454838699081224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7780454838699081220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb6eb77759116554285468790ec34e91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damgeSend: 100
-  dogCtrl: {fileID: 7780454838775002561}
 --- !u!114 &1733847767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,8 +192,8 @@ MonoBehaviour:
   dogMovement: {fileID: 7780454838902441026}
   dogDespawn: {fileID: 7780454840491141235}
   dogAniamtion: {fileID: 7780454840152828187}
-  dogDamageReceiver: {fileID: 7780454840457796240}
-  dogDamageSender: {fileID: 7780454838699081224}
+  dogDamageReceiver: {fileID: 0}
+  dogDamageSender: {fileID: 0}
   canvasHP: {fileID: 7780454840564895875}
   dogIndex: {fileID: 2437520903110271945}
 --- !u!1 &7780454838902441024
@@ -620,6 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anima: {fileID: 7780454840152828186}
+  spriteRenderer: {fileID: 0}
 --- !u!1 &7780454840436377264
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,7 +654,6 @@ GameObject:
   - component: {fileID: 7780454840457796204}
   - component: {fileID: 7780454840457796207}
   - component: {fileID: 7780454840457796206}
-  - component: {fileID: 7780454840457796240}
   m_Layer: 6
   m_Name: Dog Damage Receiver
   m_TagString: Untagged
@@ -738,22 +723,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7780454840457796240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7780454840457796203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2175cd3dae6a924a86138cc9405bc83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpMax: 10
-  hpCurrent: 1
-  isDead: 0
-  dogCtrl: {fileID: 7780454838775002561}
 --- !u!1 &7780454840491141233
 GameObject:
   m_ObjectHideFlags: 0

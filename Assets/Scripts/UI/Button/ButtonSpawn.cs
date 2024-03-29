@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,7 @@ public class ButtonSpawn : CanvasAbstract
     public string nameNewChicken = "Chicken01";
 
     [Header("Variable")]
-    [SerializeField] protected int goldPlayer;
+    [SerializeField] protected Int64 goldPlayer;
     [SerializeField] protected int goldUpdate;
     public int highestLevelChicken = 0;
 
