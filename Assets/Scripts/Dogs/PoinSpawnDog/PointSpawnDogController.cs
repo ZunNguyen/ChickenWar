@@ -11,8 +11,8 @@ public class PointSpawnDogController : ErshenMonoBehaviour
     [SerializeField] protected GameObjectSpawner gameObjectSpawner;
     public GameObjectSpawner GameObjectSpawner => gameObjectSpawner;
 
-    [SerializeField] protected CanvasController canvasController;
-    public CanvasController CanvasController => canvasController;
+    [SerializeField] protected CanvasCtrl canvasController;
+    public CanvasCtrl CanvasController => canvasController;
 
     [Header("Connect Inside")]
     [SerializeField] protected List<PointSpawnDog> listPointSpawnDog;
@@ -62,7 +62,7 @@ public class PointSpawnDogController : ErshenMonoBehaviour
     protected virtual void LoadCanvasController()
     {
         if (canvasController != null) return;
-        canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
+        canvasController = GameObject.Find("Canvas").GetComponent<CanvasCtrl>();
     }
 
     public virtual void OnObj()

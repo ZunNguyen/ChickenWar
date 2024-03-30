@@ -22,7 +22,7 @@ public class DogDamageReceiver : DamageReciver
     protected override void OnDead()
     {
         // Audio for dog boom
-        if (transform.parent.parent.gameObject.name == "Dog05" || transform.parent.parent.gameObject.name == "Dog10") CanvasController.Instance.AudioManager.PlaySFX(CanvasController.Instance.AudioManager.effectBoom);
+        if (transform.parent.parent.gameObject.name == "Dog05" || transform.parent.parent.gameObject.name == "Dog10") CanvasCtrl.Instance.AudioManager.PlaySFX(CanvasCtrl.Instance.AudioManager.effectBoom);
 
         dogCtrl.DisaleComponents();
         dogCtrl.DogAniamtion.Dead();

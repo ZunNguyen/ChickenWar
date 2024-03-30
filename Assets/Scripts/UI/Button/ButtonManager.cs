@@ -5,80 +5,86 @@ using UnityEngine.UI;
 
 public class ButtonManager : ErshenMonoBehaviour
 {
-    [SerializeField] protected CanvasController canvasController;
+    [Header("---Connect Ctrl---")]
+    [SerializeField] protected CanvasCtrl canvasCtrl;
     public bool isStarting = false;
     public int timePressButton = 0;
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
-        LoadCanvasController();
+        LoadCanvasCtrl();
     }
 
-    protected virtual void LoadCanvasController()
+    protected virtual void LoadCanvasCtrl()
     {
-        if (canvasController != null) return;
-        canvasController = this.transform.GetComponent<CanvasController>();
+        if (canvasCtrl != null) return;
+        canvasCtrl = this.transform.GetComponentInParent<CanvasCtrl>();
     }
 
-    public virtual void StartGame()
+    public virtual void ButtonBattle()
     {
+        if (canvasCtrl.PointSpawnDogController.wave == 40)
+        {
+            Debug.Log("The Wave is max");
+            return;
+        }
         timePressButton += 1;
-        if (timePressButton % 2 == 0 && timePressButton > 0) canvasController.ChangeButtonStart.ChangeImageButtonXTime(5,1);
-        if (timePressButton % 2 == 1 && timePressButton > 0) canvasController.ChangeButtonStart.ChangeImageButtonXTime(1,2);
+        if (timePressButton % 2 == 0 && timePressButton > 0) canvasCtrl.ChangeButtonStart.ChangeImageButtonXTime(5,1);
+        if (timePressButton % 2 == 1 && timePressButton > 0) canvasCtrl.ChangeButtonStart.ChangeImageButtonXTime(1,2);
         if (isStarting) return;
 
         //Audio
-        canvasController.AudioManager.PlayMusic(canvasController.AudioManager.musicBattle);
+        canvasCtrl.AudioManager.PlayMusic(canvasCtrl.AudioManager.musicBattle);
 
         // On Spawn Dog
-        canvasController.PointSpawnDogController.gameObject.SetActive(true);
-        canvasController.PointSpawnDogController.OnObj();
+        canvasCtrl.PointSpawnDogController.gameObject.SetActive(true);
+        canvasCtrl.PointSpawnDogController.OnObj();
         // On Bullet
-        canvasController.PointSpawnBulletController.BulletOn();
+        canvasCtrl.PointSpawnBulletController.BulletOn();
         // On tracking wave
-        canvasController.TrackingWaveController.TrackingWave.TrackingWaveOn();
+        canvasCtrl.TrackingWaveController.TrackingWave.TrackingWaveOn();
     }
 
-    public void SpawnChicken()
+    public void ButtonSpawnChicken()
     {
-        canvasController.ButtonSpawn.SpawnChickenInGrid();
+        canvasCtrl.ButtonSpawn.SpawnChickenInGrid();
     }
 
     public virtual void ButtonClaim()
     {
         // Audio
-        canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectClick);
+        canvasCtrl.AudioManager.PlaySFX(canvasCtrl.AudioManager.effectClick);
         
         OffTrackingWave();
         // Off panel
-        canvasController.PanelVictoyLoseCtrl.PanelVictoryLose.PanelOff(1);
+        canvasCtrl.PanelVictoyLoseCtrl.PanelVictoryLose.PanelOff(1);
     }
 
     public virtual void ButtonClaimVD()
     {
         // Audio
-        canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectClick);
+        canvasCtrl.AudioManager.PlaySFX(canvasCtrl.AudioManager.effectClick);
 
         OffTrackingWave();
         // Off panel victory
-        canvasController.PanelVictoyLoseCtrl.PanelVictoryLose.PanelOff(2);
+        canvasCtrl.PanelVictoyLoseCtrl.PanelVictoryLose.PanelOff(2);
     }
 
     public virtual void ButtonUnclockChickenUpgrade()
     {
-        canvasController.TWUpgradeChicken.TW_UpgradeOff();
+        canvasCtrl.TWUpgradeChicken.TW_UpgradeOff();
     }
 
     protected virtual void OffTrackingWave()
     {
         // Audio
-        canvasController.AudioManager.PlayMusic(canvasController.AudioManager.musicMain);
+        canvasCtrl.AudioManager.PlayMusic(canvasCtrl.AudioManager.musicMain);
 
         isStarting = false;
         timePressButton = 0;
         
-        canvasController.GameObjectSpawner.OffObjInHolder();
-        canvasController.ShieldUpdate.LoadBeginGame();
+        canvasCtrl.GameObjectSpawner.OffObjInHolder();
+        canvasCtrl.ShieldUpdate.LoadBeginGame();
     }
 }

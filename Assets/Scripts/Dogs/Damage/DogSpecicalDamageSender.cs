@@ -9,7 +9,7 @@ public class DogSpecicalDamageSender : DogDamageSender
         base.SetAnimationAttack();
 
         // Audio
-        CanvasController.Instance.AudioManager.PlaySFX(CanvasController.Instance.AudioManager.effectBoom);
+        CanvasCtrl.Instance.AudioManager.PlaySFX(CanvasCtrl.Instance.AudioManager.effectBoom);
 
         dogCtrl.DisaleComponents();
         Invoke(nameof(SetDelayToDespawn), 1f);

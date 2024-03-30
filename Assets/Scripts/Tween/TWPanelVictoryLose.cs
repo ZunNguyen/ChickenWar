@@ -44,6 +44,6 @@ public class TWPanelVictoryLose : TWEarnGoldPanel
 
     protected override void SetAudioEffectEarnGold()
     {
-        CanvasController.Instance.AudioManager.PlaySFX(CanvasController.Instance.AudioManager.effectEarnGold);
+        CanvasCtrl.Instance.AudioManager.PlaySFX(CanvasCtrl.Instance.AudioManager.effectEarnGold);
     }
 }

@@ -57,15 +57,15 @@ public class PointSpawnBullet : LoadIndexObj
             SpawnBullet();
             timeCurrent = 0;
             //Set Animation for gun
-            CanvasController.Instance.CheckPositionChicken.SetAnimationIndex(index);
+            CanvasCtrl.Instance.CheckPositionChicken.SetAnimationIndex(index);
         }
     }
 
     protected virtual void SpawnBullet()
     {
         // Set information bullet
-        string nameBullet = CanvasController.Instance.CheckPositionChicken.GetNameBullet(index - 1);
-        int damageBullet = CanvasController.Instance.CheckPositionChicken.GetDamageBullet(index - 1);
+        string nameBullet = CanvasCtrl.Instance.CheckPositionChicken.GetNameBullet(index - 1);
+        int damageBullet = CanvasCtrl.Instance.CheckPositionChicken.GetDamageBullet(index - 1);
         GameObject newBullet = pointSpawnBulletController.GameObjectSpawner.Spawn(nameBullet, this.transform.position, this.transform.rotation).gameObject;
         BulletCtrl bulletCtrl = newBullet.GetComponent<BulletCtrl>();
         bulletCtrl.BulletMovement.objTarget = GetTransNearestObj();
@@ -79,7 +79,7 @@ public class PointSpawnBullet : LoadIndexObj
         if (!HaveDogInLine()) return false;
 
         // Check chicken in line
-        if (!CanvasController.Instance.CheckPositionChicken.HaveChickenInSlot(index - 1)) return false;
+        if (!CanvasCtrl.Instance.CheckPositionChicken.HaveChickenInSlot(index - 1)) return false;
         return true;
     }
 

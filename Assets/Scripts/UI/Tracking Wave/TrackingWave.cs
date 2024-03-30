@@ -29,6 +29,11 @@ public class TrackingWave : ErshenMonoBehaviour
     public virtual void TrackingWaveOn()
     {
         int index = trackingWaveCtrl.CanvasController.PointSpawnDogController.wave;
+        if (index == 40)
+        {
+            Debug.Log("The Wave is Max");
+            return;
+        } 
         GetSumDog(index);
         GetTextWaveDog(index);
         trackingWaveCtrl.TWTrackingWave.TW_TrackingWaveOn();

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CheckPositionChicken : ErshenMonoBehaviour
 {
-    [SerializeField] protected CanvasController canvasController;
+    [SerializeField] protected CanvasCtrl canvasController;
 
     [SerializeField] protected List<Transform> chickenSlots;
 
@@ -34,7 +34,7 @@ public class CheckPositionChicken : ErshenMonoBehaviour
     protected virtual void LoadCanvasController()
     {
         if (canvasController != null) return;
-        canvasController = GetComponentInParent<CanvasController>();
+        canvasController = GetComponentInParent<CanvasCtrl>();
     }
 
     public virtual void SetAnimationIndex(int index)

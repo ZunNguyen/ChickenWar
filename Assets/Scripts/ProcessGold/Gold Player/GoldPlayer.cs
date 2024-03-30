@@ -11,7 +11,7 @@ public class GoldPlayer : ProcessGold
     public static GoldPlayer Instance => instance;
 
     [Header("---Connect CanvasCtrl")]
-    [SerializeField] protected CanvasController canvasController;
+    [SerializeField] protected CanvasCtrl canvasController;
 
     [Header("---Value---")]
     public Int64 gold = 0;
@@ -32,7 +32,7 @@ public class GoldPlayer : ProcessGold
     protected virtual void LoadCanvasCtrl()
     {
         if (canvasController != null) return;
-        canvasController = transform.GetComponentInParent<CanvasController>();
+        canvasController = transform.GetComponentInParent<CanvasCtrl>();
     }
 
     public virtual void LoadBegin(Int64 goldSave)

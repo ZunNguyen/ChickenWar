@@ -664,7 +664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveDogSO: {fileID: 11400000, guid: 5cf63922470491e4eaf8f316cdaf0e48, type: 2}
   gameObjectSpawner: {fileID: 1565035411}
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   listPointSpawnDog:
   - {fileID: 1744877705}
   - {fileID: 960102740}
@@ -2519,7 +2519,7 @@ PrefabInstance:
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -2646,7 +2646,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1190994444}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
         m_MethodName: ButtonUnclockChickenUpgrade
         m_Mode: 1
@@ -4023,7 +4023,7 @@ GameObject:
   - component: {fileID: 283534730}
   - component: {fileID: 283534729}
   m_Layer: 5
-  m_Name: Update Shield
+  m_Name: Button - Update Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4159,7 +4159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880eefa125810d4d96af91d351f65ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   shieldUpdateController: {fileID: 283534730}
   goldPlayer: 0
   goldUpgrade: 0
@@ -4178,7 +4178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 028ab84950ecfbe40b7159a190f9a62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   shieldHPBar: {fileID: 47481910}
   shieldGoldUpdate: {fileID: 703089868}
   shieldHPText: {fileID: 47481911}
@@ -4711,7 +4711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c5870baede82e4291093013a69e64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   chicken_1: {fileID: 0}
   chicken_2: {fileID: 0}
   chickenUpgrade: {fileID: 0}
@@ -5095,7 +5095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f7b820826a77147bfab9289e6639b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   missionSO: {fileID: 11400000, guid: af20b23d8aeb00142bbf0730b7f001be, type: 2}
   tWPanelMission: {fileID: 313784924}
   panelMission: {fileID: 313784923}
@@ -9491,7 +9491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e299a3d7948a4a142918e1469dcf2130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
 --- !u!4 &543870212
 Transform:
   m_ObjectHideFlags: 0
@@ -9649,7 +9649,7 @@ PrefabInstance:
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -10668,7 +10668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44c4b316f2f21c843900ec28e544c999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   rectTransform: {fileID: 612476056}
   posTarget: 150
   durTimeMove: 1.5
@@ -11859,7 +11859,7 @@ PrefabInstance:
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -13904,6 +13904,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 786114795}
+  - component: {fileID: 786114796}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -13936,6 +13937,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &786114796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786114794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60dee77ee27e9b24c88fe885afde80f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasCtrl: {fileID: 1190994444}
+  isStarting: 0
+  timePressButton: 0
 --- !u!4 &790046313 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2717444433818208914, guid: 75d0eb14318f83a40bacdfd206289656, type: 3}
@@ -14412,7 +14428,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1190994444}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
         m_MethodName: ButtonClaimVD
         m_Mode: 1
@@ -14751,7 +14767,7 @@ PrefabInstance:
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -14817,7 +14833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb74cc7a14f19647a4d98d2b6d40e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   textCountWave: {fileID: 1193247819}
   trackingWave: {fileID: 855302700}
   tWTrackingWave: {fileID: 855302699}
@@ -15188,7 +15204,7 @@ PrefabInstance:
     - target: {fileID: 4141293555347711353, guid: 8b406a3d14d43b84d99a4f2cf6592e0b, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 4141293555347711353, guid: 8b406a3d14d43b84d99a4f2cf6592e0b, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -15857,7 +15873,7 @@ PrefabInstance:
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -16463,7 +16479,7 @@ PrefabInstance:
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -18436,7 +18452,7 @@ PrefabInstance:
     - target: {fileID: 4141293555347711353, guid: 8b406a3d14d43b84d99a4f2cf6592e0b, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 4141293555347711353, guid: 8b406a3d14d43b84d99a4f2cf6592e0b, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -18866,7 +18882,7 @@ PrefabInstance:
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -21264,7 +21280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0277d1ccdfa4b743b645e6cdcfddcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: 73a448e100229134ba1807d445d2ee7b, type: 2}
   musicSlider: {fileID: 722750528}
   sfxSlider: {fileID: 932973480}
@@ -21552,7 +21568,6 @@ GameObject:
   - component: {fileID: 1190994441}
   - component: {fileID: 1190994440}
   - component: {fileID: 1190994444}
-  - component: {fileID: 1190994445}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -21657,22 +21672,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1190994439}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60dee77ee27e9b24c88fe885afde80f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
-  isStarting: 0
-  timePressButton: 0
---- !u!114 &1190994445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190994439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f619f7169a01fd499b7b9d1a0afb347, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ea9351c707072f4a91fc045203ccb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pointSpawnBulletController: {fileID: 1960530979}
@@ -21694,7 +21694,7 @@ MonoBehaviour:
   panelEarnGoldOfflineCtrl: {fileID: 1656875580}
   panelMissionCtrl: {fileID: 313784922}
   shieldUpdate: {fileID: 283534729}
-  buttonManager: {fileID: 1190994444}
+  buttonManager: {fileID: 786114796}
 --- !u!1 &1191075285
 GameObject:
   m_ObjectHideFlags: 0
@@ -24653,7 +24653,7 @@ PrefabInstance:
     - target: {fileID: 4141293555347711353, guid: 8b406a3d14d43b84d99a4f2cf6592e0b, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 4141293555347711353, guid: 8b406a3d14d43b84d99a4f2cf6592e0b, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -25629,7 +25629,7 @@ PrefabInstance:
     - target: {fileID: 4141293555347711353, guid: 8b406a3d14d43b84d99a4f2cf6592e0b, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 4141293555347711353, guid: 8b406a3d14d43b84d99a4f2cf6592e0b, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -27607,7 +27607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dcadacdbf1ae9e4e8068d90342893e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   chickenSlots:
   - {fileID: 476863126}
   - {fileID: 1636302245}
@@ -28740,7 +28740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f6f9c17cfde64eb467de354ee36fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   tWPanelPasue: {fileID: 1432441614}
   tWPanelSetting: {fileID: 1185020547}
   settingVolume: {fileID: 1185020546}
@@ -28886,7 +28886,7 @@ PrefabInstance:
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -29534,7 +29534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e81bd2a5ac59b4b9e42f695ca00898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   chickenSO: {fileID: 11400000, guid: 3d8b75dda1d6fb4468adea56244912c5, type: 2}
   goldEarn: {fileID: 1689980090}
   chickenGun: {fileID: 359386405}
@@ -29565,7 +29565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4f91977d54db54cb5c9320d2ab29ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   images:
   - {fileID: 721767108}
   - {fileID: 359386408}
@@ -30557,7 +30557,7 @@ PrefabInstance:
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -31518,7 +31518,7 @@ PrefabInstance:
     - target: {fileID: 4141293555347711353, guid: 8b406a3d14d43b84d99a4f2cf6592e0b, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 4141293555347711353, guid: 8b406a3d14d43b84d99a4f2cf6592e0b, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -32236,7 +32236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22ad8e0ef22e7047a832a4d8517ba55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   textEarnGoldOffline: {fileID: 472721550}
   tWPanelEarnGoldOffline: {fileID: 1656875578}
   panelEarnGoldOffline: {fileID: 1656875579}
@@ -32570,7 +32570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6555200df2593894cb500508f6b316a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   panelVictoryLose: {fileID: 1665868944}
   tWPanelVictoryLose: {fileID: 1665868943}
   textKill: {fileID: 1562945050}
@@ -33990,7 +33990,7 @@ PrefabInstance:
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -34070,7 +34070,7 @@ GameObject:
   - component: {fileID: 1727418702}
   - component: {fileID: 1727418705}
   m_Layer: 5
-  m_Name: Button - Start
+  m_Name: Button - Battle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34143,9 +34143,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1190994444}
+      - m_Target: {fileID: 786114796}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: PressBattleButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -34205,7 +34205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1a9bd48d8ef8b45a889f99e3d208c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   text: {fileID: 1415460046}
   imageChicken: {fileID: 1343993686}
   imageClock: {fileID: 2146524194}
@@ -36713,7 +36713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 407914680}
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   gold: 0
 --- !u!1 &1842384522
 GameObject:
@@ -37361,7 +37361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 185c15a279c6725458c9b2060fbb2cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   slots:
   - {fileID: 685813586}
   - {fileID: 854620882}
@@ -39681,7 +39681,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1190994444}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
         m_MethodName: ButtonClaim
         m_Mode: 1
@@ -40450,9 +40450,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1190994444}
+      - m_Target: {fileID: 786114794}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: SpawnChicken
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -40512,7 +40512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da90cdbd8342ef641a74a6491e8d625b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasController: {fileID: 1190994445}
+  canvasController: {fileID: 0}
   chickenSO: {fileID: 11400000, guid: 3d8b75dda1d6fb4468adea56244912c5, type: 2}
   goldUpdateChicken: {fileID: 587046940}
   levelSpawnChicken: 0
@@ -41394,7 +41394,7 @@ PrefabInstance:
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -42762,7 +42762,7 @@ PrefabInstance:
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 2314376761742561616, guid: 87d1bd8bf45012142a65e66044a36df6, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40
@@ -43362,7 +43362,7 @@ PrefabInstance:
     - target: {fileID: 4141293555347711353, guid: 8b406a3d14d43b84d99a4f2cf6592e0b, type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1190994445}
+      objectReference: {fileID: 0}
     - target: {fileID: 4141293555347711353, guid: 8b406a3d14d43b84d99a4f2cf6592e0b, type: 3}
       propertyPath: chickenLevelHighest
       value: Chicken40

@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CanvasController : ErshenMonoBehaviour
+public class CanvasCtrl : ErshenMonoBehaviour
 {
     [Header("Instance")]
-    [SerializeField] protected static CanvasController instance;
-    public static CanvasController Instance => instance;
+    [SerializeField] protected static CanvasCtrl instance;
+    public static CanvasCtrl Instance => instance;
     
     [Header("Load Script Outside")]
 
@@ -170,13 +170,13 @@ public class CanvasController : ErshenMonoBehaviour
     protected virtual void LoadButtonManager()
     {
         if (buttonManager != null) return;
-        buttonManager = this.transform.GetComponent<ButtonManager>();
+        buttonManager = this.transform.GetComponentInChildren<ButtonManager>();
     }
 
     protected virtual void LoadShieldUpdateController()
     {
         if (shieldUpdateController != null) return;
-        shieldUpdateController = transform.Find("Button").Find("Update Shield").GetComponent<ShieldUpdateController>();
+        shieldUpdateController = transform.Find("Button").Find("Button - Update Shield").GetComponent<ShieldUpdateController>();
     }
 
     protected virtual void LoadGameObjSpawner()

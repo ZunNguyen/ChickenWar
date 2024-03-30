@@ -36,7 +36,7 @@ public class CoinCollect : ProcessGold
 
     public virtual void TWCoinCollectOn()
     {
-        CanvasController.Instance.AudioManager.PlaySFX(CanvasController.Instance.AudioManager.effectEarnGold);
+        CanvasCtrl.Instance.AudioManager.PlaySFX(CanvasCtrl.Instance.AudioManager.effectEarnGold);
         rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + posTarget, durTimeMove).OnComplete(() =>
         {
             CoinCollectSpawner.Instance.Despawn(gameObject);

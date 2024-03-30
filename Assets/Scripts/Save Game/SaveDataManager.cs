@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SaveDataManager : ErshenMonoBehaviour
 {
     [Header("Load Script")]
-    [SerializeField] protected CanvasController canvasController;
+    [SerializeField] protected CanvasCtrl canvasController;
 
     protected override void LoadComponent()
     {
@@ -16,7 +16,7 @@ public class SaveDataManager : ErshenMonoBehaviour
     protected virtual void LoadCanvasController()
     {
         if (canvasController != null) return;
-        canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
+        canvasController = GameObject.Find("Canvas").GetComponent<CanvasCtrl>();
     }
 
     private void OnApplicationQuit()
