@@ -63,4 +63,34 @@ public class PanelVictoryLose : ErshenMonoBehaviour
 
         panelVictoyLoseCtrl.TWPanelVictoryLose.TW_PanelOff(multiplier, goldEarn);
     }
+
+    public virtual void ButtonClaim()
+    {
+        // Audio
+        panelVictoyLoseCtrl.CanvasController.AudioManager.PlaySFX(panelVictoyLoseCtrl.CanvasController.AudioManager.effectClick);
+        OffTrackingWave();
+        // Off panel
+        PanelOff(1);
+    }
+
+    public virtual void ButtonClaimVD()
+    {
+        // Audio
+        panelVictoyLoseCtrl.CanvasController.AudioManager.PlaySFX(panelVictoyLoseCtrl.CanvasController.AudioManager.effectClick);
+        OffTrackingWave();
+        // Off panel
+        PanelOff(1);
+    }
+
+    protected virtual void OffTrackingWave()
+    {
+        // Audio
+        panelVictoyLoseCtrl.CanvasController.AudioManager.PlayMusic(panelVictoyLoseCtrl.CanvasController.AudioManager.musicMain);
+
+        panelVictoyLoseCtrl.CanvasController.ButtonManager.isStarting = false;
+        panelVictoyLoseCtrl.CanvasController.ButtonManager.timePressButton = 0;
+
+        panelVictoyLoseCtrl.CanvasController.GameObjectSpawner.OffObjInHolder();
+        panelVictoyLoseCtrl.CanvasController.ShieldUpdate.LoadBeginGame();
+    }
 }

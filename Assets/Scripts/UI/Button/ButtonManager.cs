@@ -51,40 +51,8 @@ public class ButtonManager : ErshenMonoBehaviour
         canvasCtrl.ButtonSpawn.SpawnChickenInGrid();
     }
 
-    public virtual void ButtonClaim()
-    {
-        // Audio
-        canvasCtrl.AudioManager.PlaySFX(canvasCtrl.AudioManager.effectClick);
-        
-        OffTrackingWave();
-        // Off panel
-        canvasCtrl.PanelVictoyLoseCtrl.PanelVictoryLose.PanelOff(1);
-    }
-
-    public virtual void ButtonClaimVD()
-    {
-        // Audio
-        canvasCtrl.AudioManager.PlaySFX(canvasCtrl.AudioManager.effectClick);
-
-        OffTrackingWave();
-        // Off panel victory
-        canvasCtrl.PanelVictoyLoseCtrl.PanelVictoryLose.PanelOff(2);
-    }
-
     public virtual void ButtonUnclockChickenUpgrade()
     {
         canvasCtrl.TWUpgradeChicken.TW_UpgradeOff();
-    }
-
-    protected virtual void OffTrackingWave()
-    {
-        // Audio
-        canvasCtrl.AudioManager.PlayMusic(canvasCtrl.AudioManager.musicMain);
-
-        isStarting = false;
-        timePressButton = 0;
-        
-        canvasCtrl.GameObjectSpawner.OffObjInHolder();
-        canvasCtrl.ShieldUpdate.LoadBeginGame();
     }
 }
