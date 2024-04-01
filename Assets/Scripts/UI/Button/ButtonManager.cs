@@ -44,6 +44,10 @@ public class ButtonManager : ErshenMonoBehaviour
         canvasCtrl.PointSpawnBulletController.BulletOn();
         // On tracking wave
         canvasCtrl.TrackingWaveController.TrackingWave.TrackingWaveOn();
+
+        canvasCtrl.SaveDataManager._learnTurorial = true;
+        Destroy(canvasCtrl.Tutorial.gameObject);
+        //canvasCtrl.Tutorial.gameObject.SetActive(false);
     }
 
     public void ButtonSpawnChicken()

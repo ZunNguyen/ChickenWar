@@ -33,4 +33,7 @@ public class DataGame
     public List<float> achievementList = new();
     public List<float> missionCurrentList = new();
     public List<int> indexMissionList = new();
+
+    // Save tutorial
+    public bool learnTutorial;
 }

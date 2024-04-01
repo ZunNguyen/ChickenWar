@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -64,6 +64,9 @@ public class CanvasCtrl : ErshenMonoBehaviour
     [SerializeField] protected PanelMissionCtrl panelMissionCtrl;
     public PanelMissionCtrl PanelMissionCtrl => panelMissionCtrl;
 
+    [SerializeField] protected Tutorial tutorial;
+    public Tutorial Tutorial => tutorial;
+
     [Header("Load script for shield")]
     [SerializeField] protected ShieldUpdate shieldUpdate;
     public ShieldUpdate ShieldUpdate => shieldUpdate;
@@ -96,6 +99,7 @@ public class CanvasCtrl : ErshenMonoBehaviour
         LoadPanelEarnGoldOfflineCtrl();
         LoadSaveDataManager();
         LoadPanelMissionCtrl();
+        LoadTutorial();
 
         // Load Script for Shield
         LoadShieldUpdate();
@@ -219,6 +223,12 @@ public class CanvasCtrl : ErshenMonoBehaviour
     {
         if (panelMissionCtrl != null) return;
         panelMissionCtrl = GameObject.Find("Panel - Mission").GetComponent<PanelMissionCtrl>();
+    }
+
+    protected virtual void LoadTutorial()
+    {
+        if (tutorial != null) return;
+        tutorial = GameObject.Find("Panel - Tutorial").GetComponent<Tutorial>();
     }
 
     protected virtual void LoadInstance()

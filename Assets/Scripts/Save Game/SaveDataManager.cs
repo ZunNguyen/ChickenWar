@@ -7,6 +7,7 @@ public class SaveDataManager : ErshenMonoBehaviour
 {
     [Header("Load Script")]
     [SerializeField] protected CanvasCtrl canvasController;
+    public bool _learnTurorial;
 
     protected override void LoadComponent()
     {
@@ -46,6 +47,7 @@ public class SaveDataManager : ErshenMonoBehaviour
             levelSpawnChicken = canvasController.ButtonSpawn.levelSpawnChicken,
             volumeMusic = canvasController.ButtonPauseCtrl.SettingVolume.volumeMusic,
             volumeSFX = canvasController.ButtonPauseCtrl.SettingVolume.volumeSFX,
+            learnTutorial = _learnTurorial,
             lastTimeExit = DateTime.Now.ToString(),
         };
         SaveAchievement(dataGame);
@@ -88,7 +90,8 @@ public class SaveDataManager : ErshenMonoBehaviour
         {
             canvasController.ButtonPauseCtrl.SettingVolume.volumeMusic = 10;
             canvasController.ButtonPauseCtrl.SettingVolume.volumeSFX = 10;
-            canvasController.GoldPlayer.gold = 0;
+            canvasController.GoldPlayer.AddGoldPlayer(2);
+            //canvasController.Tutorial.gameObject.SetActive(true);
             return;
         }
         
@@ -104,6 +107,7 @@ public class SaveDataManager : ErshenMonoBehaviour
         canvasController.TWUpgradeChicken.indexLVHighest = dataGame.highestLevelChicken;
         canvasController.ButtonPauseCtrl.SettingVolume.volumeMusic = dataGame.volumeMusic;
         canvasController.ButtonPauseCtrl.SettingVolume.volumeSFX = dataGame.volumeSFX;
+        _learnTurorial = dataGame.learnTutorial;
         ProcessTimeGame(dataGame.lastTimeExit);
 
         for (int i  = 0; i < dataGame.indexSlot.Count; i++)
@@ -113,6 +117,9 @@ public class SaveDataManager : ErshenMonoBehaviour
         LoadAchievement(dataGame);
         LoadMissionCurrent(dataGame);
         LoadIndexMission(dataGame);
+
+        if (dataGame.learnTutorial) Destroy(canvasController.Tutorial.gameObject);
+        //canvasController.Tutorial.gameObject.SetActive(true);
     }
 
     protected virtual void ProcessTimeGame(string timeLastGame)
