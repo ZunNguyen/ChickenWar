@@ -4,6 +4,22 @@ using UnityEngine;
 
 public class GameObjectSpawner : Spawner
 {
+    [Header("---Instance---")]
+    protected static GameObjectSpawner instance;
+    public static GameObjectSpawner Instance => instance;
+
+    protected override void LoadComponent()
+    {
+        base.LoadComponent();
+        LoadInstance();
+    }
+
+    protected virtual void LoadInstance()
+    {
+        if (instance != null) return;
+        instance = this;
+    }
+
     public virtual void OffMovementObjInHolder()
     {
         foreach (Transform obj in holder)

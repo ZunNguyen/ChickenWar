@@ -15,7 +15,9 @@ public class Tutorial : ErshenMonoBehaviour
     [SerializeField] protected bool isIconHand;
     [SerializeField] protected float delayTime = 0.1f;
     [SerializeField] protected int pressPhase;
-     
+    [SerializeField] protected bool tutorial = false;
+    [SerializeField] protected bool endGame = false;
+
     protected override void LoadComponent()
     {
         base.LoadComponent();
@@ -47,11 +49,6 @@ public class Tutorial : ErshenMonoBehaviour
     {
         if (image != null) return;
         image = transform.GetComponent<Image>();
-    }
-
-    private void Start()
-    {
-        TutorialGame();
     }
 
     protected virtual void TW_IconHand(Vector3 rot, Vector2 posOrigin, Vector2 posTarget)
@@ -94,57 +91,87 @@ public class Tutorial : ErshenMonoBehaviour
         TW_IconHand(rot, posOrigin, posTarget);
     }
 
-    protected virtual void TutorialGame()
+    public virtual void TutorialGame()
     {
         StartCoroutine(ShowText("Hello, Welcome to my game!", true, false, Vector3.zero, Vector2.zero, Vector2.zero));
+        tutorial = true;
+        pressPhase = 0;
     }
 
     public virtual void PressNextButton()
     {
         buttonNext.SetActive(false);
         pressPhase += 1;
-        if (pressPhase == 1) StartCoroutine(ShowText("This game made by Ershen, hope you have a relax time with game <3", true, false,
+        if (pressPhase == 1 && tutorial) StartCoroutine(ShowText("This game made by Ershen, hope you have a relax time with game <3", true, false,
             Vector3.zero, Vector2.zero, Vector2.zero));
-        if (pressPhase == 2) StartCoroutine(ShowText("Now, I will guid for you how to play this game!", true, false,
+        if (pressPhase == 2 && tutorial) StartCoroutine(ShowText("Now, I will guide for you how to play this game!", true, false,
             Vector3.zero, Vector2.zero, Vector2.zero));
-        if (pressPhase == 3) StartCoroutine(ShowText("The chicken will earn gold for you, and then you can use this gold" +
+        if (pressPhase == 3 && tutorial) StartCoroutine(ShowText("The chicken will earn gold for you, and then you can use this gold" +
             " to spawn the chicken", true, false, Vector3.zero, Vector2.zero, Vector2.zero));
-        if (pressPhase == 4)
+        if (pressPhase == 4 && tutorial)
         {
             isIconHand = true;
             StartCoroutine(ShowText("Like this", false, true, new Vector3(0, 0, -250), new Vector2(-125, -170), new Vector2(-270, -350)));
         }
-        if (pressPhase == 5)
+        if (pressPhase == 5 && tutorial)
         {
             isIconHand = false; 
             StartCoroutine(ShowText("That's right!", true, false, new Vector3(0, 0, -250), new Vector2(-125, -170), new Vector2(-270, -350)));
         }
-        if (pressPhase == 6)
+        if (pressPhase == 6 && tutorial)
         {
             isIconHand = true;
             StartCoroutine(ShowText("Try again!", false, true, new Vector3(0, 0, -250), new Vector2(-125, -170), new Vector2(-270, -350)));
         }
-        if (pressPhase == 7)
+        if (pressPhase == 7 && tutorial)
         {
             isIconHand = false;
             StartCoroutine(ShowText("You also can merge two chicken same level to take the chicken with level higher", true, false,
                 new Vector3(0, 0, -250), new Vector2(-125, -170), new Vector2(-270, -350)));
         }
-        if (pressPhase == 8)
+        if (pressPhase == 8 && tutorial)
         {
             isIconHand = true;
             StartCoroutine(ShowText("", false, true, new Vector3(0, 0, -250), new Vector2(-815, 355), new Vector2(-665, 355)));
         }
-        if (pressPhase == 9)
+        if (pressPhase == 9 && tutorial)
         {   
             isIconHand = false;
-            StartCoroutine(ShowText("Great", true, false, new Vector3(0, 0, -250), new Vector2(-815, 355), new Vector2(-665, 355)));
+            StartCoroutine(ShowText("Great!", true, false, new Vector3(0, 0, -250), new Vector2(-815, 355), new Vector2(-665, 355)));
         }
-        if (pressPhase == 10)
+        if (pressPhase == 10 && tutorial)
         {
             isIconHand = true;
-            StartCoroutine(ShowText("Ok, let's fight with the dog army\nGood Luck!!!", false, true, new Vector3(0, 0, -530), new Vector2(580, -180), 
+            StartCoroutine(ShowText("And now, let's fight with the dog army\nGood Luck!!!", false, true, new Vector3(0, 0, -530), new Vector2(580, -180), 
                 new Vector2(725, -360)));
         }
+
+        // End Game
+        if(pressPhase == 1 && endGame)
+        {
+            StartCoroutine(ShowText("Your army has won this battle", true, false, Vector3.zero, Vector2.zero, Vector2.zero));
+        }
+        if (pressPhase == 2 && endGame)
+        {
+            StartCoroutine(ShowText("Thank you for experiencing my game. Hope you had relax time", true, false, Vector3.zero, Vector2.zero, Vector2.zero));
+        }
+        if (pressPhase == 3 && endGame)
+        {
+            StartCoroutine(ShowText("Thank you!!!", true, false, Vector3.zero, Vector2.zero, Vector2.zero));
+        }
+        if (pressPhase == 4 && endGame)
+        {
+            pressPhase = 0;
+            endGame = false;
+            gameObject.SetActive(false);
+        }
+    }
+
+    public virtual void EndGame()
+    {
+        gameObject.SetActive(true);
+        StartCoroutine(ShowText("Well, You are truly an excellent player", true, false, Vector3.zero, Vector2.zero, Vector2.zero));
+        endGame = true;
+        pressPhase = 0;
     }
 }

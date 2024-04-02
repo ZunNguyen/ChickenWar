@@ -5,7 +5,7 @@ using UnityEngine;
 public class PointSpawnBullet : LoadIndexObj
 {
     [Header("Connect Script")]
-    [SerializeField] protected PointSpawnBulletController pointSpawnBulletController;
+    [SerializeField] protected PointSpawnBulletCtrl pointSpawnBulletCtrl;
 
     [Header("Value")]
     [SerializeField] protected float timeCurrent;
@@ -18,14 +18,14 @@ public class PointSpawnBullet : LoadIndexObj
     protected override void LoadComponent()
     {
         base.LoadComponent();
-        this.LoadPointSpawnBulletController();
+        this.LoadPointSpawnBulletCtrl();
         TurnOffScript();
     }
 
-    protected virtual void LoadPointSpawnBulletController()
+    protected virtual void LoadPointSpawnBulletCtrl()
     {
-        if (pointSpawnBulletController != null) return;
-        pointSpawnBulletController = transform.GetComponentInParent<PointSpawnBulletController>();
+        if (pointSpawnBulletCtrl != null) return;
+        pointSpawnBulletCtrl = transform.GetComponentInParent<PointSpawnBulletCtrl>();
     }
 
     protected virtual void TurnOffScript()
@@ -66,7 +66,7 @@ public class PointSpawnBullet : LoadIndexObj
         // Set information bullet
         string nameBullet = CanvasCtrl.Instance.CheckPositionChicken.GetNameBullet(index - 1);
         int damageBullet = CanvasCtrl.Instance.CheckPositionChicken.GetDamageBullet(index - 1);
-        GameObject newBullet = pointSpawnBulletController.GameObjectSpawner.Spawn(nameBullet, this.transform.position, this.transform.rotation).gameObject;
+        GameObject newBullet = pointSpawnBulletCtrl.GameObjectSpawner.Spawn(nameBullet, this.transform.position, this.transform.rotation);
         BulletCtrl bulletCtrl = newBullet.GetComponent<BulletCtrl>();
         bulletCtrl.BulletMovement.objTarget = GetTransNearestObj();
         bulletCtrl.BulletDamSender.damge = damageBullet;

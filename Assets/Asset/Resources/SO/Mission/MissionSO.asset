@@ -16,103 +16,103 @@ MonoBehaviour:
   mission_1:
   - missionIndex: 1
     mission: 5
-    prize: 1000
+    prize: 20
   - missionIndex: 2
     mission: 10
-    prize: 5000
+    prize: 800
   - missionIndex: 3
     mission: 15
-    prize: 10000
+    prize: 26000
   - missionIndex: 4
     mission: 20
-    prize: 50000
+    prize: 180000
   - missionIndex: 5
     mission: 25
-    prize: 100000
+    prize: 2000000
   - missionIndex: 6
     mission: 30
-    prize: 500000
+    prize: 20000000
   - missionIndex: 7
     mission: 35
-    prize: 1000000
+    prize: 300000000
   - missionIndex: 8
     mission: 40
-    prize: 5000000
+    prize: 800000000
   missionMax_2: 8
   mission_2:
   - missionIndex: 1
     mission: 1000
-    prize: 2000
+    prize: 100
   - missionIndex: 2
-    mission: 2000
-    prize: 20000
+    mission: 10000
+    prize: 1000
   - missionIndex: 3
-    mission: 5000
-    prize: 200000
+    mission: 100000
+    prize: 10000
   - missionIndex: 4
     mission: 1000000
-    prize: 2000000
+    prize: 100000
   - missionIndex: 5
     mission: 10000000
-    prize: 20000000
+    prize: 1000000
   - missionIndex: 6
     mission: 100000000
-    prize: 200000000
+    prize: 10000000
   - missionIndex: 7
     mission: 1e+9
-    prize: 2e+9
+    prize: 100000000
   - missionIndex: 8
-    mission: 1e+9
-    prize: 2e+9
+    mission: 1e+10
+    prize: 1e+9
   missionMax_3: 8
   mission_3:
   - missionIndex: 1
-    mission: 3
-    prize: 1000
-  - missionIndex: 2
     mission: 5
-    prize: 5000
+    prize: 50
+  - missionIndex: 2
+    mission: 10
+    prize: 500
   - missionIndex: 3
     mission: 15
-    prize: 10000
+    prize: 20000
   - missionIndex: 4
     mission: 20
-    prize: 50000
+    prize: 150000
   - missionIndex: 5
     mission: 25
-    prize: 100000
+    prize: 1000000
   - missionIndex: 6
     mission: 30
-    prize: 500000
+    prize: 10000000
   - missionIndex: 7
     mission: 35
-    prize: 1000000
+    prize: 150000000
   - missionIndex: 8
     mission: 40
-    prize: 5000000
+    prize: 400000000
   missionMax_4: 8
   mission_4:
   - missionIndex: 1
-    mission: 10
-    prize: 1000
+    mission: 30
+    prize: 50
   - missionIndex: 2
-    mission: 20
-    prize: 5000
+    mission: 100
+    prize: 500
   - missionIndex: 3
-    mission: 50
-    prize: 10000
+    mission: 500
+    prize: 5000
   - missionIndex: 4
-    mission: 5000
+    mission: 1000
     prize: 50000
   - missionIndex: 5
-    mission: 10000
-    prize: 100000
-  - missionIndex: 6
-    mission: 20000
+    mission: 5000
     prize: 500000
+  - missionIndex: 6
+    mission: 10000
+    prize: 5000000
   - missionIndex: 7
     mission: 50000
-    prize: 1000000
+    prize: 50000000
   - missionIndex: 8
     mission: 100000
-    prize: 5000000
+    prize: 500000000

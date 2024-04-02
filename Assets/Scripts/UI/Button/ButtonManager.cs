@@ -27,11 +27,12 @@ public class ButtonManager : ErshenMonoBehaviour
     {
         if (canvasCtrl.PointSpawnDogController.wave == 40)
         {
-            Debug.Log("The Wave is max");
+            canvasCtrl.Tutorial.gameObject.SetActive(true);
+            canvasCtrl.Tutorial.EndGame();
             return;
         }
         timePressButton += 1;
-        if (timePressButton % 2 == 0 && timePressButton > 0) canvasCtrl.ChangeButtonStart.ChangeImageButtonXTime(5,1);
+        if (timePressButton % 2 == 0 && timePressButton > 0) canvasCtrl.ChangeButtonStart.ChangeImageButtonXTime(2,1);
         if (timePressButton % 2 == 1 && timePressButton > 0) canvasCtrl.ChangeButtonStart.ChangeImageButtonXTime(1,2);
         if (isStarting) return;
 
@@ -48,8 +49,7 @@ public class ButtonManager : ErshenMonoBehaviour
 
         canvasCtrl.SaveDataManager._learnTurorial = true;
         if (canvasCtrl.Tutorial == null) return;
-        Destroy(canvasCtrl.Tutorial.gameObject);
-        //canvasCtrl.Tutorial.gameObject.SetActive(false);
+        canvasCtrl.Tutorial.gameObject.SetActive(false);
     }
 
     public void ButtonSpawnChicken()

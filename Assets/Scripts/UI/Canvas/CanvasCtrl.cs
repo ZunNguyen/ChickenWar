@@ -10,8 +10,8 @@ public class CanvasCtrl : ErshenMonoBehaviour
     
     [Header("Load Script Outside")]
 
-    [SerializeField] protected PointSpawnBulletController pointSpawnBulletController;
-    public PointSpawnBulletController PointSpawnBulletController => pointSpawnBulletController;
+    [SerializeField] protected PointSpawnBulletCtrl pointSpawnBulletController;
+    public PointSpawnBulletCtrl PointSpawnBulletController => pointSpawnBulletController;
 
     [SerializeField] protected PointSpawnDogController pointSpawnDogController;
     public PointSpawnDogController PointSpawnDogController => pointSpawnDogController;
@@ -67,8 +67,11 @@ public class CanvasCtrl : ErshenMonoBehaviour
     [SerializeField] protected Tutorial tutorial;
     public Tutorial Tutorial => tutorial;
 
-    [SerializeField] protected CanvasSpawner canvasSpawner;
-    public CanvasSpawner CanvasSpawner => canvasSpawner;
+    [SerializeField] protected CoinCollectionSpawner coinCollectionSpawner;
+    public CoinCollectionSpawner CoinCollectionSpawner => coinCollectionSpawner;
+
+    [SerializeField] protected TWTextSpawner twTextSpawner;
+    public TWTextSpawner TWTextSpawner => twTextSpawner;
 
     [Header("Load script for shield")]
     [SerializeField] protected ShieldUpdate shieldUpdate;
@@ -103,7 +106,8 @@ public class CanvasCtrl : ErshenMonoBehaviour
         LoadSaveDataManager();
         LoadPanelMissionCtrl();
         LoadTutorial();
-        LoadCanvasSpawner();
+        LoadCoinCollectionSpawner();
+        LoadTWTextSpawner();
 
         // Load Script for Shield
         LoadShieldUpdate();
@@ -142,7 +146,7 @@ public class CanvasCtrl : ErshenMonoBehaviour
     protected virtual void LoadPointSpawnBulletController()
     {
         if (pointSpawnBulletController != null) return;
-        pointSpawnBulletController = GameObject.Find("Point Spawn Bullet").GetComponentInChildren<PointSpawnBulletController>();
+        pointSpawnBulletController = GameObject.Find("Point Spawn Bullet").GetComponentInChildren<PointSpawnBulletCtrl>();
     }
 
     protected virtual void LoadGoldPlayer()
@@ -235,10 +239,16 @@ public class CanvasCtrl : ErshenMonoBehaviour
         tutorial = GameObject.Find("Panel - Tutorial").GetComponent<Tutorial>();
     }
 
-    protected virtual void LoadCanvasSpawner()
+    protected virtual void LoadCoinCollectionSpawner()
     {
-        if (canvasSpawner != null) return;
-        canvasSpawner = GameObject.Find("Canvas Spawner").GetComponent<CanvasSpawner>();
+        if (coinCollectionSpawner != null) return;
+        coinCollectionSpawner = transform.Find("Canvas Spawner").Find("Coin Collection Spawner").GetComponent<CoinCollectionSpawner>();
+    }
+
+    protected virtual void LoadTWTextSpawner()
+    {
+        if (twTextSpawner != null) return;
+        twTextSpawner = transform.Find("Canvas Spawner").Find("Text Spawner").GetComponent<TWTextSpawner>();
     }
 
     protected virtual void LoadInstance()

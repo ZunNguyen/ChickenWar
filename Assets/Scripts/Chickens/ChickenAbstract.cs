@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ChickenAbstract : ErshenMonoBehaviour
+public abstract class ChickenAbstract : CanvasAbstract
 {
     [Header("Connect Controller")]
     [SerializeField] protected ChickenController chickenController;

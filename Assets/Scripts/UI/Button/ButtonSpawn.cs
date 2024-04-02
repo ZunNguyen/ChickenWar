@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ButtonSpawn : CanvasAbstract
 {
@@ -65,7 +62,7 @@ public class ButtonSpawn : CanvasAbstract
         if (levelSpawnChicken > levelChicken) return;
         levelSpawnChicken = levelChicken;
         // Get name chicken
-        nameNewChicken = ChickenSpawner.Instance.GetNameChicken(levelChicken);
+        nameNewChicken = canvasController.ChickenSpawner.GetNameChicken(levelChicken);
         // Change chicken prefab in button spawn
         ChangeChickenObj(nameNewChicken);
         // Update gold chicken spawn
@@ -76,8 +73,8 @@ public class ButtonSpawn : CanvasAbstract
     {
         DragItem dragItem = this.transform.GetComponentInChildren<DragItem>();
         Transform obj = dragItem.transform;
-        ChickenSpawner.Instance.Despawn(obj);
-        obj = ChickenSpawner.Instance.Spawn(newChicken, transform.position, transform.rotation).transform;
+        canvasController.ChickenSpawner.Despawn(obj);
+        obj = canvasController.ChickenSpawner.Spawn(newChicken, transform.position, transform.rotation).transform;
         // Set position on rect tranform
         SetPostion(obj);
         obj.SetParent(this.transform);
@@ -117,13 +114,8 @@ public class ButtonSpawn : CanvasAbstract
         {
             // Audio
             canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectSpawnError);
-
             // Spawn Text Not Enough Gold
-            GameObject newPrefab = CanvasSpawner.Instance.Spawn("TW Text", transform.position, transform.rotation);
-            TWText twText = newPrefab.GetComponent<TWText>();
-            twText.TWTextOn("Not Enough Gold");
-            newPrefab.SetActive(true);
-
+            canvasController.TWTextSpawner.SpawnText(transform.position, transform.rotation, "Not Enough Gold");
             return false;
         }
         
@@ -131,7 +123,10 @@ public class ButtonSpawn : CanvasAbstract
         int checkSlot = canvasController.SpawnChicken.CheckSlotEmtyInList();
         if (checkSlot == 99)
         {
-            Debug.Log("Full slot");
+            // Audio
+            canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectSpawnError);
+            // Spawn Text Full Slot
+            canvasController.TWTextSpawner.SpawnText(transform.position, transform.rotation, "Full Slot");
             return false;
         }        
         return true;

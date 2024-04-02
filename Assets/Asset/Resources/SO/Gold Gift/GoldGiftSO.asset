@@ -18,88 +18,78 @@ MonoBehaviour:
   - wave: 2
     gold: 20
   - wave: 3
-    gold: 50
+    gold: 30
   - wave: 4
-    gold: 100
+    gold: 50
   - wave: 5
-    gold: 200
+    gold: 75
   - wave: 6
-    gold: 300
+    gold: 160
   - wave: 7
-    gold: 500
+    gold: 320
   - wave: 8
-    gold: 700
+    gold: 480
   - wave: 9
-    gold: 1000
+    gold: 840
   - wave: 10
-    gold: 1500
+    gold: 1600
   - wave: 11
-    gold: 11000
+    gold: 3600
   - wave: 12
-    gold: 12000
+    gold: 8000
   - wave: 13
-    gold: 13000
+    gold: 17600
   - wave: 14
-    gold: 14000
-  - wave: 15
-    gold: 15000
-  - wave: 16
-    gold: 16000
-  - wave: 17
-    gold: 17000
-  - wave: 18
-    gold: 18000
-  - wave: 19
-    gold: 19000
-  - wave: 20
-    gold: 20000
-  - wave: 21
-    gold: 21000
-  - wave: 22
-    gold: 22000
-  - wave: 23
-    gold: 23000
-  - wave: 24
-    gold: 24000
-  - wave: 25
-    gold: 25000
-  - wave: 26
-    gold: 26000
-  - wave: 27
-    gold: 27000
-  - wave: 28
-    gold: 28000
-  - wave: 29
-    gold: 29000
-  - wave: 30
-    gold: 30000
-  - wave: 31
-    gold: 31000
-  - wave: 32
-    gold: 32000
-  - wave: 33
-    gold: 33000
-  - wave: 34
-    gold: 34000
-  - wave: 35
-    gold: 35000
-  - wave: 36
     gold: 36000
+  - wave: 15
+    gold: 52000
+  - wave: 16
+    gold: 70000
+  - wave: 17
+    gold: 90000
+  - wave: 18
+    gold: 128000
+  - wave: 19
+    gold: 238000
+  - wave: 20
+    gold: 360000
+  - wave: 21
+    gold: 570000
+  - wave: 22
+    gold: 800000
+  - wave: 23
+    gold: 1120000
+  - wave: 24
+    gold: 1600000
+  - wave: 25
+    gold: 2400000
+  - wave: 26
+    gold: 4000000
+  - wave: 27
+    gold: 6000000
+  - wave: 28
+    gold: 8000000
+  - wave: 29
+    gold: 16000000
+  - wave: 30
+    gold: 40000000
+  - wave: 31
+    gold: 60000000
+  - wave: 32
+    gold: 80000000
+  - wave: 33
+    gold: 200000000
+  - wave: 34
+    gold: 400000000
+  - wave: 35
+    gold: 600000000
+  - wave: 36
+    gold: 800000000
   - wave: 37
-    gold: 37000
+    gold: 1e+9
   - wave: 38
-    gold: 38000
+    gold: 1.2e+9
   - wave: 39
-    gold: 39000
+    gold: 1.4e+9
   - wave: 40
-    gold: 40000
-  - wave: 41
-    gold: 41000
-  - wave: 42
-    gold: 42000
-  - wave: 43
-    gold: 43000
-  - wave: 44
-    gold: 44000
-  - wave: 45
-    gold: 45000
+    gold: 1.6e+9

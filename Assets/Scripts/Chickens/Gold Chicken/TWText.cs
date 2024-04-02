@@ -36,7 +36,7 @@ public class TWText : CanvasAbstract
         text.text = inputText;
         rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + posTarget, durTimeMove).OnComplete(()=>
         {
-            CanvasSpawner.Instance.Despawn(gameObject);
+            canvasController.TWTextSpawner.Despawn(gameObject.transform);
         });
     }
 }

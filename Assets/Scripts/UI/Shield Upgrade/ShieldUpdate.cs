@@ -10,7 +10,7 @@ public class ShieldUpdate : CanvasAbstract
 
     [Header("---Value---")]
     [SerializeField] protected float goldPlayer;
-    [SerializeField] protected float goldUpgrade;
+    [SerializeField] protected float goldUpgrade = 300;
     public float hpMax = 100;
     public float hpCurrent;
     public int levelCurrent;
@@ -53,9 +53,7 @@ public class ShieldUpdate : CanvasAbstract
         if (levelCurrent >= shieldUpdateController.ShieldSO.listLevelShields.Count - 1)
         {
             // Text for shield Max
-            GameObject newPrefab = canvasController.CanvasSpawner.Spawn("TW Text", transform.position, transform.rotation);
-            TWText twText = newPrefab.GetComponent<TWText>();
-            twText.TWTextOn("Level is highest");
+            canvasController.TWTextSpawner.SpawnText(transform.position, transform.rotation, "Level is highest");
             return false;
         }
 
@@ -64,10 +62,7 @@ public class ShieldUpdate : CanvasAbstract
         {
             // Audio
             canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectSpawnError);
-            GameObject newPrefab = CanvasSpawner.Instance.Spawn("TW Text", transform.position, transform.rotation);
-            TWText twText = newPrefab.GetComponent<TWText>();
-            twText.TWTextOn("Not Enough Gold");
-            newPrefab.SetActive(true);
+            canvasController.TWTextSpawner.SpawnText(transform.position, transform.rotation, "Not Enough Gold");
             return false;
         }
         return true;

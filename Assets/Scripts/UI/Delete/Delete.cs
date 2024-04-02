@@ -12,7 +12,7 @@ public class Delete : CanvasAbstract, IDropHandler, IPointerEnterHandler, IPoint
         GameObject dropObj = eventData.pointerDrag;
         DragItem dragItem = dropObj.GetComponent<DragItem>();
         if (dragItem == null) return;
-        Spawner.Instance.Despawn(dragItem.transform);
+        canvasController.ChickenSpawner.Despawn(dragItem.transform);
 
         // Audio
         canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectDelete);

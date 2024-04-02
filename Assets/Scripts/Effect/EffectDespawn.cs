@@ -11,6 +11,6 @@ public class EffectDespawn : Despawn
 
     public override void DespawnObj()
     {
-        EffectSpawner.Instance.Despawn(transform);
+        GameObjectSpawner.Instance.Despawn(transform);
     }
 }

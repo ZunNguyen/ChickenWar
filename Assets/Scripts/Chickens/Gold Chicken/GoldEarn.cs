@@ -23,7 +23,7 @@ public class GoldEarn : ChickenAbstract
         timeCurrent = 0;
         GoldPlayer.Instance.AddGoldPlayer(gold);
         //coinCollect.gameObject.SetActive(true);
-        GameObject newTrans = CanvasSpawner.Instance.Spawn("Coin Collection", this.transform.position, this.transform.rotation);
+        GameObject newTrans = canvasController.CoinCollectionSpawner.Spawn("Coin Collection", this.transform.position, this.transform.rotation);
         CoinCollect coinCollect = newTrans.GetComponent<CoinCollect>();
         coinCollect.GetValueText(gold);
         coinCollect.TWCoinCollectOn();

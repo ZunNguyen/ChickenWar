@@ -90,8 +90,9 @@ public class SaveDataManager : ErshenMonoBehaviour
         {
             canvasController.ButtonPauseCtrl.SettingVolume.volumeMusic = 10;
             canvasController.ButtonPauseCtrl.SettingVolume.volumeSFX = 10;
-            canvasController.GoldPlayer.AddGoldPlayer(0);
-            //canvasController.Tutorial.gameObject.SetActive(true);
+            canvasController.GoldPlayer.LoadBegin(0);
+            canvasController.Tutorial.gameObject.SetActive(true);
+            canvasController.Tutorial.TutorialGame();
             return;
         }
         
@@ -118,8 +119,11 @@ public class SaveDataManager : ErshenMonoBehaviour
         LoadMissionCurrent(dataGame);
         LoadIndexMission(dataGame);
 
-        if (dataGame.learnTutorial) Destroy(canvasController.Tutorial.gameObject);
-        //canvasController.Tutorial.gameObject.SetActive(true);
+        if (!dataGame.learnTutorial)
+        {
+            canvasController.Tutorial.gameObject.SetActive(true);
+            canvasController.Tutorial.TutorialGame();
+        }
     }
 
     protected virtual void ProcessTimeGame(string timeLastGame)
@@ -130,10 +134,10 @@ public class SaveDataManager : ErshenMonoBehaviour
         int offlineSecond = (int)(offlineDuration.TotalSeconds);
         float goldCount = offlineSecond * 0.1f;
         int gold = (int)goldCount;
-        //if (gold < 10) return;
-        //canvasController.PanelEarnGoldOfflineCtrl.PanelEarnGoldOffline.PanelEarnGoldOfflineOn();
-        //canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.InputGoldValue(gold);
-        //canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.goldEarn = gold;
+        if (gold < 10) return;
+        canvasController.PanelEarnGoldOfflineCtrl.PanelEarnGoldOffline.PanelEarnGoldOfflineOn();
+        canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.InputGoldValue(gold);
+        canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.goldEarn = gold;
     }
 
      protected virtual void LoadAchievement(DataGame dataGame)

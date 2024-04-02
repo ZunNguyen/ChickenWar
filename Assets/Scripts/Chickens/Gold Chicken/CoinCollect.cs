@@ -39,7 +39,7 @@ public class CoinCollect : ProcessGold
         CanvasCtrl.Instance.AudioManager.PlaySFX(CanvasCtrl.Instance.AudioManager.effectEarnGold);
         rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + posTarget, durTimeMove).OnComplete(() =>
         {
-            CanvasSpawner.Instance.Despawn(gameObject);
+            CanvasCtrl.Instance.CoinCollectionSpawner.Despawn(gameObject.transform);
         });
     }
 

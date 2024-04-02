@@ -56,7 +56,7 @@ public class ReadDataMission : ErshenMonoBehaviour
     protected virtual void CreatMission_2(string[] data, int index)
     {
         string missionIndex = data[length * (index + 2) + 3];
-        float mission = int.Parse(data[length * (index + 2) + 4]);
+        float mission = Int64.Parse(data[length * (index + 2) + 4]);
         float prize = int.Parse(data[length * (index + 2) + 5]);
         MissionSO.Instance.CreatNewMission(missionIndex, mission, prize, MissionSO.Instance.mission_2);
     }

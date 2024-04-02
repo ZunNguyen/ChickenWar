@@ -68,7 +68,7 @@ public class TWUpgradeChicken : CanvasAbstract
 
     protected virtual Transform SpawnChicken(Transform chicken, int rectX)
     {
-        Transform newPrefab = canvasController.ChickenSpawner.Spawn(chicken, transform.position, transform.rotation);
+        Transform newPrefab = canvasController.ChickenSpawner.Spawn(chicken, transform.position, transform.rotation).transform;
         newPrefab.SetParent(transform);
         newPrefab.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.5f);
         newPrefab.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
