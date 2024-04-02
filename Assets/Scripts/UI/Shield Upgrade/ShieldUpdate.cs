@@ -53,7 +53,9 @@ public class ShieldUpdate : CanvasAbstract
         if (levelCurrent >= shieldUpdateController.ShieldSO.listLevelShields.Count - 1)
         {
             // Text for shield Max
-            Debug.Log("Level is highest");
+            GameObject newPrefab = canvasController.CanvasSpawner.Spawn("TW Text", transform.position, transform.rotation);
+            TWText twText = newPrefab.GetComponent<TWText>();
+            twText.TWTextOn("Level is highest");
             return false;
         }
 
@@ -62,9 +64,9 @@ public class ShieldUpdate : CanvasAbstract
         {
             // Audio
             canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectSpawnError);
-            GameObject newPrefab = CoinCollectSpawner.Instance.Spawn("Not Enough Gold", transform.position, transform.rotation);
-            NotEnoughGold notEnoughGold = newPrefab.GetComponent<NotEnoughGold>();
-            notEnoughGold.TWTextOn();
+            GameObject newPrefab = CanvasSpawner.Instance.Spawn("TW Text", transform.position, transform.rotation);
+            TWText twText = newPrefab.GetComponent<TWText>();
+            twText.TWTextOn("Not Enough Gold");
             newPrefab.SetActive(true);
             return false;
         }

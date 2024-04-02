@@ -490,10 +490,10 @@ MonoBehaviour:
         timeDelay: 5
         indexLine: "26\r"
   - wave: 4
-    sum: 0
+    sum: 45
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 24
       levelDogs:
       - levelDog: 0
         nameDog: Dog03
@@ -532,7 +532,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 3
         hpDog: 60
-        damageDog: 100
+        damageDog: 20
         timeDelay: 6
         indexLine: "246\r"
       - levelDog: 5
@@ -540,18 +540,18 @@ MonoBehaviour:
         scaleValue: 1
         nums: 2
         hpDog: 60
-        damageDog: 100
+        damageDog: 20
         timeDelay: 5
         indexLine: "135\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 21
       levelDogs:
       - levelDog: 0
         nameDog: Dog05
         scaleValue: 1
         nums: 1
         hpDog: 60
-        damageDog: 100
+        damageDog: 20
         timeDelay: 1
         indexLine: "2\r"
       - levelDog: 1
@@ -559,7 +559,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 60
-        damageDog: 100
+        damageDog: 20
         timeDelay: 3
         indexLine: "4\r"
       - levelDog: 2
@@ -567,7 +567,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 60
-        damageDog: 100
+        damageDog: 20
         timeDelay: 3
         indexLine: "6\r"
       - levelDog: 3
@@ -619,10 +619,10 @@ MonoBehaviour:
         timeDelay: 3
         indexLine: "135\r"
   - wave: 5
-    sum: 0
+    sum: 35
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 14
       levelDogs:
       - levelDog: 0
         nameDog: Dog04
@@ -645,7 +645,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 3
         hpDog: 60
-        damageDog: 100
+        damageDog: 30
         timeDelay: 4
         indexLine: "34\r"
       - levelDog: 3
@@ -653,7 +653,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 60
-        damageDog: 100
+        damageDog: 30
         timeDelay: 0
         indexLine: "16\r"
       - levelDog: 4
@@ -665,7 +665,7 @@ MonoBehaviour:
         timeDelay: 6
         indexLine: "34\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 21
       levelDogs:
       - levelDog: 0
         nameDog: Dog02
@@ -688,7 +688,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 2
         hpDog: 60
-        damageDog: 100
+        damageDog: 30
         timeDelay: 5
         indexLine: "24\r"
       - levelDog: 3
@@ -712,7 +712,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 60
-        damageDog: 100
+        damageDog: 30
         timeDelay: 1
         indexLine: "34\r"
       - levelDog: 6
@@ -720,7 +720,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 60
-        damageDog: 100
+        damageDog: 30
         timeDelay: 3
         indexLine: "25\r"
       - levelDog: 7
@@ -728,14 +728,14 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 60
-        damageDog: 100
+        damageDog: 30
         timeDelay: 3
         indexLine: "16\r"
   - wave: 6
-    sum: 0
+    sum: 33
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 14
       levelDogs:
       - levelDog: 0
         nameDog: Dog01
@@ -778,7 +778,7 @@ MonoBehaviour:
         timeDelay: 0
         indexLine: "34\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 19
       levelDogs:
       - levelDog: 0
         nameDog: Dog02
@@ -845,10 +845,10 @@ MonoBehaviour:
         timeDelay: 3
         indexLine: "16\r"
   - wave: 7
-    sum: 0
+    sum: 29
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 14
       levelDogs:
       - levelDog: 0
         nameDog: Dog01
@@ -891,7 +891,7 @@ MonoBehaviour:
         timeDelay: 6
         indexLine: "16\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 15
       levelDogs:
       - levelDog: 0
         nameDog: Dog05
@@ -934,10 +934,10 @@ MonoBehaviour:
         timeDelay: 0
         indexLine: "16\r"
   - wave: 8
-    sum: 0
+    sum: 30
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 14
       levelDogs:
       - levelDog: 0
         nameDog: Dog03
@@ -980,7 +980,7 @@ MonoBehaviour:
         timeDelay: 4
         indexLine: "135\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 16
       levelDogs:
       - levelDog: 0
         nameDog: Dog05
@@ -1039,10 +1039,10 @@ MonoBehaviour:
         timeDelay: 3
         indexLine: "34\r"
   - wave: 9
-    sum: 0
+    sum: 30
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 12
       levelDogs:
       - levelDog: 0
         nameDog: Dog05
@@ -1093,7 +1093,7 @@ MonoBehaviour:
         timeDelay: 0
         indexLine: "5\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 18
       levelDogs:
       - levelDog: 0
         nameDog: Dog03
@@ -1152,10 +1152,10 @@ MonoBehaviour:
         timeDelay: 2
         indexLine: "246\r"
   - wave: 10
-    sum: 0
+    sum: 29
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 13
       levelDogs:
       - levelDog: 0
         nameDog: Dog04
@@ -1198,7 +1198,7 @@ MonoBehaviour:
         timeDelay: 3
         indexLine: "34\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 16
       levelDogs:
       - levelDog: 0
         nameDog: Dog03
@@ -1257,10 +1257,10 @@ MonoBehaviour:
         timeDelay: 3
         indexLine: "35\r"
   - wave: 11
-    sum: 0
+    sum: 45
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 27
       levelDogs:
       - levelDog: 0
         nameDog: Dog07
@@ -1327,7 +1327,7 @@ MonoBehaviour:
         timeDelay: 3
         indexLine: "16\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 18
       levelDogs:
       - levelDog: 0
         nameDog: Dog01
@@ -1378,10 +1378,10 @@ MonoBehaviour:
         timeDelay: 5
         indexLine: "456\r"
   - wave: 12
-    sum: 0
+    sum: 30
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 12
       levelDogs:
       - levelDog: 0
         nameDog: Dog06
@@ -1448,7 +1448,7 @@ MonoBehaviour:
         timeDelay: 6
         indexLine: "246\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 18
       levelDogs:
       - levelDog: 0
         nameDog: Dog06
@@ -1595,10 +1595,10 @@ MonoBehaviour:
         timeDelay: 1
         indexLine: "1\r"
   - wave: 13
-    sum: 0
+    sum: 29
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 12
       levelDogs:
       - levelDog: 0
         nameDog: Dog09
@@ -1649,7 +1649,7 @@ MonoBehaviour:
         timeDelay: 3
         indexLine: "26\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 17
       levelDogs:
       - levelDog: 0
         nameDog: Dog09
@@ -1700,10 +1700,10 @@ MonoBehaviour:
         timeDelay: 5
         indexLine: "246\r"
   - wave: 14
-    sum: 0
+    sum: 39
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 20
       levelDogs:
       - levelDog: 0
         nameDog: Dog10
@@ -1778,7 +1778,7 @@ MonoBehaviour:
         timeDelay: 2
         indexLine: "34\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 19
       levelDogs:
       - levelDog: 0
         nameDog: Dog09
@@ -1901,10 +1901,10 @@ MonoBehaviour:
         timeDelay: 1
         indexLine: "1\r"
   - wave: 15
-    sum: 0
+    sum: 35
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 15
       levelDogs:
       - levelDog: 0
         nameDog: Dog03
@@ -1963,7 +1963,7 @@ MonoBehaviour:
         timeDelay: 5
         indexLine: "246\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 20
       levelDogs:
       - levelDog: 0
         nameDog: Dog10
@@ -2022,10 +2022,10 @@ MonoBehaviour:
         timeDelay: 3
         indexLine: "25\r"
   - wave: 16
-    sum: 0
+    sum: 38
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 22
       levelDogs:
       - levelDog: 0
         nameDog: Dog05
@@ -2172,7 +2172,7 @@ MonoBehaviour:
         timeDelay: 6
         indexLine: "246\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 16
       levelDogs:
       - levelDog: 0
         nameDog: Dog01
@@ -2215,10 +2215,10 @@ MonoBehaviour:
         timeDelay: 2
         indexLine: "25\r"
   - wave: 17
-    sum: 0
+    sum: 35
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 18
       levelDogs:
       - levelDog: 0
         nameDog: Dog08
@@ -2333,7 +2333,7 @@ MonoBehaviour:
         timeDelay: 3
         indexLine: "246\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 17
       levelDogs:
       - levelDog: 0
         nameDog: Dog01
@@ -2384,10 +2384,10 @@ MonoBehaviour:
         timeDelay: 5
         indexLine: "16\r"
   - wave: 18
-    sum: 0
+    sum: 36
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 18
       levelDogs:
       - levelDog: 0
         nameDog: Dog02
@@ -2438,7 +2438,7 @@ MonoBehaviour:
         timeDelay: 5
         indexLine: "16\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 18
       levelDogs:
       - levelDog: 0
         nameDog: Dog01
@@ -2505,10 +2505,10 @@ MonoBehaviour:
         timeDelay: 3
         indexLine: "246\r"
   - wave: 19
-    sum: 0
+    sum: 40
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 18
       levelDogs:
       - levelDog: 0
         nameDog: Dog08
@@ -2559,7 +2559,7 @@ MonoBehaviour:
         timeDelay: 5
         indexLine: "135\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 22
       levelDogs:
       - levelDog: 0
         nameDog: Dog09
@@ -2682,10 +2682,10 @@ MonoBehaviour:
         timeDelay: 0
         indexLine: "5\r"
   - wave: 20
-    sum: 0
+    sum: 46
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 28
       levelDogs:
       - levelDog: 0
         nameDog: Dog10
@@ -2752,7 +2752,7 @@ MonoBehaviour:
         timeDelay: 2
         indexLine: "34\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 18
       levelDogs:
       - levelDog: 0
         nameDog: Dog06
@@ -2835,10 +2835,10 @@ MonoBehaviour:
         timeDelay: 5
         indexLine: "1346\r"
   - wave: 21
-    sum: 0
+    sum: 36
     phases:
     - phase: 0
-      sumPhase: 0
+      sumPhase: 18
       levelDogs:
       - levelDog: 0
         nameDog: Dog03
@@ -2897,7 +2897,7 @@ MonoBehaviour:
         timeDelay: 2
         indexLine: "135\r"
     - phase: 1
-      sumPhase: 0
+      sumPhase: 18
       levelDogs:
       - levelDog: 0
         nameDog: Dog06
@@ -6735,10 +6735,10 @@ MonoBehaviour:
     sum: 0
     phases: []
   - wave: 39
-    sum: 60
+    sum: 0
     phases:
     - phase: 0
-      sumPhase: 30
+      sumPhase: 0
       levelDogs:
       - levelDog: 0
         nameDog: Dog01
@@ -6977,18 +6977,18 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 15000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "6\r"
     - phase: 1
-      sumPhase: 30
+      sumPhase: 0
       levelDogs:
       - levelDog: 0
         nameDog: Dog06
         scaleValue: 1
         nums: 1
         hpDog: 27000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 1
         indexLine: "1\r"
       - levelDog: 1
@@ -6996,7 +6996,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 27000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "2\r"
       - levelDog: 2
@@ -7004,7 +7004,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 27000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "3\r"
       - levelDog: 3
@@ -7012,7 +7012,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 27000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "4\r"
       - levelDog: 4
@@ -7020,7 +7020,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 27000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "5\r"
       - levelDog: 5
@@ -7028,7 +7028,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 27000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "6\r"
       - levelDog: 6
@@ -7036,7 +7036,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 7
         indexLine: "6\r"
       - levelDog: 7
@@ -7044,7 +7044,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "5\r"
       - levelDog: 8
@@ -7052,7 +7052,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "4\r"
       - levelDog: 9
@@ -7060,7 +7060,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "3\r"
       - levelDog: 10
@@ -7068,7 +7068,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "2\r"
       - levelDog: 11
@@ -7076,7 +7076,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "1\r"
       - levelDog: 12
@@ -7084,7 +7084,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 7
         indexLine: "1\r"
       - levelDog: 13
@@ -7092,7 +7092,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "2\r"
       - levelDog: 14
@@ -7100,7 +7100,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "3\r"
       - levelDog: 15
@@ -7108,7 +7108,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "4\r"
       - levelDog: 16
@@ -7116,7 +7116,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "5\r"
       - levelDog: 17
@@ -7124,7 +7124,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "6\r"
       - levelDog: 18
@@ -7132,7 +7132,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 7
         indexLine: "6\r"
       - levelDog: 19
@@ -7140,7 +7140,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "5\r"
       - levelDog: 20
@@ -7148,7 +7148,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "4\r"
       - levelDog: 21
@@ -7156,7 +7156,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "3\r"
       - levelDog: 22
@@ -7164,7 +7164,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "2\r"
       - levelDog: 23
@@ -7172,7 +7172,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 23000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "1\r"
       - levelDog: 24
@@ -7180,7 +7180,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 13000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 7
         indexLine: "1\r"
       - levelDog: 25
@@ -7188,7 +7188,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 13000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "2\r"
       - levelDog: 26
@@ -7196,7 +7196,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 13000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "3\r"
       - levelDog: 27
@@ -7204,7 +7204,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 13000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "4\r"
       - levelDog: 28
@@ -7212,7 +7212,7 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 13000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "5\r"
       - levelDog: 29
@@ -7220,6 +7220,6 @@ MonoBehaviour:
         scaleValue: 1
         nums: 1
         hpDog: 13000000
-        damageDog: 3000000
+        damageDog: 2700000
         timeDelay: 5
         indexLine: "6\r"

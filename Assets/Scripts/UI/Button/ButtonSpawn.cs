@@ -115,15 +115,13 @@ public class ButtonSpawn : CanvasAbstract
         goldUpdate = chickenSO.levels[levelSpawnChicken].goldUpdate;
         if (goldPlayer < goldUpdate)
         {
-            Debug.Log("Don't have enough gold to spawn");
-
             // Audio
             canvasController.AudioManager.PlaySFX(canvasController.AudioManager.effectSpawnError);
 
             // Spawn Text Not Enough Gold
-            GameObject newPrefab = CoinCollectSpawner.Instance.Spawn("Not Enough Gold", transform.position, transform.rotation);
-            NotEnoughGold notEnoughGold = newPrefab.GetComponent<NotEnoughGold>();
-            notEnoughGold.TWTextOn();
+            GameObject newPrefab = CanvasSpawner.Instance.Spawn("TW Text", transform.position, transform.rotation);
+            TWText twText = newPrefab.GetComponent<TWText>();
+            twText.TWTextOn("Not Enough Gold");
             newPrefab.SetActive(true);
 
             return false;

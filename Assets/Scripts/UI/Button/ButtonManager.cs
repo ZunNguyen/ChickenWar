@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,6 +47,7 @@ public class ButtonManager : ErshenMonoBehaviour
         canvasCtrl.TrackingWaveController.TrackingWave.TrackingWaveOn();
 
         canvasCtrl.SaveDataManager._learnTurorial = true;
+        if (canvasCtrl.Tutorial == null) return;
         Destroy(canvasCtrl.Tutorial.gameObject);
         //canvasCtrl.Tutorial.gameObject.SetActive(false);
     }

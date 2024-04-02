@@ -90,7 +90,7 @@ public class SaveDataManager : ErshenMonoBehaviour
         {
             canvasController.ButtonPauseCtrl.SettingVolume.volumeMusic = 10;
             canvasController.ButtonPauseCtrl.SettingVolume.volumeSFX = 10;
-            canvasController.GoldPlayer.AddGoldPlayer(2);
+            canvasController.GoldPlayer.AddGoldPlayer(0);
             //canvasController.Tutorial.gameObject.SetActive(true);
             return;
         }

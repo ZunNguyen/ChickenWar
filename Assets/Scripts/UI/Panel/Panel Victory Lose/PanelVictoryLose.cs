@@ -45,7 +45,7 @@ public class PanelVictoryLose : ErshenMonoBehaviour
         
         int waveDog = panelVictoyLoseCtrl.CanvasController.PointSpawnDogController.wave;
         float goldEarn = panelVictoyLoseCtrl.GoldGiftSO.listGoldGift[waveDog].gold;
-        panelVictoyLoseCtrl.TextEarnGold.InputGoldValue(goldEarn/2);
+        panelVictoyLoseCtrl.TextEarnGold.InputGoldValue(goldEarn/10);
         panelVictoyLoseCtrl.TextPanel.InputTextLose();
     }
 

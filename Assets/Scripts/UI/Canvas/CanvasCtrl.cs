@@ -67,6 +67,9 @@ public class CanvasCtrl : ErshenMonoBehaviour
     [SerializeField] protected Tutorial tutorial;
     public Tutorial Tutorial => tutorial;
 
+    [SerializeField] protected CanvasSpawner canvasSpawner;
+    public CanvasSpawner CanvasSpawner => canvasSpawner;
+
     [Header("Load script for shield")]
     [SerializeField] protected ShieldUpdate shieldUpdate;
     public ShieldUpdate ShieldUpdate => shieldUpdate;
@@ -100,6 +103,7 @@ public class CanvasCtrl : ErshenMonoBehaviour
         LoadSaveDataManager();
         LoadPanelMissionCtrl();
         LoadTutorial();
+        LoadCanvasSpawner();
 
         // Load Script for Shield
         LoadShieldUpdate();
@@ -229,6 +233,12 @@ public class CanvasCtrl : ErshenMonoBehaviour
     {
         if (tutorial != null) return;
         tutorial = GameObject.Find("Panel - Tutorial").GetComponent<Tutorial>();
+    }
+
+    protected virtual void LoadCanvasSpawner()
+    {
+        if (canvasSpawner != null) return;
+        canvasSpawner = GameObject.Find("Canvas Spawner").GetComponent<CanvasSpawner>();
     }
 
     protected virtual void LoadInstance()

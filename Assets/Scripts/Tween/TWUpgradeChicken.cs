@@ -45,8 +45,8 @@ public class TWUpgradeChicken : CanvasAbstract
     {
         tw_UpgradeOff_On = true;
         canvasController.ChickenSpawner.Despawn(chickenUpgrade.transform);
-        gameObject.SetActive(false);
         fireWork.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void ProcessShowUpgradePanel(int indexLV, Transform oldChicken, Transform newChicken)
