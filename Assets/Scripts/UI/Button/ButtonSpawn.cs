@@ -75,6 +75,7 @@ public class ButtonSpawn : CanvasAbstract
         Transform obj = dragItem.transform;
         canvasController.ChickenSpawner.Despawn(obj);
         obj = canvasController.ChickenSpawner.Spawn(newChicken, transform.position, transform.rotation).transform;
+        obj.localScale = new Vector3(1, 1, 1);
         // Set position on rect tranform
         SetPostion(obj);
         obj.SetParent(this.transform);

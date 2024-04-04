@@ -62,6 +62,8 @@ public class SpawnChicken : CanvasAbstract
     public virtual Transform InstantiatePrefab(string namePrefab, int indexSlot)
     {
         Transform newPrefab = canvasController.ChickenSpawner.Spawn(namePrefab, this.transform.position, this.transform.rotation).transform;
+
+        newPrefab.localScale = new Vector3(1, 1, 1);
         newPrefab.gameObject.SetActive(true);
 
         DragItem dragItem = newPrefab.GetComponent<DragItem>();
