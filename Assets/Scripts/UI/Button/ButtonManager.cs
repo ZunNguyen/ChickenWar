@@ -48,7 +48,9 @@ public class ButtonManager : ErshenMonoBehaviour
         canvasCtrl.TrackingWaveController.TrackingWave.TrackingWaveOn();
 
         canvasCtrl.SaveDataManager._learnTurorial = true;
-        if (canvasCtrl.Tutorial == null) return;
+        if (canvasCtrl.SaveDataManager._learnTurorial == true) return;
+        canvasCtrl.Tutorial.tutorial = true;
+        canvasCtrl.SaveDataManager._learnTurorial = true;
         canvasCtrl.Tutorial.gameObject.SetActive(false);
     }
 

@@ -25,21 +25,9 @@ public class TWPanelVictoryLose : TWEarnGoldPanel
         panelVictoyLoseCtrl = this.transform.GetComponent<PanelVictoyLoseCtrl>();
     }
 
-    protected override Vector2 GetPositionGoldPlayer()
-    {
-        Vector2 position = new(-615, 555);
-        return position;
-    }
-
     protected override void ResetStatusBtn()
     {
         panelVictoyLoseCtrl.TWPanelVictoryLose.SetIsClaimingIsFalse();
-    }
-
-    protected override Vector2 SavePosition()
-    {
-        Vector2 position = savePosition;
-        return position;
     }
 
     protected override void SetAudioEffectEarnGold()

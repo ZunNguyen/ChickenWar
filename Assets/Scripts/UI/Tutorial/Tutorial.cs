@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
@@ -13,10 +12,10 @@ public class Tutorial : ErshenMonoBehaviour
 
     [Header("---Value---")]
     [SerializeField] protected bool isIconHand;
-    [SerializeField] protected float delayTime = 0.1f;
+    [SerializeField] protected float delayTime = 0f;
     [SerializeField] protected int pressPhase;
-    [SerializeField] protected bool tutorial = false;
-    [SerializeField] protected bool endGame = false;
+    public bool tutorial = false;
+    public bool endGame = false;
 
     protected override void LoadComponent()
     {
@@ -111,39 +110,47 @@ public class Tutorial : ErshenMonoBehaviour
         if (pressPhase == 4 && tutorial)
         {
             isIconHand = true;
-            StartCoroutine(ShowText("Like this", false, true, new Vector3(0, 0, -250), new Vector2(-125, -170), new Vector2(-270, -350)));
+            Vector2 posTarget = GetPosBtnSpawn();
+            Vector2 posOrigin = GetPosHandBtnSpawn(posTarget);
+            StartCoroutine(ShowText("Like this", false, true, new Vector3(0, 0, -250), posOrigin, posTarget));
         }
         if (pressPhase == 5 && tutorial)
         {
             isIconHand = false; 
-            StartCoroutine(ShowText("That's right!", true, false, new Vector3(0, 0, -250), new Vector2(-125, -170), new Vector2(-270, -350)));
+            StartCoroutine(ShowText("That's right!", true, false, Vector3.zero, Vector2.zero, Vector2.zero));
         }
         if (pressPhase == 6 && tutorial)
         {
             isIconHand = true;
-            StartCoroutine(ShowText("Try again!", false, true, new Vector3(0, 0, -250), new Vector2(-125, -170), new Vector2(-270, -350)));
+            Vector2 posTarget = GetPosBtnSpawn();
+            Vector2 posOrigin = GetPosHandBtnSpawn(posTarget);
+            StartCoroutine(ShowText("Try again!", false, true, new Vector3(0, 0, -250), posOrigin, posTarget));
         }
         if (pressPhase == 7 && tutorial)
         {
             isIconHand = false;
             StartCoroutine(ShowText("You also can merge two chicken same level to take the chicken with level higher", true, false,
-                new Vector3(0, 0, -250), new Vector2(-125, -170), new Vector2(-270, -350)));
+                Vector3.zero, Vector2.zero, Vector2.zero));
         }
         if (pressPhase == 8 && tutorial)
         {
             isIconHand = true;
-            StartCoroutine(ShowText("", false, true, new Vector3(0, 0, -250), new Vector2(-815, 355), new Vector2(-665, 355)));
+            Vector2 posOrigin = GetPosChicken_1();
+            Vector2 posTarget = GetPosChicken_2(posOrigin);
+            StartCoroutine(ShowText("", false, true, new Vector3(0, 0, -250), posOrigin, posTarget));
         }
         if (pressPhase == 9 && tutorial)
         {   
             isIconHand = false;
-            StartCoroutine(ShowText("Great!", true, false, new Vector3(0, 0, -250), new Vector2(-815, 355), new Vector2(-665, 355)));
+            StartCoroutine(ShowText("Great!", true, false, Vector3.zero, Vector2.zero, Vector2.zero));
         }
         if (pressPhase == 10 && tutorial)
         {
             isIconHand = true;
-            StartCoroutine(ShowText("And now, let's fight with the dog army\nGood Luck!!!", false, true, new Vector3(0, 0, -530), new Vector2(580, -180), 
-                new Vector2(725, -360)));
+            Vector2 posTarget = GetPosBtnBattle();
+            Vector2 posOrigin = GetPosHandBtnBattle(posTarget);
+            StartCoroutine(ShowText("And now, let's fight with the dog army\nGood Luck!!!", false, true, new Vector3(0, 0, -530), posOrigin,
+                posTarget));
         }
 
         // End Game
@@ -173,5 +180,69 @@ public class Tutorial : ErshenMonoBehaviour
         StartCoroutine(ShowText("Well, You are truly an excellent player", true, false, Vector3.zero, Vector2.zero, Vector2.zero));
         endGame = true;
         pressPhase = 0;
+    }
+
+    protected virtual Vector2 GetPosBtnSpawn()
+    {
+        RectTransform rectBtnSpawn = GameObject.Find("Button").transform.Find("Button - Spawn").GetComponent<RectTransform>();
+        float xRectBtnSpawn = rectBtnSpawn.anchoredPosition.x;
+        float yRectBtnSpawn = rectBtnSpawn.anchoredPosition.y;
+        RectTransform rectCanvas = GameObject.Find("Canvas").GetComponent<RectTransform>();
+        float yRectCanvas = rectCanvas.sizeDelta.y;
+        Vector2 pos;
+        pos.x = xRectBtnSpawn;
+        pos.y = -(yRectCanvas / 2) + yRectBtnSpawn + 65;
+        return pos;
+    }
+
+    protected virtual Vector2 GetPosHandBtnSpawn(Vector2 posBtnSpawn)
+    {
+        Vector2 pos;
+        pos.x = posBtnSpawn.x + 240;
+        pos.y = posBtnSpawn.y + 200;
+        return pos;
+    }
+
+    protected virtual Vector2 GetPosChicken_1()
+    {
+        RectTransform rectCanvas = GameObject.Find("Canvas").GetComponent<RectTransform>();
+        float xRectCanvas = rectCanvas.sizeDelta.x;
+        RectTransform rectChicken = GameObject.Find("Grid").transform.Find("Grid - Update Chicken").GetComponent<RectTransform>();
+        float xRectChicken = rectChicken.anchoredPosition.x;
+        float yRectChicken = rectChicken.anchoredPosition.y;
+        Vector2 pos;
+        pos.x = -(xRectCanvas / 2) + xRectChicken - 30;
+        pos.y = yRectChicken + 350;
+        return pos;
+    }
+
+    protected virtual Vector2 GetPosChicken_2(Vector2 posChicken_1)
+    {
+        Vector2 pos;
+        pos.x = posChicken_1.x + 200;
+        pos.y = posChicken_1.y;
+        return pos;
+    }
+
+    protected virtual Vector2 GetPosBtnBattle()
+    {
+        RectTransform rectBtnBattle = GameObject.Find("Button").transform.Find("Button - Battle").GetComponent<RectTransform>();
+        float xRectBtnBattle = rectBtnBattle.anchoredPosition.x;
+        float yRectBtnBattle = rectBtnBattle.anchoredPosition.y;
+        RectTransform rectCanvas = GameObject.Find("Canvas").GetComponent<RectTransform>();
+        float xRectCanvas = rectCanvas.sizeDelta.x;
+        float yRectCanvas = rectCanvas.sizeDelta.y;
+        Vector2 pos;
+        pos.x = (xRectCanvas / 2) + xRectBtnBattle;
+        pos.y = -(yRectCanvas / 2) + yRectBtnBattle + 65;
+        return pos;
+    }
+
+    protected virtual Vector2 GetPosHandBtnBattle(Vector2 posBtnBattle)
+    {
+        Vector2 pos;
+        pos.x = posBtnBattle.x - 240;
+        pos.y = posBtnBattle.y + 200;
+        return pos;
     }
 }

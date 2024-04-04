@@ -1,22 +1,10 @@
-using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Claims;
 using UnityEngine;
+using UnityEngine.WSA;
 
 public class TWPanelEarnGoldOffline : TWEarnGoldPanel
 {
     [Header("---Connect Ctrl---")]
     [SerializeField] protected PanelEarnGoldOfflineCtrl panelEarnGoldOfflineCtrl;
-
-    [Header("---Gold Position---")]
-    [SerializeField] protected Vector2 savePosition = new(-40, -9);
-
-    protected override Vector2 GetPositionGoldPlayer()
-    {
-        Vector2 position = new(-615, 555);
-        return position;
-    }
 
     protected override void LoadComponent()
     {
@@ -33,12 +21,6 @@ public class TWPanelEarnGoldOffline : TWEarnGoldPanel
     protected override void ResetStatusBtn()
     {
         panelEarnGoldOfflineCtrl.TWPanelEarnGoldOffline.SetIsClaimingIsFalse();
-    }
-
-    protected override Vector2 SavePosition()
-    {
-        Vector2 position = savePosition;
-        return position;
     }
 
     protected override void SetAudioEffectEarnGold()
