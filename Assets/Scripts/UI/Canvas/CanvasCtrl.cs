@@ -236,7 +236,7 @@ public class CanvasCtrl : ErshenMonoBehaviour
     protected virtual void LoadTutorial()
     {
         if (tutorial != null) return;
-        tutorial = GameObject.Find("Panel - Tutorial").GetComponent<Tutorial>();
+        tutorial = transform.Find("Panel").Find("Panel - Tutorial").GetComponent<Tutorial>();
     }
 
     protected virtual void LoadCoinCollectionSpawner()
