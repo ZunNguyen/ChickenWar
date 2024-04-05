@@ -111,7 +111,7 @@ public class SaveDataManager : ErshenMonoBehaviour
         _learnTurorial = dataGame.learnTutorial;
         ProcessTimeGame(dataGame.lastTimeExit);
 
-        if (dataGame.nameChicken.Count != 0)
+        if (dataGame.indexSlot.Count != 0)
         {
             for (int i = 0; i < dataGame.indexSlot.Count; i++)
             {

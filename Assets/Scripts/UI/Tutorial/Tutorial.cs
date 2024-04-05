@@ -84,7 +84,7 @@ public class Tutorial : ErshenMonoBehaviour
             text.text = currentText;
             yield return new WaitForSeconds(delayTime);
         }
-        image.raycastTarget = false;
+        image.raycastTarget = activeButton;
         buttonNext.SetActive(activeButton);
         if (!activeIconHand) yield break;
         TW_IconHand(rot, posOrigin, posTarget);
@@ -188,9 +188,10 @@ public class Tutorial : ErshenMonoBehaviour
         float xRectBtnSpawn = rectBtnSpawn.anchoredPosition.x;
         float yRectBtnSpawn = rectBtnSpawn.anchoredPosition.y;
         RectTransform rectCanvas = GameObject.Find("Canvas").GetComponent<RectTransform>();
+        float xRectCanvas = rectCanvas.sizeDelta.x;
         float yRectCanvas = rectCanvas.sizeDelta.y;
         Vector2 pos;
-        pos.x = xRectBtnSpawn;
+        pos.x = -xRectCanvas/2 + xRectBtnSpawn;
         pos.y = -(yRectCanvas / 2) + yRectBtnSpawn + 65;
         return pos;
     }

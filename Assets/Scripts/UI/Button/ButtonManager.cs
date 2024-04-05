@@ -32,7 +32,7 @@ public class ButtonManager : ErshenMonoBehaviour
             return;
         }
         timePressButton += 1;
-        if (timePressButton % 2 == 0 && timePressButton > 0) canvasCtrl.ChangeButtonStart.ChangeImageButtonXTime(2,1);
+        if (timePressButton % 2 == 0 && timePressButton > 0) canvasCtrl.ChangeButtonStart.ChangeImageButtonXTime(10,1);
         if (timePressButton % 2 == 1 && timePressButton > 0) canvasCtrl.ChangeButtonStart.ChangeImageButtonXTime(1,2);
         if (isStarting) return;
 
@@ -47,9 +47,7 @@ public class ButtonManager : ErshenMonoBehaviour
         // On tracking wave
         canvasCtrl.TrackingWaveController.TrackingWave.TrackingWaveOn();
 
-        canvasCtrl.SaveDataManager._learnTurorial = true;
-        if (canvasCtrl.SaveDataManager._learnTurorial == true) return;
-        canvasCtrl.Tutorial.tutorial = true;
+        canvasCtrl.Tutorial.tutorial = false;
         canvasCtrl.SaveDataManager._learnTurorial = true;
         canvasCtrl.Tutorial.gameObject.SetActive(false);
     }

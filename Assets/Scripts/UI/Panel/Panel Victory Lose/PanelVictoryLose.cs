@@ -79,7 +79,7 @@ public class PanelVictoryLose : ErshenMonoBehaviour
         panelVictoyLoseCtrl.CanvasController.AudioManager.PlaySFX(panelVictoyLoseCtrl.CanvasController.AudioManager.effectClick);
         OffTrackingWave();
         // Off panel
-        PanelOff(1);
+        PanelOff(2);
     }
 
     protected virtual void OffTrackingWave()
