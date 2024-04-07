@@ -27,7 +27,7 @@ public class PanelMission : ErshenMonoBehaviour
     protected virtual void LoadMark()
     {
         if (mark != null) return;
-        mark = transform.Find("Image - Mark").gameObject;
+        mark = GameObject.Find("Button - Mission").transform.Find("Image - Mark").gameObject;
     }
 
     public virtual void PressMissionButton()

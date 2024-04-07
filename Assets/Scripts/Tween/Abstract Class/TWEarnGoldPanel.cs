@@ -7,7 +7,7 @@ public abstract class TWEarnGoldPanel : TWEarnGold
 {
     public virtual void TW_PanelOn()
     {
-        this.transform.GetComponent<RectTransform>().DOAnchorPosY(0, 1.5f);
+        this.transform.GetComponent<RectTransform>().DOAnchorPosY(0, 1f);
     }
 
     public virtual void TW_PanelOff(int multiplier, float goldEarn)

@@ -12,7 +12,7 @@ public class Tutorial : ErshenMonoBehaviour
 
     [Header("---Value---")]
     [SerializeField] protected bool isIconHand;
-    [SerializeField] protected float delayTime = 0f;
+    [SerializeField] protected float delayTime = 0.1f;
     [SerializeField] protected int pressPhase;
     public bool tutorial = false;
     public bool endGame = false;

@@ -135,15 +135,19 @@ public abstract class PanelMissionAbstract : ErshenMonoBehaviour
         }
         if (value >= 1000 && value < 1000000)
         {
-            return (value / 1000).ToString("n1") + "K";
+            return (value / 1000).ToString("n0") + "K";
         }
         if (value >= 1000000 && value < 1000000000)
         {
-            return (value / 1000000).ToString("n1") + "M";
+            return (value / 1000000).ToString("n0") + "M";
         }
         if (value >= 1000000000 && value < 1000000000000)
         {
-            return (value / 1000000000).ToString("n1") + "B";
+            return (value / 1000000000).ToString("n0") + "B";
+        }
+        if (value >= 1000000000000 && value < 1000000000000000)
+        {
+            return (value / 1000000000000).ToString("n0") + "T";
         }
         return "";
     }
@@ -151,7 +155,7 @@ public abstract class PanelMissionAbstract : ErshenMonoBehaviour
     public virtual void AddAchievementPlayer(float add)
     {
         achievementPlayer += add;
-        if (achievementPlayer >= missionCurrent)
+        if (achievementPlayer >= missionCurrent && indexMission != indexMissionMax)
         {
             imageButton.color = Color.white;
             imageGold.color = Color.white;

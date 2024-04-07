@@ -22,12 +22,12 @@ public class TWPanelMission : ErshenMonoBehaviour
 
     public virtual void TW_PanelMissionOn()
     {
-        transform.GetComponent<RectTransform>().DOAnchorPosY(0, 2f).SetEase(Ease.OutBack);
+        transform.GetComponent<RectTransform>().DOAnchorPosY(0, 1f).SetEase(Ease.OutBack);
     }
 
     public virtual void TW_PanelMissionOff()
     {
-        transform.GetComponent<RectTransform>().DOAnchorPosY(-1150, 2f).SetEase(Ease.OutBack).OnComplete(() =>
+        transform.GetComponent<RectTransform>().DOAnchorPosY(-1150, 1f).SetEase(Ease.OutBack).OnComplete(() =>
         {
             panelMissionCtrl.PanelMission.isActingPanel = false;
         });

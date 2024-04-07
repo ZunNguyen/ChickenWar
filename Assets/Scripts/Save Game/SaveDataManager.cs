@@ -86,6 +86,7 @@ public class SaveDataManager : ErshenMonoBehaviour
     // Load value from playerprefs
     protected virtual void LoadGame()
     {
+        
         if (!File.Exists(Application.dataPath + "/DataGame.json"))
         {
             canvasController.ButtonPauseCtrl.SettingVolume.volumeMusic = 10;
@@ -95,10 +96,9 @@ public class SaveDataManager : ErshenMonoBehaviour
             canvasController.Tutorial.TutorialGame();
             return;
         }
-        
         string json = File.ReadAllText(Application.dataPath + "/DataGame.json");
         DataGame dataGame = JsonUtility.FromJson<DataGame>(json);
-        
+
         canvasController.GoldPlayer.LoadBegin(dataGame.goldPlayer);
         canvasController.PointSpawnDogController.wave = dataGame.waveDog;
         canvasController.ShieldUpdate.levelCurrent = dataGame.levelShield;
@@ -138,10 +138,10 @@ public class SaveDataManager : ErshenMonoBehaviour
         int offlineSecond = (int)(offlineDuration.TotalSeconds);
         float goldCount = offlineSecond * 0.1f;
         int gold = (int)goldCount;
-        ////if (gold < 10) return;
-        //canvasController.PanelEarnGoldOfflineCtrl.PanelEarnGoldOffline.PanelEarnGoldOfflineOn();
-        //canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.InputGoldValue(gold);
-        //canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.goldEarn = gold;
+        if (gold < 100) return;
+        canvasController.PanelEarnGoldOfflineCtrl.PanelEarnGoldOffline.PanelEarnGoldOfflineOn();
+        canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.InputGoldValue(gold);
+        canvasController.PanelEarnGoldOfflineCtrl.TextEarnGoldOffline.goldEarn = gold;
     }
 
      protected virtual void LoadAchievement(DataGame dataGame)
@@ -178,5 +178,10 @@ public class SaveDataManager : ErshenMonoBehaviour
         Time.timeScale = 1f;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    protected virtual void ConvertJsonToString()
+    {
+
     }
 }
