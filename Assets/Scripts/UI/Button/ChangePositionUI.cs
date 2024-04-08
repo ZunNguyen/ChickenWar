@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChangePositionUI : ErshenMonoBehaviour
 {
     [SerializeField] protected RectTransform rectTransform;
-    [SerializeField] protected float x = -84;
+    [SerializeField] protected float x = -95;
     [SerializeField] protected float y = 17;
 
     public virtual void SetPosition()

@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,9 +19,9 @@ public class SaveDataManager : ErshenMonoBehaviour
         canvasController = GameObject.Find("Canvas").GetComponent<CanvasCtrl>();
     }
 
-    private void OnApplicationQuit()
+    private void Start()
     {
-        SaveGame();
+        InvokeRepeating(nameof(SaveGame), 0, 20f);
     }
 
     private void OnApplicationPause(bool pauseStatus)
@@ -56,7 +55,7 @@ public class SaveDataManager : ErshenMonoBehaviour
 
         canvasController.SpawnChicken.SaveSlotChicken(dataGame.indexSlot, dataGame.nameChicken);
         string json = JsonUtility.ToJson(dataGame);
-        File.WriteAllText(Application.dataPath + "/DataGame.json", json);
+        PlayerPrefs.SetString("SaveGame", json);
     }
 
     protected virtual void SaveAchievement(DataGame dataGame)
@@ -86,17 +85,14 @@ public class SaveDataManager : ErshenMonoBehaviour
     // Load value from playerprefs
     protected virtual void LoadGame()
     {
-        
-        if (!File.Exists(Application.dataPath + "/DataGame.json"))
+        string json = PlayerPrefs.GetString("SaveGame");
+        if (json == "")
         {
-            canvasController.ButtonPauseCtrl.SettingVolume.volumeMusic = 10;
-            canvasController.ButtonPauseCtrl.SettingVolume.volumeSFX = 10;
-            canvasController.GoldPlayer.LoadBegin(0);
-            canvasController.Tutorial.gameObject.SetActive(true);
-            canvasController.Tutorial.TutorialGame();
-            return;
+            json = "{\"goldPlayer\":0,\"waveDog\":0,\"levelShield\":0,\"highestLevelChicken\":0,\"levelSpawnChicken\":0,\"indexSlot\":" +
+            "[],\"nameChicken\":[],\"volumeMusic\":10.0,\"volumeSFX\":10.0,\"lastTimeExit\":\"\",\"achievementList\":" +
+            "[1.0,115.0,1.0,1.0],\"missionCurrentList\":[5.0,1000.0,5.0,30.0],\"indexMissionList\":[0,0,0,0],\"learnTutorial\":false}";
+            PlayerPrefs.SetString("SaveGame", json);
         }
-        string json = File.ReadAllText(Application.dataPath + "/DataGame.json");
         DataGame dataGame = JsonUtility.FromJson<DataGame>(json);
 
         canvasController.GoldPlayer.LoadBegin(dataGame.goldPlayer);
@@ -128,6 +124,8 @@ public class SaveDataManager : ErshenMonoBehaviour
             canvasController.Tutorial.gameObject.SetActive(true);
             canvasController.Tutorial.TutorialGame();
         }
+
+        SaveGame();
     }
 
     protected virtual void ProcessTimeGame(string timeLastGame)
@@ -173,15 +171,9 @@ public class SaveDataManager : ErshenMonoBehaviour
 
     public virtual void ResetGame()
     {
-        string path = "Assets/DataGame.json";
-        File.Delete(path);
+        string json = "";
+        PlayerPrefs.SetString("SaveGame", json);
         Time.timeScale = 1f;
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    protected virtual void ConvertJsonToString()
-    {
-
     }
 }

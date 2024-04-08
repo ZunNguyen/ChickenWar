@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 0}
-  x: -84
+  x: -95
   y: 17
 --- !u!1 &945817833200286862
 GameObject:
@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a89f724e92564b428b6afe71d40a17d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasController: {fileID: 0}
   chickenController: {fileID: 6993610041442064053}
   anima: {fileID: 945817833200286896}
 --- !u!114 &5857661085183015586
@@ -328,6 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fcd3d661e089a4e9b0fa7d3d961456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasController: {fileID: 0}
   chickenController: {fileID: 6993610041442064053}
   timeCurrent: 0
   timeDelay: 6

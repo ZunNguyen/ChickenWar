@@ -12,7 +12,7 @@ public class Tutorial : ErshenMonoBehaviour
 
     [Header("---Value---")]
     [SerializeField] protected bool isIconHand;
-    [SerializeField] protected float delayTime = 0.1f;
+    [SerializeField] protected float delayTime = 0.05f;
     [SerializeField] protected int pressPhase;
     public bool tutorial = false;
     public bool endGame = false;
@@ -129,7 +129,7 @@ public class Tutorial : ErshenMonoBehaviour
         if (pressPhase == 7 && tutorial)
         {
             isIconHand = false;
-            StartCoroutine(ShowText("You also can merge two chicken same level to take the chicken with level higher", true, false,
+            StartCoroutine(ShowText("You can also merge two chicken same level to take the chicken with level higher", true, false,
                 Vector3.zero, Vector2.zero, Vector2.zero));
         }
         if (pressPhase == 8 && tutorial)

@@ -32,7 +32,7 @@ public class ButtonManager : ErshenMonoBehaviour
             return;
         }
         timePressButton += 1;
-        if (timePressButton % 2 == 0 && timePressButton > 0) canvasCtrl.ChangeButtonStart.ChangeImageButtonXTime(10,1);
+        if (timePressButton % 2 == 0 && timePressButton > 0) canvasCtrl.ChangeButtonStart.ChangeImageButtonXTime(2,1);
         if (timePressButton % 2 == 1 && timePressButton > 0) canvasCtrl.ChangeButtonStart.ChangeImageButtonXTime(1,2);
         if (isStarting) return;
 

@@ -1,6 +1,5 @@
 using DG.Tweening;
 using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 
 public abstract class TWEarnGold : ErshenMonoBehaviour
