@@ -6,7 +6,7 @@ public class CameraManager : ErshenMonoBehaviour
 
     protected override void LoadComponent()
     {
-        base.LoadComponent();
+        base.LoadComponent(); 
         LoadBackGround();
     }
 
